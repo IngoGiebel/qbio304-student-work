@@ -1,3 +1,5 @@
-*.zip
+*.index
 *.gz
+*.zip
+ref-genomes*
 programs*
