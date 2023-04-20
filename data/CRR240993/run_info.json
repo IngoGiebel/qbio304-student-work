@@ -1,0 +1,13 @@
+{
+	"n_targets": 44761,
+	"n_bootstraps": 0,
+	"n_processed": 25383309,
+	"n_pseudoaligned": 22153292,
+	"n_unique": 15418252,
+	"p_pseudoaligned": 87.3,
+	"p_unique": 60.7,
+	"kallisto_version": "0.48.0",
+	"index_version": 10,
+	"start_time": "Thu Apr 20 18:05:18 2023",
+	"call": "kallisto quant -i Oryza_sativa.IRGSP-1.0.cdna.all.index -o CRR240993 -t 8 CRR240993_f1.fastq.gz CRR240993_r2.fastq.gz"
+}

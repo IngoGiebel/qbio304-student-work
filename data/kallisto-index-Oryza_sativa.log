@@ -1,0 +1,10 @@
+[build] loading fasta file ref-genomes/oryza-sativa/Oryza_sativa.IRGSP-1.0.cdna.all.fa.gz
+[build] k-mer length: 31
+[build] warning: clipped off poly-A tail (longer than 10)
+        from 3 target sequences
+[build] warning: replaced 2265 non-ACGUT characters in the input sequence
+        with pseudorandom nucleotides
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 245153 contigs and contains 52191446 k-mers

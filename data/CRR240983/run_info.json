@@ -1,0 +1,13 @@
+{
+	"n_targets": 48360,
+	"n_bootstraps": 0,
+	"n_processed": 23224610,
+	"n_pseudoaligned": 19962731,
+	"n_unique": 15833859,
+	"p_pseudoaligned": 86.0,
+	"p_unique": 68.2,
+	"kallisto_version": "0.48.0",
+	"index_version": 10,
+	"start_time": "Thu Apr 20 17:34:32 2023",
+	"call": "kallisto quant -i Oryza_nivara.Oryza_nivara_v1.0.cdna.all.index -o CRR240983 -t 8 CRR240983_f1.fastq.gz CRR240983_r2.fastq.gz"
+}
