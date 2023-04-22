@@ -1,16 +1,36 @@
 # About this script-------------------------------------------------------------
 
+# TODO
 
+# Data:
+# - studydesign_df
+# - abundance_filepaths
 
 # Load packages-----------------------------------------------------------------
 
+# Provides static code analysis for R. It checks for adherence to a given style,
+# identifying syntax errors and possible semantic issues
+library(lintr)
 # For setting the current working directory relative to the filepath
 # of this script
 library(this.path)
-
-
+# Tools for Data Copy-Pasta. RStudio addins and R functions that make
+# copy-pasting vectors and tables to text painless.
+library(datapasta)
+# Hadley Wickham's collection of R packages for data science
+library(tidyverse)
 # ------------------------------------------------------------------------------
 
 # Set the project's data subdirectory as the current working directory
 setwd(paste0(this.path::here(), "/../data"))
+
+# Read in the studydesign file
+studydesign_df <- readr::read_tsv(
+  "studydesign-PRJCA004229.tsv",
+  col_types = "icccccfffcficfc")
+
+# File paths to the Kallisto abundance.tsv files
+abundance_filepaths <- file.path(
+  studydesign_df$`Run accession`,
+  "abundance.tsv")
 

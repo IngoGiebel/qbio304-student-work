@@ -17,7 +17,7 @@ library(beepr)
 # Tools for Data Copy-Pasta. RStudio addins and R functions that make
 # copy-pasting vectors and tables to text painless.
 library(datapasta)
-# Provides access to Hadley Wickham's collection of R packages for data science
+# Hadley Wickham's collection of R packages for data science
 library(tidyverse)
 # To transform data between wide and long formats
 library(reshape2)
@@ -291,7 +291,7 @@ ggplot2::ggplot(myTPM.stats) +
 
 # Let's expand on the plot above a bit more and take a look at each 'layer'
 # of the ggplot code
-ggplot2::ggplot(myTPM.stats) + 
+ggplot2::ggplot(myTPM.stats) +
   aes(x = SD, y = MED) +
   geom_point(shape = 1, size = 2) +
   geom_smooth(method = lm) +
@@ -306,7 +306,7 @@ ggplot2::ggplot(myTPM.stats) +
 
 # Make a DGElist from your counts, and plot ----
 myDGEList <- edgeR::DGEList(myCounts)
-# take a look at the DGEList object 
+# take a look at the DGEList object
 myDGEList
 # DEGList objects are a good R data file to consider saving to you
 # working directory
@@ -315,7 +315,7 @@ save(myDGEList, file = "myDGEList")
 load(file = "myDGEList")
 
 # use the 'cpm' function from EdgeR to get counts per million
-cpm <- edgeR::cpm(myDGEList) 
+cpm <- edgeR::cpm(myDGEList)
 colSums(cpm)
 log2.cpm <- edgeR::cpm(myDGEList, log = TRUE)
 # 'coerce' your data matrix to a dataframe so that you can use tidyverse tools
@@ -729,7 +729,7 @@ mydata.sort <-
   dplyr::arrange(desc(LogFC)) |>
   dplyr::select(geneID, LogFC)
 
-# Use dplyr "filter" and "select" functions to pick out genes of interest 
+# Use dplyr "filter" and "select" functions to pick out genes of interest
 # ways to tweak the 'select' function:
 # use ':' between two column names to select all columns between
 # use 'contains', 'starts_with' or 'ends_with' to modify how you select
@@ -1024,7 +1024,7 @@ heatmaply::heatmaply(
   diffGenes.df[2:11],
   # dendrogram = "row",
   xlab = "Samples",
-  ylab = "DEGs", 
+  ylab = "DEGs",
   main = "DEGs in cutaneous leishmaniasis",
   scale = "column",
   margins = c(60, 100, 40, 20),
@@ -1052,15 +1052,15 @@ heatmaply::heatmaply(
 # targets.mod <- targets |>
 #   dplyr::rename(sampleID = sample, condition = group) |>
 #   dplyr::select(sampleID, condition)
-# 
+#
 # # import transcript Kallisto quant data
 # # using the same path variable we set way back in the step 1 script
 # Txi_trans <- importIsoformExpression(sampleVector = path)
-# 
+#
 # # fix column headers of abundance and counts data to match sampleID in target.mod
 # colnames(Txi_trans$abundance) <- c("isoform_id", sampleLabels)
 # colnames(Txi_trans$counts) <- c("isoform_id", sampleLabels)
-# 
+#
 # # import data
 # mySwitchList <- IsoformSwitchAnalyzeR::importRdata(
 #   isoformCountMatrix   = Txi_trans$counts,
@@ -1077,11 +1077,11 @@ heatmaply::heatmaply(
 #   isoformExonAnnoation = "Homo_sapiens.GRCh38.108.chr_patch_hapl_scaff.gtf.gz",
 #   isoformNtFasta       = "Homo_sapiens.GRCh38.cdna.all.fa",
 #   showProgress = TRUE)
-# 
+#
 # # Error in IsoformSwitchAnalyzeR::importRdata(isoformCountMatrix
 # # = Txi_trans$counts,  : At least one of the file(s) pointed to with
 # # 'isoformNtFasta' seems not to exist.
-# 
+#
 # # We'll do the isoform analysis in one step, but there's a lot to unpack here,
 # # so you should really read the package documentation at:
 # # https://bioconductor.org/packages/release/bioc/vignettes/
@@ -1091,23 +1091,23 @@ heatmaply::heatmaply(
 # # 1) intron retention;
 # # 2) ORF sequence similarity; and
 # # 3) nonsense mediate decay (NMD)
-# 
+#
 # #NOTE: THIS NEXT BIT COULD TAKE A WHILE!
 # mySwitchList <- IsoformSwitchAnalyzeR::isoformSwitchAnalysisCombined(
 #   switchAnalyzeRlist   = mySwitchList,
 #   pathToOutput = 'isoform_output') # directory must already exist
-# 
+#
 # # now look at the directory that you just created above
 # # in case you missed the summary output from the function above
 # IsoformSwitchAnalyzeR::extractSwitchSummary(mySwitchList)
-# 
+#
 # # extract the top n isoform switching events
 # IsoformSwitchAnalyzeR::extractTopSwitches(
 #   mySwitchList,
 #   filterForConsequences = TRUE, # these 'consequences' related to the annotations I reference above.
 #   n = 50,
 #   sortByQvals = FALSE) #change to TRUE if you want this list sorted by FDR-adusted Pval (a.k.a., q value)
-# 
+#
 # # visualize by making a 'switch plot'
 # IsoformSwitchAnalyzeR::switchPlot(
 #   mySwitchList,
@@ -1307,7 +1307,7 @@ camera.res <- limma::camera(
   v.DEGList.filtered.norm$E,
   collection,
   design,
-  contrast.matrix[, 1]) 
+  contrast.matrix[, 1])
 camera.df <- tibble::as_tibble(camera.res, rownames = "setName")
 camera.df
 
@@ -1334,7 +1334,7 @@ camera.res <- limma::camera(
   v.DEGList.filtered.norm$E,
   broadSet.C2.ALL,
   design,
-  contrast.matrix[, 1]) 
+  contrast.matrix[, 1])
 camera.df <- tibble::as_tibble(camera.res, rownames = "setName")
 camera.df
 
@@ -1380,17 +1380,17 @@ ggplot2::ggplot(camera.df[1:25,], ggplot2::aes(x = phenotype, y = setName)) +
   ggplot2::theme_bw()
 
 # Single sample GSEA using the GSVA package
-# the GSVA package offers a different way of approaching functional enrichment analysis.  
+# the GSVA package offers a different way of approaching functional enrichment analysis.
 # A few comments about the approach:
 # In contrast to most GSE methods, GSVA performs a change in coordinate systems,
 # transforming the data from a gene by sample matrix to a gene set (signature)
-# by sample matrix. 
+# by sample matrix.
 # This allows for the evaluation of pathway enrichment for each sample.
 # The method is both non-parametric and unsupervised.
 # bypasses the conventional approach of explicitly modeling phenotypes within
-# enrichment scoring algorithms. 
+# enrichment scoring algorithms.
 # focus is therefore placed on the RELATIVE enrichment of pathways across the
-# sample space rather than the absolute enrichment with respect to a phenotype. 
+# sample space rather than the absolute enrichment with respect to a phenotype.
 # however, with data with a moderate to small sample size (< 30), other GSE
 # methods that explicitly include the phenotype in their model are more likely
 # to provide greater statistical power to detect functional enrichment.
@@ -1457,7 +1457,7 @@ mycolhc.C2CP <- grDevices::rainbow(
   length(unique(mycl.C2CP)),
   start = 0.1,
   end = 0.9)
-mycolhc.C2CP <- mycolhc.C2CP[as.vector(mycl.C2CP)] 
+mycolhc.C2CP <- mycolhc.C2CP[as.vector(mycl.C2CP)]
 
 # assign your favorite heatmap color scheme. Some useful examples:
 # colorpanel(40, "darkblue", "yellow", "white"); heat.colors(75);
