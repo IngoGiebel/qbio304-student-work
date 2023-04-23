@@ -3,7 +3,7 @@
     "path": "//wsl.localhost/Ubuntu-22.04/home/uranus/QBio304 - Applied Bioinformatics/student-work/scripts/dge-analysis-PRJCA004229.R",
     "project_path": "scripts/dge-analysis-PRJCA004229.R",
     "type": "r_source",
-    "hash": "3018779897",
+    "hash": "245979854",
     "contents": "",
     "dirty": false,
     "created": 1682194640863.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "35,0",
-        "scrollLine": "10"
+        "cursorPosition": "189,0",
+        "scrollLine": "165"
     },
     "folds": "",
-    "lastKnownWriteTime": 1682206006,
+    "lastKnownWriteTime": 1682257979,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1682206006417,
+    "last_content_update": 1682257979779,
     "read_only": false,
     "read_only_alternatives": []
 }

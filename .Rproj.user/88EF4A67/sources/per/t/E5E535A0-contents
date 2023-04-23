@@ -149,13 +149,13 @@ available.datasets <- biomaRt::listDatasets(myMart)
 # Oryza nivara               : onivara_eg_gene
 # Oryza sativa Japonica Group: osativa_eg_gene
 # Ensembl annotations for tomato
-lyc.anno <- useMart(
+lyc.anno <- biomaRt::useMart(
   biomart = "plants_mart",
   dataset = "slycopersicum_eg_gene",
   host = "https://plants.ensembl.org")
 lyc.attributes <- listAttributes(lyc.anno)
 # take a look at all available attributes within the selected tomato annotation
-Tx.lyc <- getBM(
+Tx.lyc <- biomaRt::getBM(
   attributes = c("ensembl_transcript_id", "ensembl_gene_id", "description"),
   mart = lyc.anno)
 # turn it into a tibble
@@ -167,7 +167,7 @@ Tx.lyc <- dplyr::rename(
   gene_name = "ensembl_gene_id")
 Tx.lyc <- dplyr::select(Tx.lyc, "target_id", "gene_name")
 
-# import Kallisto transcript counts into R using Tximport ----
+# import Kallisto transcript counts into R using tximport ----
 # copy the abundance files to the working directory and rename so that each
 # sample has a unique name
 # TODO mapping tx2gene = Tx
@@ -175,6 +175,8 @@ Tx.lyc <- dplyr::select(Tx.lyc, "target_id", "gene_name")
 # Setting txOut = TRUE gives the original transcript level estimates as a
 # list of matrices.
 # See https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html
+#
+# *** ATTENTION: the option 'ignoreTxVersion = TRUE' is erroneous ***
 Txi_gene <- tximport::tximport(
   path,
   type = "kallisto",
@@ -235,6 +237,30 @@ Txi_gene <- tximport::tximport(
   countsFromAbundance = "lengthScaledTPM",
   ignoreTxVersion = TRUE)
 
+# ignoreTxVersion = TRUE???
+# This option leads to the following error when importing the Kallisto data
+# for Oryza nivara:
+#   > txi_gene_oryza_nivara <- tximport::tximport(
+#     +   "CRR240976/abundance.tsv",
+#     +   type = "kallisto",
+#     +   # Mapping from transcript IDs to gene IDs
+#       +   tx2gene = tx2gene_oryza_nivara,
+#     +   countsFromAbundance = "lengthScaledTPM",
+#     +   ignoreTxVersion = TRUE)
+# Note: importing `abundance.h5` is typically faster than `abundance.tsv`
+# reading in files with read_tsv
+# 1
+# Error in .local(object, ...) :
+#   None of the transcripts in the quantification files are present
+# in the first column of tx2gene. Check to see that you are using
+# the same annotation for both.
+#
+# Example IDs (file): [ONIVA01G00010, ONIVA01G00010, ONIVA01G00020, ...]
+#
+# Example IDs (tx2gene): [ONIVA12G06260.1, ONIVA12G06250.1, ONIVA12G06240.1, ...]
+#
+# This can sometimes (not always) be fixed using 'ignoreTxVersion' or 'ignoreAfterBar'.
+
 
 # Step 2------------------------------------------------------------------------
 
@@ -282,8 +308,8 @@ head(myTPM.stats)
 # Create your first plot using ggplot2 ----
 # produce a scatter plot of the transformed data
 ggplot2::ggplot(myTPM.stats) +
-  aes(x = SD, y = MED) +
-  geom_point(shape = 1, size = 3)
+  ggplot2::aes(x = SD, y = MED) +
+  ggplot2::geom_point(shape = 1, size = 3)
 # Experiment with point shape and size in the plot above
 # Experiment with other plot types (e.g. 'geom_hex' instead of 'geom_point')
 # Add a theme to your ggplot code above.  Try 'theme_bw()'
@@ -292,17 +318,17 @@ ggplot2::ggplot(myTPM.stats) +
 # Let's expand on the plot above a bit more and take a look at each 'layer'
 # of the ggplot code
 ggplot2::ggplot(myTPM.stats) +
-  aes(x = SD, y = MED) +
-  geom_point(shape = 1, size = 2) +
-  geom_smooth(method = lm) +
-  geom_hex(show.legend = T, bins = 20) +
-  labs(
+  ggplot2::aes(x = SD, y = MED) +
+  ggplot2::geom_point(shape = 1, size = 2) +
+  ggplot2::geom_smooth(method = lm) +
+  ggplot2::geom_hex(show.legend = TRUE, bins = 20) +
+  ggplot2::labs(
     y = "Median",
     x = "Standard deviation",
     title = "Transcripts per million (TPM)",
     subtitle = "unfiltered, non-normalized data",
     caption = "DIYtranscriptomics - Spring 2020") +
-  theme_bw()
+  ggplot2::theme_bw()
 
 # Make a DGElist from your counts, and plot ----
 myDGEList <- edgeR::DGEList(myCounts)
