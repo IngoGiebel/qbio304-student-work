@@ -2,7 +2,7 @@
 #
 # TODO general description
 #
-# R environment data and values used in this script which are commonly used
+# R environment data and values which are commonly used in this script
 # in different steps (with [species] = oryza_nivara|oryza_sativa):
 #
 # Step 1:
@@ -18,12 +18,14 @@
 #
 # - samples_[species]
 # - dgelist_[species]
-# - dge_cpm_[species]
 # - dge_cpm_log2_[species]_df
 # - dge_cpm_log2_[species]_df_pivot
-
-
-
+# - dgelist_filtered_[species]
+# - dge_cpm_filtered_log2_[species]_df
+# - dge_cpm_filtered_log2_[species]_df_pivot
+# - dgelist_filtered_norm_[species]
+# - dge_cpm_filtered_norm_log2_[species]_df
+# - dge_cpm_filtered_norm_log2_[species]_df_pivot
 
 # File structure requirements:
 #
@@ -195,7 +197,7 @@ samples_oryza_nivara <- studydesign_oryza_nivara_df$`Sample name`
 # Create and save a DGE list for Oryza nivara
 dgelist_oryza_nivara <- edgeR::DGEList(txi_gene_oryza_nivara$counts)
 save(dgelist_oryza_nivara, file = "dgelist_oryza_nivara")
-# Get 'counts per million'
+# Get log2 'counts per million'
 dge_cpm_oryza_nivara <- edgeR::cpm(dgelist_oryza_nivara)
 dge_cpm_log2_oryza_nivara_df <-
   edgeR::cpm(dge_cpm_oryza_nivara, log = TRUE) |>
@@ -209,7 +211,106 @@ dge_cpm_log2_oryza_nivara_df_pivot <-
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
-plot_oryza_nivara_1 <- ggplot2::ggplot(dge_cpm_log2_oryza_nivara_df_pivot) +
+plot_oryza_nivara_1 <-
+  ggplot2::ggplot(dge_cpm_log2_oryza_nivara_df_pivot) +
+  ggplot2::aes(x = sample, y = expression, fill = sample) +
+  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
+  ggplot2::stat_summary(
+    fun = "median",
+    geom = "point",
+    shape = 95,
+    size = 10,
+    color = "black",
+    show.legend = FALSE) +
+  ggplot2::labs(
+    x = "sample",
+    y = "log2 expression",
+    title = "Oryza nivara - Log2 Counts per Million (CPM)",
+    subtitle = "unfiltered, non-normalized") +
+  ggplot2::theme_bw()
+plot_oryza_nivara_1
+
+# Oryza sativa
+
+samples_oryza_sativa <- studydesign_oryza_sativa_df$`Sample name`
+# Create and save a DGE list for Oryza nivara
+dgelist_oryza_sativa <- edgeR::DGEList(txi_gene_oryza_sativa$counts)
+save(dgelist_oryza_sativa, file = "dgelist_oryza_sativa")
+# Get log2 'counts per million'
+dge_cpm_oryza_sativa <- edgeR::cpm(dgelist_oryza_sativa)
+dge_cpm_log2_oryza_sativa_df <-
+  edgeR::cpm(dgelist_oryza_sativa, log = TRUE) |>
+  tibble::as_tibble(rownames = "geneID") |>
+  dplyr::rename_with(~ c("geneID", samples_oryza_sativa))
+# Pivot the dataframe
+dge_cpm_log2_oryza_sativa_df_pivot <-
+  dge_cpm_log2_oryza_sativa_df |>
+  tidyr::pivot_longer(
+    cols = samples_oryza_sativa,
+    names_to = "sample",
+    values_to = "expression")
+# Plot this pivoted data
+plot_oryza_sativa_1 <-
+  ggplot2::ggplot(dge_cpm_log2_oryza_sativa_df_pivot) +
+  ggplot2::aes(x = sample, y = expression, fill = sample) +
+  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
+  ggplot2::stat_summary(
+    fun = "median",
+    geom = "point",
+    shape = 95,
+    size = 10,
+    color = "black",
+    show.legend = FALSE) +
+  ggplot2::labs(
+    x = "sample",
+    y = "log2 expression",
+    title = "Oryza sativa - Log2 Counts per Million (CPM)",
+    subtitle = "unfiltered, non-normalized") +
+  ggplot2::theme_bw()
+plot_oryza_sativa_1
+
+# --- Check how many genes have low reads
+
+# Determine how many genes have no reads at all
+# Oryza nivara:
+table(rowSums(dgelist_oryza_nivara$counts == 0) == length(samples_oryza_nivara))
+# Oryza sativa:
+table(rowSums(dgelist_oryza_sativa$counts == 0) == length(samples_oryza_sativa))
+
+# Check how many genes have CPMs >= 1 in at least 1, 2, 3, ... samples
+# Oryza nivara:
+sapply(
+  1L:length(samples_oryza_nivara),
+  function(n) sum(rowSums(dge_cpm_oryza_nivara >= 1) >= n))
+# Oryza sativa:
+sapply(
+  1L:length(samples_oryza_sativa),
+  function(n) sum(rowSums(dge_cpm_oryza_sativa >= 1) >= n))
+
+# --- Filter out genes with low reads (< 1 CPM in at least half of the samples)
+
+# Oryza nivara
+
+dgelist_filtered_oryza_nivara <- dgelist_oryza_nivara[
+  rowSums(dge_cpm_oryza_nivara >= 1) >= length(samples_oryza_nivara) / 2,
+  ]
+dim(dgelist_oryza_nivara)
+dim(dgelist_filtered_oryza_nivara)
+# Get log2 'counts per million'
+dge_cpm_filtered_log2_oryza_nivara_df <-
+  edgeR::cpm(dgelist_filtered_oryza_nivara, log = TRUE) |>
+  tibble::as_tibble(rownames = "geneID") |>
+  dplyr::rename_with(~ c("geneID", samples_oryza_nivara))
+# Pivot the dataframe
+dge_cpm_filtered_log2_oryza_nivara_df_pivot <-
+  dge_cpm_filtered_log2_oryza_nivara_df |>
+  tidyr::pivot_longer(
+    cols = samples_oryza_nivara,
+    names_to = "sample",
+    values_to = "expression")
+# Plot this pivoted data
+plot_oryza_nivara_2 <-
+  ggplot2::ggplot(dge_cpm_filtered_log2_oryza_nivara_df_pivot) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -223,31 +324,32 @@ plot_oryza_nivara_1 <- ggplot2::ggplot(dge_cpm_log2_oryza_nivara_df_pivot) +
     y = "log2 expression",
     x = "sample",
     title = "Oryza nivara - Log2 Counts per Million (CPM)",
-    subtitle = "unfiltered, non-normalized") +
+    subtitle = "filtered, non-normalized") +
   ggplot2::theme_bw()
-plot_oryza_nivara_1
+plot_oryza_nivara_2
 
 # Oryza sativa
 
-samples_oryza_sativa <- studydesign_oryza_sativa_df$`Sample name`
-# Create and save a DGE list for Oryza nivara
-dgelist_oryza_sativa <- edgeR::DGEList(txi_gene_oryza_sativa$counts)
-save(dgelist_oryza_sativa, file = "dgelist_oryza_sativa")
-# Get 'counts per million'
-dge_cpm_oryza_sativa <- edgeR::cpm(dgelist_oryza_sativa)
-dge_cpm_log2_oryza_sativa_df <-
-  edgeR::cpm(dge_cpm_oryza_sativa, log = TRUE) |>
+dgelist_filtered_oryza_sativa <- dgelist_oryza_sativa[
+  rowSums(dge_cpm_oryza_sativa >= 1) >= length(samples_oryza_sativa) / 2,
+]
+dim(dgelist_oryza_sativa)
+dim(dgelist_filtered_oryza_sativa)
+# Get log2 'counts per million'
+dge_cpm_filtered_log2_oryza_sativa_df <-
+  edgeR::cpm(dgelist_filtered_oryza_sativa, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_oryza_sativa))
 # Pivot the dataframe
-dge_cpm_log2_oryza_sativa_df_pivot <-
-  dge_cpm_log2_oryza_sativa_df |>
+dge_cpm_filtered_log2_oryza_sativa_df_pivot <-
+  dge_cpm_filtered_log2_oryza_sativa_df |>
   tidyr::pivot_longer(
     cols = samples_oryza_sativa,
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
-plot_oryza_sativa_1 <- ggplot2::ggplot(dge_cpm_log2_oryza_sativa_df_pivot) +
+plot_oryza_sativa_2 <-
+  ggplot2::ggplot(dge_cpm_filtered_log2_oryza_sativa_df_pivot) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -261,7 +363,84 @@ plot_oryza_sativa_1 <- ggplot2::ggplot(dge_cpm_log2_oryza_sativa_df_pivot) +
     y = "log2 expression",
     x = "sample",
     title = "Oryza sativa - Log2 Counts per Million (CPM)",
-    subtitle = "unfiltered, non-normalized") +
+    subtitle = "filtered, non-normalized") +
   ggplot2::theme_bw()
-plot_oryza_sativa_1
+plot_oryza_sativa_2
+
+# --- Normalize the data
+
+# Oryza nivara
+
+dgelist_filtered_norm_oryza_nivara <- edgeR::calcNormFactors(
+  dgelist_filtered_oryza_nivara,
+  method = "TMM")
+# Get log2 'counts per million'
+dge_cpm_filtered_norm_log2_oryza_nivara_df <-
+  edgeR::cpm(dgelist_filtered_norm_oryza_nivara, log = TRUE) |>
+  tibble::as_tibble(rownames = "geneID") |>
+  dplyr::rename_with(~ c("geneID", samples_oryza_nivara))
+# Pivot the dataframe
+dge_cpm_filtered_norm_log2_oryza_nivara_df_pivot <-
+  dge_cpm_filtered_norm_log2_oryza_nivara_df |>
+  tidyr::pivot_longer(
+    cols = samples_oryza_nivara,
+    names_to = "sample",
+    values_to = "expression")
+# Plot this pivoted data
+plot_oryza_nivara_3 <-
+  ggplot2::ggplot(dge_cpm_filtered_norm_log2_oryza_nivara_df_pivot) +
+  ggplot2::aes(x = sample, y = expression, fill = sample) +
+  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
+  ggplot2::stat_summary(
+    fun = "median",
+    geom = "point",
+    shape = 95,
+    size = 10,
+    color = "black",
+    show.legend = FALSE) +
+  ggplot2::labs(
+    y = "log2 expression",
+    x = "sample",
+    title = "Oryza nivara - Log2 Counts per Million (CPM)",
+    subtitle = "filtered, TMM normalized") +
+  ggplot2::theme_bw()
+plot_oryza_nivara_3
+
+# Oryza sativa
+
+dgelist_filtered_norm_oryza_sativa <- edgeR::calcNormFactors(
+  dgelist_filtered_oryza_sativa,
+  method = "TMM")
+# Get log2 'counts per million'
+dge_cpm_filtered_norm_log2_oryza_sativa_df <-
+  edgeR::cpm(dgelist_filtered_norm_oryza_sativa, log = TRUE) |>
+  tibble::as_tibble(rownames = "geneID") |>
+  dplyr::rename_with(~ c("geneID", samples_oryza_sativa))
+# Pivot the dataframe
+dge_cpm_filtered_norm_log2_oryza_sativa_df_pivot <-
+  dge_cpm_filtered_norm_log2_oryza_sativa_df |>
+  tidyr::pivot_longer(
+    cols = samples_oryza_sativa,
+    names_to = "sample",
+    values_to = "expression")
+# Plot this pivoted data
+plot_oryza_sativa_3 <-
+  ggplot2::ggplot(dge_cpm_filtered_norm_log2_oryza_sativa_df_pivot) +
+  ggplot2::aes(x = sample, y = expression, fill = sample) +
+  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
+  ggplot2::stat_summary(
+    fun = "median",
+    geom = "point",
+    shape = 95,
+    size = 10,
+    color = "black",
+    show.legend = FALSE) +
+  ggplot2::labs(
+    y = "log2 expression",
+    x = "sample",
+    title = "Oryza sativa - Log2 Counts per Million (CPM)",
+    subtitle = "filtered, TMM normalized") +
+  ggplot2::theme_bw()
+plot_oryza_sativa_3
+
 
