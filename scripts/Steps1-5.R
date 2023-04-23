@@ -854,25 +854,24 @@ group <- targets$group |> factor()
 pca.res <-
   log2.cpm.filtered.norm |>
   t() |>
-  stats::prcomp(scale = FALSE, retx = TRUE)
+  prcomp(scale = FALSE, retx = TRUE)
 # sdev^2 captures these eigenvalues from the PCA result
 pc.var <- pca.res$sdev^2
 # Percentage variance explained by each PC
 pc.per <- round(pc.var * 100 / sum(pc.var), 1)
 
-pca.res.df <- as_tibble(pca.res$x)
 # Plot PC1 and PC2 against each other
 pca.res.df <- tibble::as_tibble(pca.res$x)
 pca.plot <- ggplot2::ggplot(pca.res.df) +
   aes(x = PC1, y = PC2, label = sampleLabels, color = group) +
   geom_point(size = 4) +
-  geom_label() +
   stat_ellipse() +
   xlab(paste0("PC1 (",pc.per[1], "%", ")")) +
   ylab(paste0("PC2 (",pc.per[2], "%", ")")) +
   labs(
     title = "PCA plot",
     caption = paste0("produced on ", Sys.time())) +
+  coord_fixed() +
   theme_bw()
 plotly::ggplotly(pca.plot)
 

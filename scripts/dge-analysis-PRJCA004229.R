@@ -24,8 +24,17 @@
 # - dge_cpm_filtered_log2_[species]_df
 # - dge_cpm_filtered_log2_[species]_df_pivot
 # - dgelist_filtered_norm_[species]
+# - dge_cpm_filtered_norm_log2_[species]
 # - dge_cpm_filtered_norm_log2_[species]_df
 # - dge_cpm_filtered_norm_log2_[species]_df_pivot
+#
+# Step 3:
+#
+# - groups_[species]
+# - pca_res_[species]
+# - pca_var_[species]
+# - pca_per_[species]
+# - pca_res_[species]_df
 
 # File structure requirements:
 #
@@ -54,6 +63,12 @@ library(this.path)
 library(datapasta)
 # Hadley Wickham's collection of R packages for data science
 library(tidyverse)
+# To combine multiple plots in one figure
+library(cowplot)
+# For making interactive plots
+library(plotly)
+# For making interactive tables
+library(DT)
 # For annotating the abundance data
 library(biomaRt)
 # For getting Kallisto results into R
@@ -375,8 +390,10 @@ dgelist_filtered_norm_oryza_nivara <- edgeR::calcNormFactors(
   dgelist_filtered_oryza_nivara,
   method = "TMM")
 # Get log2 'counts per million'
+dge_cpm_filtered_norm_log2_oryza_nivara <-
+  edgeR::cpm(dgelist_filtered_norm_oryza_nivara, log = TRUE)
 dge_cpm_filtered_norm_log2_oryza_nivara_df <-
-  edgeR::cpm(dgelist_filtered_norm_oryza_nivara, log = TRUE) |>
+  dge_cpm_filtered_norm_log2_oryza_nivara |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_oryza_nivara))
 # Pivot the dataframe
@@ -412,8 +429,10 @@ dgelist_filtered_norm_oryza_sativa <- edgeR::calcNormFactors(
   dgelist_filtered_oryza_sativa,
   method = "TMM")
 # Get log2 'counts per million'
+dge_cpm_filtered_norm_log2_oryza_sativa <-
+  edgeR::cpm(dgelist_filtered_norm_oryza_sativa, log = TRUE)
 dge_cpm_filtered_norm_log2_oryza_sativa_df <-
-  edgeR::cpm(dgelist_filtered_norm_oryza_sativa, log = TRUE) |>
+  dge_cpm_filtered_norm_log2_oryza_sativa |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_oryza_sativa))
 # Pivot the dataframe
@@ -443,4 +462,119 @@ plot_oryza_sativa_3 <-
   ggplot2::theme_bw()
 plot_oryza_sativa_3
 
+# Combine all six violin plots in one overview plot
+cowplot::plot_grid(
+  plot_oryza_nivara_1 + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
+  plot_oryza_sativa_1 + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
+  plot_oryza_nivara_2 + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
+  plot_oryza_sativa_2 + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
+  plot_oryza_nivara_3 + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
+  plot_oryza_sativa_3 + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
+  ncol = 2,
+  rel_widths = c(2, 1),
+  labels = c("A", "B", "C", "D", "E", "F"),
+  label_size = 8)
 
+# ------------------------------------------------------------------------------
+# Step 3: Principal component analysis (PCA)
+# ------------------------------------------------------------------------------
+
+# Oryza nivara
+
+groups_oryza_nivara <- studydesign_oryza_nivara_df$Condition
+pca_res_oryza_nivara <-
+  dge_cpm_filtered_norm_log2_oryza_nivara |>
+  t() |>
+  prcomp(scale = FALSE, retx = TRUE)
+# Eigenvalues from the PCA result
+pca_var_oryza_nivara <- pca_res_oryza_nivara$sdev^2
+# Percentage variance explained by each PC
+pca_per_oryza_nivara <-
+  round(pca_var_oryza_nivara * 100 / sum(pca_var_oryza_nivara), 1)
+# Plot PC1 and PC2 against each other
+pca_res_oryza_nivara_df <- tibble::as_tibble(pca_res_oryza_nivara$x)
+pca_plot_oryza_nivara <-
+  ggplot2::ggplot(pca_res_oryza_nivara_df) +
+  ggplot2::aes(
+    x = PC1,
+    y = PC2,
+    label = samples_oryza_nivara,
+    color = groups_oryza_nivara) +
+  ggplot2::geom_point(size = 4) +
+  ggplot2::stat_ellipse() +
+  ggplot2::xlab(paste0("PC1 (", pca_per_oryza_nivara[1], "%", ")")) +
+  ggplot2::ylab(paste0("PC2 (", pca_per_oryza_nivara[2], "%", ")")) +
+  ggplot2::labs(colour = "group") +
+  ggplot2::ggtitle("Oryza nivara - PCA plot") +
+  ggplot2::theme_bw()
+plotly::ggplotly(pca_plot_oryza_nivara)
+# Make an interactive table
+dge_cpm_filtered_log2_oryza_nivara_df |>
+  dplyr::mutate(
+    normal.AVG = (BJ278C1 + BJ278C2 + BJ278C3 + BJ89C1 + BJ89C2 + BJ89C3) / 6,
+    stress.AVG = (BJ278P1 + BJ278P2 + BJ278P3 + BJ89P1 + BJ89P2 + BJ89P3) / 6,
+    LogFC = (stress.AVG - normal.AVG)) |>
+  dplyr::select(geneID, normal.AVG, stress.AVG, LogFC) |>
+  dplyr::mutate(
+    normal.AVG = round(normal.AVG, 2),
+    stress.AVG = round(stress.AVG, 2),
+    LogFC = round(LogFC, 2)) |>
+  dplyr::arrange(dplyr::desc(LogFC)) |>
+  DT::datatable(
+    extensions = c("KeyTable", "FixedHeader"),
+    filter = "top",
+    options = list(
+      keys = TRUE,
+      searchHighlight = TRUE,
+      pageLength = 100000,
+      lengthMenu = c("10", "25", "50", "100")))
+
+# Oryza sativa
+
+groups_oryza_sativa <- studydesign_oryza_sativa_df$Condition
+pca_res_oryza_sativa <-
+  dge_cpm_filtered_norm_log2_oryza_sativa |>
+  t() |>
+  prcomp(scale = FALSE, retx = TRUE)
+# Eigenvalues from the PCA result
+pca_var_oryza_sativa <- pca_res_oryza_sativa$sdev^2
+# Percentage variance explained by each PC
+pca_per_oryza_sativa <-
+  round(pca_var_oryza_sativa * 100 / sum(pca_var_oryza_sativa), 1)
+# Plot PC1 and PC2 against each other
+pca_res_oryza_sativa_df <- tibble::as_tibble(pca_res_oryza_sativa$x)
+pca_plot_oryza_sativa <-
+  ggplot2::ggplot(pca_res_oryza_sativa_df) +
+  ggplot2::aes(
+    x = PC1,
+    y = PC2,
+    label = samples_oryza_sativa,
+    color = groups_oryza_sativa) +
+  ggplot2::geom_point(size = 4) +
+  ggplot2::stat_ellipse() +
+  ggplot2::xlab(paste0("PC1 (", pca_per_oryza_sativa[1], "%", ")")) +
+  ggplot2::ylab(paste0("PC2 (", pca_per_oryza_sativa[2], "%", ")")) +
+  ggplot2::labs(colour = "group") +
+  ggplot2::ggtitle("Oryza sativa - PCA plot") +
+  ggplot2::theme_bw()
+plotly::ggplotly(pca_plot_oryza_sativa)
+# Make an interactive table
+dge_cpm_filtered_log2_oryza_sativa_df |>
+  dplyr::mutate(
+    normal.AVG = (NC1 + NC2 + NC1) / 3,
+    stress.AVG = (NP1 + NP2 + NP3) / 3,
+    LogFC = (stress.AVG - normal.AVG)) |>
+  dplyr::select(geneID, normal.AVG, stress.AVG, LogFC) |>
+  dplyr::mutate(
+    normal.AVG = round(normal.AVG, 2),
+    stress.AVG = round(stress.AVG, 2),
+    LogFC = round(LogFC, 2)) |>
+  dplyr::arrange(dplyr::desc(LogFC)) |>
+  DT::datatable(
+    extensions = c("KeyTable", "FixedHeader"),
+    filter = "top",
+    options = list(
+      keys = TRUE,
+      searchHighlight = TRUE,
+      pageLength = 100000,
+      lengthMenu = c("10", "25", "50", "100")))
