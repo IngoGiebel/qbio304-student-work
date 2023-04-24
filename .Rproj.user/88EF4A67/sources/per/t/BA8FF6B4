@@ -1,0 +1,28 @@
+{
+    "id": "BA8FF6B4",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1682358556503.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "id": "8580b6ec7627497cb7ce931f075118e6",
+        "name": "top_ranked_genes_ghost_oryza_nivara",
+        "title": "top_ranked_genes_ghost_oryza_nivara",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 4615889172956360103,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1682358556503,
+    "read_only": false,
+    "read_only_alternatives": []
+}

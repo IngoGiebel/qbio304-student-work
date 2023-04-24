@@ -20,7 +20,8 @@ library(datapasta)
 # Hadley Wickham's collection of R packages for data science
 library(tidyverse)
 # To transform data between wide and long formats
-library(reshape2)
+# Note: reshape2 is retired
+# library(reshape2)
 # let's us easily calculate stats on rows or columns of a data matrix
 library(matrixStats)
 # To combine multiple plots in one figure
@@ -1036,7 +1037,7 @@ DT::datatable(
     searchHighlight = TRUE,
     pageLength = 10000,
     lengthMenu = c("10", "25", "50", "100"))) |>
-  DT::formatRound(columns=c(2:11), digits=2)
+  DT::formatRound(columns = c(2:11), digits = 2)
 
 # write your DEGs to a file
 # NOTE: this .txt file can be directly used for input into other clustering
@@ -1274,7 +1275,7 @@ myTopHits <- limma::topTable(
   number = 50,
   sort.by = "logFC")
 
-# Run GO enrichment analysis
+# Functional enrichment analysis of the top-ranked genes
 gost.res <- gprofiler2::gost(
   rownames(myTopHits),
   organism = "hsapiens",
@@ -1289,7 +1290,6 @@ gprofiler2::gostplot(gost.res, interactive = TRUE, capped = FALSE)
 # and save to an object 'mygostplot'
 mygostplot = gprofiler2::gostplot(gost.res, interactive = FALSE, capped = FALSE)
 gprofiler2::publish_gostplot(
-  # your static gostplot from above
   mygostplot,
   highlight_terms = c("GO:0034987"),
   filename = NULL,

@@ -35,7 +35,17 @@
 # - pca_var_[species]
 # - pca_per_[species]
 # - pca_res_[species]_df
-
+#
+# Step 4:
+#
+# - top_ranked_genes_[species]_df
+# - dgelist_filtered_norm_voom_[species]
+#
+# Step 5:
+#
+# - top_ranked_genes_gostres_[species]
+#
+#
 # File structure requirements:
 #
 # |                                    <- the project's base directory
@@ -76,6 +86,8 @@ library(tximport)
 # For differential expression analysis. Here used for creating DGEList objects
 # and for data normalization.
 library(edgeR)
+# Provides tools for accessing the GSEA results using g:Profiler web resources
+library(gprofiler2)
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
@@ -578,3 +590,330 @@ dge_cpm_filtered_log2_oryza_sativa_df |>
       searchHighlight = TRUE,
       pageLength = 100000,
       lengthMenu = c("10", "25", "50", "100")))
+
+
+# ------------------------------------------------------------------------------
+# Step 4: Identify differentially expressed genes (DEGs)
+# ------------------------------------------------------------------------------
+
+# Set up the design and contrast matrices
+model_matrix_oryza_nivara <- model.matrix(~0 + groups_oryza_nivara)
+colnames(model_matrix_oryza_nivara) <- make.names(levels(groups_oryza_nivara))
+contrast_matrix_oryza_nivara <- limma::makeContrasts(
+  stress = drought.stress.condition - normal.condition,
+  levels = model_matrix_oryza_nivara)
+model_matrix_oryza_sativa <- model.matrix(~0 + groups_oryza_sativa)
+colnames(model_matrix_oryza_sativa) <- make.names(levels(groups_oryza_sativa))
+contrast_matrix_oryza_sativa <- limma::makeContrasts(
+  stress = drought.stress.condition - normal.condition,
+  levels = model_matrix_oryza_sativa)
+
+# Model mean-variance trend and fit a linear model to the data
+dgelist_filtered_norm_voom_oryza_nivara <- limma::voom(
+  dgelist_filtered_norm_oryza_nivara,
+  design = model_matrix_oryza_nivara,
+  plot = TRUE)
+dgelist_filtered_norm_lmfit_oryza_nivara <- limma::lmFit(
+  dgelist_filtered_norm_voom_oryza_nivara,
+  design = model_matrix_oryza_nivara)
+dgelist_filtered_norm_voom_oryza_sativa <- limma::voom(
+  dgelist_filtered_norm_oryza_sativa,
+  design = model_matrix_oryza_sativa,
+  plot = TRUE)
+dgelist_filtered_norm_lmfit_oryza_sativa <- limma::lmFit(
+  dgelist_filtered_norm_voom_oryza_sativa,
+  design = model_matrix_oryza_sativa)
+
+# Get Bayesian stats for the contrasts from the linear model fits
+ebayes_oryza_nivara <-
+  dgelist_filtered_norm_lmfit_oryza_nivara |>
+  limma::contrasts.fit(contrasts = contrast_matrix_oryza_nivara) |>
+  limma::eBayes()
+ebayes_oryza_sativa <-
+  dgelist_filtered_norm_lmfit_oryza_sativa |>
+  limma::contrasts.fit(contrasts = contrast_matrix_oryza_sativa) |>
+  limma::eBayes()
+
+# --- View DEGs - tables of "top-ranked" genes from the Bayesian stats
+
+# Computed statistics:
+# - log FC      : log2-fold-change corresponding to the contrast
+# - AveExpr     : average log2-expression
+# - t           : moderated t-statistic: ratio of the logFC to the standard
+#                 error (where the error has been moderated across all genes
+#                 because of Bayesian approach)
+# - P.Value     : raw p-value
+# - adj.P.Value : adjusted p-value (by BH)
+# - B           : log-odds that the gene is differentially expressed
+
+# Oryza nivara
+
+# Determine the top-ranked genes
+top_ranked_genes_oryza_nivara_df <-
+  limma::topTable(
+    ebayes_oryza_nivara,
+    adjust.method = "BH",
+    coef = 1,
+    number = 100000,
+    sort.by = "logFC") |>
+  tibble::as_tibble(rownames = "geneID")
+# Create an interactive vulcano plot
+(top_ranked_genes_oryza_nivara_df |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
+  ggplot2::geom_point(size = 0.2) +
+  ggplot2::geom_hline(
+    yintercept = -log10(0.01),
+    linetype = "longdash",
+    colour= "grey",
+    linewidth = 1) +
+  ggplot2::geom_vline(
+    xintercept = 1,
+    linetype ="longdash",
+    colour = "coral",
+    linewidth = 1) +
+  ggplot2::geom_vline(
+    xintercept = -1,
+    linetype = "longdash",
+    colour = "cadetblue",
+    linewidth = 1) +
+  ggplot2::annotate(
+    "rect",
+    xmin = 1,
+    xmax = 12,
+    ymin = -log10(0.01),
+    ymax = 7.5,
+    alpha = .2,
+    fill = "coral") +
+  ggplot2::annotate(
+    "rect",
+    xmin = -1,
+    xmax = -12,
+    ymin = -log10(0.01),
+    ymax = 7.5,
+    alpha=.2,
+    fill = "cadetblue") +
+  ggplot2::ggtitle("Oryza nivara - volcano plot") +
+  ggplot2::theme_bw()) |>
+  plotly::ggplotly()
+
+# Oryza sativa
+
+# Determine the top-ranked genes
+top_ranked_genes_oryza_sativa_df <-
+  limma::topTable(
+    ebayes_oryza_sativa,
+    adjust.method = "BH",
+    coef = 1,
+    number = 100000,
+    sort.by = "logFC") |>
+  tibble::as_tibble(rownames = "geneID")
+# Create an interactive vulcano plot
+(top_ranked_genes_oryza_sativa_df |>
+    ggplot2::ggplot() +
+    ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
+    ggplot2::geom_point(size = 0.2) +
+    ggplot2::geom_hline(
+      yintercept = -log10(0.01),
+      linetype = "longdash",
+      colour= "grey",
+      linewidth = 1) +
+    ggplot2::geom_vline(
+      xintercept = 1,
+      linetype ="longdash",
+      colour = "coral",
+      linewidth = 1) +
+    ggplot2::geom_vline(
+      xintercept = -1,
+      linetype = "longdash",
+      colour = "cadetblue",
+      linewidth = 1) +
+    ggplot2::annotate(
+      "rect",
+      xmin = 1,
+      xmax = 12,
+      ymin = -log10(0.01),
+      ymax = 7.5,
+      alpha = .2,
+      fill = "coral") +
+    ggplot2::annotate(
+      "rect",
+      xmin = -1,
+      xmax = -12,
+      ymin = -log10(0.01),
+      ymax = 7.5,
+      alpha=.2,
+      fill = "cadetblue") +
+    ggplot2::ggtitle("Oryza sativa - volcano plot") +
+    ggplot2::theme_bw()) |>
+  plotly::ggplotly()
+
+# --- Make a Venn diagram of the DEGs
+
+# Oryza nivara
+test_results_oryza_nivara <- limma::decideTests(
+  ebayes_oryza_nivara,
+  method = "global",
+  adjust.method = "BH",
+  p.value = 0.01,
+  lfc = 7)
+head(test_results_oryza_nivara)
+summary(test_results_oryza_nivara)
+limma::vennDiagram(test_results_oryza_nivara, include = "both")
+
+# Oryza sativa
+test_results_oryza_sativa <- limma::decideTests(
+  ebayes_oryza_sativa,
+  method = "global",
+  adjust.method = "BH",
+  p.value = 0.01,
+  lfc = 7)
+head(test_results_oryza_sativa)
+summary(test_results_oryza_sativa)
+limma::vennDiagram(test_results_oryza_sativa, include = "both")
+
+#--- Create an interactive table and a heatmap of the DEGs
+
+# Oryza nivara
+
+# Extract the expression data of the DEGs
+colnames(dgelist_filtered_norm_voom_oryza_nivara$E) <- samples_oryza_nivara
+deg_oryza_nivara_df <-
+  dgelist_filtered_norm_voom_oryza_nivara$E[
+    test_results_oryza_nivara[, 1] != 0, ] |>
+  as_tibble(rownames = "geneID")
+# Write the DEGs to the file DEGs_Oryza_nivara.txt
+readr::write_tsv(deg_oryza_nivara_df, "DEGs_Oryza_nivara.txt")
+# Create an interactive table
+deg_oryza_nivara_df |>
+DT::datatable(
+  extensions = c("KeyTable", "FixedHeader"),
+  caption = "DEGs in Oryza nivara",
+  options = list(
+    keys = TRUE,
+    searchHighlight = TRUE,
+    pageLength = 100000,
+    lengthMenu = c("10", "25", "50", "100"))) |>
+  DT::formatRound(columns = c(2:13), digits = 2)
+# Create a heatmap
+deg_oryza_nivara_df |>
+  dplyr::select(!1) |>
+  heatmaply::heatmaply(
+    xlab = "Samples",
+    ylab = "DEGs",
+    main = "DEGs in Oryza nivara",
+    scale = "column",
+    margins = c(60, 100, 40, 20),
+    grid_color = "white",
+    grid_width = 0.0000001,
+    titleX = TRUE,
+    titleY = TRUE,
+    hide_colorbar = TRUE,
+    branches_lwd = 0.1,
+    label_names = c("Gene", "Sample:", "Value"),
+    fontsize_row = 5,
+    fontsize_col = 5,
+    labCol = samples_oryza_nivara,
+    labRow = deg_oryza_nivara_df$geneID,
+    heatmap_layers = theme(axis.line = element_blank()))
+
+# Oryza sativa
+
+# Extract the expression data of the DEGs
+colnames(dgelist_filtered_norm_voom_oryza_sativa$E) <- samples_oryza_sativa
+deg_oryza_sativa_df <-
+  dgelist_filtered_norm_voom_oryza_sativa$E[
+    test_results_oryza_sativa[, 1] != 0, ] |>
+  as_tibble(rownames = "geneID")
+# Write the DEGs to the file DEGs_Oryza_sativa.txt
+readr::write_tsv(deg_oryza_sativa_df, "DEGs_Oryza_sativa.txt")
+# Create an interactive table
+deg_oryza_sativa_df |>
+  DT::datatable(
+    extensions = c("KeyTable", "FixedHeader"),
+    caption = "DEGs in Oryza sativa",
+    options = list(
+      keys = TRUE,
+      searchHighlight = TRUE,
+      pageLength = 100000,
+      lengthMenu = c("10", "25", "50", "100"))) |>
+  DT::formatRound(columns = c(2:7), digits = 2)
+# Create a heatmap
+deg_oryza_sativa_df |>
+  dplyr::select(!1) |>
+  heatmaply::heatmaply(
+    xlab = "Samples",
+    ylab = "DEGs",
+    main = "DEGs in Oryza sativa",
+    scale = "column",
+    margins = c(60, 100, 40, 20),
+    grid_color = "white",
+    grid_width = 0.0000001,
+    titleX = TRUE,
+    titleY = TRUE,
+    hide_colorbar = TRUE,
+    branches_lwd = 0.1,
+    label_names = c("Gene", "Sample:", "Value"),
+    fontsize_row = 5,
+    fontsize_col = 5,
+    labCol = samples_oryza_sativa,
+    labRow = deg_oryza_sativa_df$geneID,
+    heatmap_layers = theme(axis.line = element_blank()))
+
+
+# ------------------------------------------------------------------------------
+# Step 5: Gene sets enrichment analysis (GSEA)
+# ------------------------------------------------------------------------------
+
+# Oryza nivara
+
+# Functional enrichment analysis of the 100 top-ranked genes
+top_ranked_genes_ghostres_oryza_nivara <- gprofiler2::gost(
+  top_ranked_genes_oryza_nivara_df$geneID[1:100],
+  organism = "onivara",
+  correction_method = "fdr")
+# Produce an interactive manhattan plot of the enriched GO terms
+gprofiler2::gostplot(
+  top_ranked_genes_ghostres_oryza_nivara,
+  interactive = TRUE,
+  capped = FALSE)
+# Produce a static publication quality manhattan plot
+# with the first 10 top-ranked GO terms highlighted.
+gprofiler2::gostplot(
+  top_ranked_genes_ghostres_oryza_nivara,
+  interactive = FALSE,
+  capped = FALSE) |>
+  gprofiler2::publish_gostplot(
+    highlight_terms = top_ranked_genes_ghostres_oryza_nivara$result$term_id[1:10])
+# Generate a table of the gost results of the first 20 top-ranked GO terms
+gprofiler2::publish_gosttable(
+  top_ranked_genes_ghostres_oryza_nivara,
+  highlight_terms = top_ranked_genes_ghostres_oryza_nivara$result$term_id[1:20],
+  show_columns = c("source", "term_name", "term_size", "intersection_size"))
+
+# Oryza sativa
+
+# Functional enrichment analysis of the 100 top-ranked genes
+top_ranked_genes_ghostres_oryza_sativa <- gprofiler2::gost(
+  top_ranked_genes_oryza_sativa_df$geneID[1:100],
+  organism = "osativa",
+  correction_method = "fdr")
+# Produce an interactive manhattan plot of the enriched GO terms
+gprofiler2::gostplot(
+  top_ranked_genes_ghostres_oryza_sativa,
+  interactive = TRUE,
+  capped = FALSE)
+# Produce a static publication quality manhattan plot
+# with the first 10 top-ranked GO terms highlighted.
+gprofiler2::gostplot(
+  top_ranked_genes_ghostres_oryza_sativa,
+  interactive = FALSE,
+  capped = FALSE) |>
+  gprofiler2::publish_gostplot(
+    highlight_terms = top_ranked_genes_ghostres_oryza_sativa$result$term_id[1:10])
+# Generate a table of the gost results of the first 20 top-ranked GO terms
+gprofiler2::publish_gosttable(
+  top_ranked_genes_ghostres_oryza_sativa,
+  highlight_terms = top_ranked_genes_ghostres_oryza_sativa$result$term_id[1:20],
+  show_columns = c("source", "term_name", "term_size", "intersection_size"))
+
