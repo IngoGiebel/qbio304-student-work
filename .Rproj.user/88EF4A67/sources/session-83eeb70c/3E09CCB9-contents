@@ -61,9 +61,9 @@
 #      |- dge-analysis-PRJCA004229.R   <- this R script
 #      |
 #      ...
-
+#
 # ------------------------------------------------------------------------------
-# Step 0: Load required packages
+# Load required packages
 # ------------------------------------------------------------------------------
 
 # Provides static code analysis for R. It checks for adherence to a given style,
@@ -94,6 +94,76 @@ library(edgeR)
 library(gprofiler2)
 # Provides functions and methods for GSEA
 # library(GSEABase)
+library(docstring)
+
+# ------------------------------------------------------------------------------
+# Function definitions
+# ------------------------------------------------------------------------------
+
+#' Read in the studydesign tsv-file "studydesign-PRJCA004229.tsv".
+#'
+#' Read in the studydesign tsv-file "studydesign-PRJCA004229.tsv" and
+#' create a tibble for the overall studydesign and one tibble for each
+#' of the  studydesigns restricted to Oryzy nivara and Oryza sativa.
+create_studydesign_data <- function() {
+  studydesign_df <<- readr::read_tsv(
+    "studydesign-PRJCA004229.tsv",
+    col_types = "icccccfffcficfc")
+  studydesign_onivara_df <<- dplyr::filter(
+    studydesign_df,
+    Organism == "Oryza nivara")
+  studydesign_osativa_df <<- dplyr::filter(
+    studydesign_df,
+    Organism == "Oryza sativa")
+}
+
+#' Import the kallisto "abundance.tsv" files.
+#'
+#' The "abundance.tsv" files must be in a subdirectory
+#' <studydesign_df$`Run accession`> of the current working
+#' directory.
+#'
+#' See https://bioconductor.org/packages/devel/bioc/vignettes/-
+#' tximport/inst/doc/tximport.html
+#'
+#' Prerequisites:
+#' - studydesign_onivara_df
+#' - studydesign_osativa_df
+import_kallisto_transcript_abundance_estimates <- function() {
+  get_biomart <- function(dataset) {
+    biomaRt::useMart(
+      biomart = "plants_mart",
+      dataset = dataset,
+      host = "https://plants.ensembl.org")
+  }
+  get_tx2gene <- function(dataset) {
+    biomaRt::getBM(
+      attributes = c("ensembl_transcript_id", "ensembl_gene_id", "description"),
+      mart = get_biomart(dataset)) |>
+      tibble::as_tibble() |>
+      dplyr::rename(
+        target_id = "ensembl_transcript_id",
+        gene_name = "ensembl_gene_id") |>
+      dplyr::select("target_id", "gene_name")
+  }
+  get_abundance_filepaths <- function(studydsg) {
+    file.path(studydsg$`Run accession`, "abundance.tsv")
+  }
+  get_txigene <- function(dataset, studydsg) {
+    tximport::tximport(
+      get_abundance_filepaths(studydsg),
+      type = "kallisto",
+      tx2gene = get_tx2gene(dataset),
+      countsFromAbundance = "lengthScaledTPM")
+  }
+  txi_gene_onivara <<- get_txigene(
+    dataset = "onivara_eg_gene",
+    studydsg = studydesign_onivara_df)
+
+  txi_gene_osativa <<- get_txigene(
+    dataset = "osativa_eg_gene",
+    studydsg = studydesign_osativa_df)
+}
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
@@ -102,79 +172,11 @@ library(gprofiler2)
 # Set the project's data subdirectory as the current working directory
 setwd(paste0(this.path::here(), "/../data"))
 
-# --- Read in the studydesign file
+# Read in the studydesign file
+create_studydesign_data()
 
-studydesign_df <- readr::read_tsv(
-  "studydesign-PRJCA004229.tsv",
-  col_types = "icccccfffcficfc")
-
-studydesign_onivara_df <-
-  studydesign_df |>
-  dplyr::filter(Organism == "Oryza nivara")
-
-studydesign_osativa_df <-
-  studydesign_df |>
-  dplyr::filter(Organism == "Oryza sativa")
-
-# --- File paths to the Kallisto abundance.tsv files
-
-# - of the Oryza nivara samples
-abundance_filepaths_onivara <- file.path(
-  studydesign_onivara_df$`Run accession`,
-  "abundance.tsv")
-
-# - of the Oryza sativa samples
-abundance_filepaths_osativa <- file.path(
-  studydesign_osativa_df$`Run accession`,
-  "abundance.tsv")
-
-# --- Get annotations using BiomaRt
-
-# BioMaRt dataset for Oryza nivara
-biomart_onivara <- biomaRt::useMart(
-  biomart = "plants_mart",
-  dataset = "onivara_eg_gene",
-  host = "https://plants.ensembl.org")
-
-tx2gene_onivara <-
-  biomaRt::getBM(
-    attributes = c("ensembl_transcript_id", "ensembl_gene_id", "description"),
-    mart = biomart_onivara) |>
-  tibble::as_tibble() |>
-  dplyr::rename(
-    target_id = "ensembl_transcript_id",
-    gene_name = "ensembl_gene_id") |>
-  dplyr::select("target_id", "gene_name")
-
-# BioMaRt dataset for Oryza sativa
-biomart_osativa <- biomaRt::useMart(
-  biomart = "plants_mart",
-  dataset = "osativa_eg_gene",
-  host = "https://plants.ensembl.org")
-
-tx2gene_osativa <-
-  biomaRt::getBM(
-    attributes = c("ensembl_transcript_id", "ensembl_gene_id", "description"),
-    mart = biomart_osativa) |>
-  tibble::as_tibble() |>
-  dplyr::rename(
-    target_id = "ensembl_transcript_id",
-    gene_name = "ensembl_gene_id") |>
-  dplyr::select("target_id", "gene_name")
-
-# --- Import Kallisto transcript counts
-
-txi_gene_onivara <- tximport::tximport(
-  abundance_filepaths_onivara,
-  type = "kallisto",
-  tx2gene = tx2gene_onivara,
-  countsFromAbundance = "lengthScaledTPM")
-
-txi_gene_osativa <- tximport::tximport(
-  abundance_filepaths_osativa,
-  type = "kallisto",
-  tx2gene = tx2gene_osativa,
-  countsFromAbundance = "lengthScaledTPM")
+# Import the kallisto "abundance.tsv" files
+import_kallisto_transcript_abundance_estimates()
 
 # ------------------------------------------------------------------------------
 # Step 2: Filter and normalize the data
@@ -919,26 +921,3 @@ gprofiler2::publish_gosttable(
   top_genes_gostres_osativa,
   highlight_terms = top_genes_gostres_osativa$result$term_id[1:20],
   show_columns = c("source", "term_name", "term_size", "intersection_size"))
-
-# --- Competitive GSEA using CAMERA - only for Oryza sativa
-
-# Outcommented because the gene ids used in the GMT files are different
-# from the ids used by Biomart ==> no gene sets enrichment analysis
-# possible with the available GMT files.
-#
-# # Import the PlantCyc gene sets for Oryza sativa
-# gmt_osativa <-
-#   GSEABase::getGmt(
-#     "gene-sets-files/Oryza_sativa_Cyc.gmt",
-#     geneIdType = SymbolIdentifier()) |>
-#   GSEABase::geneIds()
-# # Test whether a set of genes is highly ranked relative to other genes in terms
-# # of differential expression, accounting for inter-gene correlation
-# camera_oryza_sativa_df <-
-#   limma::camera(
-#     dgelist_fltr_norm_voom_osativa$E,
-#     gmt_osativa,
-#     model_mtx_osativa,
-#     contrast_mtx_osativa[, 1]) |>
-#   tibble::as_tibble(rownames = "setName")
-# # ... doesn't work due to different gene ids.

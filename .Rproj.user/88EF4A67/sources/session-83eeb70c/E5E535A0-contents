@@ -1588,3 +1588,28 @@ ggplot2::ggplot(myGSEA.df[1:20, ], aes(x = phenotype, y = ID)) +
   )) +
   scale_color_gradient(low = "blue", high = "red") +
   theme_bw()
+
+
+# Unused code for the GSEA of Oryza sativa
+# --- Competitive GSEA using CAMERA - only for Oryza sativa
+
+# Outcommented because the gene ids used in the GMT files are different
+# from the ids used by Biomart ==> no gene sets enrichment analysis
+# possible with the available GMT files.
+#
+# # Import the PlantCyc gene sets for Oryza sativa
+# gmt_osativa <-
+#   GSEABase::getGmt(
+#     "gene-sets-files/Oryza_sativa_Cyc.gmt",
+#     geneIdType = SymbolIdentifier()) |>
+#   GSEABase::geneIds()
+# # Test whether a set of genes is highly ranked relative to other genes in terms
+# # of differential expression, accounting for inter-gene correlation
+# camera_oryza_sativa_df <-
+#   limma::camera(
+#     dgelist_fltr_norm_voom_osativa$E,
+#     gmt_osativa,
+#     model_mtx_osativa,
+#     contrast_mtx_osativa[, 1]) |>
+#   tibble::as_tibble(rownames = "setName")
+# # ... doesn't work due to different gene ids.

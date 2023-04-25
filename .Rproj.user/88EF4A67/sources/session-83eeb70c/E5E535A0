@@ -3,7 +3,7 @@
     "path": "//wsl.localhost/Ubuntu-22.04/home/uranus/QBio304 - Applied Bioinformatics/student-work/scripts/Steps1-5.R",
     "project_path": "scripts/Steps1-5.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "1543009885",
     "contents": "",
     "dirty": false,
     "created": 1682194144528.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "1550,49",
-        "scrollLine": "0"
+        "cursorPosition": "1592,42",
+        "scrollLine": "1585"
     },
     "folds": "",
-    "lastKnownWriteTime": 1682375609,
+    "lastKnownWriteTime": 1682451612,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1682375609988,
+    "last_content_update": 1682451613025,
     "read_only": false,
     "read_only_alternatives": []
 }
