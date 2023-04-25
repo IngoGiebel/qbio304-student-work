@@ -18,15 +18,15 @@
 #
 # - samples_[species]
 # - dgelist_[species]
-# - dge_cpm_log2_[species]_df
-# - dge_cpm_log2_[species]_df_pivot
-# - dgelist_filtered_[species]
-# - dge_cpm_filtered_log2_[species]_df
-# - dge_cpm_filtered_log2_[species]_df_pivot
-# - dgelist_filtered_norm_[species]
-# - dge_cpm_filtered_norm_log2_[species]
-# - dge_cpm_filtered_norm_log2_[species]_df
-# - dge_cpm_filtered_norm_log2_[species]_df_pivot
+# - dgecpm_log2_[species]_df
+# - dgecpm_log2_[species]_piv
+# - dgelist_fltr_[species]
+# - dgecpm_fltr_log2_[species]_df
+# - dgecpm_fltr_log2_[species]_piv
+# - dgelist_fltr_norm_[species]
+# - dgecpm_fltr_norm_log2_[species]
+# - dgecpm_fltr_norm_log2_[species]_df
+# - dgecpm_fltr_norm_log2_[species]_piv
 #
 # Step 3:
 #
@@ -38,12 +38,12 @@
 #
 # Step 4:
 #
-# - top_ranked_genes_[species]_df
-# - dgelist_filtered_norm_voom_[species]
+# - top_genes_[species]_df
+# - dgelist_fltr_norm_voom_[species]
 #
 # Step 5:
 #
-# - top_ranked_genes_gostres_[species]
+# - top_genes_gostres_[species]
 # - gmt_[species]
 # - camera_[species]_df
 #
@@ -230,21 +230,21 @@ samples_onivara <- studydesign_onivara_df$`Sample name`
 # Create a DGE list for Oryza nivara
 dgelist_onivara <- edgeR::DGEList(txi_gene_onivara$counts)
 # Get log2 'counts per million'
-dge_cpm_onivara <- edgeR::cpm(dgelist_onivara)
-dge_cpm_log2_onivara_df <-
-  edgeR::cpm(dge_cpm_onivara, log = TRUE) |>
+dgecpm_onivara <- edgeR::cpm(dgelist_onivara)
+dgecpm_log2_onivara_df <-
+  edgeR::cpm(dgecpm_onivara, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_onivara))
 # Pivot the dataframe
-dge_cpm_log2_onivara_df_pivot <-
-  dge_cpm_log2_onivara_df |>
+dgecpm_log2_onivara_piv <-
+  dgecpm_log2_onivara_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_onivara),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_onivara_1 <-
-  ggplot2::ggplot(dge_cpm_log2_onivara_df_pivot) +
+  ggplot2::ggplot(dgecpm_log2_onivara_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -268,21 +268,21 @@ samples_osativa <- studydesign_osativa_df$`Sample name`
 # Create a DGE list for Oryza nivara
 dgelist_osativa <- edgeR::DGEList(txi_gene_osativa$counts)
 # Get log2 'counts per million'
-dge_cpm_osativa <- edgeR::cpm(dgelist_osativa)
-dge_cpm_log2_osativa_df <-
+dgecpm_osativa <- edgeR::cpm(dgelist_osativa)
+dgecpm_log2_osativa_df <-
   edgeR::cpm(dgelist_osativa, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_osativa))
 # Pivot the dataframe
-dge_cpm_log2_osativa_df_pivot <-
-  dge_cpm_log2_osativa_df |>
+dgecpm_log2_osativa_piv <-
+  dgecpm_log2_osativa_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_osativa),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_osativa_1 <-
-  ggplot2::ggplot(dge_cpm_log2_osativa_df_pivot) +
+  ggplot2::ggplot(dgecpm_log2_osativa_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -312,35 +312,35 @@ table(rowSums(dgelist_osativa$counts == 0) == length(samples_osativa))
 # Oryza nivara:
 sapply(
   1L:length(samples_onivara),
-  function(n) sum(rowSums(dge_cpm_onivara >= 1) >= n))
+  function(n) sum(rowSums(dgecpm_onivara >= 1) >= n))
 # Oryza sativa:
 sapply(
   1L:length(samples_osativa),
-  function(n) sum(rowSums(dge_cpm_osativa >= 1) >= n))
+  function(n) sum(rowSums(dgecpm_osativa >= 1) >= n))
 
 # --- Filter out genes with low reads (< 1 CPM in at least half of the samples)
 
 # Oryza nivara
 
-dgelist_filtered_onivara <- dgelist_onivara[
-  rowSums(dge_cpm_onivara >= 1) >= length(samples_onivara) / 2, ]
+dgelist_fltr_onivara <-
+  dgelist_onivara[rowSums(dgecpm_onivara >= 1) >= length(samples_onivara) / 2, ]
 dim(dgelist_onivara)
-dim(dgelist_filtered_onivara)
+dim(dgelist_fltr_onivara)
 # Get log2 'counts per million'
-dge_cpm_filtered_log2_onivara_df <-
-  edgeR::cpm(dgelist_filtered_onivara, log = TRUE) |>
+dgecpm_fltr_log2_onivara_df <-
+  edgeR::cpm(dgelist_fltr_onivara, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_onivara))
 # Pivot the dataframe
-dge_cpm_filtered_log2_onivara_df_pivot <-
-  dge_cpm_filtered_log2_onivara_df |>
+dgecpm_fltr_log2_onivara_piv <-
+  dgecpm_fltr_log2_onivara_df |>
   tidyr::pivot_longer(
     cols = samples_onivara,
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_onivara_2 <-
-  ggplot2::ggplot(dge_cpm_filtered_log2_onivara_df_pivot) +
+  ggplot2::ggplot(dgecpm_fltr_log2_onivara_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -360,26 +360,26 @@ plot_onivara_2
 
 # Oryza sativa
 
-dgelist_filtered_osativa <- dgelist_osativa[
-  rowSums(dge_cpm_osativa >= 1) >= length(samples_osativa) / 2,
+dgelist_fltr_osativa <- dgelist_osativa[
+  rowSums(dgecpm_osativa >= 1) >= length(samples_osativa) / 2,
 ]
 dim(dgelist_osativa)
-dim(dgelist_filtered_osativa)
+dim(dgelist_fltr_osativa)
 # Get log2 'counts per million'
-dge_cpm_filtered_log2_osativa_df <-
-  edgeR::cpm(dgelist_filtered_osativa, log = TRUE) |>
+dgecpm_fltr_log2_osativa_df <-
+  edgeR::cpm(dgelist_fltr_osativa, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_osativa))
 # Pivot the dataframe
-dge_cpm_filtered_log2_osativa_df_pivot <-
-  dge_cpm_filtered_log2_osativa_df |>
+dgecpm_fltr_log2_osativa_piv <-
+  dgecpm_fltr_log2_osativa_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_osativa),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_osativa_2 <-
-  ggplot2::ggplot(dge_cpm_filtered_log2_osativa_df_pivot) +
+  ggplot2::ggplot(dgecpm_fltr_log2_osativa_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -401,26 +401,26 @@ plot_osativa_2
 
 # Oryza nivara
 
-dgelist_filtered_norm_onivara <- edgeR::calcNormFactors(
-  dgelist_filtered_onivara,
+dgelist_fltr_norm_onivara <- edgeR::calcNormFactors(
+  dgelist_fltr_onivara,
   method = "TMM")
 # Get log2 'counts per million'
-dge_cpm_filtered_norm_log2_onivara <-
-  edgeR::cpm(dgelist_filtered_norm_onivara, log = TRUE)
-dge_cpm_filtered_norm_log2_onivara_df <-
-  dge_cpm_filtered_norm_log2_onivara |>
+dgecpm_fltr_norm_log2_onivara <-
+  edgeR::cpm(dgelist_fltr_norm_onivara, log = TRUE)
+dgecpm_fltr_norm_log2_onivara_df <-
+  dgecpm_fltr_norm_log2_onivara |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_onivara))
 # Pivot the dataframe
-dge_cpm_filtered_norm_log2_onivara_df_pivot <-
-  dge_cpm_filtered_norm_log2_onivara_df |>
+dgecpm_fltr_norm_log2_onivara_piv <-
+  dgecpm_fltr_norm_log2_onivara_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_onivara),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_onivara_3 <-
-  ggplot2::ggplot(dge_cpm_filtered_norm_log2_onivara_df_pivot) +
+  ggplot2::ggplot(dgecpm_fltr_norm_log2_onivara_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -440,26 +440,26 @@ plot_onivara_3
 
 # Oryza sativa
 
-dgelist_filtered_norm_osativa <- edgeR::calcNormFactors(
-  dgelist_filtered_osativa,
+dgelist_fltr_norm_osativa <- edgeR::calcNormFactors(
+  dgelist_fltr_osativa,
   method = "TMM")
 # Get log2 'counts per million'
-dge_cpm_filtered_norm_log2_osativa <-
-  edgeR::cpm(dgelist_filtered_norm_osativa, log = TRUE)
-dge_cpm_filtered_norm_log2_osativa_df <-
-  dge_cpm_filtered_norm_log2_osativa |>
+dgecpm_fltr_norm_log2_osativa <-
+  edgeR::cpm(dgelist_fltr_norm_osativa, log = TRUE)
+dgecpm_fltr_norm_log2_osativa_df <-
+  dgecpm_fltr_norm_log2_osativa |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_osativa))
 # Pivot the dataframe
-dge_cpm_filtered_norm_log2_osativa_df_pivot <-
-  dge_cpm_filtered_norm_log2_osativa_df |>
+dgecpm_fltr_norm_log2_osativa_piv <-
+  dgecpm_fltr_norm_log2_osativa_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_osativa),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_osativa_3 <-
-  ggplot2::ggplot(dge_cpm_filtered_norm_log2_osativa_df_pivot) +
+  ggplot2::ggplot(dgecpm_fltr_norm_log2_osativa_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -498,7 +498,7 @@ cowplot::plot_grid(
 
 groups_onivara <- studydesign_onivara_df$Condition
 pca_res_onivara <-
-  dge_cpm_filtered_norm_log2_onivara |>
+  dgecpm_fltr_norm_log2_onivara |>
   t() |>
   prcomp(scale = FALSE, retx = TRUE)
 # Eigenvalues from the PCA result
@@ -523,7 +523,7 @@ pca_plot_onivara <-
   ggplot2::theme_bw()
 plotly::ggplotly(pca_plot_onivara)
 # Make an interactive table
-dge_cpm_filtered_log2_onivara_df |>
+dgecpm_fltr_log2_onivara_df |>
   dplyr::mutate(
     normal.AVG = (BJ278C1 + BJ278C2 + BJ278C3 + BJ89C1 + BJ89C2 + BJ89C3) / 6,
     stress.AVG = (BJ278P1 + BJ278P2 + BJ278P3 + BJ89P1 + BJ89P2 + BJ89P3) / 6,
@@ -547,7 +547,7 @@ dge_cpm_filtered_log2_onivara_df |>
 
 groups_osativa <- studydesign_osativa_df$Condition
 pca_res_osativa <-
-  dge_cpm_filtered_norm_log2_osativa |>
+  dgecpm_fltr_norm_log2_osativa |>
   t() |>
   prcomp(scale = FALSE, retx = TRUE)
 # Eigenvalues from the PCA result
@@ -572,7 +572,7 @@ pca_plot_osativa <-
   ggplot2::theme_bw()
 plotly::ggplotly(pca_plot_osativa)
 # Make an interactive table
-dge_cpm_filtered_log2_osativa_df |>
+dgecpm_fltr_log2_osativa_df |>
   dplyr::mutate(
     normal.AVG = (NC1 + NC2 + NC1) / 3,
     stress.AVG = (NP1 + NP2 + NP3) / 3,
@@ -598,41 +598,41 @@ dge_cpm_filtered_log2_osativa_df |>
 # ------------------------------------------------------------------------------
 
 # Set up the design and contrast matrices
-model_matrix_onivara <- model.matrix(~0 + groups_onivara)
-colnames(model_matrix_onivara) <- make.names(levels(groups_onivara))
-contrast_matrix_onivara <- limma::makeContrasts(
+model_mtx_onivara <- model.matrix(~0 + groups_onivara)
+colnames(model_mtx_onivara) <- make.names(levels(groups_onivara))
+contrast_mtx_onivara <- limma::makeContrasts(
   stress = drought.stress.condition - normal.condition,
-  levels = model_matrix_onivara)
-model_matrix_osativa <- model.matrix(~0 + groups_osativa)
-colnames(model_matrix_osativa) <- make.names(levels(groups_osativa))
-contrast_matrix_osativa <- limma::makeContrasts(
+  levels = model_mtx_onivara)
+model_mtx_osativa <- model.matrix(~0 + groups_osativa)
+colnames(model_mtx_osativa) <- make.names(levels(groups_osativa))
+contrast_mtx_osativa <- limma::makeContrasts(
   stress = drought.stress.condition - normal.condition,
-  levels = model_matrix_osativa)
+  levels = model_mtx_osativa)
 
 # Model mean-variance trend and fit a linear model to the data
-dgelist_filtered_norm_voom_onivara <- limma::voom(
-  dgelist_filtered_norm_onivara,
-  design = model_matrix_onivara,
+dgelist_fltr_norm_voom_onivara <- limma::voom(
+  dgelist_fltr_norm_onivara,
+  design = model_mtx_onivara,
   plot = TRUE)
-dgelist_filtered_norm_lmfit_onivara <- limma::lmFit(
-  dgelist_filtered_norm_voom_onivara,
-  design = model_matrix_onivara)
-dgelist_filtered_norm_voom_osativa <- limma::voom(
-  dgelist_filtered_norm_osativa,
-  design = model_matrix_osativa,
+dgelist_fltr_norm_lmfit_onivara <- limma::lmFit(
+  dgelist_fltr_norm_voom_onivara,
+  design = model_mtx_onivara)
+dgelist_fltr_norm_voom_osativa <- limma::voom(
+  dgelist_fltr_norm_osativa,
+  design = model_mtx_osativa,
   plot = TRUE)
-dgelist_filtered_norm_lmfit_osativa <- limma::lmFit(
-  dgelist_filtered_norm_voom_osativa,
-  design = model_matrix_osativa)
+dgelist_fltr_norm_lmfit_osativa <- limma::lmFit(
+  dgelist_fltr_norm_voom_osativa,
+  design = model_mtx_osativa)
 
 # Get Bayesian stats for the contrasts from the linear model fits
 ebayes_onivara <-
-  dgelist_filtered_norm_lmfit_onivara |>
-  limma::contrasts.fit(contrasts = contrast_matrix_onivara) |>
+  dgelist_fltr_norm_lmfit_onivara |>
+  limma::contrasts.fit(contrasts = contrast_mtx_onivara) |>
   limma::eBayes()
 ebayes_osativa <-
-  dgelist_filtered_norm_lmfit_osativa |>
-  limma::contrasts.fit(contrasts = contrast_matrix_osativa) |>
+  dgelist_fltr_norm_lmfit_osativa |>
+  limma::contrasts.fit(contrasts = contrast_mtx_osativa) |>
   limma::eBayes()
 
 # --- View DEGs - tables of "top-ranked" genes from the Bayesian stats
@@ -650,7 +650,7 @@ ebayes_osativa <-
 # Oryza nivara
 
 # Determine the top-ranked genes
-top_ranked_genes_onivara_df <-
+top_genes_onivara_df <-
   limma::topTable(
     ebayes_onivara,
     adjust.method = "BH",
@@ -659,7 +659,7 @@ top_ranked_genes_onivara_df <-
     sort.by = "logFC") |>
   tibble::as_tibble(rownames = "geneID")
 # Create an interactive vulcano plot
-(top_ranked_genes_onivara_df |>
+(top_genes_onivara_df |>
   ggplot2::ggplot() +
   ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
   ggplot2::geom_point(size = 0.2) +
@@ -701,7 +701,7 @@ top_ranked_genes_onivara_df <-
 # Oryza sativa
 
 # Determine the top-ranked genes
-top_ranked_genes_osativa_df <-
+top_genes_osativa_df <-
   limma::topTable(
     ebayes_osativa,
     adjust.method = "BH",
@@ -710,7 +710,7 @@ top_ranked_genes_osativa_df <-
     sort.by = "logFC") |>
   tibble::as_tibble(rownames = "geneID")
 # Create an interactive vulcano plot
-(top_ranked_genes_osativa_df |>
+(top_genes_osativa_df |>
     ggplot2::ggplot() +
     ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
     ggplot2::geom_point(size = 0.2) +
@@ -778,15 +778,15 @@ limma::vennDiagram(test_results_oryza_sativa, include = "both")
 # Oryza nivara
 
 # Extract the expression data of the DEGs
-colnames(dgelist_filtered_norm_voom_onivara$E) <- samples_onivara
-deg_oryza_nivara_df <-
-  dgelist_filtered_norm_voom_onivara$E[
+colnames(dgelist_fltr_norm_voom_onivara$E) <- samples_onivara
+deg_onivara_df <-
+  dgelist_fltr_norm_voom_onivara$E[
     test_results_oryza_nivara[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
-# Write the DEGs to the file DEGs_Oryza_nivara.txt
-readr::write_tsv(deg_oryza_nivara_df, "../results/degs-oryza-nivara.txt")
+# Save the DEGs as a text file
+readr::write_tsv(deg_onivara_df, "../results/degs-oryza-nivara.txt")
 # Create an interactive table
-deg_oryza_nivara_df |>
+deg_onivara_df |>
 DT::datatable(
   extensions = c("KeyTable", "FixedHeader"),
   caption = "DEGs in Oryza nivara",
@@ -797,7 +797,7 @@ DT::datatable(
     lengthMenu = c("10", "25", "50", "100"))) |>
   DT::formatRound(columns = c(2:13), digits = 2)
 # Create a heatmap
-deg_oryza_nivara_df |>
+deg_onivara_df |>
   dplyr::select(!1) |>
   heatmaply::heatmaply(
     xlab = "Samples",
@@ -815,18 +815,18 @@ deg_oryza_nivara_df |>
     fontsize_row = 5,
     fontsize_col = 5,
     labCol = samples_onivara,
-    labRow = deg_oryza_nivara_df$geneID,
+    labRow = deg_onivara_df$geneID,
     heatmap_layers = theme(axis.line = element_blank()))
 
 # Oryza sativa
 
 # Extract the expression data of the DEGs
-colnames(dgelist_filtered_norm_voom_osativa$E) <- samples_osativa
+colnames(dgelist_fltr_norm_voom_osativa$E) <- samples_osativa
 deg_osativa_df <-
-  dgelist_filtered_norm_voom_osativa$E[
+  dgelist_fltr_norm_voom_osativa$E[
     test_results_oryza_sativa[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
-# Write the DEGs to the file DEGs_Oryza_sativa.txt
+# Save the DEGs as a text file
 readr::write_tsv(deg_osativa_df, "../results/degs-oryza-sativa.txt")
 # Create an interactive table
 deg_osativa_df |>
@@ -871,53 +871,53 @@ deg_osativa_df |>
 # Oryza nivara
 
 # Functional enrichment analysis of the 100 top-ranked genes
-top_ranked_genes_gostres_onivara <- gprofiler2::gost(
-  top_ranked_genes_onivara_df$geneID[1:100],
+top_genes_gostres_onivara <- gprofiler2::gost(
+  top_genes_onivara_df$geneID[1:100],
   organism = "onivara",
   correction_method = "fdr")
 # Produce an interactive manhattan plot of the enriched GO terms
 gprofiler2::gostplot(
-  top_ranked_genes_gostres_onivara,
+  top_genes_gostres_onivara,
   interactive = TRUE,
   capped = FALSE)
 # Produce a static publication quality manhattan plot
 # with the first 10 top-ranked GO terms highlighted.
 gprofiler2::gostplot(
-  top_ranked_genes_gostres_onivara,
+  top_genes_gostres_onivara,
   interactive = FALSE,
   capped = FALSE) |>
   gprofiler2::publish_gostplot(
-    highlight_terms = top_ranked_genes_gostres_onivara$result$term_id[1:10])
+    highlight_terms = top_genes_gostres_onivara$result$term_id[1:10])
 # Generate a table of the gost results of the first 20 top-ranked GO terms
 gprofiler2::publish_gosttable(
-  top_ranked_genes_gostres_onivara,
-  highlight_terms = top_ranked_genes_gostres_onivara$result$term_id[1:20],
+  top_genes_gostres_onivara,
+  highlight_terms = top_genes_gostres_onivara$result$term_id[1:20],
   show_columns = c("source", "term_name", "term_size", "intersection_size"))
 
 # Oryza sativa
 
 # Functional enrichment analysis of the 100 top-ranked genes
-top_ranked_genes_gostres_osativa <- gprofiler2::gost(
-  top_ranked_genes_osativa_df$geneID[1:100],
+top_genes_gostres_osativa <- gprofiler2::gost(
+  top_genes_osativa_df$geneID[1:100],
   organism = "osativa",
   correction_method = "fdr")
 # Produce an interactive manhattan plot of the enriched GO terms
 gprofiler2::gostplot(
-  top_ranked_genes_gostres_osativa,
+  top_genes_gostres_osativa,
   interactive = TRUE,
   capped = FALSE)
 # Produce a static publication quality manhattan plot
 # with the first 10 top-ranked GO terms highlighted.
 gprofiler2::gostplot(
-  top_ranked_genes_gostres_osativa,
+  top_genes_gostres_osativa,
   interactive = FALSE,
   capped = FALSE) |>
   gprofiler2::publish_gostplot(
-    highlight_terms = top_ranked_genes_gostres_osativa$result$term_id[1:10])
+    highlight_terms = top_genes_gostres_osativa$result$term_id[1:10])
 # Generate a table of the gost results of the first 20 top-ranked GO terms
 gprofiler2::publish_gosttable(
-  top_ranked_genes_gostres_osativa,
-  highlight_terms = top_ranked_genes_gostres_osativa$result$term_id[1:20],
+  top_genes_gostres_osativa,
+  highlight_terms = top_genes_gostres_osativa$result$term_id[1:20],
   show_columns = c("source", "term_name", "term_size", "intersection_size"))
 
 # --- Competitive GSEA using CAMERA - only for Oryza sativa
@@ -936,9 +936,9 @@ gprofiler2::publish_gosttable(
 # # of differential expression, accounting for inter-gene correlation
 # camera_oryza_sativa_df <-
 #   limma::camera(
-#     dgelist_filtered_norm_voom_osativa$E,
+#     dgelist_fltr_norm_voom_osativa$E,
 #     gmt_osativa,
-#     model_matrix_osativa,
-#     contrast_matrix_osativa[, 1]) |>
+#     model_mtx_osativa,
+#     contrast_mtx_osativa[, 1]) |>
 #   tibble::as_tibble(rownames = "setName")
 # # ... doesn't work due to different gene ids.
