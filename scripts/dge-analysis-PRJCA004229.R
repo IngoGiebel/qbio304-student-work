@@ -9,10 +9,6 @@
 #
 # - studydesign_df
 # - studydesign_[species]_df
-# - abundance_filepaths_[species]
-# - biomart_[species]
-# - tx2gene_[species]
-# - txi_[species]
 #
 # Step 2:
 #
@@ -92,9 +88,6 @@ library(tximport)
 library(edgeR)
 # R interface to the g:Profiler tools
 library(gprofiler2)
-# Provides functions and methods for GSEA
-# library(GSEABase)
-library(docstring)
 
 # ------------------------------------------------------------------------------
 # Function definitions
@@ -136,6 +129,7 @@ import_kallisto_transcript_abundance_estimates <- function() {
       dataset = dataset,
       host = "https://plants.ensembl.org")
   }
+
   get_tx2gene <- function(dataset) {
     biomaRt::getBM(
       attributes = c("ensembl_transcript_id", "ensembl_gene_id", "description"),
@@ -146,9 +140,11 @@ import_kallisto_transcript_abundance_estimates <- function() {
         gene_name = "ensembl_gene_id") |>
       dplyr::select("target_id", "gene_name")
   }
+
   get_abundance_filepaths <- function(studydsg) {
     file.path(studydsg$`Run accession`, "abundance.tsv")
   }
+
   get_txigene <- function(dataset, studydsg) {
     tximport::tximport(
       get_abundance_filepaths(studydsg),
@@ -156,6 +152,7 @@ import_kallisto_transcript_abundance_estimates <- function() {
       tx2gene = get_tx2gene(dataset),
       countsFromAbundance = "lengthScaledTPM")
   }
+
   txi_gene_onivara <<- get_txigene(
     dataset = "onivara_eg_gene",
     studydsg = studydesign_onivara_df)
@@ -163,6 +160,50 @@ import_kallisto_transcript_abundance_estimates <- function() {
   txi_gene_osativa <<- get_txigene(
     dataset = "osativa_eg_gene",
     studydsg = studydesign_osativa_df)
+}
+
+#' Plot some TPM statistics about the imported kallisto data for Oryza nivara.
+plot_txi_gene_stats_onivara <- function() {
+  transform(
+    txi_gene_onivara$abundance,
+    SD = matrixStats::rowSds(txi_gene_onivara$abundance),
+    AVG = rowMeans(txi_gene_onivara$abundance),
+    MED = matrixStats::rowMedians(txi_gene_onivara$abundance)
+  ) |>
+    ggplot2::ggplot() +
+    ggplot2::aes(x = SD, y = MED) +
+    ggplot2::geom_point(shape = 1, size = 0.5) +
+    ggplot2::geom_smooth(method = lm) +
+    ggplot2::geom_hex(show.legend = TRUE) +
+    ggplot2::labs(
+      x = "Standard deviation",
+      y = "Median",
+      title = "Oryza nivara - Transcripts per million (TPM)",
+      subtitle = "unfiltered, non-normalized data"
+    ) +
+    ggplot2::theme_bw()
+}
+
+#' Plot some TPM statistics about the imported kallisto data for Oryza sativa.
+plot_txi_gene_stats_osativa <- function() {
+  transform(
+    txi_gene_osativa$abundance,
+    SD = matrixStats::rowSds(txi_gene_osativa$abundance),
+    AVG = rowMeans(txi_gene_osativa$abundance),
+    MED = matrixStats::rowMedians(txi_gene_osativa$abundance)
+  ) |>
+    ggplot2::ggplot() +
+    ggplot2::aes(x = SD, y = MED) +
+    ggplot2::geom_point(shape = 1, size = 0.5) +
+    ggplot2::geom_smooth(method = lm) +
+    ggplot2::geom_hex(show.legend = TRUE) +
+    ggplot2::labs(
+      x = "Standard deviation",
+      y = "Median",
+      title = "Oryza sativa - Transcripts per million (TPM)",
+      subtitle = "unfiltered, non-normalized data"
+    ) +
+    ggplot2::theme_bw()
 }
 
 # ------------------------------------------------------------------------------
@@ -182,47 +223,9 @@ import_kallisto_transcript_abundance_estimates()
 # Step 2: Filter and normalize the data
 # ------------------------------------------------------------------------------
 
-# --- Some TPM statistics
-
-# Oryza nivara
-transform(
-  txi_gene_onivara$abundance,
-  SD = matrixStats::rowSds(txi_gene_onivara$abundance),
-  AVG = rowMeans(txi_gene_onivara$abundance),
-  MED = matrixStats::rowMedians(txi_gene_onivara$abundance)
-) |>
-  ggplot2::ggplot() +
-  ggplot2::aes(x = SD, y = MED) +
-  ggplot2::geom_point(shape = 1, size = 0.5) +
-  ggplot2::geom_smooth(method = lm) +
-  ggplot2::geom_hex(show.legend = TRUE) +
-  ggplot2::labs(
-    x = "Standard deviation",
-    y = "Median",
-    title = "Oryza nivara - Transcripts per million (TPM)",
-    subtitle = "unfiltered, non-normalized data"
-  ) +
-  ggplot2::theme_bw()
-
-# Oryza sativa
-transform(
-  txi_gene_osativa$abundance,
-  SD = matrixStats::rowSds(txi_gene_osativa$abundance),
-  AVG = rowMeans(txi_gene_osativa$abundance),
-  MED = matrixStats::rowMedians(txi_gene_osativa$abundance)
-) |>
-  ggplot2::ggplot() +
-  ggplot2::aes(x = SD, y = MED) +
-  ggplot2::geom_point(shape = 1, size = 0.5) +
-  ggplot2::geom_smooth(method = lm) +
-  ggplot2::geom_hex(show.legend = TRUE) +
-  ggplot2::labs(
-    x = "Standard deviation",
-    y = "Median",
-    title = "Oryza sativa - Transcripts per million (TPM)",
-    subtitle = "unfiltered, non-normalized data"
-  ) +
-  ggplot2::theme_bw()
+# Plot some TPM statistics about the imported kallisto data
+plot_txi_gene_stats_onivara()
+plot_txi_gene_stats_osativa()
 
 # --- DGElist objects
 
@@ -493,6 +496,7 @@ cowplot::plot_grid(
   label_size = 8)
 
 
+# ------------------------------------------------------------------------------
 # Step 3: Principal component analysis (PCA)
 # ------------------------------------------------------------------------------
 
@@ -921,26 +925,3 @@ gprofiler2::publish_gosttable(
   top_genes_gostres_osativa,
   highlight_terms = top_genes_gostres_osativa$result$term_id[1:20],
   show_columns = c("source", "term_name", "term_size", "intersection_size"))
-
-# --- Competitive GSEA using CAMERA - only for Oryza sativa
-
-# Outcommented because the gene ids used in the GMT files are different
-# from the ids used by Biomart ==> no gene sets enrichment analysis
-# possible with the available GMT files.
-#
-# # Import the PlantCyc gene sets for Oryza sativa
-# gmt_osativa <-
-#   GSEABase::getGmt(
-#     "gene-sets-files/Oryza_sativa_Cyc.gmt",
-#     geneIdType = SymbolIdentifier()) |>
-#   GSEABase::geneIds()
-# # Test whether a set of genes is highly ranked relative to other genes in terms
-# # of differential expression, accounting for inter-gene correlation
-# camera_oryza_sativa_df <-
-#   limma::camera(
-#     dgelist_fltr_norm_voom_osativa$E,
-#     gmt_osativa,
-#     model_mtx_osativa,
-#     contrast_mtx_osativa[, 1]) |>
-#   tibble::as_tibble(rownames = "setName")
-# # ... doesn't work due to different gene ids.
