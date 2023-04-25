@@ -52,7 +52,9 @@
 #
 # |                                    <- the project's base directory
 # |
-# |- data                              <- all data files
+# |- data                              <- all research data files
+# |
+# |- results                           <- research result files & figures
 # |
 # |- scripts                           <- all script files
 #      |
@@ -225,9 +227,8 @@ transform(
 # Oryza nivara
 
 samples_onivara <- studydesign_onivara_df$`Sample name`
-# Create and save a DGE list for Oryza nivara
+# Create a DGE list for Oryza nivara
 dgelist_onivara <- edgeR::DGEList(txi_gene_onivara$counts)
-save(dgelist_onivara, file = "dgelist_oryza_nivara")
 # Get log2 'counts per million'
 dge_cpm_onivara <- edgeR::cpm(dgelist_onivara)
 dge_cpm_log2_onivara_df <-
@@ -264,9 +265,8 @@ plot_onivara_1
 # Oryza sativa
 
 samples_osativa <- studydesign_osativa_df$`Sample name`
-# Create and save a DGE list for Oryza nivara
+# Create a DGE list for Oryza nivara
 dgelist_osativa <- edgeR::DGEList(txi_gene_osativa$counts)
-save(dgelist_osativa, file = "dgelist_oryza_sativa")
 # Get log2 'counts per million'
 dge_cpm_osativa <- edgeR::cpm(dgelist_osativa)
 dge_cpm_log2_osativa_df <-
@@ -784,7 +784,7 @@ deg_oryza_nivara_df <-
     test_results_oryza_nivara[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Write the DEGs to the file DEGs_Oryza_nivara.txt
-readr::write_tsv(deg_oryza_nivara_df, "DEGs_Oryza_nivara.txt")
+readr::write_tsv(deg_oryza_nivara_df, "../results/degs-oryza-nivara.txt")
 # Create an interactive table
 deg_oryza_nivara_df |>
 DT::datatable(
@@ -827,7 +827,7 @@ deg_osativa_df <-
     test_results_oryza_sativa[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Write the DEGs to the file DEGs_Oryza_sativa.txt
-readr::write_tsv(deg_osativa_df, "DEGs_Oryza_sativa.txt")
+readr::write_tsv(deg_osativa_df, "../results/degs-oryza-sativa.txt")
 # Create an interactive table
 deg_osativa_df |>
   DT::datatable(
