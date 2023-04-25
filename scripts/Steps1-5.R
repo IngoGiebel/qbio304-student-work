@@ -54,7 +54,7 @@ library(edgeR)
 # To analyze changes in genome-wide patterns of alternative splicing and its
 # functional consequences
 library(IsoformSwitchAnalyzeR)
-# Provides functions and methods for Gene Set Enrichment Analysis
+# Provides functions and methods for Gene Sets Enrichment Analysis
 library(GSEABase)
 # For Gene Set Variation Analysis, a non-parametric and unsupervised method for
 # estimating variation of gene set enrichment across samples.
@@ -1355,12 +1355,13 @@ broadSet.C2.ALL <- GSEABase::getGmt(
 
 # Extract as a list
 broadSet.C2.ALL <- GSEABase::geneIds(broadSet.C2.ALL)
-camera.res <- limma::camera(
+camera.df <-
+  limma::camera(
   v.DEGList.filtered.norm$E,
   broadSet.C2.ALL,
   design,
-  contrast.matrix[, 1])
-camera.df <- tibble::as_tibble(camera.res, rownames = "setName")
+  contrast.matrix[, 1]) |>
+tibble::as_tibble(rownames = "setName")
 camera.df
 
 # Filter based on FDR and display as interactive table
@@ -1527,7 +1528,7 @@ gost.res <- gprofiler2::gost(
 # Set 'interactive = FALSE' to get plot for publications.
 gprofiler2::gostplot(gost.res, interactive = TRUE, capped = FALSE)
 
-msigdbr_species()
+msigdbr::msigdbr_species()
 # NOT AVAILABLE FOR PLANTS
 hs_gsea_c2 <-
   msigdbr::msigdbr(

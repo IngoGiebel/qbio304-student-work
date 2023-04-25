@@ -44,6 +44,8 @@
 # Step 5:
 #
 # - top_ranked_genes_gostres_[species]
+# - gmt_[species]
+# - camera_[species]_df
 #
 #
 # File structure requirements:
@@ -86,8 +88,10 @@ library(tximport)
 # For differential expression analysis. Here used for creating DGEList objects
 # and for data normalization.
 library(edgeR)
-# Provides tools for accessing the GSEA results using g:Profiler web resources
+# R interface to the g:Profiler tools
 library(gprofiler2)
+# Provides functions and methods for GSEA
+# library(GSEABase)
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
@@ -865,6 +869,8 @@ deg_oryza_sativa_df |>
 # Step 5: Gene sets enrichment analysis (GSEA)
 # ------------------------------------------------------------------------------
 
+# --- GSEA using g:Profiler
+
 # Oryza nivara
 
 # Functional enrichment analysis of the 100 top-ranked genes
@@ -917,3 +923,25 @@ gprofiler2::publish_gosttable(
   highlight_terms = top_ranked_genes_ghostres_oryza_sativa$result$term_id[1:20],
   show_columns = c("source", "term_name", "term_size", "intersection_size"))
 
+# --- Competitive GSEA using CAMERA - only for Oryza sativa
+
+# Outcommented because the gene ids used in the GMT files are different
+# from the ids used by Biomart ==> no gene sets enrichment analysis
+# possible with the available GMT files.
+#
+# # Import the PlantCyc gene sets for Oryza sativa
+# gmt_oryza_sativa <-
+#   GSEABase::getGmt(
+#     "gene-sets-files/Oryza_sativa_Cyc.gmt",
+#     geneIdType = SymbolIdentifier()) |>
+#   GSEABase::geneIds()
+# # Test whether a set of genes is highly ranked relative to other genes in terms
+# # of differential expression, accounting for inter-gene correlation
+# camera_oryza_sativa_df <-
+#   limma::camera(
+#     dgelist_filtered_norm_voom_oryza_sativa$E,
+#     gmt_oryza_sativa,
+#     model_matrix_oryza_sativa,
+#     contrast_matrix_oryza_sativa[, 1]) |>
+#   tibble::as_tibble(rownames = "setName")
+# # ... doesn't work due to different gene ids.
