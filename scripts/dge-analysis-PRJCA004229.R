@@ -221,11 +221,15 @@ plot_txi_gene_stats_osativa <- function() {
     ggplot2::theme_bw()
 }
 
+#' Create a CPM tibble
+cpm_df <- function(data, samples) {
+  tibble::as_tibble(data, rownames = "geneID") |>
+    dplyr::rename_with(~ c("geneID", samples))
+}
+
 #' Create a log2 CPM tibble
 cpm_log2_df <- function(data, samples) {
-  edgeR::cpm(data, log = TRUE) |>
-    tibble::as_tibble(rownames = "geneID") |>
-    dplyr::rename_with(~ c("geneID", samples))
+  edgeR::cpm(data, log = TRUE) |> cpm_df(samples)
 }
 
 #' Pivot the (log2) CPM data frame.
@@ -301,8 +305,12 @@ filter_low_cpm <- function(cpm_thr, sample_perc) {
   dgelist_fltr_onivara <<- dgelist_onivara[
     rowSums(cpm_onivara >= cpm_thr) >= length(samples_onivara) * sample_perc, ]
   # Compute counts per million (CPM) and their respective log2 values
-  cpm_fltr_log2_onivara_df <<- cpm_log2_df(dgelist_fltr_onivara, samples_onivara)
-  cpm_log2_onivara_piv <<- pivot_cpm_df(cpm_log2_onivara_df, samples_onivara)
+  cpm_fltr_log2_onivara_df <<- cpm_log2_df(
+    dgelist_fltr_onivara,
+    samples_onivara)
+  cpm_fltr_log2_onivara_piv <<- pivot_cpm_df(
+    cpm_fltr_log2_onivara_df,
+    samples_onivara)
 
   # Oryza sativa
 
@@ -310,8 +318,52 @@ filter_low_cpm <- function(cpm_thr, sample_perc) {
   dgelist_fltr_osativa <<- dgelist_osativa[
     rowSums(cpm_osativa >= cpm_thr) >= length(samples_osativa) * sample_perc, ]
   # Compute counts per million (CPM) and their respective log2 values
-  cpm_fltr_log2_osativa_df <<- cpm_log2_df(dgelist_fltr_osativa, samples_osativa)
-  cpm_log2_osativa_piv <<- pivot_cpm_df(cpm_log2_osativa_df, samples_osativa)
+  cpm_fltr_log2_osativa_df <<- cpm_log2_df(
+    dgelist_fltr_osativa,
+    samples_osativa)
+  cpm_fltr_log2_osativa_piv <<- pivot_cpm_df(
+    cpm_fltr_log2_osativa_df,
+    samples_osativa)
+}
+
+#' Normalize the filtered data.
+normalize_data <- function() {
+
+  # Oryza nivara
+
+  # Compute scaling factors to convert observed library sizes into
+  # effective library sizes
+  dgelist_fltr_norm_onivara <<- edgeR::calcNormFactors(
+    dgelist_fltr_onivara,
+    method = "TMM")
+  # Compute counts per million (CPM) and their respective log2 values
+  cpm_fltr_norm_log2_onivara <<- edgeR::cpm(
+    dgelist_fltr_norm_onivara,
+    log = TRUE)
+  cpm_fltr_norm_log2_onivara_df <<- cpm_df(
+    cpm_fltr_norm_log2_onivara,
+    samples_onivara)
+  cpm_fltr_norm_log2_onivara_piv <<- pivot_cpm_df(
+    cpm_fltr_norm_log2_onivara_df,
+    samples_onivara)
+
+  # Oryza sativa
+
+  # Compute scaling factors to convert observed library sizes into
+  # effective library sizes
+  dgelist_fltr_norm_osativa <<- edgeR::calcNormFactors(
+    dgelist_fltr_osativa,
+    method = "TMM")
+  # Compute counts per million (CPM) and their respective log2 values
+  cpm_fltr_norm_log2_osativa <<- edgeR::cpm(
+    dgelist_fltr_norm_osativa,
+    log = TRUE)
+  cpm_fltr_norm_log2_osativa_df <<- cpm_df(
+    cpm_fltr_norm_log2_osativa,
+    samples_osativa)
+  cpm_fltr_norm_log2_osativa_piv <<- pivot_cpm_df(
+    cpm_fltr_norm_log2_osativa_df,
+    samples_osativa)
 }
 
 
@@ -331,6 +383,8 @@ import_kallisto_transcript_abundance_estimates()
 # ------------------------------------------------------------------------------
 # Step 2: Filter and normalize the data
 # ------------------------------------------------------------------------------
+
+# --- Data exploration and analysis of the raw data
 
 # Plot some TPM statistics about the imported kallisto data
 plot_txi_gene_stats_onivara()
@@ -371,7 +425,8 @@ sapply(
   1L:length(samples_osativa),
   function(n) sum(rowSums(cpm_osativa >= 1) >= n))
 
-# Filter out genes with low reads (< 1 CPM in at least half of the samples)
+# --- Filter out genes with low reads (< 1 CPM in at least half of the samples)
+
 filter_low_cpm(cpm_thr = 1, sample_perc = 0.5)
 sprintf(
   "Oryza nivara - genes filtered out: %d out of %d",
@@ -399,100 +454,40 @@ plot_cpm_fltr_osativa <- plot_cpm(
   normalized = FALSE)
 plot_cpm_fltr_osativa
 
-
 # --- Normalize the data
 
-# Oryza nivara
+normalize_data()
 
-dgelist_fltr_norm_onivara <- edgeR::calcNormFactors(
-  dgelist_fltr_onivara,
-  method = "TMM")
-# Get log2 'counts per million'
-cpm_fltr_norm_log2_onivara <-
-  edgeR::cpm(dgelist_fltr_norm_onivara, log = TRUE)
-cpm_fltr_norm_log2_onivara_df <-
-  cpm_fltr_norm_log2_onivara |>
-  tibble::as_tibble(rownames = "geneID") |>
-  dplyr::rename_with(~ c("geneID", samples_onivara))
-# Pivot the dataframe
-cpm_fltr_norm_log2_onivara_piv <-
-  cpm_fltr_norm_log2_onivara_df |>
-  tidyr::pivot_longer(
-    cols = tidyselect::all_of(samples_onivara),
-    names_to = "sample",
-    values_to = "expression")
-# Plot this pivoted data
-plot_onivara_3 <-
-  ggplot2::ggplot(cpm_fltr_norm_log2_onivara_piv) +
-  ggplot2::aes(x = sample, y = expression, fill = sample) +
-  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
-  ggplot2::stat_summary(
-    fun = "median",
-    geom = "point",
-    shape = 95,
-    size = 10,
-    color = "black",
-    show.legend = FALSE) +
-  ggplot2::labs(
-    y = "log2 expression",
-    x = "sample",
-    title = "Oryza nivara - Log2 Counts per Million (CPM)",
-    subtitle = "filtered, TMM normalized") +
-  ggplot2::theme_bw()
-plot_onivara_3
+# Plot the log2 CPM data (filtered, normalized)
+plot_cpm_fltr_norm_onivara <- plot_cpm(
+  cpm_piv = cpm_fltr_norm_log2_onivara_piv,
+  organism = "Oryza nivara",
+  log2 = TRUE,
+  filtered = TRUE,
+  normalized = TRUE)
+plot_cpm_fltr_norm_onivara
 
-# Oryza sativa
+plot_cpm_fltr_norm_osativa <- plot_cpm(
+  cpm_piv = cpm_fltr_norm_log2_osativa_piv,
+  organism = "Oryza sativa",
+  log2 = TRUE,
+  filtered = TRUE,
+  normalized = TRUE)
+plot_cpm_fltr_norm_osativa
 
-dgelist_fltr_norm_osativa <- edgeR::calcNormFactors(
-  dgelist_fltr_osativa,
-  method = "TMM")
-# Get log2 'counts per million'
-cpm_fltr_norm_log2_osativa <-
-  edgeR::cpm(dgelist_fltr_norm_osativa, log = TRUE)
-cpm_fltr_norm_log2_osativa_df <-
-  cpm_fltr_norm_log2_osativa |>
-  tibble::as_tibble(rownames = "geneID") |>
-  dplyr::rename_with(~ c("geneID", samples_osativa))
-# Pivot the dataframe
-cpm_fltr_norm_log2_osativa_piv <-
-  cpm_fltr_norm_log2_osativa_df |>
-  tidyr::pivot_longer(
-    cols = tidyselect::all_of(samples_osativa),
-    names_to = "sample",
-    values_to = "expression")
-# Plot this pivoted data
-plot_osativa_3 <-
-  ggplot2::ggplot(cpm_fltr_norm_log2_osativa_piv) +
-  ggplot2::aes(x = sample, y = expression, fill = sample) +
-  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
-  ggplot2::stat_summary(
-    fun = "median",
-    geom = "point",
-    shape = 95,
-    size = 10,
-    color = "black",
-    show.legend = FALSE) +
-  ggplot2::labs(
-    y = "log2 expression",
-    x = "sample",
-    title = "Oryza sativa - Log2 Counts per Million (CPM)",
-    subtitle = "filtered, TMM normalized") +
-  ggplot2::theme_bw()
-plot_osativa_3
+# --- Combine all six violin plots in one overview plot
 
-# Combine all six violin plots in one overview plot
 cowplot::plot_grid(
-  plot_onivara_1 + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
-  plot_osativa_1 + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
-  plot_onivara_2 + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
-  plot_osativa_2 + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
-  plot_onivara_3 + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
-  plot_osativa_3 + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
+  plot_cpm_onivara           + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
+  plot_cpm_osativa           + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
+  plot_cpm_fltr_onivara      + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
+  plot_cpm_fltr_osativa      + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
+  plot_cpm_fltr_norm_onivara + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
+  plot_cpm_fltr_norm_osativa + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
   ncol = 2,
   rel_widths = c(2, 1),
   labels = c("A", "B", "C", "D", "E", "F"),
   label_size = 8)
-
 
 # ------------------------------------------------------------------------------
 # Step 3: Principal component analysis (PCA)
