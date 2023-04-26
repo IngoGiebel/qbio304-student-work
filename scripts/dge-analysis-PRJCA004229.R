@@ -14,15 +14,15 @@
 #
 # - samples_[species]
 # - dgelist_[species]
-# - dgecpm_log2_[species]_df
-# - dgecpm_log2_[species]_piv
+# - cpm_log2_[species]_df
+# - cpm_log2_[species]_piv
 # - dgelist_fltr_[species]
-# - dgecpm_fltr_log2_[species]_df
-# - dgecpm_fltr_log2_[species]_piv
+# - cpm_fltr_log2_[species]_df
+# - cpm_fltr_log2_[species]_piv
 # - dgelist_fltr_norm_[species]
-# - dgecpm_fltr_norm_log2_[species]
-# - dgecpm_fltr_norm_log2_[species]_df
-# - dgecpm_fltr_norm_log2_[species]_piv
+# - cpm_fltr_norm_log2_[species]
+# - cpm_fltr_norm_log2_[species]_df
+# - cpm_fltr_norm_log2_[species]_piv
 #
 # Step 3:
 #
@@ -98,6 +98,8 @@ library(gprofiler2)
 #' Read in the studydesign tsv-file "studydesign-PRJCA004229.tsv" and
 #' create a tibble for the overall studydesign and one tibble for each
 #' of the  studydesigns restricted to Oryzy nivara and Oryza sativa.
+#' Furthermore, samples vectors for the Oryza nivara and the Oryza sativa
+#' samples are created.
 create_studydesign_data <- function() {
   studydesign_df <<- readr::read_tsv(
     "studydesign-PRJCA004229.tsv",
@@ -105,9 +107,11 @@ create_studydesign_data <- function() {
   studydesign_onivara_df <<- dplyr::filter(
     studydesign_df,
     Organism == "Oryza nivara")
+  samples_onivara <<- studydesign_onivara_df$`Sample name`
   studydesign_osativa_df <<- dplyr::filter(
     studydesign_df,
     Organism == "Oryza sativa")
+  samples_osativa <<- studydesign_osativa_df$`Sample name`
 }
 
 #' Import the kallisto "abundance.tsv" files.
@@ -206,6 +210,28 @@ plot_txi_gene_stats_osativa <- function() {
     ggplot2::theme_bw()
 }
 
+
+# # Create a DGElist object for Oryza nivara
+# # A DGEList object holds the dataset (read counts and associated information)
+# # to be analyzed by edgeR and the subsequent calculations performed on the
+# # dataset.
+# dgelist_onivara <- edgeR::DGEList(txi_gene_onivara$counts)
+# # Compute counts per million (CPM) and their respective log2 values
+# # Get log2 'counts per million'
+# cpm_onivara <- edgeR::cpm(dgelist_onivara)
+# cpm_log2_onivara_df <-
+#   edgeR::cpm(cpm_onivara, log = TRUE) |>
+#   tibble::as_tibble(rownames = "geneID") |>
+#   dplyr::rename_with(~ c("geneID", samples_onivara))
+# # Pivot the dataframe
+# cpm_log2_onivara_piv <-
+#   cpm_log2_onivara_df |>
+#   tidyr::pivot_longer(
+#     cols = tidyselect::all_of(samples_onivara),
+#     names_to = "sample",
+#     values_to = "expression")
+
+
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
 # ------------------------------------------------------------------------------
@@ -231,25 +257,29 @@ plot_txi_gene_stats_osativa()
 
 # Oryza nivara
 
-samples_onivara <- studydesign_onivara_df$`Sample name`
-# Create a DGE list for Oryza nivara
+
+# Create a DGElist object for Oryza nivara
+# A DGEList object holds the dataset (read counts and associated information)
+# to be analyzed by edgeR and the subsequent calculations performed on the
+# dataset.
 dgelist_onivara <- edgeR::DGEList(txi_gene_onivara$counts)
+# Compute counts per million (CPM) and their respective log2 values
 # Get log2 'counts per million'
-dgecpm_onivara <- edgeR::cpm(dgelist_onivara)
-dgecpm_log2_onivara_df <-
-  edgeR::cpm(dgecpm_onivara, log = TRUE) |>
+cpm_onivara <- edgeR::cpm(dgelist_onivara)
+cpm_log2_onivara_df <-
+  edgeR::cpm(cpm_onivara, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_onivara))
 # Pivot the dataframe
-dgecpm_log2_onivara_piv <-
-  dgecpm_log2_onivara_df |>
+cpm_log2_onivara_piv <-
+  cpm_log2_onivara_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_onivara),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_onivara_1 <-
-  ggplot2::ggplot(dgecpm_log2_onivara_piv) +
+  ggplot2::ggplot(cpm_log2_onivara_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -269,25 +299,25 @@ plot_onivara_1
 
 # Oryza sativa
 
-samples_osativa <- studydesign_osativa_df$`Sample name`
+
 # Create a DGE list for Oryza nivara
 dgelist_osativa <- edgeR::DGEList(txi_gene_osativa$counts)
 # Get log2 'counts per million'
-dgecpm_osativa <- edgeR::cpm(dgelist_osativa)
-dgecpm_log2_osativa_df <-
+cpm_osativa <- edgeR::cpm(dgelist_osativa)
+cpm_log2_osativa_df <-
   edgeR::cpm(dgelist_osativa, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_osativa))
 # Pivot the dataframe
-dgecpm_log2_osativa_piv <-
-  dgecpm_log2_osativa_df |>
+cpm_log2_osativa_piv <-
+  cpm_log2_osativa_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_osativa),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_osativa_1 <-
-  ggplot2::ggplot(dgecpm_log2_osativa_piv) +
+  ggplot2::ggplot(cpm_log2_osativa_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -317,35 +347,35 @@ table(rowSums(dgelist_osativa$counts == 0) == length(samples_osativa))
 # Oryza nivara:
 sapply(
   1L:length(samples_onivara),
-  function(n) sum(rowSums(dgecpm_onivara >= 1) >= n))
+  function(n) sum(rowSums(cpm_onivara >= 1) >= n))
 # Oryza sativa:
 sapply(
   1L:length(samples_osativa),
-  function(n) sum(rowSums(dgecpm_osativa >= 1) >= n))
+  function(n) sum(rowSums(cpm_osativa >= 1) >= n))
 
 # --- Filter out genes with low reads (< 1 CPM in at least half of the samples)
 
 # Oryza nivara
 
 dgelist_fltr_onivara <-
-  dgelist_onivara[rowSums(dgecpm_onivara >= 1) >= length(samples_onivara) / 2, ]
+  dgelist_onivara[rowSums(cpm_onivara >= 1) >= length(samples_onivara) / 2, ]
 dim(dgelist_onivara)
 dim(dgelist_fltr_onivara)
 # Get log2 'counts per million'
-dgecpm_fltr_log2_onivara_df <-
+cpm_fltr_log2_onivara_df <-
   edgeR::cpm(dgelist_fltr_onivara, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_onivara))
 # Pivot the dataframe
-dgecpm_fltr_log2_onivara_piv <-
-  dgecpm_fltr_log2_onivara_df |>
+cpm_fltr_log2_onivara_piv <-
+  cpm_fltr_log2_onivara_df |>
   tidyr::pivot_longer(
     cols = samples_onivara,
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_onivara_2 <-
-  ggplot2::ggplot(dgecpm_fltr_log2_onivara_piv) +
+  ggplot2::ggplot(cpm_fltr_log2_onivara_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -366,25 +396,25 @@ plot_onivara_2
 # Oryza sativa
 
 dgelist_fltr_osativa <- dgelist_osativa[
-  rowSums(dgecpm_osativa >= 1) >= length(samples_osativa) / 2,
+  rowSums(cpm_osativa >= 1) >= length(samples_osativa) / 2,
 ]
 dim(dgelist_osativa)
 dim(dgelist_fltr_osativa)
 # Get log2 'counts per million'
-dgecpm_fltr_log2_osativa_df <-
+cpm_fltr_log2_osativa_df <-
   edgeR::cpm(dgelist_fltr_osativa, log = TRUE) |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_osativa))
 # Pivot the dataframe
-dgecpm_fltr_log2_osativa_piv <-
-  dgecpm_fltr_log2_osativa_df |>
+cpm_fltr_log2_osativa_piv <-
+  cpm_fltr_log2_osativa_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_osativa),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_osativa_2 <-
-  ggplot2::ggplot(dgecpm_fltr_log2_osativa_piv) +
+  ggplot2::ggplot(cpm_fltr_log2_osativa_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -410,22 +440,22 @@ dgelist_fltr_norm_onivara <- edgeR::calcNormFactors(
   dgelist_fltr_onivara,
   method = "TMM")
 # Get log2 'counts per million'
-dgecpm_fltr_norm_log2_onivara <-
+cpm_fltr_norm_log2_onivara <-
   edgeR::cpm(dgelist_fltr_norm_onivara, log = TRUE)
-dgecpm_fltr_norm_log2_onivara_df <-
-  dgecpm_fltr_norm_log2_onivara |>
+cpm_fltr_norm_log2_onivara_df <-
+  cpm_fltr_norm_log2_onivara |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_onivara))
 # Pivot the dataframe
-dgecpm_fltr_norm_log2_onivara_piv <-
-  dgecpm_fltr_norm_log2_onivara_df |>
+cpm_fltr_norm_log2_onivara_piv <-
+  cpm_fltr_norm_log2_onivara_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_onivara),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_onivara_3 <-
-  ggplot2::ggplot(dgecpm_fltr_norm_log2_onivara_piv) +
+  ggplot2::ggplot(cpm_fltr_norm_log2_onivara_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -449,22 +479,22 @@ dgelist_fltr_norm_osativa <- edgeR::calcNormFactors(
   dgelist_fltr_osativa,
   method = "TMM")
 # Get log2 'counts per million'
-dgecpm_fltr_norm_log2_osativa <-
+cpm_fltr_norm_log2_osativa <-
   edgeR::cpm(dgelist_fltr_norm_osativa, log = TRUE)
-dgecpm_fltr_norm_log2_osativa_df <-
-  dgecpm_fltr_norm_log2_osativa |>
+cpm_fltr_norm_log2_osativa_df <-
+  cpm_fltr_norm_log2_osativa |>
   tibble::as_tibble(rownames = "geneID") |>
   dplyr::rename_with(~ c("geneID", samples_osativa))
 # Pivot the dataframe
-dgecpm_fltr_norm_log2_osativa_piv <-
-  dgecpm_fltr_norm_log2_osativa_df |>
+cpm_fltr_norm_log2_osativa_piv <-
+  cpm_fltr_norm_log2_osativa_df |>
   tidyr::pivot_longer(
     cols = tidyselect::all_of(samples_osativa),
     names_to = "sample",
     values_to = "expression")
 # Plot this pivoted data
 plot_osativa_3 <-
-  ggplot2::ggplot(dgecpm_fltr_norm_log2_osativa_piv) +
+  ggplot2::ggplot(cpm_fltr_norm_log2_osativa_piv) +
   ggplot2::aes(x = sample, y = expression, fill = sample) +
   ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
   ggplot2::stat_summary(
@@ -504,7 +534,7 @@ cowplot::plot_grid(
 
 groups_onivara <- studydesign_onivara_df$Condition
 pca_res_onivara <-
-  dgecpm_fltr_norm_log2_onivara |>
+  cpm_fltr_norm_log2_onivara |>
   t() |>
   prcomp(scale = FALSE, retx = TRUE)
 # Eigenvalues from the PCA result
@@ -529,7 +559,7 @@ pca_plot_onivara <-
   ggplot2::theme_bw()
 plotly::ggplotly(pca_plot_onivara)
 # Make an interactive table
-dgecpm_fltr_log2_onivara_df |>
+cpm_fltr_log2_onivara_df |>
   dplyr::mutate(
     normal.AVG = (BJ278C1 + BJ278C2 + BJ278C3 + BJ89C1 + BJ89C2 + BJ89C3) / 6,
     stress.AVG = (BJ278P1 + BJ278P2 + BJ278P3 + BJ89P1 + BJ89P2 + BJ89P3) / 6,
@@ -553,7 +583,7 @@ dgecpm_fltr_log2_onivara_df |>
 
 groups_osativa <- studydesign_osativa_df$Condition
 pca_res_osativa <-
-  dgecpm_fltr_norm_log2_osativa |>
+  cpm_fltr_norm_log2_osativa |>
   t() |>
   prcomp(scale = FALSE, retx = TRUE)
 # Eigenvalues from the PCA result
@@ -578,7 +608,7 @@ pca_plot_osativa <-
   ggplot2::theme_bw()
 plotly::ggplotly(pca_plot_osativa)
 # Make an interactive table
-dgecpm_fltr_log2_osativa_df |>
+cpm_fltr_log2_osativa_df |>
   dplyr::mutate(
     normal.AVG = (NC1 + NC2 + NC1) / 3,
     stress.AVG = (NP1 + NP2 + NP3) / 3,
