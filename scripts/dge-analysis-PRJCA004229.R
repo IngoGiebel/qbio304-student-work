@@ -9,16 +9,19 @@
 #
 # - studydesign_df
 # - studydesign_[species]_df
+# - samples_[species]
 #
 # Step 2:
 #
-# - samples_[species]
 # - dgelist_[species]
+#
 # - cpm_log2_[species]_df
 # - cpm_log2_[species]_piv
+#
 # - dgelist_fltr_[species]
 # - cpm_fltr_log2_[species]_df
 # - cpm_fltr_log2_[species]_piv
+#
 # - dgelist_fltr_norm_[species]
 # - cpm_fltr_norm_log2_[species]
 # - cpm_fltr_norm_log2_[species]_df
@@ -101,13 +104,16 @@ library(gprofiler2)
 #' Furthermore, samples vectors for the Oryza nivara and the Oryza sativa
 #' samples are created.
 create_studydesign_data <- function() {
+
   studydesign_df <<- readr::read_tsv(
     "studydesign-PRJCA004229.tsv",
     col_types = "icccccfffcficfc")
+
   studydesign_onivara_df <<- dplyr::filter(
     studydesign_df,
     Organism == "Oryza nivara")
   samples_onivara <<- studydesign_onivara_df$`Sample name`
+
   studydesign_osativa_df <<- dplyr::filter(
     studydesign_df,
     Organism == "Oryza sativa")
@@ -215,6 +221,22 @@ plot_txi_gene_stats_osativa <- function() {
     ggplot2::theme_bw()
 }
 
+#' Create a log2 CPM tibble
+cpm_log2_df <- function(data, samples) {
+  edgeR::cpm(data, log = TRUE) |>
+    tibble::as_tibble(rownames = "geneID") |>
+    dplyr::rename_with(~ c("geneID", samples))
+}
+
+#' Pivot the (log2) CPM data frame.
+pivot_cpm_df <- function(cpm_df, samples) {
+  tidyr::pivot_longer(
+    cpm_df,
+    cols = tidyselect::all_of(samples),
+    names_to = "sample",
+    values_to = "expression")
+}
+
 #' Create DGElist objects and compute counts per million (CPM) and their
 #' respective log2 values.
 #'
@@ -222,24 +244,6 @@ plot_txi_gene_stats_osativa <- function() {
 #' to be analyzed by edgeR and the subsequent calculations performed on the
 #' dataset.
 create_deglists_and_cpms <- function() {
-
-  # Function definitions
-
-  # Create a log2 CPM tibble
-  cpm_log2_df <- function(cpm, samples) {
-    edgeR::cpm(cpm, log = TRUE) |>
-      tibble::as_tibble(rownames = "geneID") |>
-      dplyr::rename_with(~ c("geneID", samples))
-  }
-
-  # Pivot the (log2) CPM tibble
-  pivot_cpm_df <- function(cpm_df, samples) {
-    tidyr::pivot_longer(
-      cpm_df,
-      cols = tidyselect::all_of(samples),
-      names_to = "sample",
-      values_to = "expression")
-  }
 
   # Oryza nivara
 
@@ -257,6 +261,56 @@ create_deglists_and_cpms <- function() {
   # Compute counts per million (CPM) and their respective log2 values
   cpm_osativa <<- edgeR::cpm(dgelist_osativa)
   cpm_log2_osativa_df <<- cpm_log2_df(cpm_osativa, samples_osativa)
+  cpm_log2_osativa_piv <<- pivot_cpm_df(cpm_log2_osativa_df, samples_osativa)
+}
+
+#' Create a plot of the CPM data.
+plot_cpm <- function(cpm_piv, organism, log2, filtered, normalized) {
+  ggplot2::ggplot(cpm_piv) +
+    ggplot2::aes(x = sample, y = expression, fill = sample) +
+    ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
+    ggplot2::stat_summary(
+      fun = "median",
+      geom = "point",
+      shape = 95,
+      size = 10,
+      color = "black",
+      show.legend = FALSE) +
+    ggplot2::labs(
+      x = "sample",
+      y = paste0(if (log2) "log2 " else "", "expression"),
+      title = paste0(
+        organism, " - ",
+        if (log2) "Log2 " else "",
+        "Counts per Million (CPM)"),
+      subtitle = paste0(
+        if (filtered) "filtered" else "unfiltered", ", ",
+        if (normalized) "normalized" else "non-normalized")) +
+    ggplot2::theme_bw()
+}
+
+#' Create filtered DGElist objects and compute log2 CPM of the filtered data.
+#'
+#' Low reads (less than <cpm_thr> CPM in at least <sample_perc> of the samples)
+#' are filtered out.
+filter_low_cpm <- function(cpm_thr, sample_perc) {
+
+  # Oryza nivara
+
+  # Create a DGElist object
+  dgelist_fltr_onivara <<- dgelist_onivara[
+    rowSums(cpm_onivara >= cpm_thr) >= length(samples_onivara) * sample_perc, ]
+  # Compute counts per million (CPM) and their respective log2 values
+  cpm_fltr_log2_onivara_df <<- cpm_log2_df(dgelist_fltr_onivara, samples_onivara)
+  cpm_log2_onivara_piv <<- pivot_cpm_df(cpm_log2_onivara_df, samples_onivara)
+
+  # Oryza sativa
+
+  # Create a DGElist object
+  dgelist_fltr_osativa <<- dgelist_osativa[
+    rowSums(cpm_osativa >= cpm_thr) >= length(samples_osativa) * sample_perc, ]
+  # Compute counts per million (CPM) and their respective log2 values
+  cpm_fltr_log2_osativa_df <<- cpm_log2_df(dgelist_fltr_osativa, samples_osativa)
   cpm_log2_osativa_piv <<- pivot_cpm_df(cpm_log2_osativa_df, samples_osativa)
 }
 
@@ -286,144 +340,65 @@ plot_txi_gene_stats_osativa()
 # respective log2 values
 create_deglists_and_cpms()
 
-# Plot this pivoted data
-plot_onivara_1 <-
-  ggplot2::ggplot(cpm_log2_onivara_piv) +
-  ggplot2::aes(x = sample, y = expression, fill = sample) +
-  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
-  ggplot2::stat_summary(
-    fun = "median",
-    geom = "point",
-    shape = 95,
-    size = 10,
-    color = "black",
-    show.legend = FALSE) +
-  ggplot2::labs(
-    x = "sample",
-    y = "log2 expression",
-    title = "Oryza nivara - Log2 Counts per Million (CPM)",
-    subtitle = "unfiltered, non-normalized") +
-  ggplot2::theme_bw()
-plot_onivara_1
+# Plot the log2 CPM data (unfiltered, non-normalized)
+plot_cpm_onivara <- plot_cpm(
+  cpm_piv = cpm_log2_onivara_piv,
+  organism = "Oryza nivara",
+  log2 = TRUE,
+  filtered = FALSE,
+  normalized = FALSE)
+plot_cpm_onivara
 
-# Oryza sativa
+plot_cpm_osativa <- plot_cpm(
+  cpm_piv = cpm_log2_osativa_piv,
+  organism = "Oryza sativa",
+  log2 = TRUE,
+  filtered = FALSE,
+  normalized = FALSE)
+plot_cpm_osativa
 
-# Plot this pivoted data
-plot_osativa_1 <-
-  ggplot2::ggplot(cpm_log2_osativa_piv) +
-  ggplot2::aes(x = sample, y = expression, fill = sample) +
-  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
-  ggplot2::stat_summary(
-    fun = "median",
-    geom = "point",
-    shape = 95,
-    size = 10,
-    color = "black",
-    show.legend = FALSE) +
-  ggplot2::labs(
-    x = "sample",
-    y = "log2 expression",
-    title = "Oryza sativa - Log2 Counts per Million (CPM)",
-    subtitle = "unfiltered, non-normalized") +
-  ggplot2::theme_bw()
-plot_osativa_1
+# Check how many genes have low reads
 
-# --- Check how many genes have low reads
-
-# Determine how many genes have no reads at all
-# Oryza nivara:
+# Determine how many genes have no reads at all (in none of the samples)
 table(rowSums(dgelist_onivara$counts == 0) == length(samples_onivara))
-# Oryza sativa:
 table(rowSums(dgelist_osativa$counts == 0) == length(samples_osativa))
 
-# Check how many genes have CPMs >= 1 in at least 1, 2, 3, ... samples
-# Oryza nivara:
+# Determine how many genes have CPMs >= 1 in at least 1, 2, 3, ... samples
 sapply(
   1L:length(samples_onivara),
   function(n) sum(rowSums(cpm_onivara >= 1) >= n))
-# Oryza sativa:
 sapply(
   1L:length(samples_osativa),
   function(n) sum(rowSums(cpm_osativa >= 1) >= n))
 
-# --- Filter out genes with low reads (< 1 CPM in at least half of the samples)
+# Filter out genes with low reads (< 1 CPM in at least half of the samples)
+filter_low_cpm(cpm_thr = 1, sample_perc = 0.5)
+sprintf(
+  "Oryza nivara - genes filtered out: %d out of %d",
+  nrow(dgelist_onivara) - nrow(dgelist_fltr_onivara),
+  nrow(dgelist_onivara))
+sprintf(
+  "Oryza sativa - genes filtered out: %d out of %d",
+  nrow(dgelist_osativa) - nrow(dgelist_fltr_osativa),
+  nrow(dgelist_osativa))
 
-# Oryza nivara
+# Plot the log2 CPM data (filtered, non-normalized)
+plot_cpm_fltr_onivara <- plot_cpm(
+  cpm_piv = cpm_fltr_log2_onivara_piv,
+  organism = "Oryza nivara",
+  log2 = TRUE,
+  filtered = TRUE,
+  normalized = FALSE)
+plot_cpm_fltr_onivara
 
-dgelist_fltr_onivara <-
-  dgelist_onivara[rowSums(cpm_onivara >= 1) >= length(samples_onivara) / 2, ]
-dim(dgelist_onivara)
-dim(dgelist_fltr_onivara)
-# Get log2 'counts per million'
-cpm_fltr_log2_onivara_df <-
-  edgeR::cpm(dgelist_fltr_onivara, log = TRUE) |>
-  tibble::as_tibble(rownames = "geneID") |>
-  dplyr::rename_with(~ c("geneID", samples_onivara))
-# Pivot the dataframe
-cpm_fltr_log2_onivara_piv <-
-  cpm_fltr_log2_onivara_df |>
-  tidyr::pivot_longer(
-    cols = samples_onivara,
-    names_to = "sample",
-    values_to = "expression")
-# Plot this pivoted data
-plot_onivara_2 <-
-  ggplot2::ggplot(cpm_fltr_log2_onivara_piv) +
-  ggplot2::aes(x = sample, y = expression, fill = sample) +
-  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
-  ggplot2::stat_summary(
-    fun = "median",
-    geom = "point",
-    shape = 95,
-    size = 10,
-    color = "black",
-    show.legend = FALSE) +
-  ggplot2::labs(
-    y = "log2 expression",
-    x = "sample",
-    title = "Oryza nivara - Log2 Counts per Million (CPM)",
-    subtitle = "filtered, non-normalized") +
-  ggplot2::theme_bw()
-plot_onivara_2
+plot_cpm_fltr_osativa <- plot_cpm(
+  cpm_piv = cpm_fltr_log2_osativa_piv,
+  organism = "Oryza sativa",
+  log2 = TRUE,
+  filtered = TRUE,
+  normalized = FALSE)
+plot_cpm_fltr_osativa
 
-# Oryza sativa
-
-dgelist_fltr_osativa <- dgelist_osativa[
-  rowSums(cpm_osativa >= 1) >= length(samples_osativa) / 2,
-]
-dim(dgelist_osativa)
-dim(dgelist_fltr_osativa)
-# Get log2 'counts per million'
-cpm_fltr_log2_osativa_df <-
-  edgeR::cpm(dgelist_fltr_osativa, log = TRUE) |>
-  tibble::as_tibble(rownames = "geneID") |>
-  dplyr::rename_with(~ c("geneID", samples_osativa))
-# Pivot the dataframe
-cpm_fltr_log2_osativa_piv <-
-  cpm_fltr_log2_osativa_df |>
-  tidyr::pivot_longer(
-    cols = tidyselect::all_of(samples_osativa),
-    names_to = "sample",
-    values_to = "expression")
-# Plot this pivoted data
-plot_osativa_2 <-
-  ggplot2::ggplot(cpm_fltr_log2_osativa_piv) +
-  ggplot2::aes(x = sample, y = expression, fill = sample) +
-  ggplot2::geom_violin(trim = FALSE, show.legend = FALSE) +
-  ggplot2::stat_summary(
-    fun = "median",
-    geom = "point",
-    shape = 95,
-    size = 10,
-    color = "black",
-    show.legend = FALSE) +
-  ggplot2::labs(
-    y = "log2 expression",
-    x = "sample",
-    title = "Oryza sativa - Log2 Counts per Million (CPM)",
-    subtitle = "filtered, non-normalized") +
-  ggplot2::theme_bw()
-plot_osativa_2
 
 # --- Normalize the data
 
