@@ -37,7 +37,7 @@
 # Step 4:
 #
 # - top_genes_[species]_df
-# - dgelist_fltr_norm_voom_[species]
+# - voom_[species]
 #
 # Step 5:
 #
@@ -501,6 +501,32 @@ create_design_and_contrast_mtx <- function() {
     levels = model_mtx_osativa)
 }
 
+#' Model mean-variance trend and fit a linear model to the data.
+model_mean_var_trend_and_fitlm <- function() {
+
+  # Oryza nivara
+
+  voom_onivara <<- limma::voom(
+    dgelist_fltr_norm_onivara,
+    design = model_mtx_onivara,
+    plot = TRUE)
+  dgelist_fltr_norm_lmfit_onivara <<- limma::lmFit(
+    voom_onivara,
+    design = model_mtx_onivara)
+
+  # Oryza sativa
+
+  voom_osativa <- limma::voom(
+    dgelist_fltr_norm_osativa,
+    design = model_mtx_osativa,
+    plot = TRUE)
+  dgelist_fltr_norm_lmfit_osativa <<- limma::lmFit(
+    voom_osativa,
+    design = model_mtx_osativa)
+}
+
+
+
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
@@ -668,33 +694,11 @@ make_cpm_comparison_table_normal_vs_stress_osativa()
 # Step 4: Identify differentially expressed genes (DEGs)
 # ------------------------------------------------------------------------------
 
-# Set up the design and contrast matrices
-model_mtx_onivara <- model.matrix(~0 + groups_onivara)
-colnames(model_mtx_onivara) <- make.names(levels(groups_onivara))
-contrast_mtx_onivara <- limma::makeContrasts(
-  stress = drought.stress.condition - normal.condition,
-  levels = model_mtx_onivara)
-model_mtx_osativa <- model.matrix(~0 + groups_osativa)
-colnames(model_mtx_osativa) <- make.names(levels(groups_osativa))
-contrast_mtx_osativa <- limma::makeContrasts(
-  stress = drought.stress.condition - normal.condition,
-  levels = model_mtx_osativa)
+# Create the design and contrast matrices
+create_design_and_contrast_mtx()
 
 # Model mean-variance trend and fit a linear model to the data
-dgelist_fltr_norm_voom_onivara <- limma::voom(
-  dgelist_fltr_norm_onivara,
-  design = model_mtx_onivara,
-  plot = TRUE)
-dgelist_fltr_norm_lmfit_onivara <- limma::lmFit(
-  dgelist_fltr_norm_voom_onivara,
-  design = model_mtx_onivara)
-dgelist_fltr_norm_voom_osativa <- limma::voom(
-  dgelist_fltr_norm_osativa,
-  design = model_mtx_osativa,
-  plot = TRUE)
-dgelist_fltr_norm_lmfit_osativa <- limma::lmFit(
-  dgelist_fltr_norm_voom_osativa,
-  design = model_mtx_osativa)
+model_mean_var_trend_and_fitlm()
 
 # Get Bayesian stats for the contrasts from the linear model fits
 ebayes_onivara <-
@@ -849,9 +853,9 @@ limma::vennDiagram(test_results_oryza_sativa, include = "both")
 # Oryza nivara
 
 # Extract the expression data of the DEGs
-colnames(dgelist_fltr_norm_voom_onivara$E) <- samples_onivara
+colnames(voom_onivara$E) <- samples_onivara
 deg_onivara_df <-
-  dgelist_fltr_norm_voom_onivara$E[
+  voom_onivara$E[
     test_results_oryza_nivara[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Save the DEGs as a text file
@@ -892,9 +896,9 @@ deg_onivara_df |>
 # Oryza sativa
 
 # Extract the expression data of the DEGs
-colnames(dgelist_fltr_norm_voom_osativa$E) <- samples_osativa
+colnames(voom_osativa$E) <- samples_osativa
 deg_osativa_df <-
-  dgelist_fltr_norm_voom_osativa$E[
+  voom_osativa$E[
     test_results_oryza_sativa[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Save the DEGs as a text file
