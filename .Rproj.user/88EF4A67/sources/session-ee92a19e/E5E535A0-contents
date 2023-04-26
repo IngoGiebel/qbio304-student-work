@@ -636,8 +636,8 @@ log2.cpm.filtered.norm.df
 # other distance methods are "euclidean", maximum", "manhattan", "canberra",
 # "binary" or "minkowski"
 # distance <- dist(t(log2.cpm.filtered.norm), method = "maximum")
-distance <- log2.cpm.filtered.norm |> t() |> stats::dist(method = "euclidean")
-stats::as.dist(distance)
+distance <- log2.cpm.filtered.norm |> t() |> dist(method = "euclidean")
+as.dist(distance)
 
 # other agglomeration methods are "ward.D", "ward.D2", "single", "complete",
 # "average", "mcquitty", "median", or "centroid"

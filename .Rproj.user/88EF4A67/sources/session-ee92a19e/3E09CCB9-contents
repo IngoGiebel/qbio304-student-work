@@ -10,6 +10,7 @@
 # - studydesign_df
 # - studydesign_[species]_df
 # - samples_[species]
+# - groups_[species]
 #
 # Step 2:
 #
@@ -29,11 +30,7 @@
 #
 # Step 3:
 #
-# - groups_[species]
 # - pca_res_[species]
-# - pca_var_[species]
-# - pca_per_[species]
-# - pca_res_[species]_df
 #
 # Step 4:
 #
@@ -78,6 +75,8 @@ library(datapasta)
 library(tidyverse)
 # To combine multiple plots in one figure
 library(cowplot)
+# Provides geoms for ggplot2 to repel overlapping text labels
+library(ggrepel)
 # For making interactive plots
 library(plotly)
 # For making interactive tables
@@ -101,23 +100,28 @@ library(gprofiler2)
 #' Read in the studydesign tsv-file "studydesign-PRJCA004229.tsv" and
 #' create a tibble for the overall studydesign and one tibble for each
 #' of the  studydesigns restricted to Oryzy nivara and Oryza sativa.
-#' Furthermore, samples vectors for the Oryza nivara and the Oryza sativa
-#' samples are created.
+#'
+#' Furthermore, samples and group vectors are created for the variables
+#' `Sample name` and Condition.
 create_studydesign_data <- function() {
 
   studydesign_df <<- readr::read_tsv(
     "studydesign-PRJCA004229.tsv",
     col_types = "icccccfffcficfc")
 
+  # Oryza nivara
   studydesign_onivara_df <<- dplyr::filter(
     studydesign_df,
     Organism == "Oryza nivara")
   samples_onivara <<- studydesign_onivara_df$`Sample name`
+  groups_onivara <<- studydesign_onivara_df$Condition
 
+  # Oryza sativa
   studydesign_osativa_df <<- dplyr::filter(
     studydesign_df,
     Organism == "Oryza sativa")
   samples_osativa <<- studydesign_osativa_df$`Sample name`
+  groups_osativa <<- studydesign_osativa_df$Condition
 }
 
 #' Import the kallisto "abundance.tsv" files.
@@ -289,7 +293,8 @@ plot_cpm <- function(cpm_piv, organism, log2, filtered, normalized) {
         "Counts per Million (CPM)"),
       subtitle = paste0(
         if (filtered) "filtered" else "unfiltered", ", ",
-        if (normalized) "normalized" else "non-normalized")) +
+        if (normalized) "normalized" else "non-normalized",
+        " data")) +
     ggplot2::theme_bw()
 }
 
@@ -364,6 +369,74 @@ normalize_data <- function() {
   cpm_fltr_norm_log2_osativa_piv <<- pivot_cpm_df(
     cpm_fltr_norm_log2_osativa_df,
     samples_osativa)
+}
+
+#' Plot a cluster dendrogram of the samples.
+plot_hclust <- function(cpm, samples, organism, filtered, normalized) {
+  plot(
+    hclust(
+      cpm |> t() |> dist(method = "euclidean"),
+      method = "complete"),
+    labels = samples,
+    main = paste(organism, "- Cluster Dendogram"),
+    xlab = "euclidean distance",
+    sub = paste0(
+      if (filtered) "filtered" else "unfiltered", ", ",
+      if (normalized) "normalized" else "non-normalized",
+      " data"))
+}
+
+#' Do a principal component analysis (PCA).
+do_pca <- function() {
+
+  # Function definitions
+
+  compute_pca_res <- function(cpm) {
+    t(cpm)|> prcomp(scale = FALSE, retx = TRUE)
+  }
+
+  # Oryza nivara
+
+  pca_res_onivara <<- compute_pca_res(cpm_fltr_norm_log2_onivara)
+
+  # Oryza sativa
+
+  pca_res_osativa <<- compute_pca_res(cpm_fltr_norm_log2_osativa)
+}
+
+#' Plot the samples and their contributioh percentage to the first two PCs.
+plot_pc1_pc2 <- function(pca_res, samples, groups, organism) {
+  # Percentage variance explained by each PC
+  pca_pct <- round(pca_res$sdev^2 * 100 / sum(pca_res$sdev^2), 1)
+  # Create the plot
+  ggplot2::ggplot(tibble::as_tibble(pca_res$x)) +
+    ggplot2::aes(x = PC1, y = PC2, label = samples, color = groups) +
+    ggplot2::geom_point(size = 4) +
+    ggrepel::geom_text_repel(nudge_x = 10, nudge_y = 5) +
+    ggplot2::stat_ellipse() +
+    ggplot2::xlab(paste0("PC1 (", pca_pct[1], "%", ")")) +
+    ggplot2::ylab(paste0("PC2 (", pca_pct[2], "%", ")")) +
+    ggplot2::labs(colour = "group") +
+    ggplot2::ggtitle(paste0(organism, " - PCA plot")) +
+    ggplot2::theme_bw()
+}
+
+#' Create the design and contrast matrices.
+create_design_and_contrast_mtx <- function() {
+
+  # Oryza nivara
+  model_mtx_onivara <<- model.matrix(~0 + groups_onivara)
+  colnames(model_mtx_onivara) <- make.names(levels(groups_onivara))
+  contrast_mtx_onivara <<- limma::makeContrasts(
+    stress = drought.stress.condition - normal.condition,
+    levels = model_mtx_onivara)
+
+  # Oryza sativa
+  model_mtx_osativa <<- model.matrix(~0 + groups_osativa)
+  colnames(model_mtx_osativa) <- make.names(levels(groups_osativa))
+  contrast_mtx_osativa <<- limma::makeContrasts(
+    stress = drought.stress.condition - normal.condition,
+    levels = model_mtx_osativa)
 }
 
 
@@ -493,34 +566,37 @@ cowplot::plot_grid(
 # Step 3: Principal component analysis (PCA)
 # ------------------------------------------------------------------------------
 
-# Oryza nivara
+# Plot cluster dendrogams of the samples - using the euclidean distance of
+# filtered and normalized CPM data
+plot_hclust(
+  cpm = cpm_fltr_norm_log2_onivara,
+  samples = samples_onivara,
+  organism = "Oryza nivara",
+  filtered = TRUE,
+  normalized = TRUE)
+plot_hclust(
+  cpm = cpm_fltr_norm_log2_osativa,
+  samples = samples_osativa,
+  organism = "Oryza sativa",
+  filtered = TRUE,
+  normalized = TRUE)
 
-groups_onivara <- studydesign_onivara_df$Condition
-pca_res_onivara <-
-  cpm_fltr_norm_log2_onivara |>
-  t() |>
-  prcomp(scale = FALSE, retx = TRUE)
-# Eigenvalues from the PCA result
-pca_var_onivara <- pca_res_onivara$sdev^2
-# Percentage variance explained by each PC
-pca_per_onivara <- round(pca_var_onivara * 100 / sum(pca_var_onivara), 1)
-# Plot PC1 and PC2 against each other
-pca_res_onivara_df <- tibble::as_tibble(pca_res_onivara$x)
-pca_plot_onivara <-
-  ggplot2::ggplot(pca_res_onivara_df) +
-  ggplot2::aes(
-    x = PC1,
-    y = PC2,
-    label = samples_onivara,
-    color = groups_onivara) +
-  ggplot2::geom_point(size = 4) +
-  ggplot2::stat_ellipse() +
-  ggplot2::xlab(paste0("PC1 (", pca_per_onivara[1], "%", ")")) +
-  ggplot2::ylab(paste0("PC2 (", pca_per_onivara[2], "%", ")")) +
-  ggplot2::labs(colour = "group") +
-  ggplot2::ggtitle("Oryza nivara - PCA plot") +
-  ggplot2::theme_bw()
-plotly::ggplotly(pca_plot_onivara)
+# Principal component analysis
+do_pca()
+
+# Plot the samples and their contributioh percentage to the first two PCs
+plot_pc1_pc2(
+  pca_res = pca_res_onivara,
+  samples = samples_onivara,
+  groups = groups_onivara,
+  organism = "Oryza nivara")
+plot_pc1_pc2(
+  pca_res = pca_res_osativa,
+  samples = samples_osativa,
+  groups = groups_osativa,
+  organism = "Oryza sativa")
+
+
 # Make an interactive table
 cpm_fltr_log2_onivara_df |>
   dplyr::mutate(
@@ -544,7 +620,6 @@ cpm_fltr_log2_onivara_df |>
 
 # Oryza sativa
 
-groups_osativa <- studydesign_osativa_df$Condition
 pca_res_osativa <-
   cpm_fltr_norm_log2_osativa |>
   t() |>
