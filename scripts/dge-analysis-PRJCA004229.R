@@ -488,14 +488,14 @@ create_design_and_contrast_mtx <- function() {
 
   # Oryza nivara
   model_mtx_onivara <<- model.matrix(~0 + groups_onivara)
-  colnames(model_mtx_onivara) <- make.names(levels(groups_onivara))
+  colnames(model_mtx_onivara) <<- make.names(levels(groups_onivara))
   contrast_mtx_onivara <<- limma::makeContrasts(
     stress = drought.stress.condition - normal.condition,
     levels = model_mtx_onivara)
 
   # Oryza sativa
   model_mtx_osativa <<- model.matrix(~0 + groups_osativa)
-  colnames(model_mtx_osativa) <- make.names(levels(groups_osativa))
+  colnames(model_mtx_osativa) <<- make.names(levels(groups_osativa))
   contrast_mtx_osativa <<- limma::makeContrasts(
     stress = drought.stress.condition - normal.condition,
     levels = model_mtx_osativa)
@@ -525,8 +525,109 @@ model_mean_var_trend_and_fitlm <- function() {
     design = model_mtx_osativa)
 }
 
+#' Compute empirical Bayes stats for the contrasts from the linear model fits.
+#'
+#' Computed statistics:
+#' - log FC      : log2-fold-change corresponding to the contrast
+#' - AveExpr     : average log2-expression
+#' - t           : moderated t-statistic: ratio of the logFC to the standard
+#'                 error (where the error has been moderated across all genes
+#'                 because of Bayesian approach)
+#' - P.Value     : raw p-value
+#' - adj.P.Value : adjusted p-value (by BH)
+#' - B           : log-odds that the gene is differentially expressed
+compute_ebayes_stats <- function() {
 
+  # Oryza nivara
 
+  ebayes_onivara <<-
+    dgelist_fltr_norm_lmfit_onivara |>
+    limma::contrasts.fit(contrasts = contrast_mtx_onivara) |>
+    limma::eBayes()
+
+  # Oryza sativa
+
+  ebayes_osativa <<-
+    dgelist_fltr_norm_lmfit_osativa |>
+    limma::contrasts.fit(contrasts = contrast_mtx_osativa) |>
+    limma::eBayes()
+}
+
+#' Extract tables of the top-ranked genes from the linear model fits.
+extract_top_genes_from_lmfit <- function() {
+
+  # Function definitions
+
+  top_genes <- function(ebayes) {
+    limma::topTable(
+      ebayes,
+      adjust.method = "BH",
+      coef = 1,
+      number = 100000,
+      sort.by = "logFC") |>
+      tibble::as_tibble(rownames = "geneID")
+  }
+
+  # Oryza nivara
+
+  top_genes_onivara_df <<- top_genes(ebayes_onivara)
+
+  # Oryza sativa
+
+  top_genes_osativa_df <<- top_genes(ebayes_osativa)
+}
+
+#' Create an interactive volcano plot of the differentially expressed genes.
+plot_volcano_top_genes <- function(top_genes_df, organism) {
+  (top_genes_df |>
+     ggplot2::ggplot() +
+     ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
+     ggplot2::geom_point(size = 0.2) +
+     ggplot2::geom_hline(
+       yintercept = -log10(0.01),
+       linetype = "longdash",
+       colour= "grey",
+       linewidth = 1) +
+     ggplot2::geom_vline(
+       xintercept = 1,
+       linetype ="longdash",
+       colour = "coral",
+       linewidth = 1) +
+     ggplot2::geom_vline(
+       xintercept = -1,
+       linetype = "longdash",
+       colour = "cadetblue",
+       linewidth = 1) +
+     ggplot2::annotate(
+       "rect",
+       xmin = 1,
+       xmax = 12,
+       ymin = -log10(0.01),
+       ymax = 7.5,
+       alpha = .2,
+       fill = "coral") +
+     ggplot2::annotate(
+       "rect",
+       xmin = -1,
+       xmax = -12,
+       ymin = -log10(0.01),
+       ymax = 7.5,
+       alpha=.2,
+       fill = "cadetblue") +
+     ggplot2::ggtitle(paste0(organism, " - volcano plot")) +
+     ggplot2::theme_bw()) |>
+    plotly::ggplotly()
+}
+
+#' Perform limma test for the empirical Bayes stats.
+do_limma_test <- function(ebayes) {
+  limma::decideTests(
+    ebayes,
+    method = "global",
+    adjust.method = "BH",
+    p.value = 0.01,
+    lfc = 7)
+}
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
@@ -700,163 +801,34 @@ create_design_and_contrast_mtx()
 # Model mean-variance trend and fit a linear model to the data
 model_mean_var_trend_and_fitlm()
 
-# Get Bayesian stats for the contrasts from the linear model fits
-ebayes_onivara <-
-  dgelist_fltr_norm_lmfit_onivara |>
-  limma::contrasts.fit(contrasts = contrast_mtx_onivara) |>
-  limma::eBayes()
-ebayes_osativa <-
-  dgelist_fltr_norm_lmfit_osativa |>
-  limma::contrasts.fit(contrasts = contrast_mtx_osativa) |>
-  limma::eBayes()
+# Compute empirical Bayes stats for the contrasts from the linear model fits
+compute_ebayes_stats()
 
-# --- View DEGs - tables of "top-ranked" genes from the Bayesian stats
+# Extract tables of the top-ranked genes from the linear model fits
+extract_top_genes_from_lmfit()
 
-# Computed statistics:
-# - log FC      : log2-fold-change corresponding to the contrast
-# - AveExpr     : average log2-expression
-# - t           : moderated t-statistic: ratio of the logFC to the standard
-#                 error (where the error has been moderated across all genes
-#                 because of Bayesian approach)
-# - P.Value     : raw p-value
-# - adj.P.Value : adjusted p-value (by BH)
-# - B           : log-odds that the gene is differentially expressed
+# Create an interactive volcano plots of the differentially expressed genes
+plot_volcano_top_genes(top_genes_onivara_df, organism = "Oryza nivara")
+plot_volcano_top_genes(top_genes_osativa_df, organism = "Oryza sativa")
 
+# Perform limma tests and make Venn diagrams of the DEG test results
 # Oryza nivara
-
-# Determine the top-ranked genes
-top_genes_onivara_df <-
-  limma::topTable(
-    ebayes_onivara,
-    adjust.method = "BH",
-    coef = 1,
-    number = 100000,
-    sort.by = "logFC") |>
-  tibble::as_tibble(rownames = "geneID")
-# Create an interactive vulcano plot
-(top_genes_onivara_df |>
-  ggplot2::ggplot() +
-  ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
-  ggplot2::geom_point(size = 0.2) +
-  ggplot2::geom_hline(
-    yintercept = -log10(0.01),
-    linetype = "longdash",
-    colour= "grey",
-    linewidth = 1) +
-  ggplot2::geom_vline(
-    xintercept = 1,
-    linetype ="longdash",
-    colour = "coral",
-    linewidth = 1) +
-  ggplot2::geom_vline(
-    xintercept = -1,
-    linetype = "longdash",
-    colour = "cadetblue",
-    linewidth = 1) +
-  ggplot2::annotate(
-    "rect",
-    xmin = 1,
-    xmax = 12,
-    ymin = -log10(0.01),
-    ymax = 7.5,
-    alpha = .2,
-    fill = "coral") +
-  ggplot2::annotate(
-    "rect",
-    xmin = -1,
-    xmax = -12,
-    ymin = -log10(0.01),
-    ymax = 7.5,
-    alpha=.2,
-    fill = "cadetblue") +
-  ggplot2::ggtitle("Oryza nivara - volcano plot") +
-  ggplot2::theme_bw()) |>
-  plotly::ggplotly()
-
-# Oryza sativa
-
-# Determine the top-ranked genes
-top_genes_osativa_df <-
-  limma::topTable(
-    ebayes_osativa,
-    adjust.method = "BH",
-    coef = 1,
-    number = 100000,
-    sort.by = "logFC") |>
-  tibble::as_tibble(rownames = "geneID")
-# Create an interactive vulcano plot
-(top_genes_osativa_df |>
-    ggplot2::ggplot() +
-    ggplot2::aes(x = logFC, y = -log10(adj.P.Val), text = geneID) +
-    ggplot2::geom_point(size = 0.2) +
-    ggplot2::geom_hline(
-      yintercept = -log10(0.01),
-      linetype = "longdash",
-      colour= "grey",
-      linewidth = 1) +
-    ggplot2::geom_vline(
-      xintercept = 1,
-      linetype ="longdash",
-      colour = "coral",
-      linewidth = 1) +
-    ggplot2::geom_vline(
-      xintercept = -1,
-      linetype = "longdash",
-      colour = "cadetblue",
-      linewidth = 1) +
-    ggplot2::annotate(
-      "rect",
-      xmin = 1,
-      xmax = 12,
-      ymin = -log10(0.01),
-      ymax = 7.5,
-      alpha = .2,
-      fill = "coral") +
-    ggplot2::annotate(
-      "rect",
-      xmin = -1,
-      xmax = -12,
-      ymin = -log10(0.01),
-      ymax = 7.5,
-      alpha=.2,
-      fill = "cadetblue") +
-    ggplot2::ggtitle("Oryza sativa - volcano plot") +
-    ggplot2::theme_bw()) |>
-  plotly::ggplotly()
-
-# --- Make a Venn diagram of the DEGs
-
-# Oryza nivara
-test_results_oryza_nivara <- limma::decideTests(
-  ebayes_onivara,
-  method = "global",
-  adjust.method = "BH",
-  p.value = 0.01,
-  lfc = 7)
-head(test_results_oryza_nivara)
+test_results_oryza_nivara <- do_limma_test(ebayes_onivara)
 summary(test_results_oryza_nivara)
 limma::vennDiagram(test_results_oryza_nivara, include = "both")
-
 # Oryza sativa
-test_results_oryza_sativa <- limma::decideTests(
-  ebayes_osativa,
-  method = "global",
-  adjust.method = "BH",
-  p.value = 0.01,
-  lfc = 7)
-head(test_results_oryza_sativa)
-summary(test_results_oryza_sativa)
-limma::vennDiagram(test_results_oryza_sativa, include = "both")
+test_results_oryza_osativa <- do_limma_test(ebayes_osativa)
+summary(test_results_oryza_osativa)
+limma::vennDiagram(test_results_oryza_osativa, include = "both")
 
-#--- Create an interactive table and a heatmap of the DEGs
+# Create an interactive table and a heatmap of the DEGs
 
 # Oryza nivara
 
 # Extract the expression data of the DEGs
 colnames(voom_onivara$E) <- samples_onivara
 deg_onivara_df <-
-  voom_onivara$E[
-    test_results_oryza_nivara[, 1] != 0, ] |>
+  voom_onivara$E[test_results_oryza_nivara[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Save the DEGs as a text file
 readr::write_tsv(deg_onivara_df, "../results/degs-oryza-nivara.txt")
@@ -898,8 +870,7 @@ deg_onivara_df |>
 # Extract the expression data of the DEGs
 colnames(voom_osativa$E) <- samples_osativa
 deg_osativa_df <-
-  voom_osativa$E[
-    test_results_oryza_sativa[, 1] != 0, ] |>
+  voom_osativa$E[test_results_oryza_sativa[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Save the DEGs as a text file
 readr::write_tsv(deg_osativa_df, "../results/degs-oryza-sativa.txt")
