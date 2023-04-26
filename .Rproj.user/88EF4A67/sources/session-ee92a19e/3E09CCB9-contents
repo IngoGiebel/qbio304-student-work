@@ -127,6 +127,9 @@ create_studydesign_data <- function() {
 #' - studydesign_onivara_df
 #' - studydesign_osativa_df
 import_kallisto_transcript_abundance_estimates <- function() {
+
+  # Function definitions
+
   get_biomart <- function(dataset) {
     biomaRt::useMart(
       biomart = "plants_mart",
@@ -156,6 +159,8 @@ import_kallisto_transcript_abundance_estimates <- function() {
       tx2gene = get_tx2gene(dataset),
       countsFromAbundance = "lengthScaledTPM")
   }
+
+  # Create txi_gene_onivara and txi_gene_osativa
 
   txi_gene_onivara <<- get_txigene(
     dataset = "onivara_eg_gene",
@@ -210,26 +215,50 @@ plot_txi_gene_stats_osativa <- function() {
     ggplot2::theme_bw()
 }
 
+#' Create DGElist objects and compute counts per million (CPM) and their
+#' respective log2 values.
+#'
+#' A DGEList object holds the dataset (read counts and associated information)
+#' to be analyzed by edgeR and the subsequent calculations performed on the
+#' dataset.
+create_deglists_and_cpms <- function() {
 
-# # Create a DGElist object for Oryza nivara
-# # A DGEList object holds the dataset (read counts and associated information)
-# # to be analyzed by edgeR and the subsequent calculations performed on the
-# # dataset.
-# dgelist_onivara <- edgeR::DGEList(txi_gene_onivara$counts)
-# # Compute counts per million (CPM) and their respective log2 values
-# # Get log2 'counts per million'
-# cpm_onivara <- edgeR::cpm(dgelist_onivara)
-# cpm_log2_onivara_df <-
-#   edgeR::cpm(cpm_onivara, log = TRUE) |>
-#   tibble::as_tibble(rownames = "geneID") |>
-#   dplyr::rename_with(~ c("geneID", samples_onivara))
-# # Pivot the dataframe
-# cpm_log2_onivara_piv <-
-#   cpm_log2_onivara_df |>
-#   tidyr::pivot_longer(
-#     cols = tidyselect::all_of(samples_onivara),
-#     names_to = "sample",
-#     values_to = "expression")
+  # Function definitions
+
+  # Create a log2 CPM tibble
+  cpm_log2_df <- function(cpm, samples) {
+    edgeR::cpm(cpm, log = TRUE) |>
+      tibble::as_tibble(rownames = "geneID") |>
+      dplyr::rename_with(~ c("geneID", samples))
+  }
+
+  # Pivot the (log2) CPM tibble
+  pivot_cpm_df <- function(cpm_df, samples) {
+    tidyr::pivot_longer(
+      cpm_df,
+      cols = tidyselect::all_of(samples),
+      names_to = "sample",
+      values_to = "expression")
+  }
+
+  # Oryza nivara
+
+  # Create a DGElist object
+  dgelist_onivara <<- edgeR::DGEList(txi_gene_onivara$counts)
+  # Compute counts per million (CPM) and their respective log2 values
+  cpm_onivara <<- edgeR::cpm(dgelist_onivara)
+  cpm_log2_onivara_df <<- cpm_log2_df(cpm_onivara, samples_onivara)
+  cpm_log2_onivara_piv <<- pivot_cpm_df(cpm_log2_onivara_df, samples_onivara)
+
+  # Oryza sativa
+
+  # Create a DGElist object
+  dgelist_osativa <<- edgeR::DGEList(txi_gene_osativa$counts)
+  # Compute counts per million (CPM) and their respective log2 values
+  cpm_osativa <<- edgeR::cpm(dgelist_osativa)
+  cpm_log2_osativa_df <<- cpm_log2_df(cpm_osativa, samples_osativa)
+  cpm_log2_osativa_piv <<- pivot_cpm_df(cpm_log2_osativa_df, samples_osativa)
+}
 
 
 # ------------------------------------------------------------------------------
@@ -253,30 +282,10 @@ import_kallisto_transcript_abundance_estimates()
 plot_txi_gene_stats_onivara()
 plot_txi_gene_stats_osativa()
 
-# --- DGElist objects
+# Create DGElist objects and compute counts per million (CPM) and their
+# respective log2 values
+create_deglists_and_cpms()
 
-# Oryza nivara
-
-
-# Create a DGElist object for Oryza nivara
-# A DGEList object holds the dataset (read counts and associated information)
-# to be analyzed by edgeR and the subsequent calculations performed on the
-# dataset.
-dgelist_onivara <- edgeR::DGEList(txi_gene_onivara$counts)
-# Compute counts per million (CPM) and their respective log2 values
-# Get log2 'counts per million'
-cpm_onivara <- edgeR::cpm(dgelist_onivara)
-cpm_log2_onivara_df <-
-  edgeR::cpm(cpm_onivara, log = TRUE) |>
-  tibble::as_tibble(rownames = "geneID") |>
-  dplyr::rename_with(~ c("geneID", samples_onivara))
-# Pivot the dataframe
-cpm_log2_onivara_piv <-
-  cpm_log2_onivara_df |>
-  tidyr::pivot_longer(
-    cols = tidyselect::all_of(samples_onivara),
-    names_to = "sample",
-    values_to = "expression")
 # Plot this pivoted data
 plot_onivara_1 <-
   ggplot2::ggplot(cpm_log2_onivara_piv) +
@@ -299,22 +308,6 @@ plot_onivara_1
 
 # Oryza sativa
 
-
-# Create a DGE list for Oryza nivara
-dgelist_osativa <- edgeR::DGEList(txi_gene_osativa$counts)
-# Get log2 'counts per million'
-cpm_osativa <- edgeR::cpm(dgelist_osativa)
-cpm_log2_osativa_df <-
-  edgeR::cpm(dgelist_osativa, log = TRUE) |>
-  tibble::as_tibble(rownames = "geneID") |>
-  dplyr::rename_with(~ c("geneID", samples_osativa))
-# Pivot the dataframe
-cpm_log2_osativa_piv <-
-  cpm_log2_osativa_df |>
-  tidyr::pivot_longer(
-    cols = tidyselect::all_of(samples_osativa),
-    names_to = "sample",
-    values_to = "expression")
 # Plot this pivoted data
 plot_osativa_1 <-
   ggplot2::ggplot(cpm_log2_osativa_piv) +
