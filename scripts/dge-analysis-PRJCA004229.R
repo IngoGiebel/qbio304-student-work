@@ -10,6 +10,8 @@
 # - studydesign_df
 # - studydesign_[species]_df
 # - samples_[species]
+# - samples_normal_[species]
+# - samples_stress_[species]
 # - groups_[species]
 #
 # Step 2:
@@ -114,6 +116,12 @@ create_studydesign_data <- function() {
     studydesign_df,
     Organism == "Oryza nivara")
   samples_onivara <<- studydesign_onivara_df$`Sample name`
+  samples_normal_onivara <<- dplyr::filter(
+    studydesign_onivara_df,
+    Condition == "normal condition")$`Sample name`
+  samples_stress_onivara <<- dplyr::filter(
+    studydesign_onivara_df,
+    Condition == "drought stress condition")$`Sample name`
   groups_onivara <<- studydesign_onivara_df$Condition
 
   # Oryza sativa
@@ -121,6 +129,12 @@ create_studydesign_data <- function() {
     studydesign_df,
     Organism == "Oryza sativa")
   samples_osativa <<- studydesign_osativa_df$`Sample name`
+  samples_normal_osativa <<- dplyr::filter(
+    studydesign_osativa_df,
+    Condition == "normal condition")$`Sample name`
+  samples_stress_osativa <<- dplyr::filter(
+    studydesign_osativa_df,
+    Condition == "drought stress condition")$`Sample name`
   groups_osativa <<- studydesign_osativa_df$Condition
 }
 
@@ -421,6 +435,54 @@ plot_pc1_pc2 <- function(pca_res, samples, groups, organism) {
     ggplot2::theme_bw()
 }
 
+#' Make an interactive table which compares for each gene the medium filtered
+#' and normalized log CPM values of the "normal condition" samples with the
+#' corresponding values of the "drought stress condition" samples.
+make_cpm_comparison_table_normal_vs_stress_onivara <- function() {
+  cpm_fltr_norm_log2_onivara_df |>
+    rowwise() |>
+    summarize(
+      geneID,
+      normal.AVG = (BJ278C1 + BJ278C2 + BJ278C3 + BJ89C1 + BJ89C2 + BJ89C3) / 6,
+      stress.AVG = (BJ278P1 + BJ278P2 + BJ278P3 + BJ89P1 + BJ89P2 + BJ89P3) / 6,
+      LogFC = stress.AVG - normal.AVG) |>
+    dplyr::arrange(dplyr::desc(LogFC)) |>
+    DT::datatable(
+      caption = "Oryza nivara - CPM comparison normal vs draught stress",
+      extensions = c("KeyTable", "FixedHeader"),
+      filter = "top",
+      options = list(
+        keys = TRUE,
+        searchHighlight = TRUE,
+        pageLength = 100000,
+        lengthMenu = c("10", "25", "50", "100"))) |>
+    DT::formatRound(2:4)
+}
+
+#' Make an interactive table which compares for each gene the medium filtered
+#' and normalized log CPM values of the "normal condition" samples with the
+#' corresponding values of the "drought stress condition" samples.
+make_cpm_comparison_table_normal_vs_stress_osativa <- function() {
+  cpm_fltr_norm_log2_osativa_df |>
+    rowwise() |>
+    summarize(
+      geneID,
+      normal.AVG = (NC1 + NC2 + NC1) / 3,
+      stress.AVG = (NP1 + NP2 + NP3) / 3,
+      LogFC = stress.AVG - normal.AVG) |>
+    dplyr::arrange(dplyr::desc(LogFC)) |>
+    DT::datatable(
+      caption = "Oryza sativa - CPM comparison normal vs draught stress",
+      extensions = c("KeyTable", "FixedHeader"),
+      filter = "top",
+      options = list(
+        keys = TRUE,
+        searchHighlight = TRUE,
+        pageLength = 100000,
+        lengthMenu = c("10", "25", "50", "100"))) |>
+    DT::formatRound(2:4)
+}
+
 #' Create the design and contrast matrices.
 create_design_and_contrast_mtx <- function() {
 
@@ -596,76 +658,11 @@ plot_pc1_pc2(
   groups = groups_osativa,
   organism = "Oryza sativa")
 
-
-# Make an interactive table
-cpm_fltr_log2_onivara_df |>
-  dplyr::mutate(
-    normal.AVG = (BJ278C1 + BJ278C2 + BJ278C3 + BJ89C1 + BJ89C2 + BJ89C3) / 6,
-    stress.AVG = (BJ278P1 + BJ278P2 + BJ278P3 + BJ89P1 + BJ89P2 + BJ89P3) / 6,
-    LogFC = (stress.AVG - normal.AVG)) |>
-  dplyr::select(geneID, normal.AVG, stress.AVG, LogFC) |>
-  dplyr::mutate(
-    normal.AVG = round(normal.AVG, 2),
-    stress.AVG = round(stress.AVG, 2),
-    LogFC = round(LogFC, 2)) |>
-  dplyr::arrange(dplyr::desc(LogFC)) |>
-  DT::datatable(
-    extensions = c("KeyTable", "FixedHeader"),
-    filter = "top",
-    options = list(
-      keys = TRUE,
-      searchHighlight = TRUE,
-      pageLength = 100000,
-      lengthMenu = c("10", "25", "50", "100")))
-
-# Oryza sativa
-
-pca_res_osativa <-
-  cpm_fltr_norm_log2_osativa |>
-  t() |>
-  prcomp(scale = FALSE, retx = TRUE)
-# Eigenvalues from the PCA result
-pca_var_osativa <- pca_res_osativa$sdev^2
-# Percentage variance explained by each PC
-pca_per_osativa <- round(pca_var_osativa * 100 / sum(pca_var_osativa), 1)
-# Plot PC1 and PC2 against each other
-pca_res_osativa_df <- tibble::as_tibble(pca_res_osativa$x)
-pca_plot_osativa <-
-  ggplot2::ggplot(pca_res_osativa_df) +
-  ggplot2::aes(
-    x = PC1,
-    y = PC2,
-    label = samples_osativa,
-    color = groups_osativa) +
-  ggplot2::geom_point(size = 4) +
-  ggplot2::stat_ellipse() +
-  ggplot2::xlab(paste0("PC1 (", pca_per_osativa[1], "%", ")")) +
-  ggplot2::ylab(paste0("PC2 (", pca_per_osativa[2], "%", ")")) +
-  ggplot2::labs(colour = "group") +
-  ggplot2::ggtitle("Oryza sativa - PCA plot") +
-  ggplot2::theme_bw()
-plotly::ggplotly(pca_plot_osativa)
-# Make an interactive table
-cpm_fltr_log2_osativa_df |>
-  dplyr::mutate(
-    normal.AVG = (NC1 + NC2 + NC1) / 3,
-    stress.AVG = (NP1 + NP2 + NP3) / 3,
-    LogFC = (stress.AVG - normal.AVG)) |>
-  dplyr::select(geneID, normal.AVG, stress.AVG, LogFC) |>
-  dplyr::mutate(
-    normal.AVG = round(normal.AVG, 2),
-    stress.AVG = round(stress.AVG, 2),
-    LogFC = round(LogFC, 2)) |>
-  dplyr::arrange(dplyr::desc(LogFC)) |>
-  DT::datatable(
-    extensions = c("KeyTable", "FixedHeader"),
-    filter = "top",
-    options = list(
-      keys = TRUE,
-      searchHighlight = TRUE,
-      pageLength = 100000,
-      lengthMenu = c("10", "25", "50", "100")))
-
+# Make an interactive tables which compare for each gene the medium
+# log CPM values of the "normal condition" samples with the
+# corresponding values of the "drought stress condition" samples
+make_cpm_comparison_table_normal_vs_stress_onivara()
+make_cpm_comparison_table_normal_vs_stress_osativa()
 
 # ------------------------------------------------------------------------------
 # Step 4: Identify differentially expressed genes (DEGs)
