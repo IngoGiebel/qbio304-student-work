@@ -732,8 +732,7 @@ sapply(
   1L:length(samples_osativa),
   function(n) sum(rowSums(cpm_osativa >= 1) >= n))
 
-# --- Filter out genes with low reads (< 1 CPM in at least half of the samples)
-
+# Filter out genes with low reads (< 1 CPM in at least half of the samples)
 filter_low_cpm(cpm_thr = 1, sample_perc = 0.5)
 sprintf(
   "Oryza nivara - genes filtered out: %d out of %d",
@@ -761,8 +760,7 @@ plot_cpm_fltr_osativa <- plot_cpm(
   normalized = FALSE)
 plot_cpm_fltr_osativa
 
-# --- Normalize the data
-
+# Normalize the data
 normalize_data()
 
 # Plot the log2 CPM data (filtered, normalized)
@@ -782,8 +780,7 @@ plot_cpm_fltr_norm_osativa <- plot_cpm(
   normalized = TRUE)
 plot_cpm_fltr_norm_osativa
 
-# --- Combine all six violin plots in one overview plot
-
+# Combine all six violin plots in one overview plot
 cowplot::plot_grid(
   plot_cpm_onivara           + ggplot2::ggtitle("Oryza nivara - Log2 CPM"),
   plot_cpm_osativa           + ggplot2::ggtitle("Oryza sativa - Log2 CPM"),
