@@ -1,52 +1,29 @@
 # About this script-------------------------------------------------------------
 #
-# TODO general description
+# This R script performs a differential gene expression analysis of 18
+# biological replicates. Half of these replicates were subject to drought
+# stress conditions, the other half served as a control group. The following
+# data was examined:
 #
-# R environment data and values which are commonly used in this script
-# in different steps (with [species] = onivara|osativa):
+# ==============================================================================
+# Number of replicates   Organism & cultivar        Condition
+# ==============================================================================
+#                    3   Oryza nivara, BJ278        normal
+#                    3   Oryza nivara, BJ278        drought stress
+#                    3   Oryza nivara, BJ89         normal
+#                    3   Oryza nivara, BJ89         drought stress
+#                    3   Oryza sativa, Nipponbare   normal
+#                    3   Oryza sativa, Nipponbare   drought stress
+# ==============================================================================
 #
-# Step 1:
+# See file "studydesign-PRJCA004229.tsv" for further information about the
+# biological replicates.
 #
-# - studydesign_df
-# - studydesign_[species]_df
-# - samples_[species]
-# - samples_normal_[species]
-# - samples_stress_[species]
-# - groups_[species]
+# The species O. nivara and O. sativa are analyzed separately. No quantitative
+# interspecies analysis is performed in this script.
 #
-# Step 2:
-#
-# - dgelist_[species]
-#
-# - cpm_log2_[species]_df
-# - cpm_log2_[species]_piv
-#
-# - dgelist_fltr_[species]
-# - cpm_fltr_log2_[species]_df
-# - cpm_fltr_log2_[species]_piv
-#
-# - dgelist_fltr_norm_[species]
-# - cpm_fltr_norm_log2_[species]
-# - cpm_fltr_norm_log2_[species]_df
-# - cpm_fltr_norm_log2_[species]_piv
-#
-# Step 3:
-#
-# - pca_res_[species]
-#
-# Step 4:
-#
-# - top_genes_[species]_df
-# - voom_[species]
-#
-# Step 5:
-#
-# - top_genes_gostres_[species]
-# - gmt_[species]
-# - camera_[species]_df
-#
-#
-# File structure requirements:
+# ------------------------------------------------------------------------------
+# In order to run this script, the following file structure is required:
 #
 # |                                    <- the project's base directory
 # |
@@ -60,6 +37,37 @@
 #      |
 #      ...
 #
+# ------------------------------------------------------------------------------
+# R environment data and values which are commonly used in this script in
+# different steps (with [species] = onivara|osativa):
+#
+# Step 1:
+# - studydesign_df
+# - studydesign_[species]_df
+# - samples_[species]
+# - samples_normal_[species]
+# - samples_stress_[species]
+# - groups_[species]
+# Step 2:
+# - dgelist_[species]
+# - cpm_log2_[species]_df
+# - cpm_log2_[species]_piv
+# - dgelist_fltr_[species]
+# - cpm_fltr_log2_[species]_df
+# - cpm_fltr_log2_[species]_piv
+# - dgelist_fltr_norm_[species]
+# - cpm_fltr_norm_log2_[species]
+# - cpm_fltr_norm_log2_[species]_df
+# - cpm_fltr_norm_log2_[species]_piv
+# Step 3:
+# - pca_res_[species]
+# Step 4:
+# - top_genes_[species]_df
+# - voom_[species]
+# Step 5:
+# - top_genes_gostres_[species]
+# ------------------------------------------------------------------------------
+
 # ------------------------------------------------------------------------------
 # Load required packages
 # ------------------------------------------------------------------------------
@@ -665,8 +673,6 @@ create_deg_heatmap <- function(deg_df, samples, organism) {
       labRow = deg_df$geneID,
       heatmap_layers = theme(axis.line = element_blank()))
 }
-
-
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
