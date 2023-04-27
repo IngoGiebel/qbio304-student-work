@@ -516,7 +516,7 @@ model_mean_var_trend_and_fitlm <- function() {
 
   # Oryza sativa
 
-  voom_osativa <- limma::voom(
+  voom_osativa <<- limma::voom(
     dgelist_fltr_norm_osativa,
     design = model_mtx_osativa,
     plot = TRUE)
@@ -628,6 +628,45 @@ do_limma_test <- function(ebayes) {
     p.value = 0.01,
     lfc = 7)
 }
+
+#' Create an interactive table of the DEGs.
+create_deg_table <- function(deg_df, organism) {
+  DT::datatable(
+    deg_df,
+    extensions = c("KeyTable", "FixedHeader"),
+    caption = paste("DEGs in", organism),
+    options = list(
+      keys = TRUE,
+      searchHighlight = TRUE,
+      pageLength = 100000,
+      lengthMenu = c("10", "25", "50", "100"))) |>
+    DT::formatRound(columns = c(2:ncol(deg_df)), digits = 2)
+}
+
+#' Create a heatmap of the DEGs.
+create_deg_heatmap <- function(deg_df, samples, organism) {
+  dplyr::select(deg_df, !1) |>
+    heatmaply::heatmaply(
+      xlab = "Samples",
+      ylab = "DEGs",
+      main = paste("DEGs in", organism),
+      scale = "column",
+      margins = c(60, 100, 40, 20),
+      grid_color = "white",
+      grid_width = 0.0000001,
+      titleX = TRUE,
+      titleY = TRUE,
+      hide_colorbar = TRUE,
+      branches_lwd = 0.1,
+      label_names = c("Gene", "Sample:", "Value"),
+      fontsize_row = 5,
+      fontsize_col = 5,
+      labCol = samples,
+      labRow = deg_df$geneID,
+      heatmap_layers = theme(axis.line = element_blank()))
+}
+
+
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
@@ -833,37 +872,14 @@ deg_onivara_df <-
 # Save the DEGs as a text file
 readr::write_tsv(deg_onivara_df, "../results/degs-oryza-nivara.txt")
 # Create an interactive table
-deg_onivara_df |>
-DT::datatable(
-  extensions = c("KeyTable", "FixedHeader"),
-  caption = "DEGs in Oryza nivara",
-  options = list(
-    keys = TRUE,
-    searchHighlight = TRUE,
-    pageLength = 100000,
-    lengthMenu = c("10", "25", "50", "100"))) |>
-  DT::formatRound(columns = c(2:13), digits = 2)
+create_deg_table(
+  deg_onivara_df,
+  organism = "Oryza nivara")
 # Create a heatmap
-deg_onivara_df |>
-  dplyr::select(!1) |>
-  heatmaply::heatmaply(
-    xlab = "Samples",
-    ylab = "DEGs",
-    main = "DEGs in Oryza nivara",
-    scale = "column",
-    margins = c(60, 100, 40, 20),
-    grid_color = "white",
-    grid_width = 0.0000001,
-    titleX = TRUE,
-    titleY = TRUE,
-    hide_colorbar = TRUE,
-    branches_lwd = 0.1,
-    label_names = c("Gene", "Sample:", "Value"),
-    fontsize_row = 5,
-    fontsize_col = 5,
-    labCol = samples_onivara,
-    labRow = deg_onivara_df$geneID,
-    heatmap_layers = theme(axis.line = element_blank()))
+create_deg_heatmap(
+  deg_onivara_df,
+  samples = samples_onivara,
+  organism = "Oryza nivara")
 
 # Oryza sativa
 
@@ -875,44 +891,18 @@ deg_osativa_df <-
 # Save the DEGs as a text file
 readr::write_tsv(deg_osativa_df, "../results/degs-oryza-sativa.txt")
 # Create an interactive table
-deg_osativa_df |>
-  DT::datatable(
-    extensions = c("KeyTable", "FixedHeader"),
-    caption = "DEGs in Oryza sativa",
-    options = list(
-      keys = TRUE,
-      searchHighlight = TRUE,
-      pageLength = 100000,
-      lengthMenu = c("10", "25", "50", "100"))) |>
-  DT::formatRound(columns = c(2:7), digits = 2)
+create_deg_table(
+  deg_osativa_df,
+  organism = "Oryza sativa")
 # Create a heatmap
-deg_osativa_df |>
-  dplyr::select(!1) |>
-  heatmaply::heatmaply(
-    xlab = "Samples",
-    ylab = "DEGs",
-    main = "DEGs in Oryza sativa",
-    scale = "column",
-    margins = c(60, 100, 40, 20),
-    grid_color = "white",
-    grid_width = 0.0000001,
-    titleX = TRUE,
-    titleY = TRUE,
-    hide_colorbar = TRUE,
-    branches_lwd = 0.1,
-    label_names = c("Gene", "Sample:", "Value"),
-    fontsize_row = 5,
-    fontsize_col = 5,
-    labCol = samples_osativa,
-    labRow = deg_osativa_df$geneID,
-    heatmap_layers = theme(axis.line = element_blank()))
-
+create_deg_heatmap(
+  deg_osativa_df,
+  samples = samples_osativa,
+  organism = "Oryza sativa")
 
 # ------------------------------------------------------------------------------
-# Step 5: Gene sets enrichment analysis (GSEA)
+# Step 5: Gene sets enrichment analysis (GSEA) using g:Profiler
 # ------------------------------------------------------------------------------
-
-# --- GSEA using g:Profiler
 
 # Oryza nivara
 
