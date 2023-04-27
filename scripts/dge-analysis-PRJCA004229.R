@@ -886,7 +886,7 @@ create_deg_heatmap(
 # Extract the expression data of the DEGs
 colnames(voom_osativa$E) <- samples_osativa
 deg_osativa_df <-
-  voom_osativa$E[test_results_oryza_sativa[, 1] != 0, ] |>
+  voom_osativa$E[test_results_oryza_osativa[, 1] != 0, ] |>
   as_tibble(rownames = "geneID")
 # Save the DEGs as a text file
 readr::write_tsv(deg_osativa_df, "../results/degs-oryza-sativa.txt")
