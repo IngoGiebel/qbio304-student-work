@@ -6,21 +6,21 @@ Bioinformatics) student work assigned in WS 2022/2023.
 
 ## Script execution order:
 
-1. fastqc_untrimmed.sh
+1. fastqc_untrimmed.sh  
 Check the HTML quality reports. Consider changing the parameters before executing
 the trimmomatic script.
 
-2. trimmomatic
+2. trimmomatic  
 Check the Trimmomatic output.
 
-3. fastqc_trimmed.sh
+3. fastqc_trimmed.sh  
 Check the HTML quality reports before continuing.
 
 4. kallisto_index.sh
 
 5. kallisto_quant.sh
 
-6. multiqc.sh
+6. multiqc.sh  
 Check the MultiQC report.
 
 7. dge-analysis-PRJCA004229.R
