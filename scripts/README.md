@@ -28,8 +28,8 @@ Check the MultiQC report.
 
 **Note:** all scripts must be executed with the data folder as the current working
 directory. The programs invoked by these scripts must already be installed
-within the execution path.
-
+within the execution path. The required (raw) data files must be present in the
+data subdirectory. See the respective README in that folder.
 
 
 ## List of scripts:
