@@ -1,5 +1,6 @@
 *.index
 *.gz
 *.zip
+*.bak
 ref-genomes*
 programs*

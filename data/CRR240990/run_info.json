@@ -1,13 +1,13 @@
 {
 	"n_targets": 44761,
 	"n_bootstraps": 0,
-	"n_processed": 24953356,
-	"n_pseudoaligned": 21796740,
-	"n_unique": 15023594,
-	"p_pseudoaligned": 87.3,
-	"p_unique": 60.2,
+	"n_processed": 23274848,
+	"n_pseudoaligned": 20381357,
+	"n_unique": 13846238,
+	"p_pseudoaligned": 87.6,
+	"p_unique": 59.5,
 	"kallisto_version": "0.48.0",
 	"index_version": 10,
-	"start_time": "Thu Apr 20 17:57:11 2023",
-	"call": "kallisto quant -i Oryza_sativa.IRGSP-1.0.cdna.all.index -o CRR240990 -t 8 CRR240990_f1.fastq.gz CRR240990_r2.fastq.gz"
+	"start_time": "Sat Apr 29 17:35:02 2023",
+	"call": "kallisto quant -i Oryza_sativa.IRGSP-1.0.cdna.all.index -o CRR240990 -t 8 CRR240990_f1.trim.p.fastq.gz CRR240990_r2.trim.p.fastq.gz"
 }

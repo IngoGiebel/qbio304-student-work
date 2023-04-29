@@ -71,130 +71,130 @@
     "report_general_stats_data": [
         {
             "CRR240988_f1": {
-                "total_reads": 21995599.0,
-                "pseudoaligned_reads": 17762562.0,
-                "not_pseudoaligned_reads": 4233037.0,
-                "percent_aligned": 80.75507286707673,
-                "fragment_length": 297.636
+                "total_reads": 20026695.0,
+                "pseudoaligned_reads": 16229063.0,
+                "not_pseudoaligned_reads": 3797632.0,
+                "percent_aligned": 81.03715066315236,
+                "fragment_length": 273.254
             },
             "CRR240977_f1": {
-                "total_reads": 27483610.0,
-                "pseudoaligned_reads": 21935683.0,
-                "not_pseudoaligned_reads": 5547927.0,
-                "percent_aligned": 79.81368895861934,
-                "fragment_length": 282.523
+                "total_reads": 25602707.0,
+                "pseudoaligned_reads": 20424061.0,
+                "not_pseudoaligned_reads": 5178646.0,
+                "percent_aligned": 79.77305290413237,
+                "fragment_length": 258.201
             },
             "CRR240993_f1": {
-                "total_reads": 25383309.0,
-                "pseudoaligned_reads": 22153292.0,
-                "not_pseudoaligned_reads": 3230017.0,
-                "percent_aligned": 87.27503573312684,
-                "fragment_length": 295.552
+                "total_reads": 23651433.0,
+                "pseudoaligned_reads": 20701501.0,
+                "not_pseudoaligned_reads": 2949932.0,
+                "percent_aligned": 87.52747032283413,
+                "fragment_length": 271.468
             },
             "CRR240976_f1": {
-                "total_reads": 26550050.0,
-                "pseudoaligned_reads": 21852626.0,
-                "not_pseudoaligned_reads": 4697424.0,
-                "percent_aligned": 82.30728755689725,
-                "fragment_length": 286.78
+                "total_reads": 24754289.0,
+                "pseudoaligned_reads": 20386495.0,
+                "not_pseudoaligned_reads": 4367794.0,
+                "percent_aligned": 82.35540515827378,
+                "fragment_length": 262.264
             },
             "CRR240982_f1": {
-                "total_reads": 22969595.0,
-                "pseudoaligned_reads": 20103136.0,
-                "not_pseudoaligned_reads": 2866459.0,
-                "percent_aligned": 87.52063760810759,
-                "fragment_length": 291.973
+                "total_reads": 20794246.0,
+                "pseudoaligned_reads": 18194472.0,
+                "not_pseudoaligned_reads": 2599774.0,
+                "percent_aligned": 87.49762794957797,
+                "fragment_length": 267.726
             },
             "CRR240986_f1": {
-                "total_reads": 29600090.0,
-                "pseudoaligned_reads": 24968628.0,
-                "not_pseudoaligned_reads": 4631462.0,
-                "percent_aligned": 84.35321649359851,
-                "fragment_length": 290.813
+                "total_reads": 27268943.0,
+                "pseudoaligned_reads": 23039476.0,
+                "not_pseudoaligned_reads": 4229467.0,
+                "percent_aligned": 84.48980218998588,
+                "fragment_length": 265.9
             },
             "CRR240989_f1": {
-                "total_reads": 20166961.0,
-                "pseudoaligned_reads": 15427155.0,
-                "not_pseudoaligned_reads": 4739806.0,
-                "percent_aligned": 76.49717277680062,
-                "fragment_length": 292.531
+                "total_reads": 18679055.0,
+                "pseudoaligned_reads": 14312741.0,
+                "not_pseudoaligned_reads": 4366314.0,
+                "percent_aligned": 76.62454551367829,
+                "fragment_length": 267.862
             },
             "CRR240992_f1": {
-                "total_reads": 27668062.0,
-                "pseudoaligned_reads": 22819488.0,
-                "not_pseudoaligned_reads": 4848574.0,
-                "percent_aligned": 82.47591753986961,
-                "fragment_length": 286.663
+                "total_reads": 25779302.0,
+                "pseudoaligned_reads": 21315916.0,
+                "not_pseudoaligned_reads": 4463386.0,
+                "percent_aligned": 82.68616427240738,
+                "fragment_length": 262.394
             },
             "CRR240991_f1": {
-                "total_reads": 23683666.0,
-                "pseudoaligned_reads": 19542099.0,
-                "not_pseudoaligned_reads": 4141567.0,
-                "percent_aligned": 82.51298173179778,
-                "fragment_length": 299.164
+                "total_reads": 22007277.0,
+                "pseudoaligned_reads": 18194439.0,
+                "not_pseudoaligned_reads": 3812838.0,
+                "percent_aligned": 82.67464893544076,
+                "fragment_length": 274.769
             },
             "CRR240981_f1": {
-                "total_reads": 22688076.0,
-                "pseudoaligned_reads": 19746278.0,
-                "not_pseudoaligned_reads": 2941798.0,
-                "percent_aligned": 87.03372643850452,
-                "fragment_length": 286.404
+                "total_reads": 20591736.0,
+                "pseudoaligned_reads": 17973096.0,
+                "not_pseudoaligned_reads": 2618640.0,
+                "percent_aligned": 87.28305374544428,
+                "fragment_length": 261.703
             },
             "CRR240990_f1": {
-                "total_reads": 24953356.0,
-                "pseudoaligned_reads": 21796740.0,
-                "not_pseudoaligned_reads": 3156616.0,
-                "percent_aligned": 87.34993401288388,
-                "fragment_length": 285.435
+                "total_reads": 23274848.0,
+                "pseudoaligned_reads": 20381357.0,
+                "not_pseudoaligned_reads": 2893491.0,
+                "percent_aligned": 87.56816371045689,
+                "fragment_length": 261.39
             },
             "CRR240983_f1": {
-                "total_reads": 23224610.0,
-                "pseudoaligned_reads": 19962731.0,
-                "not_pseudoaligned_reads": 3261879.0,
-                "percent_aligned": 85.95507524130653,
-                "fragment_length": 297.627
+                "total_reads": 21519945.0,
+                "pseudoaligned_reads": 18496969.0,
+                "not_pseudoaligned_reads": 3022976.0,
+                "percent_aligned": 85.95267785303355,
+                "fragment_length": 273.784
             },
             "CRR240980_f1": {
-                "total_reads": 22115769.0,
-                "pseudoaligned_reads": 18623668.0,
-                "not_pseudoaligned_reads": 3492101.0,
-                "percent_aligned": 84.20990470645629,
-                "fragment_length": 282.819
+                "total_reads": 20618994.0,
+                "pseudoaligned_reads": 17393099.0,
+                "not_pseudoaligned_reads": 3225895.0,
+                "percent_aligned": 84.35474107029664,
+                "fragment_length": 258.176
             },
             "CRR240978_f1": {
-                "total_reads": 22154962.0,
-                "pseudoaligned_reads": 18037896.0,
-                "not_pseudoaligned_reads": 4117066.0,
-                "percent_aligned": 81.41695751949382,
-                "fragment_length": 292.757
+                "total_reads": 20621916.0,
+                "pseudoaligned_reads": 16793222.0,
+                "not_pseudoaligned_reads": 3828694.0,
+                "percent_aligned": 81.4338590070874,
+                "fragment_length": 268.415
             },
             "CRR240987_f1": {
-                "total_reads": 30706772.0,
-                "pseudoaligned_reads": 26364822.0,
-                "not_pseudoaligned_reads": 4341950.0,
-                "percent_aligned": 85.85995949036909,
-                "fragment_length": 293.202
+                "total_reads": 28312283.0,
+                "pseudoaligned_reads": 24359929.0,
+                "not_pseudoaligned_reads": 3952354.0,
+                "percent_aligned": 86.04014377787902,
+                "fragment_length": 269.165
             },
             "CRR240984_f1": {
-                "total_reads": 24622291.0,
-                "pseudoaligned_reads": 21349251.0,
-                "not_pseudoaligned_reads": 3273040.0,
-                "percent_aligned": 86.70700464063235,
-                "fragment_length": 299.783
+                "total_reads": 22723872.0,
+                "pseudoaligned_reads": 19669745.0,
+                "not_pseudoaligned_reads": 3054127.0,
+                "percent_aligned": 86.55983012050059,
+                "fragment_length": 275.623
             },
             "CRR240979_f1": {
-                "total_reads": 21691338.0,
-                "pseudoaligned_reads": 16837560.0,
-                "not_pseudoaligned_reads": 4853778.0,
-                "percent_aligned": 77.62342737916859,
-                "fragment_length": 292.815
+                "total_reads": 20249745.0,
+                "pseudoaligned_reads": 15721652.0,
+                "not_pseudoaligned_reads": 4528093.0,
+                "percent_aligned": 77.63876532766216,
+                "fragment_length": 268.443
             },
             "CRR240985_f1": {
-                "total_reads": 27849875.0,
-                "pseudoaligned_reads": 23202999.0,
-                "not_pseudoaligned_reads": 4646876.0,
-                "percent_aligned": 83.31455347645186,
-                "fragment_length": 284.778
+                "total_reads": 25262702.0,
+                "pseudoaligned_reads": 21081068.0,
+                "not_pseudoaligned_reads": 4181634.0,
+                "percent_aligned": 83.44740004453996,
+                "fragment_length": 260.511
             }
         },
         {
@@ -401,6 +401,7 @@
             "CRR240990_f1": {
                 "percent_gc": 56.0,
                 "avg_sequence_length": 112.86024200888444,
+                "median_sequence_length": 113,
                 "total_sequences": 23274848.0,
                 "percent_duplicates": 78.35861592187032,
                 "percent_fails": 18.181818181818183
@@ -408,6 +409,7 @@
             "CRR240988_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.72353680924387,
+                "median_sequence_length": 113,
                 "total_sequences": 20026695.0,
                 "percent_duplicates": 75.14715231747408,
                 "percent_fails": 18.181818181818183
@@ -415,6 +417,7 @@
             "CRR240977_f1": {
                 "percent_gc": 56.0,
                 "avg_sequence_length": 112.86026981443798,
+                "median_sequence_length": 113,
                 "total_sequences": 25602707.0,
                 "percent_duplicates": 79.1631821730632,
                 "percent_fails": 18.181818181818183
@@ -422,6 +425,7 @@
             "CRR240980_r2": {
                 "percent_gc": 59.0,
                 "avg_sequence_length": 112.80479595658255,
+                "median_sequence_length": 113,
                 "total_sequences": 20618994.0,
                 "percent_duplicates": 72.78893189095228,
                 "percent_fails": 18.181818181818183
@@ -429,6 +433,7 @@
             "CRR240978_r2": {
                 "percent_gc": 59.0,
                 "avg_sequence_length": 112.80393625888108,
+                "median_sequence_length": 113,
                 "total_sequences": 20621916.0,
                 "percent_duplicates": 76.19969982489934,
                 "percent_fails": 18.181818181818183
@@ -436,6 +441,7 @@
             "CRR240985_r2": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.75393404078471,
+                "median_sequence_length": 113,
                 "total_sequences": 25262702.0,
                 "percent_duplicates": 72.58798181335021,
                 "percent_fails": 18.181818181818183
@@ -443,6 +449,7 @@
             "CRR240977_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.8086316419588,
+                "median_sequence_length": 113,
                 "total_sequences": 25602707.0,
                 "percent_duplicates": 77.42862026509805,
                 "percent_fails": 18.181818181818183
@@ -450,6 +457,7 @@
             "CRR240988_f1": {
                 "percent_gc": 55.0,
                 "avg_sequence_length": 112.84562844742979,
+                "median_sequence_length": 113,
                 "total_sequences": 20026695.0,
                 "percent_duplicates": 77.86455699645605,
                 "percent_fails": 18.181818181818183
@@ -457,6 +465,7 @@
             "CRR240987_f1": {
                 "percent_gc": 55.0,
                 "avg_sequence_length": 112.8567884122944,
+                "median_sequence_length": 113,
                 "total_sequences": 28312283.0,
                 "percent_duplicates": 76.47209055284716,
                 "percent_fails": 18.181818181818183
@@ -464,6 +473,7 @@
             "CRR240987_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.75509820243037,
+                "median_sequence_length": 113,
                 "total_sequences": 28312283.0,
                 "percent_duplicates": 73.5566230090835,
                 "percent_fails": 18.181818181818183
@@ -471,6 +481,7 @@
             "CRR240981_r2": {
                 "percent_gc": 59.0,
                 "avg_sequence_length": 112.74936663912163,
+                "median_sequence_length": 113,
                 "total_sequences": 20591736.0,
                 "percent_duplicates": 73.16195011156582,
                 "percent_fails": 18.181818181818183
@@ -478,6 +489,7 @@
             "CRR240993_f1": {
                 "percent_gc": 55.0,
                 "avg_sequence_length": 112.85653736075949,
+                "median_sequence_length": 113,
                 "total_sequences": 23651433.0,
                 "percent_duplicates": 76.22558239518915,
                 "percent_fails": 18.181818181818183
@@ -485,6 +497,7 @@
             "CRR240978_f1": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.86171086139619,
+                "median_sequence_length": 113,
                 "total_sequences": 20621916.0,
                 "percent_duplicates": 77.92130679000368,
                 "percent_fails": 18.181818181818183
@@ -492,6 +505,7 @@
             "CRR240981_f1": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.78902356751271,
+                "median_sequence_length": 113,
                 "total_sequences": 20591736.0,
                 "percent_duplicates": 75.15697044668488,
                 "percent_fails": 18.181818181818183
@@ -499,6 +513,7 @@
             "CRR240983_f1": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.8579145996888,
+                "median_sequence_length": 113,
                 "total_sequences": 21519945.0,
                 "percent_duplicates": 82.68654431906704,
                 "percent_fails": 18.181818181818183
@@ -506,6 +521,7 @@
             "CRR240982_f1": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.80337599160845,
+                "median_sequence_length": 113,
                 "total_sequences": 20794246.0,
                 "percent_duplicates": 79.5533888165163,
                 "percent_fails": 18.181818181818183
@@ -513,6 +529,7 @@
             "CRR240989_f1": {
                 "percent_gc": 56.0,
                 "avg_sequence_length": 112.84809552731656,
+                "median_sequence_length": 113,
                 "total_sequences": 18679055.0,
                 "percent_duplicates": 78.86149286240015,
                 "percent_fails": 9.090909090909092
@@ -520,6 +537,7 @@
             "CRR240991_f1": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.86337723653862,
+                "median_sequence_length": 113,
                 "total_sequences": 22007277.0,
                 "percent_duplicates": 80.46056670332436,
                 "percent_fails": 18.181818181818183
@@ -527,6 +545,7 @@
             "CRR240990_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.81154433317889,
+                "median_sequence_length": 113,
                 "total_sequences": 23274848.0,
                 "percent_duplicates": 76.52567041355609,
                 "percent_fails": 18.181818181818183
@@ -534,6 +553,7 @@
             "CRR240976_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.81073247549142,
+                "median_sequence_length": 113,
                 "total_sequences": 24754289.0,
                 "percent_duplicates": 76.44204219207117,
                 "percent_fails": 18.181818181818183
@@ -541,6 +561,7 @@
             "CRR240984_r2": {
                 "percent_gc": 59.0,
                 "avg_sequence_length": 112.77486226819092,
+                "median_sequence_length": 113,
                 "total_sequences": 22723872.0,
                 "percent_duplicates": 75.51429746234456,
                 "percent_fails": 18.181818181818183
@@ -548,6 +569,7 @@
             "CRR240976_f1": {
                 "percent_gc": 56.0,
                 "avg_sequence_length": 112.85446085726801,
+                "median_sequence_length": 113,
                 "total_sequences": 24754289.0,
                 "percent_duplicates": 78.48246089221904,
                 "percent_fails": 18.181818181818183
@@ -555,6 +577,7 @@
             "CRR240986_r2": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.75197377470774,
+                "median_sequence_length": 113,
                 "total_sequences": 27268943.0,
                 "percent_duplicates": 70.18788361663078,
                 "percent_fails": 18.181818181818183
@@ -562,6 +585,7 @@
             "CRR240986_f1": {
                 "percent_gc": 55.0,
                 "avg_sequence_length": 112.85800652412527,
+                "median_sequence_length": 113,
                 "total_sequences": 27268943.0,
                 "percent_duplicates": 73.29030888998759,
                 "percent_fails": 18.181818181818183
@@ -569,6 +593,7 @@
             "CRR240980_f1": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.86690645528098,
+                "median_sequence_length": 113,
                 "total_sequences": 20618994.0,
                 "percent_duplicates": 75.37486520372181,
                 "percent_fails": 18.181818181818183
@@ -576,6 +601,7 @@
             "CRR240983_r2": {
                 "percent_gc": 60.0,
                 "avg_sequence_length": 112.78584527051532,
+                "median_sequence_length": 113,
                 "total_sequences": 21519945.0,
                 "percent_duplicates": 81.60014027381908,
                 "percent_fails": 18.181818181818183
@@ -583,6 +609,7 @@
             "CRR240982_r2": {
                 "percent_gc": 59.0,
                 "avg_sequence_length": 112.73976329798157,
+                "median_sequence_length": 113,
                 "total_sequences": 20794246.0,
                 "percent_duplicates": 78.06636436068784,
                 "percent_fails": 18.181818181818183
@@ -590,6 +617,7 @@
             "CRR240979_r2": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.82185622584383,
+                "median_sequence_length": 113,
                 "total_sequences": 20249745.0,
                 "percent_duplicates": 71.54577971984537,
                 "percent_fails": 18.181818181818183
@@ -597,6 +625,7 @@
             "CRR240991_r2": {
                 "percent_gc": 60.0,
                 "avg_sequence_length": 112.79669470239321,
+                "median_sequence_length": 113,
                 "total_sequences": 22007277.0,
                 "percent_duplicates": 78.98846434503676,
                 "percent_fails": 18.181818181818183
@@ -604,6 +633,7 @@
             "CRR240979_f1": {
                 "percent_gc": 54.0,
                 "avg_sequence_length": 112.85414971892239,
+                "median_sequence_length": 113,
                 "total_sequences": 20249745.0,
                 "percent_duplicates": 74.47161321943403,
                 "percent_fails": 18.181818181818183
@@ -611,6 +641,7 @@
             "CRR240984_f1": {
                 "percent_gc": 57.0,
                 "avg_sequence_length": 112.83406951949034,
+                "median_sequence_length": 113,
                 "total_sequences": 22723872.0,
                 "percent_duplicates": 77.45568768155104,
                 "percent_fails": 18.181818181818183
@@ -618,6 +649,7 @@
             "CRR240992_f1": {
                 "percent_gc": 56.0,
                 "avg_sequence_length": 112.84744431792606,
+                "median_sequence_length": 113,
                 "total_sequences": 25779302.0,
                 "percent_duplicates": 80.62341917533293,
                 "percent_fails": 18.181818181818183
@@ -625,6 +657,7 @@
             "CRR240993_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.81050395551085,
+                "median_sequence_length": 113,
                 "total_sequences": 23651433.0,
                 "percent_duplicates": 74.27368229721678,
                 "percent_fails": 18.181818181818183
@@ -632,6 +665,7 @@
             "CRR240989_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.797919487897,
+                "median_sequence_length": 113,
                 "total_sequences": 18679055.0,
                 "percent_duplicates": 76.85257296388801,
                 "percent_fails": 18.181818181818183
@@ -639,6 +673,7 @@
             "CRR240992_r2": {
                 "percent_gc": 58.0,
                 "avg_sequence_length": 112.81709943116381,
+                "median_sequence_length": 113,
                 "total_sequences": 25779302.0,
                 "percent_duplicates": 78.88278312082883,
                 "percent_fails": 18.181818181818183
@@ -646,6 +681,7 @@
             "CRR240985_f1": {
                 "percent_gc": 54.0,
                 "avg_sequence_length": 112.80226085871574,
+                "median_sequence_length": 113,
                 "total_sequences": 25262702.0,
                 "percent_duplicates": 75.2806876201067,
                 "percent_fails": 18.181818181818183
@@ -672,7 +708,7 @@
                 "shared_key": null,
                 "modify": null,
                 "placement": 1000.0,
-                "dmax": 299.783,
+                "dmax": 275.623,
                 "dmin": 0.0
             },
             "percent_aligned": {
@@ -784,7 +820,7 @@
                 "dmin": 0.0
             },
             "avg_sequence_length": {
-                "title": "Read Length",
+                "title": "Average Read Length",
                 "description": "Average Read Length (bp)",
                 "min": 0,
                 "suffix": " bp",
@@ -802,6 +838,27 @@
                 "modify": null,
                 "placement": 1000.0,
                 "dmax": 112.86690645528098,
+                "dmin": 0.0
+            },
+            "median_sequence_length": {
+                "title": "Median Read Length",
+                "description": "Median Read Length (bp)",
+                "min": 0,
+                "suffix": " bp",
+                "scale": "RdYlGn",
+                "format": "{:,.0f}",
+                "hidden": true,
+                "namespace": "FastQC",
+                "rid": "mqc-generalstats-fastqc-median_sequence_length",
+                "colour": "152,78,163",
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 113.0,
                 "dmin": 0.0
             },
             "percent_fails": {
@@ -847,7 +904,7 @@
             }
         }
     ],
-    "report_multiqc_command": "/usr/bin/multiqc --dirs --filename MultiQC-Report.html --outdir ../docs --export --interactive .",
+    "report_multiqc_command": "/home/uranus/.local/bin/multiqc --force --dirs --filename MultiQC-Report.html --outdir ../results/multiqc --export --interactive .",
     "report_plot_data": {
         "kallisto_alignment-1": {
             "plot_type": "bar_graph",
@@ -878,48 +935,48 @@
                     {
                         "name": "Pseudoaligned",
                         "data": [
-                            21852626.0,
-                            21935683.0,
-                            18037896.0,
-                            16837560.0,
-                            18623668.0,
-                            19746278.0,
-                            20103136.0,
-                            19962731.0,
-                            21349251.0,
-                            23202999.0,
-                            24968628.0,
-                            26364822.0,
-                            17762562.0,
-                            15427155.0,
-                            21796740.0,
-                            19542099.0,
-                            22819488.0,
-                            22153292.0
+                            20386495.0,
+                            20424061.0,
+                            16793222.0,
+                            15721652.0,
+                            17393099.0,
+                            17973096.0,
+                            18194472.0,
+                            18496969.0,
+                            19669745.0,
+                            21081068.0,
+                            23039476.0,
+                            24359929.0,
+                            16229063.0,
+                            14312741.0,
+                            20381357.0,
+                            18194439.0,
+                            21315916.0,
+                            20701501.0
                         ],
                         "color": "#437bb1"
                     },
                     {
                         "name": "Not aligned",
                         "data": [
-                            4697424.0,
-                            5547927.0,
-                            4117066.0,
-                            4853778.0,
-                            3492101.0,
-                            2941798.0,
-                            2866459.0,
-                            3261879.0,
-                            3273040.0,
-                            4646876.0,
-                            4631462.0,
-                            4341950.0,
-                            4233037.0,
-                            4739806.0,
-                            3156616.0,
-                            4141567.0,
-                            4848574.0,
-                            3230017.0
+                            4367794.0,
+                            5178646.0,
+                            3828694.0,
+                            4528093.0,
+                            3225895.0,
+                            2618640.0,
+                            2599774.0,
+                            3022976.0,
+                            3054127.0,
+                            4181634.0,
+                            4229467.0,
+                            3952354.0,
+                            3797632.0,
+                            4366314.0,
+                            2893491.0,
+                            3812838.0,
+                            4463386.0,
+                            2949932.0
                         ],
                         "color": "#b1084c"
                     }
@@ -57393,130 +57450,130 @@
     "report_saved_raw_data": {
         "multiqc_kallisto": {
             "CRR240988_f1": {
-                "total_reads": 21995599.0,
-                "pseudoaligned_reads": 17762562.0,
-                "not_pseudoaligned_reads": 4233037.0,
-                "percent_aligned": 80.75507286707673,
-                "fragment_length": 297.636
+                "total_reads": 20026695.0,
+                "pseudoaligned_reads": 16229063.0,
+                "not_pseudoaligned_reads": 3797632.0,
+                "percent_aligned": 81.03715066315236,
+                "fragment_length": 273.254
             },
             "CRR240977_f1": {
-                "total_reads": 27483610.0,
-                "pseudoaligned_reads": 21935683.0,
-                "not_pseudoaligned_reads": 5547927.0,
-                "percent_aligned": 79.81368895861934,
-                "fragment_length": 282.523
+                "total_reads": 25602707.0,
+                "pseudoaligned_reads": 20424061.0,
+                "not_pseudoaligned_reads": 5178646.0,
+                "percent_aligned": 79.77305290413237,
+                "fragment_length": 258.201
             },
             "CRR240993_f1": {
-                "total_reads": 25383309.0,
-                "pseudoaligned_reads": 22153292.0,
-                "not_pseudoaligned_reads": 3230017.0,
-                "percent_aligned": 87.27503573312684,
-                "fragment_length": 295.552
+                "total_reads": 23651433.0,
+                "pseudoaligned_reads": 20701501.0,
+                "not_pseudoaligned_reads": 2949932.0,
+                "percent_aligned": 87.52747032283413,
+                "fragment_length": 271.468
             },
             "CRR240976_f1": {
-                "total_reads": 26550050.0,
-                "pseudoaligned_reads": 21852626.0,
-                "not_pseudoaligned_reads": 4697424.0,
-                "percent_aligned": 82.30728755689725,
-                "fragment_length": 286.78
+                "total_reads": 24754289.0,
+                "pseudoaligned_reads": 20386495.0,
+                "not_pseudoaligned_reads": 4367794.0,
+                "percent_aligned": 82.35540515827378,
+                "fragment_length": 262.264
             },
             "CRR240982_f1": {
-                "total_reads": 22969595.0,
-                "pseudoaligned_reads": 20103136.0,
-                "not_pseudoaligned_reads": 2866459.0,
-                "percent_aligned": 87.52063760810759,
-                "fragment_length": 291.973
+                "total_reads": 20794246.0,
+                "pseudoaligned_reads": 18194472.0,
+                "not_pseudoaligned_reads": 2599774.0,
+                "percent_aligned": 87.49762794957797,
+                "fragment_length": 267.726
             },
             "CRR240986_f1": {
-                "total_reads": 29600090.0,
-                "pseudoaligned_reads": 24968628.0,
-                "not_pseudoaligned_reads": 4631462.0,
-                "percent_aligned": 84.35321649359851,
-                "fragment_length": 290.813
+                "total_reads": 27268943.0,
+                "pseudoaligned_reads": 23039476.0,
+                "not_pseudoaligned_reads": 4229467.0,
+                "percent_aligned": 84.48980218998588,
+                "fragment_length": 265.9
             },
             "CRR240989_f1": {
-                "total_reads": 20166961.0,
-                "pseudoaligned_reads": 15427155.0,
-                "not_pseudoaligned_reads": 4739806.0,
-                "percent_aligned": 76.49717277680062,
-                "fragment_length": 292.531
+                "total_reads": 18679055.0,
+                "pseudoaligned_reads": 14312741.0,
+                "not_pseudoaligned_reads": 4366314.0,
+                "percent_aligned": 76.62454551367829,
+                "fragment_length": 267.862
             },
             "CRR240992_f1": {
-                "total_reads": 27668062.0,
-                "pseudoaligned_reads": 22819488.0,
-                "not_pseudoaligned_reads": 4848574.0,
-                "percent_aligned": 82.47591753986961,
-                "fragment_length": 286.663
+                "total_reads": 25779302.0,
+                "pseudoaligned_reads": 21315916.0,
+                "not_pseudoaligned_reads": 4463386.0,
+                "percent_aligned": 82.68616427240738,
+                "fragment_length": 262.394
             },
             "CRR240991_f1": {
-                "total_reads": 23683666.0,
-                "pseudoaligned_reads": 19542099.0,
-                "not_pseudoaligned_reads": 4141567.0,
-                "percent_aligned": 82.51298173179778,
-                "fragment_length": 299.164
+                "total_reads": 22007277.0,
+                "pseudoaligned_reads": 18194439.0,
+                "not_pseudoaligned_reads": 3812838.0,
+                "percent_aligned": 82.67464893544076,
+                "fragment_length": 274.769
             },
             "CRR240981_f1": {
-                "total_reads": 22688076.0,
-                "pseudoaligned_reads": 19746278.0,
-                "not_pseudoaligned_reads": 2941798.0,
-                "percent_aligned": 87.03372643850452,
-                "fragment_length": 286.404
+                "total_reads": 20591736.0,
+                "pseudoaligned_reads": 17973096.0,
+                "not_pseudoaligned_reads": 2618640.0,
+                "percent_aligned": 87.28305374544428,
+                "fragment_length": 261.703
             },
             "CRR240990_f1": {
-                "total_reads": 24953356.0,
-                "pseudoaligned_reads": 21796740.0,
-                "not_pseudoaligned_reads": 3156616.0,
-                "percent_aligned": 87.34993401288388,
-                "fragment_length": 285.435
+                "total_reads": 23274848.0,
+                "pseudoaligned_reads": 20381357.0,
+                "not_pseudoaligned_reads": 2893491.0,
+                "percent_aligned": 87.56816371045689,
+                "fragment_length": 261.39
             },
             "CRR240983_f1": {
-                "total_reads": 23224610.0,
-                "pseudoaligned_reads": 19962731.0,
-                "not_pseudoaligned_reads": 3261879.0,
-                "percent_aligned": 85.95507524130653,
-                "fragment_length": 297.627
+                "total_reads": 21519945.0,
+                "pseudoaligned_reads": 18496969.0,
+                "not_pseudoaligned_reads": 3022976.0,
+                "percent_aligned": 85.95267785303355,
+                "fragment_length": 273.784
             },
             "CRR240980_f1": {
-                "total_reads": 22115769.0,
-                "pseudoaligned_reads": 18623668.0,
-                "not_pseudoaligned_reads": 3492101.0,
-                "percent_aligned": 84.20990470645629,
-                "fragment_length": 282.819
+                "total_reads": 20618994.0,
+                "pseudoaligned_reads": 17393099.0,
+                "not_pseudoaligned_reads": 3225895.0,
+                "percent_aligned": 84.35474107029664,
+                "fragment_length": 258.176
             },
             "CRR240978_f1": {
-                "total_reads": 22154962.0,
-                "pseudoaligned_reads": 18037896.0,
-                "not_pseudoaligned_reads": 4117066.0,
-                "percent_aligned": 81.41695751949382,
-                "fragment_length": 292.757
+                "total_reads": 20621916.0,
+                "pseudoaligned_reads": 16793222.0,
+                "not_pseudoaligned_reads": 3828694.0,
+                "percent_aligned": 81.4338590070874,
+                "fragment_length": 268.415
             },
             "CRR240987_f1": {
-                "total_reads": 30706772.0,
-                "pseudoaligned_reads": 26364822.0,
-                "not_pseudoaligned_reads": 4341950.0,
-                "percent_aligned": 85.85995949036909,
-                "fragment_length": 293.202
+                "total_reads": 28312283.0,
+                "pseudoaligned_reads": 24359929.0,
+                "not_pseudoaligned_reads": 3952354.0,
+                "percent_aligned": 86.04014377787902,
+                "fragment_length": 269.165
             },
             "CRR240984_f1": {
-                "total_reads": 24622291.0,
-                "pseudoaligned_reads": 21349251.0,
-                "not_pseudoaligned_reads": 3273040.0,
-                "percent_aligned": 86.70700464063235,
-                "fragment_length": 299.783
+                "total_reads": 22723872.0,
+                "pseudoaligned_reads": 19669745.0,
+                "not_pseudoaligned_reads": 3054127.0,
+                "percent_aligned": 86.55983012050059,
+                "fragment_length": 275.623
             },
             "CRR240979_f1": {
-                "total_reads": 21691338.0,
-                "pseudoaligned_reads": 16837560.0,
-                "not_pseudoaligned_reads": 4853778.0,
-                "percent_aligned": 77.62342737916859,
-                "fragment_length": 292.815
+                "total_reads": 20249745.0,
+                "pseudoaligned_reads": 15721652.0,
+                "not_pseudoaligned_reads": 4528093.0,
+                "percent_aligned": 77.63876532766216,
+                "fragment_length": 268.443
             },
             "CRR240985_f1": {
-                "total_reads": 27849875.0,
-                "pseudoaligned_reads": 23202999.0,
-                "not_pseudoaligned_reads": 4646876.0,
-                "percent_aligned": 83.31455347645186,
-                "fragment_length": 284.778
+                "total_reads": 25262702.0,
+                "pseudoaligned_reads": 21081068.0,
+                "not_pseudoaligned_reads": 4181634.0,
+                "percent_aligned": 83.44740004453996,
+                "fragment_length": 260.511
             }
         },
         "multiqc_trimmomatic": {
@@ -57731,6 +57788,7 @@
                 "%GC": 56.0,
                 "total_deduplicated_percentage": 21.641384078129676,
                 "avg_sequence_length": 112.86024200888444,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57754,6 +57812,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 24.852847682525926,
                 "avg_sequence_length": 112.72353680924387,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57777,6 +57836,7 @@
                 "%GC": 56.0,
                 "total_deduplicated_percentage": 20.836817826936795,
                 "avg_sequence_length": 112.86026981443798,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57800,6 +57860,7 @@
                 "%GC": 59.0,
                 "total_deduplicated_percentage": 27.21106810904771,
                 "avg_sequence_length": 112.80479595658255,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -57823,6 +57884,7 @@
                 "%GC": 59.0,
                 "total_deduplicated_percentage": 23.800300175100656,
                 "avg_sequence_length": 112.80393625888108,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57846,6 +57908,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 27.412018186649785,
                 "avg_sequence_length": 112.75393404078471,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -57869,6 +57932,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 22.571379734901953,
                 "avg_sequence_length": 112.8086316419588,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57892,6 +57956,7 @@
                 "%GC": 55.0,
                 "total_deduplicated_percentage": 22.13544300354395,
                 "avg_sequence_length": 112.84562844742979,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57915,6 +57980,7 @@
                 "%GC": 55.0,
                 "total_deduplicated_percentage": 23.52790944715283,
                 "avg_sequence_length": 112.8567884122944,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57938,6 +58004,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 26.443376990916512,
                 "avg_sequence_length": 112.75509820243037,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -57961,6 +58028,7 @@
                 "%GC": 59.0,
                 "total_deduplicated_percentage": 26.838049888434185,
                 "avg_sequence_length": 112.74936663912163,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -57984,6 +58052,7 @@
                 "%GC": 55.0,
                 "total_deduplicated_percentage": 23.774417604810843,
                 "avg_sequence_length": 112.85653736075949,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58007,6 +58076,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 22.078693209996317,
                 "avg_sequence_length": 112.86171086139619,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58030,6 +58100,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 24.843029553315123,
                 "avg_sequence_length": 112.78902356751271,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58053,6 +58124,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 17.313455680932964,
                 "avg_sequence_length": 112.8579145996888,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58076,6 +58148,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 20.446611183483697,
                 "avg_sequence_length": 112.80337599160845,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58099,6 +58172,7 @@
                 "%GC": 56.0,
                 "total_deduplicated_percentage": 21.13850713759985,
                 "avg_sequence_length": 112.84809552731656,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58122,6 +58196,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 19.539433296675643,
                 "avg_sequence_length": 112.86337723653862,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58145,6 +58220,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 23.47432958644391,
                 "avg_sequence_length": 112.81154433317889,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58168,6 +58244,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 23.55795780792883,
                 "avg_sequence_length": 112.81073247549142,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58191,6 +58268,7 @@
                 "%GC": 59.0,
                 "total_deduplicated_percentage": 24.485702537655442,
                 "avg_sequence_length": 112.77486226819092,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58214,6 +58292,7 @@
                 "%GC": 56.0,
                 "total_deduplicated_percentage": 21.517539107780966,
                 "avg_sequence_length": 112.85446085726801,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58237,6 +58316,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 29.812116383369208,
                 "avg_sequence_length": 112.75197377470774,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58260,6 +58340,7 @@
                 "%GC": 55.0,
                 "total_deduplicated_percentage": 26.709691110012407,
                 "avg_sequence_length": 112.85800652412527,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58283,6 +58364,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 24.625134796278186,
                 "avg_sequence_length": 112.86690645528098,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58306,6 +58388,7 @@
                 "%GC": 60.0,
                 "total_deduplicated_percentage": 18.399859726180914,
                 "avg_sequence_length": 112.78584527051532,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58329,6 +58412,7 @@
                 "%GC": 59.0,
                 "total_deduplicated_percentage": 21.93363563931216,
                 "avg_sequence_length": 112.73976329798157,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58352,6 +58436,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 28.45422028015463,
                 "avg_sequence_length": 112.82185622584383,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58375,6 +58460,7 @@
                 "%GC": 60.0,
                 "total_deduplicated_percentage": 21.01153565496324,
                 "avg_sequence_length": 112.79669470239321,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58398,6 +58484,7 @@
                 "%GC": 54.0,
                 "total_deduplicated_percentage": 25.52838678056596,
                 "avg_sequence_length": 112.85414971892239,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58421,6 +58508,7 @@
                 "%GC": 57.0,
                 "total_deduplicated_percentage": 22.544312318448963,
                 "avg_sequence_length": 112.83406951949034,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58444,6 +58532,7 @@
                 "%GC": 56.0,
                 "total_deduplicated_percentage": 19.376580824667077,
                 "avg_sequence_length": 112.84744431792606,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58467,6 +58556,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 25.72631770278322,
                 "avg_sequence_length": 112.81050395551085,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58490,6 +58580,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 23.147427036112,
                 "avg_sequence_length": 112.797919487897,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58513,6 +58604,7 @@
                 "%GC": 58.0,
                 "total_deduplicated_percentage": 21.117216879171167,
                 "avg_sequence_length": 112.81709943116381,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -58536,6 +58628,7 @@
                 "%GC": 54.0,
                 "total_deduplicated_percentage": 24.719312379893292,
                 "avg_sequence_length": 112.80226085871574,
+                "median_sequence_length": 113,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "pass",
@@ -58551,200 +58644,218 @@
         },
         "multiqc_general_stats": {
             "CRR240988_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 297.636,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 80.75507286707673,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 17762562.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 273.254,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 81.03715066315236,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 16229063.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.61,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 77.86455699645605,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 55.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.84562844742979,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20026695.0
             },
             "CRR240977_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 282.523,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 79.81368895861934,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 21935683.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 258.201,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 79.77305290413237,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 20424061.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.2,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 79.1631821730632,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 56.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.86026981443798,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 25602707.0
             },
             "CRR240993_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 295.552,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.27503573312684,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 22153292.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 271.468,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.52747032283413,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 20701501.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.21,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.22558239518915,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 55.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.85653736075949,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 23651433.0
             },
             "CRR240976_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 286.78,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 82.30728755689725,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 21852626.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 262.264,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 82.35540515827378,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 20386495.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.21,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 78.48246089221904,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 56.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.85446085726801,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 24754289.0
             },
             "CRR240982_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 291.973,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.52063760810759,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 20103136.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 267.726,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.49762794957797,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 18194472.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.91,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 79.5533888165163,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.80337599160845,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20794246.0
             },
             "CRR240986_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 290.813,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 84.35321649359851,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 24968628.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 265.9,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 84.48980218998588,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 23039476.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.42,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 73.29030888998759,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 55.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.85800652412527,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 27268943.0
             },
             "CRR240989_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 292.531,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 76.49717277680062,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 15427155.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 267.862,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 76.62454551367829,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 14312741.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.31,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 78.86149286240015,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 56.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.84809552731656,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 9.090909090909092,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 18679055.0
             },
             "CRR240992_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 286.663,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 82.47591753986961,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 22819488.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 262.394,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 82.68616427240738,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 21315916.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.23,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 80.62341917533293,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 56.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.84744431792606,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 25779302.0
             },
             "CRR240991_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 299.164,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 82.51298173179778,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 19542099.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 274.769,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 82.67464893544076,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 18194439.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.25,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 80.46056670332436,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.86337723653862,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 22007277.0
             },
             "CRR240981_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 286.404,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.03372643850452,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 19746278.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 261.703,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.28305374544428,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 17973096.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.88,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 75.15697044668488,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.78902356751271,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20591736.0
             },
             "CRR240990_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 285.435,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.34993401288388,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 21796740.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 261.39,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 87.56816371045689,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 20381357.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.19,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 78.35861592187032,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 56.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.86024200888444,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 23274848.0
             },
             "CRR240983_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 297.627,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 85.95507524130653,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 19962731.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 273.784,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 85.95267785303355,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 18496969.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.26,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 82.68654431906704,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.8579145996888,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 21519945.0
             },
             "CRR240980_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 282.819,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 84.20990470645629,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 18623668.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 258.176,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 84.35474107029664,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 17393099.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.16,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 75.37486520372181,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.86690645528098,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20618994.0
             },
             "CRR240978_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 292.757,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 81.41695751949382,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 18037896.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 268.415,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 81.4338590070874,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 16793222.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.21,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 77.92130679000368,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.86171086139619,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20621916.0
             },
             "CRR240987_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 293.202,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 85.85995949036909,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 26364822.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 269.165,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 86.04014377787902,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 24359929.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.41,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.47209055284716,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 55.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.8567884122944,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 28312283.0
             },
             "CRR240984_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 299.783,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 86.70700464063235,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 21349251.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 275.623,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 86.55983012050059,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 19669745.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.33,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 77.45568768155104,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.83406951949034,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 22723872.0
             },
             "CRR240979_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 292.815,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 77.62342737916859,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 16837560.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 268.443,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 77.63876532766216,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 15721652.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.19,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 74.47161321943403,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 54.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.85414971892239,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20249745.0
             },
             "CRR240985_f1": {
-                "Kallisto_mqc-generalstats-kallisto-fragment_length": 284.778,
-                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 83.31455347645186,
-                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 23202999.0,
+                "Kallisto_mqc-generalstats-kallisto-fragment_length": 260.511,
+                "Kallisto_mqc-generalstats-kallisto-percent_aligned": 83.44740004453996,
+                "Kallisto_mqc-generalstats-kallisto-pseudoaligned_reads": 21081068.0,
                 "Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct": 1.88,
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 75.2806876201067,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 54.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.80226085871574,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 25262702.0
             },
@@ -58752,6 +58863,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 75.14715231747408,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.72353680924387,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20026695.0
             },
@@ -58759,6 +58871,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 72.78893189095228,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 59.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.80479595658255,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20618994.0
             },
@@ -58766,6 +58879,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.19969982489934,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 59.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.80393625888108,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20621916.0
             },
@@ -58773,6 +58887,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 72.58798181335021,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.75393404078471,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 25262702.0
             },
@@ -58780,6 +58895,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 77.42862026509805,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.8086316419588,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 25602707.0
             },
@@ -58787,6 +58903,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 73.5566230090835,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.75509820243037,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 28312283.0
             },
@@ -58794,6 +58911,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 73.16195011156582,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 59.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.74936663912163,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20591736.0
             },
@@ -58801,6 +58919,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.52567041355609,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.81154433317889,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 23274848.0
             },
@@ -58808,6 +58927,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.44204219207117,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.81073247549142,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 24754289.0
             },
@@ -58815,6 +58935,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 75.51429746234456,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 59.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.77486226819092,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 22723872.0
             },
@@ -58822,6 +58943,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 70.18788361663078,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.75197377470774,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 27268943.0
             },
@@ -58829,6 +58951,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 81.60014027381908,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 60.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.78584527051532,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 21519945.0
             },
@@ -58836,6 +58959,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 78.06636436068784,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 59.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.73976329798157,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20794246.0
             },
@@ -58843,6 +58967,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 71.54577971984537,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 57.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.82185622584383,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20249745.0
             },
@@ -58850,6 +58975,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 78.98846434503676,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 60.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.79669470239321,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 22007277.0
             },
@@ -58857,6 +58983,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 74.27368229721678,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.81050395551085,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 23651433.0
             },
@@ -58864,6 +58991,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.85257296388801,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.797919487897,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 18679055.0
             },
@@ -58871,6 +58999,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 78.88278312082883,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 58.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 112.81709943116381,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 113,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 25779302.0
             }
@@ -58882,14 +59011,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2023-04-20, 18:33",
+    "config_creation_date": "2023-04-29, 19:42 CEST",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/usr/lib/python3/dist-packages/multiqc/utils",
-    "config_short_version": "1.12",
+    "config_script_path": "/home/uranus/.local/lib/python3.10/site-packages/multiqc/utils",
+    "config_short_version": "1.14",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.12"
+    "config_version": "1.14"
 }

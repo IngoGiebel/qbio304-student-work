@@ -5,11 +5,11 @@
 [index] number of k-mers: 50,816,733
 [index] number of equivalence classes: 91,169
 [quant] running in paired-end mode
-[quant] will process pair 1: CRR240980_f1.fastq.gz
-                             CRR240980_r2.fastq.gz
+[quant] will process pair 1: CRR240980_f1.trim.p.fastq.gz
+                             CRR240980_r2.trim.p.fastq.gz
 [quant] finding pseudoalignments for the reads ... done
-[quant] processed 22,115,769 reads, 18,623,668 reads pseudoaligned
-[quant] estimated average fragment length: 282.819
+[quant] processed 20,618,994 reads, 17,393,099 reads pseudoaligned
+[quant] estimated average fragment length: 258.176
 [   em] quantifying the abundances ... done
-[   em] the Expectation-Maximization algorithm ran for 1,145 rounds
+[   em] the Expectation-Maximization algorithm ran for 1,149 rounds
 
