@@ -4,6 +4,7 @@ This folder contains the automatically created analysis results:
 
 - degs-oryza-nivara.txt
 - degs-oryza-sativa.txt
+
 (text data files of the top differentially expressed genes (DEG))
 
 
