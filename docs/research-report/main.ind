@@ -1,3 +1,54 @@
 
 \begin{theindex}
+
+\indexspace
+\textbf{C}\label{L-xindex-C}
+\nopagebreak[4]
+  \item cultivar
+    \subitem -\,BJ278, \hyperpage{2}
+    \subitem -\,BJ89, \hyperpage{2}
+    \subitem -\,Nipponbare, \hyperpage{2}
+
+\indexspace
+\textbf{F}\label{L-xindex-F}
+\nopagebreak[4]
+  \item FastQC, \hyperpage{2}
+
+\indexspace
+\textbf{I}\label{L-xindex-I}
+\nopagebreak[4]
+  \item Illumina HiSeq 2000, \hyperpage{2}
+
+\indexspace
+\textbf{K}\label{L-xindex-K}
+\nopagebreak[4]
+  \item kallisto, \hyperpage{3}
+
+\indexspace
+\textbf{M}\label{L-xindex-M}
+\nopagebreak[4]
+  \item MultiQC, \hyperpage{3}
+
+\indexspace
+\textbf{O}\label{L-xindex-O}
+\nopagebreak[4]
+  \item Oryza
+    \subitem -\,nivara, \hyperpage{2}
+    \subitem -\,sativa, \hyperpage{2}
+
+\indexspace
+\textbf{P}\label{L-xindex-P}
+\nopagebreak[4]
+  \item pseudoalignment, \hyperpage{3}
+
+\indexspace
+\textbf{R}\label{L-xindex-R}
+\nopagebreak[4]
+  \item R, \hyperpage{4}
+  \item RNA-seq, \hyperpage{2}
+
+\indexspace
+\textbf{T}\label{L-xindex-T}
+\nopagebreak[4]
+  \item Trimmomatic, \hyperpage{3}
 \end{theindex}

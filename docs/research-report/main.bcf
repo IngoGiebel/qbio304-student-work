@@ -2814,6 +2814,10 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">babraham</bcf:citekey>
     <bcf:citekey order="2" intorder="1">10.1093/bioinformatics/btw354</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">10.1093/bioinformatics/btw354</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">10.1038/nbt.3519</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">10.1093/bioinformatics/btu170</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">R-base</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

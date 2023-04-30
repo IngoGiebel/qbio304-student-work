@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  30 APR 2023 19:22
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  1 MAY 2023 00:17
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2611,8 +2611,8 @@ Package microtype Info: ... No tracking.
 Package microtype Info: ... Loading protrusion list `T1-default'.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... Applying non-selected expansion (no list).
-) (./materials_and_methods.tex [2])
-(./results.tex [3]) (./discussion.tex) (./conclusion.tex [4]) [5]
+) (./materials_and_methods.tex [2]
+[3]) (./results.tex [4]) (./discussion.tex) (./conclusion.tex) [5]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
 (Font)              scaled to size 10.95pt on input line 102.
 Package microtype Info: Setting up font `TU/Roboto(0)/m/it/10.95' on input line
@@ -2717,39 +2717,32 @@ Package microtype Info: *** Changing to language context `english'
 (microtype)              on input line 26.
 Package polyglossia Info: Option: English, variant=american.
 )
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 256F1C109CF03EA9ED27872D83D3C2D4;3798.
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
+(rerunfilecheck)             Checksum: 6DF929CF540020C3275433EC035C986B;3865.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 57447 strings out of 478290
+ 57487 strings out of 478290
  125086,2848258 words of node,token memory allocated
- 731 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 9 attribute, 93 glue_spec,
- 9 attribute_list, 2 shape, 2 write, 1 pdf_action nodes
-   avail lists: 1:2,2:1204,3:1442,4:258,5:279,6:106,7:4639,8:98,9:585,10:15,11:3
-65
- 75791 multiletter control sequences out of 65536+600000
- 75 fonts using 13272303 bytes
- 99i,11n,128p,1038b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 751 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 11 attribute, 93 glue_spec
+, 11 attribute_list, 2 shape, 2 write, 3 pdf_action nodes
+   avail lists: 1:2,2:1255,3:1503,4:270,5:330,6:108,7:5876,8:102,9:609,10:15,11:
+450
+ 75827 multiletter control sequences out of 65536+600000
+ 75 fonts using 13282959 bytes
+ 99i,11n,128p,1042b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Italic.otf><c:/t
 exlive/2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf><c:/texlive/
 2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf><c:/texlive/2022
 /texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (8 pages, 41518 bytes).
+Output written on main.pdf (8 pages, 48855 bytes).
 
-PDF statistics: 240 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 131072)
- 220 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 271 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 131072)
+ 228 words of extra memory for PDF output out of 10000 (max. 100000000)
 

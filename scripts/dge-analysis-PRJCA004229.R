@@ -100,6 +100,8 @@ library(tximport)
 library(edgeR)
 # R interface to the g:Profiler tools
 library(gprofiler2)
+#  For generating BibTeX bibliography entries
+library(knitr)
 
 # ------------------------------------------------------------------------------
 # Function definitions
@@ -673,6 +675,12 @@ create_deg_heatmap <- function(deg_df, samples, organism) {
       labRow = deg_df$geneID,
       heatmap_layers = theme(axis.line = element_blank()))
 }
+
+# ------------------------------------------------------------------------------
+# Step 0: Generate BibTeX bibliography entries for the used packages
+# ------------------------------------------------------------------------------
+
+knitr::write_bib()
 
 # ------------------------------------------------------------------------------
 # Step 1: Import and annotate the Kallisto abundance files
