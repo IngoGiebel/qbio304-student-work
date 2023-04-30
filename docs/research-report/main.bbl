@@ -1,0 +1,191 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{babraham}{online}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{4}
+      \field{title}{Babraham Bioinformatics}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+      \endverb
+      \verb{url}
+      \verb https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+      \endverb
+      \keyw{FastQC}
+    \endentry
+    \entry{10.1093/bioinformatics/btw354}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=730e9a25dd34475a742296db3fbd7fcb}{%
+           family={Ewels},
+           familyi={E\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec34f16200cd7392dae00c581fa70778}{%
+           family={Magnusson},
+           familyi={M\bibinitperiod},
+           given={Måns},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f803bc7dd3e0319a02bac5a534d7e574}{%
+           family={Lundin},
+           familyi={L\bibinitperiod},
+           given={Sverker},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49bbc6788f20ace0520f9154d72dd877}{%
+           family={Käller},
+           familyi={K\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6f67f3bab1472d1f6d3b7874f8047359}
+      \strng{fullhash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \strng{bibnamehash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \strng{authorbibnamehash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \strng{authornamehash}{6f67f3bab1472d1f6d3b7874f8047359}
+      \strng{authorfullhash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Motivation: Fast and accurate quality control is essential for studies involving next-generation sequencing data. Whilst numerous tools exist to quantify QC metrics, there is no common approach to flexibly integrate these across tools and large sample sets. Assessing analysis results across an entire project can be time consuming and error prone; batch effects and outlier samples can easily be missed in the early stages of analysis.Results: We present MultiQC, a tool to create a single report visualising output from multiple tools across many samples, enabling global trends and biases to be quickly identified. MultiQC can plot data from many common bioinformatics tools and is built to allow easy extension and customization.Availability and implementation: MultiQC is available with an GNU GPLv3 license on GitHub, the Python Package Index and Bioconda. Documentation and example reports are available at http://multiqc.infoContact:  phil.ewels@scilifelab.se}}
+      \field{issn}{1367-4803}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{06}
+      \field{number}{19}
+      \field{title}{{MultiQC: summarize analysis results for multiple tools and samples in a single report}}
+      \field{volume}{32}
+      \field{year}{2016}
+      \field{pages}{3047\bibrangedash 3048}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btw354
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/bioinformatics/article-pdf/32/19/3047/49021359/bioinformatics\_32\_19\_3047.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/bioinformatics/btw354
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btw354
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{babraham}{online}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{4}
+      \field{title}{Babraham Bioinformatics}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+      \endverb
+      \verb{url}
+      \verb https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+      \endverb
+      \keyw{FastQC}
+    \endentry
+    \entry{10.1093/bioinformatics/btw354}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=730e9a25dd34475a742296db3fbd7fcb}{%
+           family={Ewels},
+           familyi={E\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec34f16200cd7392dae00c581fa70778}{%
+           family={Magnusson},
+           familyi={M\bibinitperiod},
+           given={Måns},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f803bc7dd3e0319a02bac5a534d7e574}{%
+           family={Lundin},
+           familyi={L\bibinitperiod},
+           given={Sverker},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49bbc6788f20ace0520f9154d72dd877}{%
+           family={Käller},
+           familyi={K\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6f67f3bab1472d1f6d3b7874f8047359}
+      \strng{fullhash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \strng{bibnamehash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \strng{authorbibnamehash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \strng{authornamehash}{6f67f3bab1472d1f6d3b7874f8047359}
+      \strng{authorfullhash}{a46e6b5b6c8d983d6fa8dc62d2539048}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Motivation: Fast and accurate quality control is essential for studies involving next-generation sequencing data. Whilst numerous tools exist to quantify QC metrics, there is no common approach to flexibly integrate these across tools and large sample sets. Assessing analysis results across an entire project can be time consuming and error prone; batch effects and outlier samples can easily be missed in the early stages of analysis.Results: We present MultiQC, a tool to create a single report visualising output from multiple tools across many samples, enabling global trends and biases to be quickly identified. MultiQC can plot data from many common bioinformatics tools and is built to allow easy extension and customization.Availability and implementation: MultiQC is available with an GNU GPLv3 license on GitHub, the Python Package Index and Bioconda. Documentation and example reports are available at http://multiqc.infoContact:  phil.ewels@scilifelab.se}}
+      \field{issn}{1367-4803}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{06}
+      \field{number}{19}
+      \field{title}{{MultiQC: summarize analysis results for multiple tools and samples in a single report}}
+      \field{volume}{32}
+      \field{year}{2016}
+      \field{pages}{3047\bibrangedash 3048}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btw354
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/bioinformatics/article-pdf/32/19/3047/49021359/bioinformatics\_32\_19\_3047.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/bioinformatics/btw354
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btw354
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

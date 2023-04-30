@@ -1,9 +1,19 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'main.blg'
-[175] biber-MSWIN32:340> INFO - === 
-[320] Biber.pm:418> INFO - Reading 'main.bcf'
-[455] Biber.pm:975> INFO - Using all citekeys in bib section 0
-[478] Biber.pm:4401> INFO - Processing section 0
-[499] Biber.pm:4592> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[963] Utils.pm:410> ERROR - Cannot find 'bibliography.bib'!
-[963] Biber.pm:135> INFO - ERRORS: 1
+[105] biber-MSWIN32:340> INFO - === 
+[190] Biber.pm:418> INFO - Reading 'main.bcf'
+[330] Biber.pm:978> INFO - Found 2 citekeys in bib section 0
+[354] Biber.pm:4401> INFO - Processing section 0
+[366] Biber.pm:4592> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[437] bibtex.pm:1713> INFO - LaTeX decoding ...
+[462] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[509] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[509] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[510] Biber.pm:4221> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[511] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[519] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[520] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[521] Biber.pm:4221> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[521] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[528] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[535] bbl.pm:757> INFO - Output to main.bbl

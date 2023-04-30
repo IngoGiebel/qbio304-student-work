@@ -1,10 +1,33 @@
 \section{Materials and methods}
 
-\subsection{Selection of publicly available plant RNA-seq data}
-Explain the criteria for selecting the data and the source of the published study.
+\subsection{Selection of the RNA-seq data}
+
+This study uses publicly available paired-end RNA-seq data of wild and cultivated rice, submitted in January 1, 2021 by the Institute of Botany, Chinese Academy of Sciences. This data allows to compare rice grown under normal conditions with rice grown under drought stress conditions. Furthermore, the data allows for an interspecies comparison of wild rice (Oryza nivara, cultivars BJ278 and BJ89) with cultivated rice (Oryza sativa, cultivar Nipponbare).
+
+All samples were uniformly taken from seedlings (leaf tissue) at the age of twelve days. Used sequencing platform: Illumina HiSeq 2000.
+
+Therefore, the data is well-suited for a targeted analysis of drought stress responses.
+
 
 \subsection{Quality evaluation}
-Describe the tools and methods used to assess the quality of the selected RNA-seq data.
+
+The quality of the raw and trimmed RNA-seq data was assessed using FastQC \autocite{babraham}. FastQC is a quality control analysis tool for high throughput sequencing data. It provides information about
+\begin{itemize}
+    \item basic statistics: some simple composition statistics for the FastQ file analyzed
+    \item per base sequence quality: an overview of the range of quality values across all bases at each position in the FastQ file
+    \item per tile sequence quality: an overview of the per tile sequence quality in case an Illumina library was used
+    \item per sequence quality scores: an overview of how the overall quality scores of the sequences are distributed
+    \item per base sequence content: an overview of the proportion of each base position in a FastQ file for which each of the four normal DNA bases has been called
+    \item per sequence GC content: the GC content across the whole length of each sequence in a file compared with a normal distributed GC content
+    \item per base N content: an overview of the N content at each position across all bases
+    \item sequence length distribution: an overview of how the sequence lengths are distributed
+    \item sequence duplication levels: an overview of the degree of duplication for every sequence in a library
+    \item over-represented sequences: a list of over-represented sequences matched against common contaminants
+    \item adapter content: a checks if the reads in the FastQ file contain a significant amount of adapter sequences
+\end{itemize}
+
+The results of the separate FastQC analyses (of all the raw and trimmed FastQ files), the results of the Trimmomatic trimming and the information about the kallisto pseudo-alignments were summarized in an interactive MultiQC HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
+
 
 \subsection{Mapping to the respective genome}
 Detail the reference genome used and the bioinformatics tools employed for the mapping process.
