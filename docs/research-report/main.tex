@@ -1,0 +1,107 @@
+\documentclass[
+11pt,
+fleqn,
+titlepage]{article}
+
+% Packages
+
+\usepackage{authblk}
+\usepackage[sfdefault]{roboto}
+\usepackage{pgfplots}
+\pgfplotsset{
+    compat=1.18,
+    title style={font=\footnotesize},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend style={font=\footnotesize}}
+\usetikzlibrary{intersections}
+\usepackage[a4paper, headheight=14pt]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{parskip}
+\usepackage[babel, tracking, verbose]{microtype}
+\usepackage[defaultlines=2, all]{nowidow}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\captionsetup{
+    labelfont=bf,
+    singlelinecheck=false,
+    justification=RaggedRight}
+\captionsetup[subfigure]{
+    labelformat=brace}
+\renewcommand\thesubfigure{\roman{subfigure}}
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=american]{english}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
+\addbibresource{bibliography.bib}
+\nocite{*}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage[
+math-style=ISO,
+warnings-off={mathtools-colon, mathtools-overbracket}
+]{unicode-math}
+\usepackage{nicefrac}
+\usepackage[renew-dots, renew-matrix]{nicematrix}
+\NiceMatrixOptions{cell-space-limits = 1pt}
+\usepackage[imakeidx]{xindex}
+\makeindex[intoc]
+\usepackage[pdfa]{hyperref}
+\usepackage{colorprofiles}
+\hypersetup{
+    pdfinfo={
+        Title={Analysis of differential gene expression in wild and cultivated rice under drought stress},
+        Author={Ingo Giebel},
+        Subject={Student work QBio304: Applied Bioinformatics},
+        Keywords={Heinrich-Heine-Universität Düsseldorf, WS 2022/2023, QBio304: Applied Bioinformatics, Student work, Instructors: Prof. Dr. Björn Usadel, Dr. Jedrzej Jakub Szymanski}},
+        colorlinks,
+        linkcolor=blue,
+        linktoc=all}
+\usepackage[ocgcolorlinks, tikz]{ocgx2}
+\sloppy
+
+% Header
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Student work QBio304: Applied Bioinformatics}
+\fancyhead[R]{\thepage}
+\fancypagestyle{plain}{}
+
+% Title & author
+
+\title{
+    Analysis of differential gene expression in wild and cultivated rice under drought stress}
+\author{Ingo Giebel}
+\affil{Math.-Nat. Fakultät, Heinrich-Heine-Universität Düsseldorf}
+\affil{QBio304: Applied Bioinformatics}
+\affil{Prof. Dr. Björn Usadel}
+\affil{Dr. Jedrzej Jakub Szymanski}
+\date{May 1, 2023}
+
+\begin{document}
+    \maketitle
+
+    \tableofcontents
+
+    \newpage
+    \input{abstract}
+
+    \input{introduction}
+
+    \input{materials_and_methods}
+
+    \input{results}
+
+    \input{discussion}
+
+    \input{conclusion}
+
+    \newpage
+    \printbibliography[heading=bibintoc, title=Bibliography]
+
+    \newpage
+    \printindex
+\end{document}
