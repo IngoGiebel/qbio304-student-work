@@ -154,6 +154,159 @@
       \verb https://doi.org/10.1038/nbt.3519
       \endverb
     \endentry
+    \entry{R-edgeR}{manual}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=8cc46710357e0664c1a2665c7fb8b88a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yunshun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=305d4329cdf105cbd06928fea5dee07b}{%
+           family={Lun},
+           familyi={L\bibinitperiod},
+           given={Aaron\bibnamedelima TL},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0dd72956405d78b6bb66638241ce020}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Davis\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=951d585e86cb8b9c75ad8215db61706f}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffcd669072a93fe5f18e9037b1bcb13}{%
+           family={Phipson},
+           familyi={P\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8471a849eb709ebe0fbe0e01176cd50}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bbea9566d4e6dd5d8b8a66028783a91}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiaobei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8acfd40aa371634dafbda59822de12b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon\bibnamedelima K},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{77b61d45f7838c87f25f8bb6fa28b210}
+      \strng{fullhash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \strng{bibnamehash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \strng{authorbibnamehash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \strng{authornamehash}{77b61d45f7838c87f25f8bb6fa28b210}
+      \strng{authorfullhash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{http://bioinf.wehi.edu.au/edgeR}
+      \field{title}{edgeR: Empirical Analysis of Digital Gene Expression Data in R}
+      \field{year}{2023}
+    \endentry
+    \entry{R-biomaRt}{manual}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=276676b0722df85e11996c61db115c12}{%
+           family={Durinck},
+           familyi={D\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06840ce5f3ec7137c6c49ee1605b903c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{fullhash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{bibnamehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{authorbibnamehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{authornamehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{authorfullhash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 2.54.1}
+      \field{title}{biomaRt: Interface to BioMart databases (i.e. Ensembl)}
+      \field{year}{2023}
+    \endentry
+    \entry{biomaRt2009}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=276676b0722df85e11996c61db115c12}{%
+           family={Durinck},
+           familyi={D\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e91336057c05d96b80908892cd87aa46}{%
+           family={Spellman},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00c1e68d68524a9967e8e74c4c1e2931}{%
+           family={Birney},
+           familyi={B\bibinitperiod},
+           given={Ewan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06840ce5f3ec7137c6c49ee1605b903c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d39d542e5a9cf767abd3426a0ee67732}
+      \strng{fullhash}{1f51ee5276a41307d251c945f8345f39}
+      \strng{bibnamehash}{1f51ee5276a41307d251c945f8345f39}
+      \strng{authorbibnamehash}{1f51ee5276a41307d251c945f8345f39}
+      \strng{authornamehash}{d39d542e5a9cf767abd3426a0ee67732}
+      \strng{authorfullhash}{1f51ee5276a41307d251c945f8345f39}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Protocols}
+      \field{title}{Mapping identifiers for the integration of genomic datasets with the R/Bioconductor package biomaRt}
+      \field{volume}{4}
+      \field{year}{2009}
+      \field{pages}{1184\bibrangedash 1191}
+      \range{pages}{8}
+    \endentry
     \entry{10.1093/bioinformatics/btw354}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=730e9a25dd34475a742296db3fbd7fcb}{%
@@ -217,6 +370,80 @@
       \verb https://doi.org/10.1093/bioinformatics/btw354
       \endverb
     \endentry
+    \entry{R-tximport}{manual}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=c6cfd117a64996739118edbf9e60538d}{%
+           family={Love},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e9dc1181359aa0cea3e35a86494c06f}{%
+           family={Soneson},
+           familyi={S\bibinitperiod},
+           given={Charlotte},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05f73087e45d1c1dceaa2a114bf70712}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eccda3e34049a4d8774491fdaa7fe7b0}{%
+           family={Patro},
+           familyi={P\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13bd76e58bfcce00d725fc30e3498d55}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima Parker},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02ee82fb7960d88267d01d0f8752c4cc}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Ryan\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6c263e38ca51c2b5d190f484b485a52}{%
+           family={Shirley},
+           familyi={S\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bdb4f1f591f2857fc8e043f946df773}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Avi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e25f13609371deda4f2b8a29cbfe235b}
+      \strng{fullhash}{335325cdd84c23f617d7cd1bed4b033b}
+      \strng{bibnamehash}{335325cdd84c23f617d7cd1bed4b033b}
+      \strng{authorbibnamehash}{335325cdd84c23f617d7cd1bed4b033b}
+      \strng{authornamehash}{e25f13609371deda4f2b8a29cbfe235b}
+      \strng{authorfullhash}{335325cdd84c23f617d7cd1bed4b033b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 1.26.1}
+      \field{title}{tximport: Import and summarize transcript-level estimates for transcript- and gene-level analysis}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/mikelove/tximport
+      \endverb
+      \verb{url}
+      \verb https://github.com/mikelove/tximport
+      \endverb
+    \endentry
     \entry{R-base}{manual}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
@@ -249,6 +476,94 @@
       \endverb
       \verb{url}
       \verb https://www.R-project.org/
+      \endverb
+    \endentry
+    \entry{edgeR2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0dd72956405d78b6bb66638241ce020}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Davis\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8acfd40aa371634dafbda59822de12b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon\bibnamedelima K},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6b6440459c8fd3a4496d0c2072944af}
+      \strng{fullhash}{9439dfc2ce0d77dcb996812c6d596223}
+      \strng{bibnamehash}{9439dfc2ce0d77dcb996812c6d596223}
+      \strng{authorbibnamehash}{9439dfc2ce0d77dcb996812c6d596223}
+      \strng{authornamehash}{c6b6440459c8fd3a4496d0c2072944af}
+      \strng{authorfullhash}{9439dfc2ce0d77dcb996812c6d596223}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{1}
+      \field{title}{edgeR: a Bioconductor package for differential expression analysis of digital gene expression data}
+      \field{volume}{26}
+      \field{year}{2010}
+      \field{pages}{139\bibrangedash 140}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btp616
+      \endverb
+    \endentry
+    \entry{tximport2015}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4e9dc1181359aa0cea3e35a86494c06f}{%
+           family={Soneson},
+           familyi={S\bibinitperiod},
+           given={Charlotte},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d480d3f68226ebba9e9a763795e86f7}{%
+           family={Love},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8e64a7b3dfca90319418c048cfd6ba1c}
+      \strng{fullhash}{a441bee4ab864bec45154b07a5b9b905}
+      \strng{bibnamehash}{a441bee4ab864bec45154b07a5b9b905}
+      \strng{authorbibnamehash}{a441bee4ab864bec45154b07a5b9b905}
+      \strng{authornamehash}{8e64a7b3dfca90319418c048cfd6ba1c}
+      \strng{authorfullhash}{a441bee4ab864bec45154b07a5b9b905}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1521}
+      \field{journaltitle}{F1000Research}
+      \field{title}{Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences}
+      \field{volume}{4}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.12688/f1000research.7563.1
       \endverb
     \endentry
   \enddatalist
@@ -388,6 +703,159 @@
       \verb https://doi.org/10.1038/nbt.3519
       \endverb
     \endentry
+    \entry{R-edgeR}{manual}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=8cc46710357e0664c1a2665c7fb8b88a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yunshun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=305d4329cdf105cbd06928fea5dee07b}{%
+           family={Lun},
+           familyi={L\bibinitperiod},
+           given={Aaron\bibnamedelima TL},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0dd72956405d78b6bb66638241ce020}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Davis\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=951d585e86cb8b9c75ad8215db61706f}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffcd669072a93fe5f18e9037b1bcb13}{%
+           family={Phipson},
+           familyi={P\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8471a849eb709ebe0fbe0e01176cd50}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bbea9566d4e6dd5d8b8a66028783a91}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiaobei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8acfd40aa371634dafbda59822de12b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon\bibnamedelima K},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{77b61d45f7838c87f25f8bb6fa28b210}
+      \strng{fullhash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \strng{bibnamehash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \strng{authorbibnamehash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \strng{authornamehash}{77b61d45f7838c87f25f8bb6fa28b210}
+      \strng{authorfullhash}{d7b33c2d9d8ccee1989f8ea20b23ff6e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{http://bioinf.wehi.edu.au/edgeR}
+      \field{title}{edgeR: Empirical Analysis of Digital Gene Expression Data in R}
+      \field{year}{2023}
+    \endentry
+    \entry{R-biomaRt}{manual}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=276676b0722df85e11996c61db115c12}{%
+           family={Durinck},
+           familyi={D\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06840ce5f3ec7137c6c49ee1605b903c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{fullhash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{bibnamehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{authorbibnamehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{authornamehash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \strng{authorfullhash}{c63edf7caef73ded1f7cecca17b1b5c6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 2.54.1}
+      \field{title}{biomaRt: Interface to BioMart databases (i.e. Ensembl)}
+      \field{year}{2023}
+    \endentry
+    \entry{biomaRt2009}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=276676b0722df85e11996c61db115c12}{%
+           family={Durinck},
+           familyi={D\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e91336057c05d96b80908892cd87aa46}{%
+           family={Spellman},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00c1e68d68524a9967e8e74c4c1e2931}{%
+           family={Birney},
+           familyi={B\bibinitperiod},
+           given={Ewan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06840ce5f3ec7137c6c49ee1605b903c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d39d542e5a9cf767abd3426a0ee67732}
+      \strng{fullhash}{1f51ee5276a41307d251c945f8345f39}
+      \strng{bibnamehash}{1f51ee5276a41307d251c945f8345f39}
+      \strng{authorbibnamehash}{1f51ee5276a41307d251c945f8345f39}
+      \strng{authornamehash}{d39d542e5a9cf767abd3426a0ee67732}
+      \strng{authorfullhash}{1f51ee5276a41307d251c945f8345f39}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Protocols}
+      \field{title}{Mapping identifiers for the integration of genomic datasets with the R/Bioconductor package biomaRt}
+      \field{volume}{4}
+      \field{year}{2009}
+      \field{pages}{1184\bibrangedash 1191}
+      \range{pages}{8}
+    \endentry
     \entry{10.1093/bioinformatics/btw354}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=730e9a25dd34475a742296db3fbd7fcb}{%
@@ -451,6 +919,80 @@
       \verb https://doi.org/10.1093/bioinformatics/btw354
       \endverb
     \endentry
+    \entry{R-tximport}{manual}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=c6cfd117a64996739118edbf9e60538d}{%
+           family={Love},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e9dc1181359aa0cea3e35a86494c06f}{%
+           family={Soneson},
+           familyi={S\bibinitperiod},
+           given={Charlotte},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05f73087e45d1c1dceaa2a114bf70712}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eccda3e34049a4d8774491fdaa7fe7b0}{%
+           family={Patro},
+           familyi={P\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13bd76e58bfcce00d725fc30e3498d55}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima Parker},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02ee82fb7960d88267d01d0f8752c4cc}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Ryan\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6c263e38ca51c2b5d190f484b485a52}{%
+           family={Shirley},
+           familyi={S\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bdb4f1f591f2857fc8e043f946df773}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Avi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e25f13609371deda4f2b8a29cbfe235b}
+      \strng{fullhash}{335325cdd84c23f617d7cd1bed4b033b}
+      \strng{bibnamehash}{335325cdd84c23f617d7cd1bed4b033b}
+      \strng{authorbibnamehash}{335325cdd84c23f617d7cd1bed4b033b}
+      \strng{authornamehash}{e25f13609371deda4f2b8a29cbfe235b}
+      \strng{authorfullhash}{335325cdd84c23f617d7cd1bed4b033b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 1.26.1}
+      \field{title}{tximport: Import and summarize transcript-level estimates for transcript- and gene-level analysis}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/mikelove/tximport
+      \endverb
+      \verb{url}
+      \verb https://github.com/mikelove/tximport
+      \endverb
+    \endentry
     \entry{R-base}{manual}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
@@ -483,6 +1025,94 @@
       \endverb
       \verb{url}
       \verb https://www.R-project.org/
+      \endverb
+    \endentry
+    \entry{edgeR2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0dd72956405d78b6bb66638241ce020}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Davis\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8acfd40aa371634dafbda59822de12b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon\bibnamedelima K},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6b6440459c8fd3a4496d0c2072944af}
+      \strng{fullhash}{9439dfc2ce0d77dcb996812c6d596223}
+      \strng{bibnamehash}{9439dfc2ce0d77dcb996812c6d596223}
+      \strng{authorbibnamehash}{9439dfc2ce0d77dcb996812c6d596223}
+      \strng{authornamehash}{c6b6440459c8fd3a4496d0c2072944af}
+      \strng{authorfullhash}{9439dfc2ce0d77dcb996812c6d596223}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{1}
+      \field{title}{edgeR: a Bioconductor package for differential expression analysis of digital gene expression data}
+      \field{volume}{26}
+      \field{year}{2010}
+      \field{pages}{139\bibrangedash 140}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btp616
+      \endverb
+    \endentry
+    \entry{tximport2015}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4e9dc1181359aa0cea3e35a86494c06f}{%
+           family={Soneson},
+           familyi={S\bibinitperiod},
+           given={Charlotte},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d480d3f68226ebba9e9a763795e86f7}{%
+           family={Love},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8e64a7b3dfca90319418c048cfd6ba1c}
+      \strng{fullhash}{a441bee4ab864bec45154b07a5b9b905}
+      \strng{bibnamehash}{a441bee4ab864bec45154b07a5b9b905}
+      \strng{authorbibnamehash}{a441bee4ab864bec45154b07a5b9b905}
+      \strng{authornamehash}{8e64a7b3dfca90319418c048cfd6ba1c}
+      \strng{authorfullhash}{a441bee4ab864bec45154b07a5b9b905}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1521}
+      \field{journaltitle}{F1000Research}
+      \field{title}{Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences}
+      \field{volume}{4}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.12688/f1000research.7563.1
       \endverb
     \endentry
   \enddatalist
