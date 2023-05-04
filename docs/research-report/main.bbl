@@ -370,6 +370,44 @@
       \verb https://doi.org/10.1093/bioinformatics/btw354
       \endverb
     \endentry
+    \entry{R-gprofiler2}{manual}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=95aed347c86db8130989069ebc31e3dc}{%
+           family={Kolberg},
+           familyi={K\bibinitperiod},
+           given={Liis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed5c8ec6c197b990e431c156bfa436ce}{%
+           family={Raudvere},
+           familyi={R\bibinitperiod},
+           given={Uku},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{fullhash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{bibnamehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{authorbibnamehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{authornamehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{authorfullhash}{caa531847bc767aa0088a6feb3aeee0e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 0.2.1}
+      \field{title}{gprofiler2: Interface to the g:Profiler Toolset}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://CRAN.R-project.org/package=gprofiler2
+      \endverb
+      \verb{url}
+      \verb https://CRAN.R-project.org/package=gprofiler2
+      \endverb
+    \endentry
     \entry{R-tximport}{manual}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=c6cfd117a64996739118edbf9e60538d}{%
@@ -512,6 +550,75 @@
       \verb https://www.R-project.org/
       \endverb
     \endentry
+    \entry{limma2015}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=951d585e86cb8b9c75ad8215db61706f}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffcd669072a93fe5f18e9037b1bcb13}{%
+           family={Phipson},
+           familyi={P\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65027af5f4f54f2e6c7bb140253872e2}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8471a849eb709ebe0fbe0e01176cd50}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f16015700a0004333624de6431e9a41b}{%
+           family={Law},
+           familyi={L\bibinitperiod},
+           given={Charity\bibnamedelima W},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4e22f2196e5fdf40a8499f2d3f8bf02}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8acfd40aa371634dafbda59822de12b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon\bibnamedelima K},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{86c08ec45f36a1fa3a69960789a32e39}
+      \strng{fullhash}{dd10be2ac81c50adf371c58312df557a}
+      \strng{bibnamehash}{dd10be2ac81c50adf371c58312df557a}
+      \strng{authorbibnamehash}{dd10be2ac81c50adf371c58312df557a}
+      \strng{authornamehash}{86c08ec45f36a1fa3a69960789a32e39}
+      \strng{authorfullhash}{dd10be2ac81c50adf371c58312df557a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{number}{7}
+      \field{title}{{limma} powers differential expression analyses for {RNA}-sequencing and microarray studies}
+      \field{volume}{43}
+      \field{year}{2015}
+      \field{pages}{e47}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/nar/gkv007
+      \endverb
+    \endentry
     \entry{edgeR2010}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
@@ -555,6 +662,146 @@
       \range{pages}{2}
       \verb{doi}
       \verb 10.1093/bioinformatics/btp616
+      \endverb
+    \endentry
+    \entry{R-limma}{manual}{}
+      \name{author}{19}{}{%
+        {{un=0,uniquepart=base,hash=1f5a441c482bf702fbfd24d7e0131093}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8471a849eb709ebe0fbe0e01176cd50}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a3871882b5ea1134b4fce7eb830a3d6}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e553dbc58d14fceed5d59d4d3b32}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=910014f620992729565b08d08b71e541}{%
+           family={Wettenhall},
+           familyi={W\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8fef17433d17d852e9ab4ef1edd73c3}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Davis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65027af5f4f54f2e6c7bb140253872e2}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4e22f2196e5fdf40a8499f2d3f8bf02}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffcd669072a93fe5f18e9037b1bcb13}{%
+           family={Phipson},
+           familyi={P\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=460750b5f96ad36bac1869e19c9368a3}{%
+           family={Lun},
+           familyi={L\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ed025afe99294b9fcd9aa4eb48ef57e}{%
+           family={Thorne},
+           familyi={T\bibinitperiod},
+           given={Natalie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d6b48566a9385706fdb4bddfbf926a3}{%
+           family={Oshlack},
+           familyi={O\bibinitperiod},
+           given={Alicia},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa24c80ea2c54ef9451b7e6f502394a5}{%
+           family={{de Graaf}},
+           familyi={d\bibinitperiod},
+           given={Carolyn},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8cc46710357e0664c1a2665c7fb8b88a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yunshun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34fd61a38ea4366b864e1d130da879c0}{%
+           family={Langaas},
+           familyi={L\bibinitperiod},
+           given={Mette},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=684a95a364d0fa2a801cdc7d0696aad6}{%
+           family={Ferkingstad},
+           familyi={F\bibinitperiod},
+           given={Egil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9096a4167efc81d9d0e4703e5e56ce92}{%
+           family={Davy},
+           familyi={D\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=777d368d4ca2e6081d261a5193a6940c}{%
+           family={Pepin},
+           familyi={P\bibinitperiod},
+           given={Francois},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5787f97a61ad1ca063f8e52fb47ab245}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Dongseok},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0252291bdcea5149f4d9105816f30f38}
+      \strng{fullhash}{c2862a8fab07d8977e50682de281a407}
+      \strng{bibnamehash}{c2862a8fab07d8977e50682de281a407}
+      \strng{authorbibnamehash}{c2862a8fab07d8977e50682de281a407}
+      \strng{authornamehash}{0252291bdcea5149f4d9105816f30f38}
+      \strng{authorfullhash}{c2862a8fab07d8977e50682de281a407}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 3.54.2}
+      \field{title}{limma: Linear Models for Microarray Data}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://bioinf.wehi.edu.au/limma
+      \endverb
+      \verb{url}
+      \verb http://bioinf.wehi.edu.au/limma
       \endverb
     \endentry
     \entry{tximport2015}{article}{}
@@ -953,6 +1200,44 @@
       \verb https://doi.org/10.1093/bioinformatics/btw354
       \endverb
     \endentry
+    \entry{R-gprofiler2}{manual}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=95aed347c86db8130989069ebc31e3dc}{%
+           family={Kolberg},
+           familyi={K\bibinitperiod},
+           given={Liis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed5c8ec6c197b990e431c156bfa436ce}{%
+           family={Raudvere},
+           familyi={R\bibinitperiod},
+           given={Uku},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{fullhash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{bibnamehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{authorbibnamehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{authornamehash}{caa531847bc767aa0088a6feb3aeee0e}
+      \strng{authorfullhash}{caa531847bc767aa0088a6feb3aeee0e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 0.2.1}
+      \field{title}{gprofiler2: Interface to the g:Profiler Toolset}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://CRAN.R-project.org/package=gprofiler2
+      \endverb
+      \verb{url}
+      \verb https://CRAN.R-project.org/package=gprofiler2
+      \endverb
+    \endentry
     \entry{R-tximport}{manual}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=c6cfd117a64996739118edbf9e60538d}{%
@@ -1095,6 +1380,75 @@
       \verb https://www.R-project.org/
       \endverb
     \endentry
+    \entry{limma2015}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=951d585e86cb8b9c75ad8215db61706f}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffcd669072a93fe5f18e9037b1bcb13}{%
+           family={Phipson},
+           familyi={P\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65027af5f4f54f2e6c7bb140253872e2}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8471a849eb709ebe0fbe0e01176cd50}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f16015700a0004333624de6431e9a41b}{%
+           family={Law},
+           familyi={L\bibinitperiod},
+           given={Charity\bibnamedelima W},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4e22f2196e5fdf40a8499f2d3f8bf02}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8acfd40aa371634dafbda59822de12b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon\bibnamedelima K},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{86c08ec45f36a1fa3a69960789a32e39}
+      \strng{fullhash}{dd10be2ac81c50adf371c58312df557a}
+      \strng{bibnamehash}{dd10be2ac81c50adf371c58312df557a}
+      \strng{authorbibnamehash}{dd10be2ac81c50adf371c58312df557a}
+      \strng{authornamehash}{86c08ec45f36a1fa3a69960789a32e39}
+      \strng{authorfullhash}{dd10be2ac81c50adf371c58312df557a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{number}{7}
+      \field{title}{{limma} powers differential expression analyses for {RNA}-sequencing and microarray studies}
+      \field{volume}{43}
+      \field{year}{2015}
+      \field{pages}{e47}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/nar/gkv007
+      \endverb
+    \endentry
     \entry{edgeR2010}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=2aa08244fd721275d08d7e2da379b722}{%
@@ -1138,6 +1492,146 @@
       \range{pages}{2}
       \verb{doi}
       \verb 10.1093/bioinformatics/btp616
+      \endverb
+    \endentry
+    \entry{R-limma}{manual}{}
+      \name{author}{19}{}{%
+        {{un=0,uniquepart=base,hash=1f5a441c482bf702fbfd24d7e0131093}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8471a849eb709ebe0fbe0e01176cd50}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a3871882b5ea1134b4fce7eb830a3d6}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e553dbc58d14fceed5d59d4d3b32}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=910014f620992729565b08d08b71e541}{%
+           family={Wettenhall},
+           familyi={W\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8fef17433d17d852e9ab4ef1edd73c3}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Davis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65027af5f4f54f2e6c7bb140253872e2}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4e22f2196e5fdf40a8499f2d3f8bf02}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffcd669072a93fe5f18e9037b1bcb13}{%
+           family={Phipson},
+           familyi={P\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=460750b5f96ad36bac1869e19c9368a3}{%
+           family={Lun},
+           familyi={L\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ed025afe99294b9fcd9aa4eb48ef57e}{%
+           family={Thorne},
+           familyi={T\bibinitperiod},
+           given={Natalie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d6b48566a9385706fdb4bddfbf926a3}{%
+           family={Oshlack},
+           familyi={O\bibinitperiod},
+           given={Alicia},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa24c80ea2c54ef9451b7e6f502394a5}{%
+           family={{de Graaf}},
+           familyi={d\bibinitperiod},
+           given={Carolyn},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8cc46710357e0664c1a2665c7fb8b88a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yunshun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34fd61a38ea4366b864e1d130da879c0}{%
+           family={Langaas},
+           familyi={L\bibinitperiod},
+           given={Mette},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=684a95a364d0fa2a801cdc7d0696aad6}{%
+           family={Ferkingstad},
+           familyi={F\bibinitperiod},
+           given={Egil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9096a4167efc81d9d0e4703e5e56ce92}{%
+           family={Davy},
+           familyi={D\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=777d368d4ca2e6081d261a5193a6940c}{%
+           family={Pepin},
+           familyi={P\bibinitperiod},
+           given={Francois},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5787f97a61ad1ca063f8e52fb47ab245}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Dongseok},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0252291bdcea5149f4d9105816f30f38}
+      \strng{fullhash}{c2862a8fab07d8977e50682de281a407}
+      \strng{bibnamehash}{c2862a8fab07d8977e50682de281a407}
+      \strng{authorbibnamehash}{c2862a8fab07d8977e50682de281a407}
+      \strng{authornamehash}{0252291bdcea5149f4d9105816f30f38}
+      \strng{authorfullhash}{c2862a8fab07d8977e50682de281a407}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 3.54.2}
+      \field{title}{limma: Linear Models for Microarray Data}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://bioinf.wehi.edu.au/limma
+      \endverb
+      \verb{url}
+      \verb http://bioinf.wehi.edu.au/limma
       \endverb
     \endentry
     \entry{tximport2015}{article}{}

@@ -34,7 +34,7 @@ The results of the separate FastQC analyses (of the raw and trimmed FastQ files)
 The initial quality assessment of the raw FastQ files revealed that about roughly the first 12 base pairs of the reads were of low quality. Therefore, the data was preprocessed/trimmed using Trimmomatic\index{Trimmomatic}, a "flexible and efficient preprocessing tool, which could correctly handle paired-end data" \autocite{10.1093/bioinformatics/btw354}.
 
 
-\subsection{Genome mapping}
+\subsection{Transcripts abundances quantification}
 
 The mapping/pseudoalignment of the RNA-seq reads and the abundances quantification of the transcripts\index{transcript!abundances quantification} was done using kallisto\index{kallisto}. According to \autocite{10.1038/nbt.3519}, kallisto offers the following advantages over other alignment and quantification software:
 \begin{quote}
@@ -56,7 +56,7 @@ Scaling method: average transcript length over samples and then the library size
 
 The mapping of the transcript IDs\index{transcript!ID} (used within the kallisto \verb|abundance.tsv| files) to the corresponding gene IDs\index{gene!ID} was done using the BioMart database \verb|plants_mart| hosted at \url{https://plants.ensembl.org}. Datasets: \verb|nivara_eg_gene| and \verb|osativa_eg_gene| for O. nivara and O. sativa, respectively. See \autocite{R-biomaRt, biomaRt2009}.
 
-Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\index{transcript!TPM}) statistics about the imported kallisto files.
+Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\index{transcript!transcripts per million (TPM)}) statistics about the imported kallisto files.
 
 \begin{figure}[htbp]
     \caption{TPM statistics about the imported kallisto data}
@@ -73,7 +73,7 @@ Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\ind
 
 \subsubsection{Filtering and normalization}
 
-For further analysis, \verb|DGEList|-objects with counts per million (CPM\index{CPM}) and log2(CPM) values were created using the R-package \verb|edgeR|\index{R!package!edgeR} \autocite{R-edgeR, edgeR2010}. Figure \ref{fig:2.2-Log2CPM-unflt-notnorm} shows the distribution of the log2(CPM) values.
+For further analysis, \verb|DGEList|-objects with counts per million (CPM)\index{counts per million (CPM)} and log2(CPM) values were created using the R-package \verb|edgeR|\index{R!package!edgeR} \autocite{R-edgeR, edgeR2010}. Figure \ref{fig:2.2-Log2CPM-unflt-notnorm} shows the distribution of the log2(CPM) values.
 
 \begin{figure}[htbp]
     \caption{Log2(CPM) distribution of the unfiltered, non-normalized data}
@@ -145,10 +145,30 @@ Figure \ref{fig:2.5-Log2CPM-Overview} provides an overview of the filtering and 
     \includegraphics[width=\textwidth]{../../results/plots-and-tables/2.5-Log2CPM-Overview}
 \end{figure}
 
-\subsubsection{TODO}
+\subsubsection{Hierarchical cluster analysis}
 
-Explain the statistical methods and software used for evaluating the data and identifying differentially expressed genes.
+A hierarchical cluster analysis (HCA)\index{hierarchical cluster analysis (HCA)} was performed via the \verb|stats|\index{R!package!stats} function \verb|hclust| on the Euclidean distance matrix\index{hierarchical cluster analysis (HCA)!Euclidean distance matrix} of the log2(CPM) values. Used agglomeration method: \verb|method = complete|.
 
+\subsubsection{Principal component analysis}
+
+A principal component analysis (PCA)\index{principal component analysis (PCA)} was performed via the \verb|stats|\index{R!package!stats} function \verb|prcomp|.
+
+\subsubsection{Identification of differentially expressed genes}
+
+In order to identify differentially expressed genes (DEGs)\index{differentially expressed genes (DEGs)}, design and contrast matrices were created using the \verb|stats|\index{R!package!stats} function \verb|model.matrix| and the \verb|limma|\index{R!package!limma} function \verb|makeContrasts|.
+
+The design matrices were used to create linear model fits for each gene via the \verb|limma|\index{R!package!limma} functions \verb|voom| and \verb|lmFit|.
+
+The linear model fits and the contrast matrices were used to calculate estimated coefficients and standard errors (contrasts) via the \verb|limma|\index{R!package!limma} function \verb|contrasts.fit|.
+
+The contrasts were used to "calculate moderated t-statistics, moderated F-statistic, and log-odds of differential expression by empirical Bayes moderation of the standard errors towards a global value" (empirical Bayes statistics) via the \verb|limma|\index{R!package!limma} function \verb|eBayes| \autocite{R-limma}.
+
+Finally, the empirical Bayes statistics were used to extract a table of the top-ranked genes via the \verb|limma|\index{R!package!limma} function \verb|topTable| (sorted by the \verb|LogFC|\index{LogFC}-values).
+
+Venn diagrams of the DEGs (according to the calculated empirical Bayes statistics) were created via the \verb|gprofiler2|\index{R!package!gprofiler2} function \verb|decideTests| (with parameters \verb|method = "global"|, \verb|adjust.method = "BH"|, \verb|p.value = 0.01|, \verb|lfc = 7|) and the \verb|limma| function \verb|vennDiagram|.
+
+See \autocite{limma2015} for details on the statistical foundations implemented by \verb|limma|\index{R!package!limma}.
 
 \subsection{Functional enrichment analysis}
-Describe the tools and databases used to perform functional enrichment analysis to interpret the biological significance of the differentially expressed genes.
+
+A functional enrichment analysis of the 100 "top-ranked" genes was performed via the \verb|gprofiler2|\index{R!package!gprofiler2} function \verb|gost| (with \verb|correction_method = "fdr"| \autocite{R-gprofiler2}.

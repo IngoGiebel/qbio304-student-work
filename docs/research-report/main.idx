@@ -26,6 +26,22 @@
 \indexentry{R!package!tximport|hyperpage}{5}
 \indexentry{transcript!ID|hyperpage}{5}
 \indexentry{gene!ID|hyperpage}{5}
-\indexentry{transcript!TPM|hyperpage}{5}
-\indexentry{CPM|hyperpage}{6}
+\indexentry{transcript!transcripts per million (TPM)|hyperpage}{5}
+\indexentry{counts per million (CPM)|hyperpage}{6}
 \indexentry{R!package!edgeR|hyperpage}{6}
+\indexentry{hierarchical cluster analysis (HCA)|hyperpage}{7}
+\indexentry{R!package!stats|hyperpage}{7}
+\indexentry{hierarchical cluster analysis (HCA)!Euclidean distance matrix|hyperpage}{7}
+\indexentry{principal component analysis (PCA)|hyperpage}{7}
+\indexentry{R!package!stats|hyperpage}{7}
+\indexentry{differentially expressed genes (DEGs)|hyperpage}{9}
+\indexentry{R!package!stats|hyperpage}{9}
+\indexentry{R!package!limma|hyperpage}{9}
+\indexentry{R!package!limma|hyperpage}{9}
+\indexentry{R!package!limma|hyperpage}{9}
+\indexentry{R!package!limma|hyperpage}{9}
+\indexentry{R!package!limma|hyperpage}{9}
+\indexentry{LogFC|hyperpage}{9}
+\indexentry{R!package!gprofiler2|hyperpage}{9}
+\indexentry{R!package!limma|hyperpage}{9}
+\indexentry{R!package!gprofiler2|hyperpage}{9}
