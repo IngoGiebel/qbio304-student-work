@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  4 MAY 2023 00:37
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  4 MAY 2023 09:56
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2717,24 +2717,74 @@ e (type pdf)
 Package luatex.def Info: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sat
 iva.pdf  used on input line 70.
 (luatex.def)             Requested size: 200.75996pt x 141.37514pt.
+<../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf, id=
+220, 597.23125pt x 420.57124pt>
+File: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf
+ Graphic file (type pdf)
+<use ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf>
+
+Package luatex.def Info: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notno
+rm-Oryza_nivara.pdf  used on input line 83.
+(luatex.def)             Requested size: 267.68535pt x 113.81244pt.
+<../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf, id=
+221, 597.23125pt x 420.57124pt>
+File: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf
+ Graphic file (type pdf)
+<use ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf>
+
+Package luatex.def Info: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notno
+rm-Oryza_sativa.pdf  used on input line 87.
+(luatex.def)             Requested size: 133.84267pt x 113.81244pt.
  [4]
-Overfull \hbox (1.40749pt too wide) in paragraph at lines 88--88
-[]|\TU/Roboto(0)/m/n/10.95 󰃴󰃹󰃵󰃷󰃷|  
+Overfull \hbox (5.60297pt too wide) in paragraph at lines 95--108
+[]  
  []
 
-
-Overfull \hbox (1.30017pt too wide) in paragraph at lines 89--89
-[]|\TU/Roboto(0)/m/n/10.95 󰃴󰃵󰃸󰃵󰃶|  
- []
-
-
-Overfull \hbox (1.5148pt too wide) in paragraph at lines 89--89
-[]|\TU/Roboto(0)/m/n/10.95 󰃴󰃹󰃷󰃸󰃴|  
- []
-
-) (./results.tex [5<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pd
-f><../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf>])
-(./discussion.tex) (./conclusion.tex) [6] [7]
+<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf, id=23
+8, 597.23125pt x 420.57124pt>
+File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf G
+raphic file (type pdf)
+<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
+-Oryza_nivara.pdf  used on input line 117.
+(luatex.def)             Requested size: 267.68535pt x 113.81244pt.
+<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf, id=23
+9, 597.23125pt x 420.57124pt>
+File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf G
+raphic file (type pdf)
+<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
+-Oryza_sativa.pdf  used on input line 121.
+(luatex.def)             Requested size: 133.84267pt x 113.81244pt.
+[5<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf><../../results/
+plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf><../../results/plots-and-tables/
+2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf><../../results/plots-and-tables/2.2-L
+og2CPM-unflt-notnorm-Oryza_sativa.pdf>]
+File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf G
+raphic file (type pdf)
+<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
+-Oryza_nivara.pdf  used on input line 132.
+(luatex.def)             Requested size: 267.68535pt x 113.81244pt.
+File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf G
+raphic file (type pdf)
+<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
+-Oryza_sativa.pdf  used on input line 136.
+(luatex.def)             Requested size: 133.84267pt x 113.81244pt.
+<../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf, id=278, 597.23125pt x
+ 420.57124pt>
+File: ../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf Graphic file (typ
+e pdf)
+<use ../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.5-Log2CPM-Overview.pd
+f  used on input line 145.
+(luatex.def)             Requested size: 418.25368pt x 294.53905pt.
+) (./results.tex [6<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza
+_nivara.pdf><../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa
+.pdf>] [7<../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf>]) (./discuss
+ion.tex) (./conclusion.tex)
+[8] [9]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
 (Font)              scaled to size 10.95pt on input line 106.
 Package microtype Info: Setting up font `TU/Roboto(0)/m/it/10.95' on input line
@@ -2743,7 +2793,7 @@ Package microtype Info: ... No tracking.
 Package microtype Info: ... Loading protrusion list `T1-default'.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... Applying non-selected expansion (no list).
- [8] (./main.ind)
+ [10] (./main.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2814,7 +2864,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
- [9
+ [11
 
 ]
 
@@ -2835,22 +2885,22 @@ Package microtype Info: *** Changing to language context `english'
 Package polyglossia Info: Option: English, variant=american.
 )
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BBB25F724540A2FE4D14F52B5F84B575;4490.
+(rerunfilecheck)             Checksum: 1AE93E70ECA62D76DD0B81BBEB590E7F;4491.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 61411 strings out of 478290
+ 61545 strings out of 478290
  125086,2848258 words of node,token memory allocated
  751 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 11 attribute, 93 glue_spec
 , 11 attribute_list, 2 shape, 2 write, 3 pdf_action nodes
-   avail lists: 1:2,2:1411,3:1684,4:311,5:383,6:120,7:6482,8:114,9:675,10:15,11:
-449
- 79645 multiletter control sequences out of 65536+600000
- 76 fonts using 13380027 bytes
+   avail lists: 1:2,2:1411,3:1684,4:311,5:380,6:120,7:6373,8:114,9:675,10:15,11:
+444
+ 79710 multiletter control sequences out of 65536+600000
+ 76 fonts using 13382019 bytes
  99i,12n,128p,1042b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Italic.otf><c:/t
 exlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/te
@@ -2858,10 +2908,10 @@ xlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive/
 2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf><c:/texlive/2022/te
 xmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf><c:/texlive/2022/texmf-
 dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (10 pages, 1556931 bytes).
+Output written on main.pdf (12 pages, 1996590 bytes).
 
-PDF statistics: 355 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 53 named destinations out of 1000 (max. 131072)
+PDF statistics: 403 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 59 named destinations out of 1000 (max. 131072)
  252 words of extra memory for PDF output out of 10000 (max. 100000000)
 

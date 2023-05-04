@@ -56,7 +56,7 @@ Scaling method: average transcript length over samples and then the library size
 
 The mapping of the transcript IDs (used within the kallisto \verb|abundance.tsv| files) to the corresponding gene IDs was done using the BioMart database \verb|plants_mart| hosted at \url{https://plants.ensembl.org}. Datasets: \verb|nivara_eg_gene| and \verb|osativa_eg_gene| for O. nivara and O. sativa, respectively. See \autocite{R-biomaRt, biomaRt2009}.
 
-Figure \ref{fig:2.1-TPM-Stats} show some basic TPM statistics about the imported kallisto files.
+Figure \ref{fig:2.1-TPM-Stats} shows some basic TPM statistics about the imported kallisto files.
 
 \begin{figure}[htbp]
     \caption{TPM statistics about the imported kallisto data}
@@ -73,16 +73,31 @@ Figure \ref{fig:2.1-TPM-Stats} show some basic TPM statistics about the imported
 
 \subsubsection{Filtering and normalization}
 
-For further analysis, \verb|DGEList|-objects with CPM and log2(CPM) values were created using the R-package \verb|edgeR| \autocite{R-edgeR, edgeR2010}. In order to assess reasonable values for filtering the data, the number of genes with no reads at all (in none of the samples) and conversely the number of genes with CPMs \(\ge 1\) in at least 1, 2, 3, \dots\ of the samples were computed. Table \ref{tab:ufltr_cpm_stats} summarizes the results.
+For further analysis, \verb|DGEList|-objects with CPM and log2(CPM) values were created using the R-package \verb|edgeR| \autocite{R-edgeR, edgeR2010}. Figure \ref{fig:2.2-Log2CPM-unflt-notnorm} shows the distribution of the log2(CPM) values.
+
+\begin{figure}[htbp]
+    \caption{Log2(CPM) distribution of the unfiltered, non-normalized data}
+    \label{fig:2.2-Log2CPM-unflt-notnorm}
+    \begin{subfigure}[t]{0.64\linewidth}
+        \label{fig:2.2-Log2CPM-unflt-notnorm-Oryza_nivara}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.32\linewidth}
+        \label{fig:2.2-Log2CPM-unflt-notnorm-Oryza_sativa}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa}
+    \end{subfigure}
+\end{figure}
+
+In order to assess reasonable values for filtering the data, the number of genes with no reads at all (in none of the samples) and conversely the number of genes with CPMs \(\ge 1\) in at least 1, 2, 3, \dots\ of the samples were computed. Table \ref{tab:ufltr_cpm_stats} summarizes the results.
 
 \begin{table}[htbp]
     \begin{threeparttable}
         \caption{Number of genes with no reads at all, and conversely number of genes with CPMs \(\ge 1\) in at least n = 1, 2, 3, \dots\ of the samples}
         \label{tab:ufltr_cpm_stats}
-        \setlength\tabcolsep{5pt}
-        \begin{tabular}{l l l p{0.4in} p{0.4in} p{0.4in} p{0.4in} p{0.4in} p{0.4in}}
+        \setlength\tabcolsep{6pt}
+        \begin{tabular}{l l l p{30pt} p{30pt} p{30pt} p{30pt} p{30pt} p{30pt}}
             \toprule
-                             &                  &                     & \multicolumn{6}{l}{Genes w/ CPMs \(\ge 1\) in at least n samples} \\
+                             &                  &                     & \multicolumn{6}{l}{Genes with CPMs \(\ge 1\) in at least n samples} \\
             \textbf{Species} & \(\Sigma\) genes & \(\Sigma\) no reads & 1     & 2     & 3     & 4     & 5     & 6     \\
             \midrule
             O. nivara        & 36313            & 7115                & 21001 & 20355 & 19891 & 19302 & 18895 & 18481 \\
@@ -91,6 +106,44 @@ For further analysis, \verb|DGEList|-objects with CPM and log2(CPM) values were 
         \end{tabular}
     \end{threeparttable}
 \end{table}
+
+Filtering out genes with low reads (\(< 1\) CPM in at least half of the samples) resulted in the distribution of the log2(CPM) values shown in figure \ref{fig:2.3-Log2CPM-flt-notnorm}.
+
+\begin{figure}[htbp]
+    \caption{Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data}
+    \label{fig:2.3-Log2CPM-flt-notnorm}
+    \begin{subfigure}[t]{0.64\linewidth}
+        \label{fig:2.3-Log2CPM-flt-notnorm-Oryza_nivara}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.32\linewidth}
+        \label{fig:2.3-Log2CPM-flt-notnorm-Oryza_sativa}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa}
+    \end{subfigure}
+\end{figure}
+
+Finally, the filtered data was normalized using the \verb|edgeR| function \verb|calcNormFactors| which calculates scaling factors to convert raw library sizes into effective library sizes. Used normalization method: \verb|TMM|. The results of the normalization are shown in figure \ref{fig:2.4-Log2CPM-flt-norm}.
+
+\begin{figure}[htbp]
+    \caption{Log2(CPM) distribution of the filtered, normalized data}
+    \label{fig:2.4-Log2CPM-flt-norm}
+    \begin{subfigure}[t]{0.64\linewidth}
+        \label{fig:2.4-Log2CPM-flt-norm-Oryza_nivara}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.32\linewidth}
+        \label{fig:2.4-Log2CPM-flt-norm-Oryza_sativa}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa}
+    \end{subfigure}
+\end{figure}
+
+Figure \ref{fig:2.5-Log2CPM-Overview} provides an overview of the filtering and normalization results.
+
+\begin{figure}[htbp]
+    \caption{Log2(CPM) distribution of the filtered, normalized data in comparison with the non-normalized and the unfiltered data}
+    \label{fig:2.5-Log2CPM-Overview}
+    \includegraphics[width=\textwidth]{../../results/plots-and-tables/2.5-Log2CPM-Overview}
+\end{figure}
 
 \subsubsection{TODO}
 
