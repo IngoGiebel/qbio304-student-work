@@ -1,0 +1,11 @@
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1}{\ignorespaces TPM statistics about the imported kallisto data\relax }}{6}{figure.caption.4}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {2}{\ignorespaces Log2(CPM) distribution of the unfiltered, non-normalized data\relax }}{6}{figure.caption.5}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {3}{\ignorespaces Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data\relax }}{7}{figure.caption.8}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data\relax }}{7}{figure.caption.9}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {5}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data in comparison with the non-normalized and the unfiltered data\relax }}{8}{figure.caption.10}%

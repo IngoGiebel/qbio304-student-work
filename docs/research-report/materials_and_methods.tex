@@ -50,13 +50,13 @@ The preprocessed and aligned data was further evaluated and analyzed using an R-
 
 \subsubsection{Import of the kallisto transcript-level estimates}
 
-The kallisto transcript-level estimates were imported using the R-package\verb|tximport|\index{R!package!tximport} \autocite{R-tximport, tximport2015}. Thereby, the  abundances, counts, and transcript lengths were summarized to the gene level.
+The kallisto transcript-level estimates were imported using the R-package \verb|tximport|\index{R!package!tximport} \autocite{R-tximport, tximport2015}. Thereby, the  abundances, counts, and transcript lengths were summarized to the gene level.
 
 Scaling method: average transcript length over samples and then the library size (parameter \verb|lengthScaledTPM|).
 
 The mapping of the transcript IDs\index{transcript!ID} (used within the kallisto \verb|abundance.tsv| files) to the corresponding gene IDs\index{gene!ID} was done using the BioMart database \verb|plants_mart| hosted at \url{https://plants.ensembl.org}. Datasets: \verb|nivara_eg_gene| and \verb|osativa_eg_gene| for O. nivara and O. sativa, respectively. See \autocite{R-biomaRt, biomaRt2009}.
 
-Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\index{transcript!TPM} statistics about the imported kallisto files.
+Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\index{transcript!TPM}) statistics about the imported kallisto files.
 
 \begin{figure}[htbp]
     \caption{TPM statistics about the imported kallisto data}

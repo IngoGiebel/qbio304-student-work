@@ -1,31 +1,31 @@
-\indexentry{RNA-seq|hyperpage}{2}
-\indexentry{Oryza!nivara|hyperpage}{2}
-\indexentry{cultivar!BJ278|hyperpage}{2}
-\indexentry{cultivar!BJ89|hyperpage}{2}
-\indexentry{Oryza!sativa|hyperpage}{2}
-\indexentry{cultivar!Nipponbare|hyperpage}{2}
-\indexentry{Illumina!HiSeq 2000|hyperpage}{2}
-\indexentry{RNA-seq!quality assessment|hyperpage}{2}
-\indexentry{FastQC|hyperpage}{2}
-\indexentry{FastQ|hyperpage}{2}
-\indexentry{RNA-seq!contaminant|hyperpage}{3}
-\indexentry{RNA-seq!adapter sequence|hyperpage}{3}
-\indexentry{Trimmomatic|hyperpage}{3}
-\indexentry{kallisto|hyperpage}{3}
-\indexentry{transcript!pseudoalignment|hyperpage}{3}
-\indexentry{MultiQC|hyperpage}{3}
-\indexentry{Trimmomatic|hyperpage}{3}
-\indexentry{transcript!abundances quantification|hyperpage}{3}
-\indexentry{kallisto|hyperpage}{3}
-\indexentry{genome/transcriptome!reference|hyperpage}{4}
-\indexentry{FASTA|hyperpage}{4}
-\indexentry{DNA!cDNA|hyperpage}{4}
-\indexentry{Ensembl|hyperpage}{4}
-\indexentry{R|hyperpage}{4}
-\indexentry{R!RStudio|hyperpage}{4}
-\indexentry{R!package!tximport|hyperpage}{4}
-\indexentry{transcript!ID|hyperpage}{4}
-\indexentry{gene!ID|hyperpage}{4}
-\indexentry{transcript!TPM|hyperpage}{4}
-\indexentry{CPM|hyperpage}{5}
-\indexentry{R!package!edgeR|hyperpage}{5}
+\indexentry{RNA-seq|hyperpage}{3}
+\indexentry{Oryza!nivara|hyperpage}{3}
+\indexentry{cultivar!BJ278|hyperpage}{3}
+\indexentry{cultivar!BJ89|hyperpage}{3}
+\indexentry{Oryza!sativa|hyperpage}{3}
+\indexentry{cultivar!Nipponbare|hyperpage}{3}
+\indexentry{Illumina!HiSeq 2000|hyperpage}{3}
+\indexentry{RNA-seq!quality assessment|hyperpage}{3}
+\indexentry{FastQC|hyperpage}{3}
+\indexentry{FastQ|hyperpage}{3}
+\indexentry{RNA-seq!contaminant|hyperpage}{4}
+\indexentry{RNA-seq!adapter sequence|hyperpage}{4}
+\indexentry{Trimmomatic|hyperpage}{4}
+\indexentry{kallisto|hyperpage}{4}
+\indexentry{transcript!pseudoalignment|hyperpage}{4}
+\indexentry{MultiQC|hyperpage}{4}
+\indexentry{Trimmomatic|hyperpage}{4}
+\indexentry{transcript!abundances quantification|hyperpage}{4}
+\indexentry{kallisto|hyperpage}{4}
+\indexentry{genome/transcriptome!reference|hyperpage}{5}
+\indexentry{FASTA|hyperpage}{5}
+\indexentry{DNA!cDNA|hyperpage}{5}
+\indexentry{Ensembl|hyperpage}{5}
+\indexentry{R|hyperpage}{5}
+\indexentry{R!RStudio|hyperpage}{5}
+\indexentry{R!package!tximport|hyperpage}{5}
+\indexentry{transcript!ID|hyperpage}{5}
+\indexentry{gene!ID|hyperpage}{5}
+\indexentry{transcript!TPM|hyperpage}{5}
+\indexentry{CPM|hyperpage}{6}
+\indexentry{R!package!edgeR|hyperpage}{6}
