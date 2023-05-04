@@ -677,9 +677,10 @@ create_deg_heatmap <- function(deg_df, samples, organism) {
 }
 
 # ------------------------------------------------------------------------------
-# Step 0: Generate BibTeX bibliography entries for the used packages
+# Step 0: Generate BibTeX bibliography entries for RStudio and the used packages
 # ------------------------------------------------------------------------------
 
+RStudio.Version()
 knitr::write_bib()
 
 # ------------------------------------------------------------------------------

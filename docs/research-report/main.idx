@@ -4,12 +4,28 @@
 \indexentry{cultivar!BJ89|hyperpage}{2}
 \indexentry{Oryza!sativa|hyperpage}{2}
 \indexentry{cultivar!Nipponbare|hyperpage}{2}
-\indexentry{Illumina HiSeq 2000|hyperpage}{2}
+\indexentry{Illumina!HiSeq 2000|hyperpage}{2}
+\indexentry{RNA-seq!quality assessment|hyperpage}{2}
 \indexentry{FastQC|hyperpage}{2}
+\indexentry{FastQ|hyperpage}{2}
+\indexentry{RNA-seq!contaminant|hyperpage}{3}
+\indexentry{RNA-seq!adapter sequence|hyperpage}{3}
 \indexentry{Trimmomatic|hyperpage}{3}
 \indexentry{kallisto|hyperpage}{3}
-\indexentry{pseudoalignment|hyperpage}{3}
+\indexentry{transcript!pseudoalignment|hyperpage}{3}
 \indexentry{MultiQC|hyperpage}{3}
 \indexentry{Trimmomatic|hyperpage}{3}
+\indexentry{transcript!abundances quantification|hyperpage}{3}
 \indexentry{kallisto|hyperpage}{3}
+\indexentry{genome/transcriptome!reference|hyperpage}{4}
+\indexentry{FASTA|hyperpage}{4}
+\indexentry{DNA!cDNA|hyperpage}{4}
+\indexentry{Ensembl|hyperpage}{4}
 \indexentry{R|hyperpage}{4}
+\indexentry{R!RStudio|hyperpage}{4}
+\indexentry{R!package!tximport|hyperpage}{4}
+\indexentry{transcript!ID|hyperpage}{4}
+\indexentry{gene!ID|hyperpage}{4}
+\indexentry{transcript!TPM|hyperpage}{4}
+\indexentry{CPM|hyperpage}{5}
+\indexentry{R!package!edgeR|hyperpage}{5}

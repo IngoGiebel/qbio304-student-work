@@ -4,16 +4,16 @@
 
 This study uses publicly available paired-end RNA-seq\index{RNA-seq} data of wild and cultivated rice, submitted in January 1, 2021 by the Institute of Botany, Chinese Academy of Sciences. This data allows to compare rice grown under normal conditions with rice grown under drought stress conditions. Furthermore, the data allows for an interspecies comparison of wild rice (Oryza nivara\index{Oryza!nivara}, cultivars BJ278\index{cultivar!BJ278} and BJ89\index{cultivar!BJ89}) with cultivated rice (Oryza sativa\index{Oryza!sativa}, cultivar Nipponbare\index{cultivar!Nipponbare}).
 
-All samples were uniformly taken from seedlings (leaf tissue) at the age of twelve days. Used sequencing platform: Illumina HiSeq 2000\index{Illumina HiSeq 2000}.
+All samples were uniformly taken from seedlings (leaf tissue) at the age of twelve days. Used sequencing platform: Illumina HiSeq 2000\index{Illumina!HiSeq 2000}.
 
 Therefore, the data is well-suited for a targeted analysis of drought stress responses.
 
 
 \subsection{Quality evaluation}
 
-The quality of the raw and trimmed RNA-seq data was assessed using FastQC\index{FastQC} \autocite{babraham}. FastQC is a quality control analysis tool for high throughput sequencing data. It provides information about
+The quality of the raw and trimmed RNA-seq data\index{RNA-seq!quality assessment} was assessed using FastQC\index{FastQC} \autocite{babraham}. FastQC is a quality control analysis tool for high throughput sequencing data. It provides information about
 \begin{itemize}
-    \item basic statistics: some simple composition statistics for the FastQ file analyzed
+    \item basic statistics: some simple composition statistics for the FastQ\index{FastQ} file analyzed
     \item per base sequence quality: an overview of the range of quality values across all bases at each position in the FastQ file
     \item per tile sequence quality: an overview of the per tile sequence quality in case an Illumina library was used
     \item per sequence quality scores: an overview of how the overall quality scores of the sequences are distributed
@@ -22,11 +22,11 @@ The quality of the raw and trimmed RNA-seq data was assessed using FastQC\index{
     \item per base N content: an overview of the N content at each position across all bases
     \item sequence length distribution: an overview of how the sequence lengths are distributed
     \item sequence duplication levels: an overview of the degree of duplication for every sequence in a library
-    \item over-represented sequences: a list of over-represented sequences matched against common contaminants
-    \item adapter content: a check for significant amounts of adapter sequences the FastQ file
+    \item over-represented sequences: a list of over-represented sequences matched against common contaminants\index{RNA-seq!contaminant}
+    \item adapter content: a check for significant amounts of adapter sequences\index{RNA-seq!adapter sequence} the FastQ file
 \end{itemize}
 
-The results of the separate FastQC analyses (of the raw and trimmed FastQ files), the results of the Trimmomatic\index{Trimmomatic} trimming and the information about the kallisto\index{kallisto} pseudoalignments\index{pseudoalignment} were summarized in an interactive MultiQC\index{MultiQC} HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
+The results of the separate FastQC analyses (of the raw and trimmed FastQ files), the results of the Trimmomatic\index{Trimmomatic} trimming and the information about the kallisto\index{kallisto} pseudoalignments\index{transcript!pseudoalignment} were summarized in an interactive MultiQC\index{MultiQC} HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
 
 
 \subsection{RNA-seq preprocessing}
@@ -36,27 +36,27 @@ The initial quality assessment of the raw FastQ files revealed that about roughl
 
 \subsection{Genome mapping}
 
-The mapping/pseudoalignment of the RNA-seq reads and the abundances quantification of the genes/transcripts was done using kallisto\index{kallisto}. According to \autocite{10.1038/nbt.3519}, kallisto offers the following advantages over other alignment and quantification software:
+The mapping/pseudoalignment of the RNA-seq reads and the abundances quantification of the transcripts\index{transcript!abundances quantification} was done using kallisto\index{kallisto}. According to \autocite{10.1038/nbt.3519}, kallisto offers the following advantages over other alignment and quantification software:
 \begin{quote}
     kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment. On benchmarks with standard RNA-Seq data, kallisto can quantify 30 million human bulk RNA-seq reads in less than 3 minutes on a Mac desktop computer using only the read sequences and a transcriptome index that itself takes than 10 minutes to build. Pseudoalignment of reads preserves the key information needed for quantification, and kallisto is therefore not only fast, but also comparably accurate to other existing quantification tools. In fact, because the pseudoalignment procedure is robust to errors in the reads, in many benchmarks kallisto significantly outperforms existing tools.
 \end{quote}
 
-kallisto requires a reference genome/transcriptome for aligning the RNA-seq data. To this end, reference Fasta cDNA dumps of Oryza nivara, cultivar BJ278 and Oryza sativa, cultivar Nipponbare were downloaded from Ensembl. The Ensembl project delivers reference data for genome interpretation for any species: genome assemblies from public archive are annotated with genes, regulatory regions, variants and comparative data to provide a foundation for scientific research and genome interpretation \autocite{10.1093/bioinformatics/btu170}.
+kallisto requires a reference genome/transcriptome\index{genome/transcriptome!reference} for aligning the RNA-seq data. To this end, reference FASTA\index{FASTA} cDNA\index{DNA!cDNA} dumps of Oryza nivara, cultivar BJ278 and Oryza sativa, cultivar Nipponbare were downloaded from Ensembl\index{Ensembl}. The Ensembl project delivers reference data for genome interpretation for any species: genome assemblies from public archive are annotated with genes, regulatory regions, variants and comparative data to provide a foundation for scientific research and genome interpretation \autocite{10.1093/bioinformatics/btu170}.
 
 
 \subsection{Statistical evaluation and differential expression analysis}
 
-The preprocessed and aligned data was further evaluated and analyzed using an R-script\index{R} \autocite{R-base}. The following sections describe the analysis steps in detail.
+The preprocessed and aligned data was further evaluated and analyzed using an R-script\index{R} \autocite{R-base} executed within RStudio\index{R!RStudio} \autocite{RStudio}. The following sections describe the analysis steps in detail.
 
 \subsubsection{Import of the kallisto transcript-level estimates}
 
-The kallisto transcript-level estimates were imported using the R-package \verb|tximport| \autocite{R-tximport, tximport2015}. Thereby, the  abundances, counts, and transcript lengths were summarized to the gene level.
+The kallisto transcript-level estimates were imported using the R-package\verb|tximport|\index{R!package!tximport} \autocite{R-tximport, tximport2015}. Thereby, the  abundances, counts, and transcript lengths were summarized to the gene level.
 
 Scaling method: average transcript length over samples and then the library size (parameter \verb|lengthScaledTPM|).
 
-The mapping of the transcript IDs (used within the kallisto \verb|abundance.tsv| files) to the corresponding gene IDs was done using the BioMart database \verb|plants_mart| hosted at \url{https://plants.ensembl.org}. Datasets: \verb|nivara_eg_gene| and \verb|osativa_eg_gene| for O. nivara and O. sativa, respectively. See \autocite{R-biomaRt, biomaRt2009}.
+The mapping of the transcript IDs\index{transcript!ID} (used within the kallisto \verb|abundance.tsv| files) to the corresponding gene IDs\index{gene!ID} was done using the BioMart database \verb|plants_mart| hosted at \url{https://plants.ensembl.org}. Datasets: \verb|nivara_eg_gene| and \verb|osativa_eg_gene| for O. nivara and O. sativa, respectively. See \autocite{R-biomaRt, biomaRt2009}.
 
-Figure \ref{fig:2.1-TPM-Stats} shows some basic TPM statistics about the imported kallisto files.
+Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\index{transcript!TPM} statistics about the imported kallisto files.
 
 \begin{figure}[htbp]
     \caption{TPM statistics about the imported kallisto data}
@@ -73,7 +73,7 @@ Figure \ref{fig:2.1-TPM-Stats} shows some basic TPM statistics about the importe
 
 \subsubsection{Filtering and normalization}
 
-For further analysis, \verb|DGEList|-objects with CPM and log2(CPM) values were created using the R-package \verb|edgeR| \autocite{R-edgeR, edgeR2010}. Figure \ref{fig:2.2-Log2CPM-unflt-notnorm} shows the distribution of the log2(CPM) values.
+For further analysis, \verb|DGEList|-objects with counts per million (CPM\index{CPM}) and log2(CPM) values were created using the R-package \verb|edgeR|\index{R!package!edgeR} \autocite{R-edgeR, edgeR2010}. Figure \ref{fig:2.2-Log2CPM-unflt-notnorm} shows the distribution of the log2(CPM) values.
 
 \begin{figure}[htbp]
     \caption{Log2(CPM) distribution of the unfiltered, non-normalized data}

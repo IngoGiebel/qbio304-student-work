@@ -6,7 +6,7 @@ Loading local config file xindex-cfg.lua ... done
 Corrected the unknown language "*" to "en"
 Open outputfile main.ind... done
 Read Data from file main.idx ... 
-15 lines of data read
+31 lines of data read
 Change escape chars with macros ... 
 ... done
 Sorting entries: for LARGE idx files it can take some minutes ... 
@@ -22,6 +22,6 @@ done
 Replace @-operator ...
 done
 Start writing .ind file ... 
-42 lines of data wrote into the main.ind file
+70 lines of data wrote into the main.ind file
 
 done! closing program

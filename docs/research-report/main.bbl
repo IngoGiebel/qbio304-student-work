@@ -444,6 +444,40 @@
       \verb https://github.com/mikelove/tximport
       \endverb
     \endentry
+    \entry{RStudio}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c91a15d2d660e7a8ad6c8c736c419cd8}{%
+           family={{Posit team}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{organization}{1}{%
+        {Posit Software, PBC}%
+      }
+      \strng{namehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{fullhash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{bibnamehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{authorbibnamehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{authornamehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{authorfullhash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RStudio: Integrated Development Environment for R}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://www.posit.co/
+      \endverb
+      \verb{url}
+      \verb http://www.posit.co/
+      \endverb
+    \endentry
     \entry{R-base}{manual}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
@@ -991,6 +1025,40 @@
       \endverb
       \verb{url}
       \verb https://github.com/mikelove/tximport
+      \endverb
+    \endentry
+    \entry{RStudio}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c91a15d2d660e7a8ad6c8c736c419cd8}{%
+           family={{Posit team}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{organization}{1}{%
+        {Posit Software, PBC}%
+      }
+      \strng{namehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{fullhash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{bibnamehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{authorbibnamehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{authornamehash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \strng{authorfullhash}{c91a15d2d660e7a8ad6c8c736c419cd8}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RStudio: Integrated Development Environment for R}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://www.posit.co/
+      \endverb
+      \verb{url}
+      \verb http://www.posit.co/
       \endverb
     \endentry
     \entry{R-base}{manual}{}

@@ -4,20 +4,43 @@
 \indexspace
 \textbf{C}\label{L-xindex-C}
 \nopagebreak[4]
+  \item CPM, \hyperpage{5}
   \item cultivar
     \subitem -\,BJ278, \hyperpage{2}
     \subitem -\,BJ89, \hyperpage{2}
     \subitem -\,Nipponbare, \hyperpage{2}
 
 \indexspace
+\textbf{D}\label{L-xindex-D}
+\nopagebreak[4]
+  \item DNA
+    \subitem -\,cDNA, \hyperpage{4}
+
+\indexspace
+\textbf{E}\label{L-xindex-E}
+\nopagebreak[4]
+  \item Ensembl, \hyperpage{4}
+
+\indexspace
 \textbf{F}\label{L-xindex-F}
 \nopagebreak[4]
+  \item FASTA, \hyperpage{4}
+  \item FastQ, \hyperpage{2}
   \item FastQC, \hyperpage{2}
+
+\indexspace
+\textbf{G}\label{L-xindex-G}
+\nopagebreak[4]
+  \item gene
+    \subitem -\,ID, \hyperpage{4}
+  \item genome/transcriptome
+    \subitem -\,reference, \hyperpage{4}
 
 \indexspace
 \textbf{I}\label{L-xindex-I}
 \nopagebreak[4]
-  \item Illumina HiSeq 2000, \hyperpage{2}
+  \item Illumina
+    \subitem -\,HiSeq 2000, \hyperpage{2}
 
 \indexspace
 \textbf{K}\label{L-xindex-K}
@@ -37,18 +60,25 @@
     \subitem -\,sativa, \hyperpage{2}
 
 \indexspace
-\textbf{P}\label{L-xindex-P}
-\nopagebreak[4]
-  \item pseudoalignment, \hyperpage{3}
-
-\indexspace
 \textbf{R}\label{L-xindex-R}
 \nopagebreak[4]
   \item R, \hyperpage{4}
+    \subitem -\,RStudio, \hyperpage{4}
+    \subitem -\,package
+      \subsubitem --\,edgeR, \hyperpage{5}
+      \subsubitem --\,tximport, \hyperpage{4}
   \item RNA-seq, \hyperpage{2}
+    \subitem -\,adapter sequence, \hyperpage{3}
+    \subitem -\,contaminant, \hyperpage{3}
+    \subitem -\,quality assessment, \hyperpage{2}
 
 \indexspace
 \textbf{T}\label{L-xindex-T}
 \nopagebreak[4]
+  \item transcript
+    \subitem -\,ID, \hyperpage{4}
+    \subitem -\,TPM, \hyperpage{4}
+    \subitem -\,abundances quantification, \hyperpage{3}
+    \subitem -\,pseudoalignment, \hyperpage{3}
   \item Trimmomatic, \hyperpage{3}
 \end{theindex}
