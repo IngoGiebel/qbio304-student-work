@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  5 MAY 2023 12:20
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  5 MAY 2023 14:06
  restricted system commands enabled.
 **QBio304-Research-Report.tex
 (./QBio304-Research-Report.tex
@@ -2816,6 +2816,18 @@ LaTeX Info: Redefining \rmfamily on input line 16.
 LaTeX Info: Redefining \sffamily on input line 16.
 LaTeX Info: Redefining \ttfamily on input line 16.
 luaotfload | aux : font no 52 (nil) defines no feature for script latn with lang
+uage eng
+Package microtype Info: |<< adding left margin kern for `Tr':
+(microtype)             -0.3285pt on input line 17.
+LaTeX Info: Redefining \rmfamily on input line 18.
+LaTeX Info: Redefining \sffamily on input line 18.
+LaTeX Info: Redefining \ttfamily on input line 18.
+luaotfload | aux : font no 52 (nil) defines no feature for script latn with lang
+uage eng
+LaTeX Info: Redefining \rmfamily on input line 20.
+LaTeX Info: Redefining \sffamily on input line 20.
+LaTeX Info: Redefining \ttfamily on input line 20.
+luaotfload | aux : font no 52 (nil) defines no feature for script latn with lang
 uage eng)
 \tf@lof=\write8
 
@@ -2865,6 +2877,16 @@ LaTeX Info: Redefining \rmfamily on input line 10.
 LaTeX Info: Redefining \sffamily on input line 10.
 LaTeX Info: Redefining \ttfamily on input line 10.
 luaotfload | aux : font no 52 (nil) defines no feature for script latn with lang
+uage eng
+LaTeX Info: Redefining \rmfamily on input line 11.
+LaTeX Info: Redefining \sffamily on input line 11.
+LaTeX Info: Redefining \ttfamily on input line 11.
+luaotfload | aux : font no 52 (nil) defines no feature for script latn with lang
+uage eng
+LaTeX Info: Redefining \rmfamily on input line 12.
+LaTeX Info: Redefining \sffamily on input line 12.
+LaTeX Info: Redefining \ttfamily on input line 12.
+luaotfload | aux : font no 52 (nil) defines no feature for script latn with lang
 uage eng)
 \tf@lot=\write9
 
@@ -2896,7 +2918,7 @@ Package microtype Info: ... Loading protrusion list `T1-default'.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... Applying non-selected expansion (no list).
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CRR240
-976_f1.png, id=249, 1008.76875pt x 602.25pt>
+976_f1.png, id=261, 1008.76875pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_C
 RR240976_f1.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CR
@@ -2905,7 +2927,7 @@ Package luatex.def Info: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequ
 ence_content_plot_CRR240976_f1.png  used on input line 44.
 (luatex.def)             Requested size: 200.74966pt x 113.80379pt.
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CRR240
-976_f1_trim_p.png, id=250, 918.43124pt x 602.25pt>
+976_f1_trim_p.png, id=262, 918.43124pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_C
 RR240976_f1_trim_p.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CR
@@ -2914,7 +2936,7 @@ Package luatex.def Info: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequ
 ence_content_plot_CRR240976_f1_trim_p.png  used on input line 49.
 (luatex.def)             Requested size: 200.75218pt x 113.80379pt.
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CRR240
-976_f1.png, id=251, 1008.76875pt x 602.25pt>
+976_f1.png, id=263, 1008.76875pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_C
 RR240976_f1.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CR
@@ -2923,7 +2945,7 @@ Package luatex.def Info: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequ
 ence_quality_plot_CRR240976_f1.png  used on input line 59.
 (luatex.def)             Requested size: 200.74966pt x 113.80379pt.
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CRR240
-976_f1_trim_p.png, id=252, 918.43124pt x 602.25pt>
+976_f1_trim_p.png, id=264, 918.43124pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_C
 RR240976_f1_trim_p.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CR
@@ -2948,7 +2970,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... No expansion.
  [6]
-<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf, id=290, 597.231
+<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf, id=302, 597.231
 25pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf Graphic fil
 e (type pdf)
@@ -2956,7 +2978,7 @@ e (type pdf)
 Package luatex.def Info: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_niv
 ara.pdf  used on input line 98.
 (luatex.def)             Requested size: 200.75996pt x 141.37514pt.
-<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf, id=291, 597.231
+<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf, id=303, 597.231
 25pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf Graphic fil
 e (type pdf)
@@ -2965,7 +2987,7 @@ Package luatex.def Info: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sat
 iva.pdf  used on input line 102.
 (luatex.def)             Requested size: 200.75996pt x 141.37514pt.
 <../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf, id=
-295, 597.23125pt x 420.57124pt>
+307, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf
  Graphic file (type pdf)
 <use ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf>
@@ -2974,7 +2996,7 @@ Package luatex.def Info: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notno
 rm-Oryza_nivara.pdf  used on input line 115.
 (luatex.def)             Requested size: 267.68535pt x 113.81244pt.
 <../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf, id=
-296, 597.23125pt x 420.57124pt>
+308, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf
  Graphic file (type pdf)
 <use ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf>
@@ -2987,16 +3009,16 @@ Overfull \hbox (5.60297pt too wide) in paragraph at lines 127--140
 []  
  []
 
-<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf, id=29
-9, 597.23125pt x 420.57124pt>
+<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf, id=31
+1, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf G
 raphic file (type pdf)
 <use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
 -Oryza_nivara.pdf  used on input line 149.
 (luatex.def)             Requested size: 267.68535pt x 113.81244pt.
-<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf, id=30
-0, 597.23125pt x 420.57124pt>
+<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf, id=31
+2, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf G
 raphic file (type pdf)
 <use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>
@@ -3019,7 +3041,7 @@ Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
 plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf><../../results/plots-and-tables/
 2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf><../../results/plots-and-tables/2.2-L
 og2CPM-unflt-notnorm-Oryza_sativa.pdf>]
-<../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf, id=337, 597.23125pt x
+<../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf, id=349, 597.23125pt x
  420.57124pt>
 File: ../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf Graphic file (typ
 e pdf)
@@ -3030,15 +3052,55 @@ f  used on input line 177.
  [8<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf><../
 ../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>] [9<../../
 results/plots-and-tables/2.5-Log2CPM-Overview.pdf>]) (./results.tex
-<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png, id=368, 12
+<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png, id=380, 12
+04.5pt x 803.0pt>
+File: ../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png Graphi
+c file (type png)
+<use ../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png>
+Package luatex.def Info: ../../results/multiqc/Plot-Exports/trimmomatic-survivi
+ng_reads.png  used on input line 10.
+(luatex.def)             Requested size: 313.69025pt x 209.1304pt.
+<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png, id=382, 12
 04.5pt x 803.0pt>
 File: ../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png Graphi
 c file (type png)
 <use ../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/fastqc-status-check
--heatmap.png  used on input line 10.
-(luatex.def)             Requested size: 418.25368pt x 278.83646pt.
- [10] [11<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png>]) (./discussion.tex) (./conclusion.tex) [12]
+-heatmap.png  used on input line 18.
+(luatex.def)             Requested size: 313.69025pt x 209.1304pt.
+ [10] [11<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png><..
+/../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png>]
+Package microtype Info: ... No configuration file mt-lmr.cfg.
+Package microtype Info: ... Loading configuration file mt-LatinModernRoman.cfg.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
+ern Roman (RS)
+)
+Package microtype Info: Setting up font `TU/lmr/m/n/10.95' on input line 26.
+Package microtype Info: ... No tracking.
+Package microtype Info: ... Loading protrusion list `LMR-default'.
+Package microtype Info: ... Applying non-selected expansion (no list).
+Package microtype Info: Setting up font `TU/lmr/m/n/7.665' on input line 26.
+Package microtype Info: ... No tracking.
+Package microtype Info: ... Loading protrusion list `LMR-default'.
+Package microtype Info: ... Applying non-selected expansion (no list).
+Package microtype Info: Setting up font `TU/lmr/m/n/5.475' on input line 26.
+Package microtype Info: ... No tracking.
+Package microtype Info: ... Loading protrusion list `LMR-default'.
+Package microtype Info: ... Applying non-selected expansion (no list).
+<../../results/multiqc/Plot-Exports/kallisto_alignment.png, id=402, 1204.5pt x 
+803.0pt>
+File: ../../results/multiqc/Plot-Exports/kallisto_alignment.png Graphic file (t
+ype png)
+<use ../../results/multiqc/Plot-Exports/kallisto_alignment.png>
+Package luatex.def Info: ../../results/multiqc/Plot-Exports/kallisto_alignment.
+png  used on input line 31.
+(luatex.def)             Requested size: 313.69025pt x 209.1304pt.
+)
+(./discussion.tex [12<../../results/multiqc/Plot-Exports/kallisto_alignment.png>
+]) (./conclusion.tex) [13]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
 (Font)              scaled to size 10.95pt on input line 111.
 Package microtype Info: Setting up font `TU/Roboto(0)/m/it/10.95' on input line
@@ -3047,9 +3109,7 @@ Package microtype Info: ... No tracking.
 Package microtype Info: ... Loading protrusion list `T1-default'.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... Applying non-selected expansion (no list).
-
-[13] [14]
-No file QBio304-Research-Report.ind.
+ [14] [15] (./QBio304-Research-Report.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -3120,6 +3180,9 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
+ [16
+
+]
 
 Package imakeidx Warning: Remember to run lualatex again after calling
 (imakeidx)                `xindex QBio304-Research-Report.idx'.
@@ -3139,22 +3202,22 @@ Package polyglossia Info: Option: English, variant=american.
 )
 Package rerunfilecheck Info: File `QBio304-Research-Report.out' has not changed
 .
-(rerunfilecheck)             Checksum: 4875AF59A7AB1F8F9C94F08B44021430;5204.
+(rerunfilecheck)             Checksum: 6B960E9DCFBB568116F0A15CDF4BB584;5341.
 Package logreq Info: Writing requests to 'QBio304-Research-Report.run.xml'.
 
 \openout1 = QBio304-Research-Report.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 61744 strings out of 478290
+ 61900 strings out of 478290
  125086,2848258 words of node,token memory allocated
- 795 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 16 attribute, 93 glue_spec
-, 16 attribute_list, 2 shape, 3 write, 8 pdf_action nodes
-   avail lists: 1:2,2:1465,3:1745,4:329,5:416,6:119,7:7311,8:118,9:706,10:18,11:
+ 801 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 16 attribute, 93 glue_spec
+, 16 attribute_list, 2 shape, 2 write, 8 pdf_action nodes
+   avail lists: 1:2,2:1505,3:2072,4:337,5:416,6:221,7:7311,8:131,9:719,10:18,11:
 459
- 79839 multiletter control sequences out of 65536+600000
- 91 fonts using 18789783 bytes
+ 79955 multiletter control sequences out of 65536+600000
+ 93 fonts using 18999307 bytes
  99i,12n,128p,1061b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Italic.otf><c:/t
 exlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive
@@ -3162,10 +3225,10 @@ exlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive
 2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf><c:/texlive/2022/te
 xmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf><c:/texlive/2022/texmf-
 dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on QBio304-Research-Report.pdf (15 pages, 2335723 bytes).
+Output written on QBio304-Research-Report.pdf (17 pages, 2430659 bytes).
 
-PDF statistics: 466 PDF objects out of 1000 (max. 8388607)
- 406 compressed objects within 5 object streams
- 71 named destinations out of 1000 (max. 131072)
- 260 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 540 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
+ 77 named destinations out of 1000 (max. 131072)
+ 268 words of extra memory for PDF output out of 10000 (max. 100000000)
 

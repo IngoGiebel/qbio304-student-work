@@ -1,0 +1,104 @@
+
+\begin{theindex}
+
+\indexspace
+\textbf{C}\label{L-xindex-C}
+\nopagebreak[4]
+  \item counts per million (CPM), \hyperpage{7}
+  \item cultivar
+    \subitem -\,BJ278, \hyperpage{3}
+    \subitem -\,BJ89, \hyperpage{3}
+    \subitem -\,Nipponbare, \hyperpage{3}
+
+\indexspace
+\textbf{D}\label{L-xindex-D}
+\nopagebreak[4]
+  \item DNA
+    \subitem -\,cDNA, \hyperpage{6}
+  \item differentially expressed genes (DEGs), \hyperpage{10}
+
+\indexspace
+\textbf{E}\label{L-xindex-E}
+\nopagebreak[4]
+  \item Ensembl, \hyperpage{6}
+
+\indexspace
+\textbf{F}\label{L-xindex-F}
+\nopagebreak[4]
+  \item FASTA, \hyperpage{6}
+  \item FASTQ, \hyperpage{3}
+  \item FastQC, \hyperpage{3}, \hyperpage{10}
+
+\indexspace
+\textbf{G}\label{L-xindex-G}
+\nopagebreak[4]
+  \item gene
+    \subitem -\,ID, \hyperpage{6}
+  \item genome/transcriptome
+    \subitem -\,reference, \hyperpage{6}
+
+\indexspace
+\textbf{H}\label{L-xindex-H}
+\nopagebreak[4]
+  \item hierarchical cluster analysis (HCA), \hyperpage{8}
+    \subitem -\,Euclidean distance matrix, \hyperpage{8}
+
+\indexspace
+\textbf{I}\label{L-xindex-I}
+\nopagebreak[4]
+  \item Illumina
+    \subitem -\,HiSeq 2000, \hyperpage{3}
+
+\indexspace
+\textbf{K}\label{L-xindex-K}
+\nopagebreak[4]
+  \item kallisto, \hyperpage{4}, \hyperpage{6}, \hyperpage{12}
+
+\indexspace
+\textbf{L}\label{L-xindex-L}
+\nopagebreak[4]
+  \item LogFC, \hyperpage{10}
+
+\indexspace
+\textbf{M}\label{L-xindex-M}
+\nopagebreak[4]
+  \item MultiQC, \hyperpage{4}, \hyperpage{10}
+
+\indexspace
+\textbf{O}\label{L-xindex-O}
+\nopagebreak[4]
+  \item Oryza
+    \subitem -\,nivara, \hyperpage{3}
+    \subitem -\,sativa, \hyperpage{3}
+
+\indexspace
+\textbf{P}\label{L-xindex-P}
+\nopagebreak[4]
+  \item principal component analysis (PCA), \hyperpage{10}
+
+\indexspace
+\textbf{R}\label{L-xindex-R}
+\nopagebreak[4]
+  \item R, \hyperpage{6}
+    \subitem -\,RStudio, \hyperpage{6}
+    \subitem -\,package
+      \subsubitem --\,edgeR, \hyperpage{7}
+      \subsubitem --\,gprofiler2, \hyperpage{10}
+      \subsubitem --\,limma, \hyperpage{10}
+      \subsubitem --\,stats, \hyperpage{8}, \hyperpage{10}
+      \subsubitem --\,tximport, \hyperpage{6}
+  \item RNA-seq, \hyperpage{3}
+    \subitem -\,adapter sequence, \hyperpage{4}
+    \subitem -\,contaminant, \hyperpage{4}
+    \subitem -\,quality assessment, \hyperpage{3}
+
+\indexspace
+\textbf{T}\label{L-xindex-T}
+\nopagebreak[4]
+  \item transcript
+    \subitem -\,ID, \hyperpage{6}
+    \subitem -\,abundances quantification, \hyperpage{6}
+    \subitem -\,pseudoalignment, \hyperpage{4}
+    \subitem -\,transcripts per million (TPM), \hyperpage{7}
+  \item Trimmomatic, \hyperpage{4}, \hyperpage{10}
+\end{theindex}

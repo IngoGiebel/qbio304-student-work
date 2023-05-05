@@ -14,4 +14,8 @@
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {7}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data in comparison with the non-normalized and the unfiltered data\relax }}{9}{figure.caption.12}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {8}{\ignorespaces Overview of the FastQC quality analysis checks (created by MultiQC)\relax }}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Trimmomatic preprocessing\relax }}{11}{figure.caption.13}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {9}{\ignorespaces FastQC quality assessment of the preprocessed FASTQ files\relax }}{11}{figure.caption.14}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {10}{\ignorespaces kallisto pseudoalignments\relax }}{12}{figure.caption.15}%
