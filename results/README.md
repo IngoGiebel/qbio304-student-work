@@ -8,6 +8,11 @@ This folder contains the automatically created analysis results:
 (text data files of the top differentially expressed genes (DEG))
 
 
+## results/fastqc
+
+Plot exports from FastQC quality control reports.
+
+
 ## results/multiqc
 
 MultiQC report of the FastQC quality control analysis, Trimmomatic trimming and the kallisto pseudoalignment.

@@ -13,25 +13,57 @@ Therefore, the data is well-suited for a targeted analysis of drought stress res
 
 The quality of the raw and trimmed RNA-seq data\index{RNA-seq!quality assessment} was assessed using FastQC\index{FastQC} \autocite{babraham}. FastQC is a quality control analysis tool for high throughput sequencing data. It provides information about
 \begin{itemize}
-    \item basic statistics: some simple composition statistics for the FastQ\index{FastQ} file analyzed
-    \item per base sequence quality: an overview of the range of quality values across all bases at each position in the FastQ file
+    \item basic statistics: some simple composition statistics for the FASTQ\index{FASTQ} file analyzed
+    \item per base sequence quality: an overview of the range of quality values across all bases at each position in the FASTQ file
     \item per tile sequence quality: an overview of the per tile sequence quality in case an Illumina library was used
     \item per sequence quality scores: an overview of how the overall quality scores of the sequences are distributed
-    \item per base sequence content: an overview of the proportion of each base position in a FastQ file for which each of the four normal DNA bases has been called
+    \item per base sequence content: an overview of the proportion of each base position in a FASTQ file for which each of the four normal DNA bases has been called
     \item per sequence GC content: the GC content across the whole length of each sequence in a file compared with a normal distributed GC content
     \item per base N content: an overview of the N content at each position across all bases
     \item sequence length distribution: an overview of how the sequence lengths are distributed
     \item sequence duplication levels: an overview of the degree of duplication for every sequence in a library
     \item over-represented sequences: a list of over-represented sequences matched against common contaminants\index{RNA-seq!contaminant}
-    \item adapter content: a check for significant amounts of adapter sequences\index{RNA-seq!adapter sequence} the FastQ file
+    \item adapter content: a check for significant amounts of adapter sequences\index{RNA-seq!adapter sequence} the FASTQ file
 \end{itemize}
 
-The results of the separate FastQC analyses (of the raw and trimmed FastQ files), the results of the Trimmomatic\index{Trimmomatic} trimming and the information about the kallisto\index{kallisto} pseudoalignments\index{transcript!pseudoalignment} were summarized in an interactive MultiQC\index{MultiQC} HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
+The results of the separate FastQC analyses (of the raw and trimmed FASTQ files), the results of the Trimmomatic\index{Trimmomatic} trimming and the information about the kallisto\index{kallisto} pseudoalignments\index{transcript!pseudoalignment} were summarized in an interactive MultiQC\index{MultiQC} HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
 
 
 \subsection{RNA-seq preprocessing}
 
-The initial quality assessment of the raw FastQ files revealed that about roughly the first 12 base pairs of the reads were of low quality. Therefore, the data was preprocessed/trimmed using Trimmomatic\index{Trimmomatic}, a "flexible and efficient preprocessing tool, which could correctly handle paired-end data" \autocite{10.1093/bioinformatics/btw354}.
+The initial quality assessment of the raw FASTQ files revealed that about roughly the first 12 base pairs of the reads were of low quality. Therefore, the data was preprocessed/trimmed using Trimmomatic\index{Trimmomatic}, a "flexible and efficient preprocessing tool, which could correctly handle paired-end data" \autocite{10.1093/bioinformatics/btw354}.
+
+That trimming substantially improved the per base sequence content and the per base sequence quality. Figures \ref{fig:0.1-FastQC-per_base_seq_cont-CRR240976-raw_vs_trim} and \ref{fig:0.1-FastQC-per_base_seq_qual-CRR240976-raw_vs_trim} show exemplary a comparison of the FastQC assessments of a raw FASTQ file vs the corresponding trimmed FASTQ file.
+
+\begin{figure}[htbp]
+    \caption{FastQC quality assessment of the per base sequence content of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz}
+    \label{fig:0.1-FastQC-per_base_seq_cont-CRR240976-raw_vs_trim}
+    \begin{subfigure}[t]{0.48\linewidth}
+        \caption{Raw data}
+        \label{fig:0.1-FastQC-per_base_seq_cont-CRR240976}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CRR240976_f1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\linewidth}
+        \caption{Trimmed data}
+        \label{fig:0.1-FastQC-per_base_seq_cont-CRR240976-trim}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CRR240976_f1_trim_p}
+    \end{subfigure}
+\end{figure}
+
+\begin{figure}[htbp]
+    \caption{FastQC quality assessment of the per base sequence quality of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz}
+    \label{fig:0.1-FastQC-per_base_seq_qual-CRR240976-raw_vs_trim}
+    \begin{subfigure}[t]{0.48\linewidth}
+        \caption{Raw data}
+        \label{fig:0.1-FastQC-per_base_seq_qual-CRR240976}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CRR240976_f1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\linewidth}
+        \caption{Trimmed data}
+        \label{fig:0.1-FastQC-per_base_seq_qual-CRR240976-trim}
+        \includegraphics[width=\textwidth, height=4cm]{../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CRR240976_f1_trim_p}
+    \end{subfigure}
+\end{figure}
 
 
 \subsection{Transcripts abundances quantification}

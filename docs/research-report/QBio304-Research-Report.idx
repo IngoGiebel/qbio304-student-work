@@ -1,0 +1,49 @@
+\indexentry{RNA-seq|hyperpage}{3}
+\indexentry{Oryza!nivara|hyperpage}{3}
+\indexentry{cultivar!BJ278|hyperpage}{3}
+\indexentry{cultivar!BJ89|hyperpage}{3}
+\indexentry{Oryza!sativa|hyperpage}{3}
+\indexentry{cultivar!Nipponbare|hyperpage}{3}
+\indexentry{Illumina!HiSeq 2000|hyperpage}{3}
+\indexentry{RNA-seq!quality assessment|hyperpage}{3}
+\indexentry{FastQC|hyperpage}{3}
+\indexentry{FASTQ|hyperpage}{3}
+\indexentry{RNA-seq!contaminant|hyperpage}{4}
+\indexentry{RNA-seq!adapter sequence|hyperpage}{4}
+\indexentry{Trimmomatic|hyperpage}{4}
+\indexentry{kallisto|hyperpage}{4}
+\indexentry{transcript!pseudoalignment|hyperpage}{4}
+\indexentry{MultiQC|hyperpage}{4}
+\indexentry{Trimmomatic|hyperpage}{4}
+\indexentry{transcript!abundances quantification|hyperpage}{6}
+\indexentry{kallisto|hyperpage}{6}
+\indexentry{genome/transcriptome!reference|hyperpage}{6}
+\indexentry{FASTA|hyperpage}{6}
+\indexentry{DNA!cDNA|hyperpage}{6}
+\indexentry{Ensembl|hyperpage}{6}
+\indexentry{R|hyperpage}{6}
+\indexentry{R!RStudio|hyperpage}{6}
+\indexentry{R!package!tximport|hyperpage}{6}
+\indexentry{transcript!ID|hyperpage}{6}
+\indexentry{gene!ID|hyperpage}{6}
+\indexentry{transcript!transcripts per million (TPM)|hyperpage}{7}
+\indexentry{counts per million (CPM)|hyperpage}{7}
+\indexentry{R!package!edgeR|hyperpage}{7}
+\indexentry{hierarchical cluster analysis (HCA)|hyperpage}{8}
+\indexentry{R!package!stats|hyperpage}{8}
+\indexentry{hierarchical cluster analysis (HCA)!Euclidean distance matrix|hyperpage}{8}
+\indexentry{principal component analysis (PCA)|hyperpage}{10}
+\indexentry{R!package!stats|hyperpage}{10}
+\indexentry{differentially expressed genes (DEGs)|hyperpage}{10}
+\indexentry{R!package!stats|hyperpage}{10}
+\indexentry{R!package!limma|hyperpage}{10}
+\indexentry{R!package!limma|hyperpage}{10}
+\indexentry{R!package!limma|hyperpage}{10}
+\indexentry{R!package!limma|hyperpage}{10}
+\indexentry{R!package!limma|hyperpage}{10}
+\indexentry{LogFC|hyperpage}{10}
+\indexentry{R!package!gprofiler2|hyperpage}{10}
+\indexentry{R!package!limma|hyperpage}{10}
+\indexentry{R!package!gprofiler2|hyperpage}{10}
+\indexentry{FastQC|hyperpage}{10}
+\indexentry{MultiQC|hyperpage}{10}

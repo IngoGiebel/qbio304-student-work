@@ -1,0 +1,17 @@
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1}{\ignorespaces FastQC quality assessment of the per base sequence content of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz\relax }}{5}{figure.caption.4}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {2}{\ignorespaces FastQC quality assessment of the per base sequence quality of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz\relax }}{5}{figure.caption.5}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {3}{\ignorespaces TPM statistics about the imported kallisto data\relax }}{7}{figure.caption.6}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4}{\ignorespaces Log2(CPM) distribution of the unfiltered, non-normalized data\relax }}{7}{figure.caption.7}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {5}{\ignorespaces Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data\relax }}{8}{figure.caption.10}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {6}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data\relax }}{8}{figure.caption.11}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {7}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data in comparison with the non-normalized and the unfiltered data\relax }}{9}{figure.caption.12}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {8}{\ignorespaces Overview of the FastQC quality analysis checks (created by MultiQC)\relax }}{11}{figure.caption.13}%
