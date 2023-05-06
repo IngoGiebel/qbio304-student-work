@@ -6,7 +6,7 @@ Loading local config file xindex-cfg.lua ... done
 Corrected the unknown language "*" to "en"
 Open outputfile QBio304-Research-Report.ind... done
 Read Data from file QBio304-Research-Report.idx ... 
-51 lines of data read
+58 lines of data read
 Change escape chars with macros ... 
 ... done
 Sorting entries: for LARGE idx files it can take some minutes ... 
@@ -22,6 +22,6 @@ done
 Replace @-operator ...
 done
 Start writing .ind file ... 
-87 lines of data wrote into the QBio304-Research-Report.ind file
+92 lines of data wrote into the QBio304-Research-Report.ind file
 
 done! closing program

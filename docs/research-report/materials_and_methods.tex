@@ -177,13 +177,13 @@ Figure \ref{fig:2.5-Log2CPM-Overview} provides an overview of the filtering and 
     \includegraphics[width=\textwidth]{../../results/plots-and-tables/2.5-Log2CPM-Overview}
 \end{figure}
 
-\subsubsection{Hierarchical cluster analysis}
+\subsubsection{Hierarchical cluster analysis}\label{hierarchical-cluster-analysis}
 
 A hierarchical cluster analysis (HCA)\index{hierarchical cluster analysis (HCA)} was performed via the \verb|stats|\index{R!package!stats} function \verb|hclust| on the Euclidean distance matrix\index{hierarchical cluster analysis (HCA)!Euclidean distance matrix} of the log2(CPM) values. Used agglomeration method: \verb|method = complete|.
 
-\subsubsection{Principal component analysis}
+\subsubsection{Principal component analysis}\label{principal-component-analysis}
 
-A principal component analysis (PCA)\index{principal component analysis (PCA)} was performed via the \verb|stats|\index{R!package!stats} function \verb|prcomp|.
+A principal component analysis (PCA)\index{principal component analysis (PCA)} of the filtered and normalized log2(CPM) values was performed via the \verb|stats|\index{R!package!stats} function \verb|prcomp|.
 
 \subsubsection{Identification of differentially expressed genes}
 

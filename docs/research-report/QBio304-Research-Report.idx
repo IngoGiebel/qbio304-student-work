@@ -47,8 +47,12 @@
 \indexentry{R!package!gprofiler2|hyperpage}{10}
 \indexentry{FastQC|hyperpage}{10}
 \indexentry{Trimmomatic|hyperpage}{10}
-\indexentry{kallisto|hyperpage}{10}
-\indexentry{MultiQC|hyperpage}{10}
+\indexentry{kallisto|hyperpage}{11}
+\indexentry{MultiQC|hyperpage}{11}
 \indexentry{Trimmomatic|hyperpage}{11}
 \indexentry{FastQC|hyperpage}{11}
 \indexentry{kallisto|hyperpage}{11}
+\indexentry{hierarchical cluster analysis (HCA)|hyperpage}{11}
+\indexentry{principal component analysis (PCA)|hyperpage}{14}
+\indexentry{principal component analysis (PCA)!principal component (PC)|hyperpage}{14}
+\indexentry{batch effect|hyperpage}{14}

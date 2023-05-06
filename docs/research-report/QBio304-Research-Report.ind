@@ -2,6 +2,11 @@
 \begin{theindex}
 
 \indexspace
+\textbf{B}\label{L-xindex-B}
+\nopagebreak[4]
+  \item batch effect, \hyperpage{14}
+
+\indexspace
 \textbf{C}\label{L-xindex-C}
 \nopagebreak[4]
   \item counts per million (CPM), \hyperpage{7}
@@ -27,7 +32,7 @@
 \nopagebreak[4]
   \item FASTA, \hyperpage{6}
   \item FASTQ, \hyperpage{3}
-  \item FastQC, \hyperpage{3}, \hyperpage{10}
+  \item FastQC, \hyperpage{3}, \hyperpage{10\nohyperpage{f}}
 
 \indexspace
 \textbf{G}\label{L-xindex-G}
@@ -40,7 +45,7 @@
 \indexspace
 \textbf{H}\label{L-xindex-H}
 \nopagebreak[4]
-  \item hierarchical cluster analysis (HCA), \hyperpage{8}
+  \item hierarchical cluster analysis (HCA), \hyperpage{8}, \hyperpage{11}
     \subitem -\,Euclidean distance matrix, \hyperpage{8}
 
 \indexspace
@@ -52,7 +57,7 @@
 \indexspace
 \textbf{K}\label{L-xindex-K}
 \nopagebreak[4]
-  \item kallisto, \hyperpage{4}, \hyperpage{6}, \hyperpage{12}
+  \item kallisto, \hyperpage{4}, \hyperpage{6}, \hyperpage{10\nohyperpage{f}}
 
 \indexspace
 \textbf{L}\label{L-xindex-L}
@@ -74,7 +79,8 @@
 \indexspace
 \textbf{P}\label{L-xindex-P}
 \nopagebreak[4]
-  \item principal component analysis (PCA), \hyperpage{10}
+  \item principal component analysis (PCA), \hyperpage{10}, \hyperpage{14}
+    \subitem -\,principal component (PC), \hyperpage{14}
 
 \indexspace
 \textbf{R}\label{L-xindex-R}
@@ -100,5 +106,5 @@
     \subitem -\,abundances quantification, \hyperpage{6}
     \subitem -\,pseudoalignment, \hyperpage{4}
     \subitem -\,transcripts per million (TPM), \hyperpage{7}
-  \item Trimmomatic, \hyperpage{4}, \hyperpage{10}
+  \item Trimmomatic, \hyperpage{4}, \hyperpage{10\nohyperpage{f}}
 \end{theindex}

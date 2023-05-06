@@ -824,7 +824,7 @@ plot_hclust(
 # Principal component analysis
 do_pca()
 
-# Plot the samples and their contributioh percentage to the first two PCs
+# Plot the samples and their contribution percentage to the first two PCs
 plot_pc1_pc2(
   pca_res = pca_res_onivara,
   samples = samples_onivara,
