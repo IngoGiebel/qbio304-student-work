@@ -33,12 +33,17 @@
   \item FASTA, \hyperpage{6}
   \item FASTQ, \hyperpage{3}
   \item FastQC, \hyperpage{3}, \hyperpage{10\nohyperpage{f}}
+  \item functional enrichment analysis, \hyperpage{10}, \hyperpage{21}
 
 \indexspace
 \textbf{G}\label{L-xindex-G}
 \nopagebreak[4]
   \item gene
     \subitem -\,ID, \hyperpage{6}
+  \item gene ontology (GO), \hyperpage{21}
+    \subitem -\,biological process (BP), \hyperpage{21}
+    \subitem -\,cellular component (CC), \hyperpage{21}
+    \subitem -\,molecular function (MF), \hyperpage{21}
   \item genome/transcriptome
     \subitem -\,reference, \hyperpage{6}
 
@@ -57,7 +62,7 @@
 \indexspace
 \textbf{K}\label{L-xindex-K}
 \nopagebreak[4]
-  \item kallisto, \hyperpage{4}, \hyperpage{6}, \hyperpage{10\nohyperpage{f}}
+  \item kallisto, \hyperpage{4}, \hyperpage{10\nohyperpage{f}}
 
 \indexspace
 \textbf{L}\label{L-xindex-L}
@@ -79,8 +84,8 @@
 \indexspace
 \textbf{P}\label{L-xindex-P}
 \nopagebreak[4]
-  \item principal component analysis (PCA), \hyperpage{10}, \hyperpage{14}
-    \subitem -\,principal component (PC), \hyperpage{14}
+  \item principal component analysis (PCA), \hyperpage{8}, \hyperpage{11}
+    \subitem -\,principal component (PC), \hyperpage{11}
 
 \indexspace
 \textbf{R}\label{L-xindex-R}
@@ -103,8 +108,9 @@
 \nopagebreak[4]
   \item transcript
     \subitem -\,ID, \hyperpage{6}
-    \subitem -\,abundances quantification, \hyperpage{6}
+    \subitem -\,abundances quantification, \hyperpage{4}
     \subitem -\,pseudoalignment, \hyperpage{4}
-    \subitem -\,transcripts per million (TPM), \hyperpage{7}
-  \item Trimmomatic, \hyperpage{4}, \hyperpage{10\nohyperpage{f}}
+    \subitem -\,transcripts per million (TPM), \hyperpage{6}
+  \item transcriptome, \hyperpage{3}
+  \item Trimmomatic, \hyperpage{4}, \hyperpage{10}
 \end{theindex}
