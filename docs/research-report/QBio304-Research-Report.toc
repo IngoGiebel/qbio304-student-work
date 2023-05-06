@@ -21,11 +21,11 @@
 \contentsline {subsection}{\numberline {4.3}Hierarchical cluster analysis}{11}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Principal component analysis}{14}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Differentially expressed genes}{14}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Functional enrichment analysis}{18}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Discussion}{20}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Critical evaluation of the results}{20}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Biological implications}{20}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Limitations and future directions}{20}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Conclusion}{20}{section.6}%
-\contentsline {section}{References}{21}{section*.27}%
-\contentsline {section}{Index}{23}{section*.28}%
+\contentsline {subsection}{\numberline {4.6}Functional enrichment analysis}{21}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Discussion}{21}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Critical evaluation of the results}{21}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Biological implications}{21}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Limitations and future directions}{21}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Conclusion}{21}{section.6}%
+\contentsline {section}{References}{22}{section*.27}%
+\contentsline {section}{Index}{24}{section*.28}%

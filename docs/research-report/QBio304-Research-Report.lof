@@ -1,14 +1,14 @@
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces FastQC quality assessment of the per base sequence content of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz\relax }}{5}{figure.caption.4}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemplary FastQC quality assessment of the per base sequence content - raw vs trimmed FASTQ file}}{5}{figure.caption.4}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {2}{\ignorespaces FastQC quality assessment of the per base sequence quality of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz\relax }}{5}{figure.caption.5}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemplary FastQC quality assessment of the per base sequence quality - raw vs trimmed FASTQ file}}{5}{figure.caption.5}%
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {3}{\ignorespaces TPM statistics about the imported kallisto data\relax }}{7}{figure.caption.6}%
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {4}{\ignorespaces Log2(CPM) distribution of the unfiltered, non-normalized data\relax }}{7}{figure.caption.7}%
 \setforeignlanguage {english}
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {5}{\ignorespaces Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data\relax }}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Log2(CPM) distribution of the filtered, non-normalized data}}{8}{figure.caption.10}%
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {6}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data\relax }}{8}{figure.caption.11}%
 \setforeignlanguage {english}
@@ -38,6 +38,6 @@
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {19}{\ignorespaces Heatmap of the DEGs - O. sativa\relax }}{17}{figure.caption.24}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {20}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - O. nivara\relax }}{18}{figure.caption.25}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - O. nivara\relax }}{19}{figure.caption.25}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {21}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - O. sativa\relax }}{19}{figure.caption.26}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - O. sativa\relax }}{20}{figure.caption.26}%

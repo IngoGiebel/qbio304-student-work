@@ -36,7 +36,7 @@ The initial quality assessment of the raw FASTQ files revealed that about roughl
 That trimming substantially improved the per base sequence content and the per base sequence quality. Figures \ref{fig:0.1-FastQC-per_base_seq_cont-CRR240976-raw_vs_trim} and \ref{fig:0.1-FastQC-per_base_seq_qual-CRR240976-raw_vs_trim} show exemplary a comparison of the FastQC assessments of a raw FASTQ file vs the corresponding trimmed FASTQ file.
 
 \begin{figure}[htbp]
-    \caption{FastQC quality assessment of the per base sequence content of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz}
+    \caption[Exemplary FastQC quality assessment of the per base sequence content - raw vs trimmed FASTQ file]{FastQC quality assessment of the per base sequence content of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz}
     \label{fig:0.1-FastQC-per_base_seq_cont-CRR240976-raw_vs_trim}
     \begin{subfigure}[t]{0.48\linewidth}
         \caption{Raw data}
@@ -51,7 +51,7 @@ That trimming substantially improved the per base sequence content and the per b
 \end{figure}
 
 \begin{figure}[htbp]
-    \caption{FastQC quality assessment of the per base sequence quality of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz}
+    \caption[Exemplary FastQC quality assessment of the per base sequence quality - raw vs trimmed FASTQ file]{FastQC quality assessment of the per base sequence quality of the raw FASTQ file CRR240976\_f1.fastq.gz vs the trimmed file CRR240976\_f1.trim.p.fastq.gz}
     \label{fig:0.1-FastQC-per_base_seq_qual-CRR240976-raw_vs_trim}
     \begin{subfigure}[t]{0.48\linewidth}
         \caption{Raw data}
@@ -124,7 +124,7 @@ In order to assess reasonable values for filtering the data, the number of genes
 
 \begin{table}[htbp]
     \begin{threeparttable}
-        \caption{Number of genes with no reads at all, and conversely number of genes with CPMs \(\ge 1\) in at least n = 1, 2, 3, \dots\ of the samples}
+        \caption[Number of genes with no reads, and number of genes with  CPMs \(\ge 1\)]{Number of genes with no reads at all, and conversely number of genes with CPMs \(\ge 1\) in at least n = 1, 2, 3, \dots\ of the samples}
         \label{tab:ufltr_cpm_stats}
         \setlength\tabcolsep{6pt}
         \begin{tabular}{l l l p{30pt} p{30pt} p{30pt} p{30pt} p{30pt} p{30pt}}
@@ -142,7 +142,7 @@ In order to assess reasonable values for filtering the data, the number of genes
 Filtering out genes with low reads (\(< 1\) CPM in at least half of the samples) resulted in the distribution of the log2(CPM) values shown in figure \ref{fig:2.3-Log2CPM-flt-notnorm}.
 
 \begin{figure}[htbp]
-    \caption{Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data}
+    \caption[Log2(CPM) distribution of the filtered, non-normalized data]{Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data}
     \label{fig:2.3-Log2CPM-flt-notnorm}
     \begin{subfigure}[t]{0.64\linewidth}
         \label{fig:2.3-Log2CPM-flt-notnorm-Oryza_nivara}
@@ -203,4 +203,4 @@ See \autocite{limma2015} for details on the statistical foundations implemented 
 
 \subsection{Functional enrichment analysis}
 
-A functional enrichment analysis of the 100 "top-ranked" genes was performed via the \verb|gprofiler2|\index{R!package!gprofiler2} function \verb|gost| (with \verb|correction_method = "fdr"| \autocite{R-gprofiler2}.
+A functional enrichment analysis\index{functional enrichment analysis} of the 100 "top-ranked" genes was performed via the \verb|gprofiler2|\index{R!package!gprofiler2} function \verb|gost| (with \verb|correction_method = "fdr"| \autocite{R-gprofiler2}.
