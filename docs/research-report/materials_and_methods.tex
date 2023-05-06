@@ -13,17 +13,17 @@ All this makes the data well suited for a targeted analysis of drought stress re
 
 The quality of the raw and trimmed RNA-seq data\index{RNA-seq!quality assessment} was assessed using FastQC\index{FastQC} \autocite{babraham}. FastQC is a quality control analysis tool for high throughput sequencing data. It provides information about
 \begin{itemize}
-    \item basic statistics: some simple composition statistics for the FASTQ\index{FASTQ} file analyzed
-    \item per base sequence quality: an overview of the range of quality values across all bases at each position in the FASTQ file
-    \item per tile sequence quality: an overview of the per tile sequence quality in case an Illumina library was used
-    \item per sequence quality scores: an overview of how the overall quality scores of the sequences are distributed
-    \item per base sequence content: an overview of the proportion of each base position in a FASTQ file for which each of the four normal DNA bases has been called
-    \item per sequence GC content: the GC content across the whole length of each sequence in a file compared with a normal distributed GC content
-    \item per base N content: an overview of the N content at each position across all bases
-    \item sequence length distribution: an overview of how the sequence lengths are distributed
-    \item sequence duplication levels: an overview of the degree of duplication for every sequence in a library
-    \item over-represented sequences: a list of over-represented sequences matched against common contaminants\index{RNA-seq!contaminant}
-    \item adapter content: a check for significant amounts of adapter sequences\index{RNA-seq!adapter sequence} the FASTQ file
+    \item \emph{basic statistics}: some simple composition statistics for the FASTQ\index{FASTQ} file analyzed
+    \item \emph{per base sequence quality}: an overview of the range of quality values across all bases at each position in the FASTQ file
+    \item \emph{per tile sequence quality}: an overview of the per tile sequence quality in case an Illumina library was used
+    \item \emph{per sequence quality scores}: an overview of how the overall quality scores of the sequences are distributed
+    \item \emph{per base sequence content}: an overview of the proportion of each base position in a FASTQ file for which each of the four normal DNA bases has been called
+    \item \emph{per sequence GC content}: the GC content across the whole length of each sequence in a file compared with a normal distributed GC content
+    \item \emph{per base N content}: an overview of the N content at each position across all bases
+    \item \emph{sequence length distribution}: an overview of how the sequence lengths are distributed
+    \item \emph{sequence duplication levels}: an overview of the degree of duplication for every sequence in a library
+    \item \emph{over-represented sequences}: a list of over-represented sequences matched against common contaminants\index{RNA-seq!contaminant}
+    \item \emph{adapter content}: a check for significant amounts of adapter sequences\index{RNA-seq!adapter sequence} the FASTQ file
 \end{itemize}
 
 The results of the separate FastQC analyses (of the raw and trimmed FASTQ files), the results of the Trimmomatic\index{Trimmomatic} trimming and the information about the kallisto\index{kallisto} pseudoalignments\index{transcript!pseudoalignment} were summarized in an interactive MultiQC\index{MultiQC} HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
