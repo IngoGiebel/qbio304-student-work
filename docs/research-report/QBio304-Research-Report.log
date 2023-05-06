@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  5 MAY 2023 14:06
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  6 MAY 2023 09:35
  restricted system commands enabled.
 **QBio304-Research-Report.tex
 (./QBio304-Research-Report.tex
@@ -3052,55 +3052,35 @@ f  used on input line 177.
  [8<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf><../
 ../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>] [9<../../
 results/plots-and-tables/2.5-Log2CPM-Overview.pdf>]) (./results.tex
-<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png, id=380, 12
+<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png, id=381, 12
 04.5pt x 803.0pt>
 File: ../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png Graphi
 c file (type png)
 <use ../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/trimmomatic-survivi
-ng_reads.png  used on input line 10.
+ng_reads.png  used on input line 12.
 (luatex.def)             Requested size: 313.69025pt x 209.1304pt.
-<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png, id=382, 12
+ [10]
+<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png, id=393, 12
 04.5pt x 803.0pt>
 File: ../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png Graphi
 c file (type png)
 <use ../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/fastqc-status-check
--heatmap.png  used on input line 18.
+-heatmap.png  used on input line 20.
 (luatex.def)             Requested size: 313.69025pt x 209.1304pt.
- [10] [11<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png><..
-/../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png>]
-Package microtype Info: ... No configuration file mt-lmr.cfg.
-Package microtype Info: ... Loading configuration file mt-LatinModernRoman.cfg.
-
-
-(c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
-ern Roman (RS)
-)
-Package microtype Info: Setting up font `TU/lmr/m/n/10.95' on input line 26.
-Package microtype Info: ... No tracking.
-Package microtype Info: ... Loading protrusion list `LMR-default'.
-Package microtype Info: ... Applying non-selected expansion (no list).
-Package microtype Info: Setting up font `TU/lmr/m/n/7.665' on input line 26.
-Package microtype Info: ... No tracking.
-Package microtype Info: ... Loading protrusion list `LMR-default'.
-Package microtype Info: ... Applying non-selected expansion (no list).
-Package microtype Info: Setting up font `TU/lmr/m/n/5.475' on input line 26.
-Package microtype Info: ... No tracking.
-Package microtype Info: ... Loading protrusion list `LMR-default'.
-Package microtype Info: ... Applying non-selected expansion (no list).
-<../../results/multiqc/Plot-Exports/kallisto_alignment.png, id=402, 1204.5pt x 
+<../../results/multiqc/Plot-Exports/kallisto_alignment.png, id=395, 1204.5pt x 
 803.0pt>
 File: ../../results/multiqc/Plot-Exports/kallisto_alignment.png Graphic file (t
 ype png)
 <use ../../results/multiqc/Plot-Exports/kallisto_alignment.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/kallisto_alignment.
-png  used on input line 31.
+png  used on input line 33.
 (luatex.def)             Requested size: 313.69025pt x 209.1304pt.
-)
-(./discussion.tex [12<../../results/multiqc/Plot-Exports/kallisto_alignment.png>
-]) (./conclusion.tex) [13]
+) (./discussion.tex [11<../../results/multiqc/Plot-Exports/trimmomatic-surviving
+_reads.png>] [12<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.
+png><../../results/multiqc/Plot-Exports/kallisto_alignment.png>]) (./conclusion
+.tex) [13]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
 (Font)              scaled to size 10.95pt on input line 111.
 Package microtype Info: Setting up font `TU/Roboto(0)/m/it/10.95' on input line
@@ -3109,7 +3089,8 @@ Package microtype Info: ... No tracking.
 Package microtype Info: ... Loading protrusion list `T1-default'.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... Applying non-selected expansion (no list).
- [14] [15] (./QBio304-Research-Report.ind)
+ [14] [15]
+(./QBio304-Research-Report.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -3209,15 +3190,15 @@ Package logreq Info: Writing requests to 'QBio304-Research-Report.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 61900 strings out of 478290
+ 61821 strings out of 478290
  125086,2848258 words of node,token memory allocated
  801 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 16 attribute, 93 glue_spec
 , 16 attribute_list, 2 shape, 2 write, 8 pdf_action nodes
    avail lists: 1:2,2:1505,3:2072,4:337,5:416,6:221,7:7311,8:131,9:719,10:18,11:
 459
- 79955 multiletter control sequences out of 65536+600000
- 93 fonts using 18999307 bytes
+ 79887 multiletter control sequences out of 65536+600000
+ 91 fonts using 18815311 bytes
  99i,12n,128p,1061b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Italic.otf><c:/t
 exlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive
@@ -3225,10 +3206,10 @@ exlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive
 2022/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf><c:/texlive/2022/te
 xmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf><c:/texlive/2022/texmf-
 dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on QBio304-Research-Report.pdf (17 pages, 2430659 bytes).
+Output written on QBio304-Research-Report.pdf (17 pages, 2430916 bytes).
 
-PDF statistics: 540 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
+PDF statistics: 541 PDF objects out of 1000 (max. 8388607)
+ 475 compressed objects within 5 object streams
  77 named destinations out of 1000 (max. 131072)
  268 words of extra memory for PDF output out of 10000 (max. 100000000)
 

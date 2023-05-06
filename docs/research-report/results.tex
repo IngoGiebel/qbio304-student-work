@@ -2,7 +2,9 @@
 
 \subsection{Quality evaluation}
 
-Figure \ref{fig:0.1-MultiQC_FastQC_status_checks} shows an overview of the Trimmomatic\index{Trimmomatic} preprocessing (the surviving reads), created by MultiQC\index{MultiQC}.
+The RNA-seq data was initially assessed with FastQC\index{FastQC}, and according to this assessment the data was preprocessed/trimmed with Trimmomatic\index{Trimmomatic} and afterwards assessed again with FastQC (see section \ref{RNA-seq-preprocessing}). Finally, an overall report on the data preprocessing, the quality assessments and the kallisto\index{kallisto} pseudoalignments was created with MultiQC\index{MultiQC}.
+
+Figure \ref{fig:0.1-MultiQC_FastQC_status_checks} shows the MultiQC report on the Trimmomatic\index{Trimmomatic} preprocessing (the surviving reads).
 
 \begin{figure}[htbp]
     \caption{Trimmomatic preprocessing}
@@ -10,7 +12,7 @@ Figure \ref{fig:0.1-MultiQC_FastQC_status_checks} shows an overview of the Trimm
     \includegraphics[width=0.75\textwidth]{../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads}
 \end{figure}
 
-Figure \ref{fig:0.2-MultiQC_FastQC_status_checks} shows a MultiQC overview of the FastQC\index{FastQC} quality assessment of the trimmed FASTQ files.
+Figure \ref{fig:0.2-MultiQC_FastQC_status_checks} shows the MultiQC overview of the FastQC\index{FastQC} quality assessments of the trimmed FASTQ files.
 
 \begin{figure}[htbp]
     \caption{FastQC quality assessment of the preprocessed FASTQ files}
@@ -18,12 +20,12 @@ Figure \ref{fig:0.2-MultiQC_FastQC_status_checks} shows a MultiQC overview of th
     \includegraphics[width=0.75\textwidth]{../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap}
 \end{figure}
 
-According to this quality assessment, the (trimmed) RNA-seq data may be regarded as good quality for the purpose of this research.
+According to these quality assessments, the (trimmed) RNA-seq data may be regarded as good quality for the purpose of this research.
 
 
 \subsection{Reads mapped to the reference transcriptome}
 
-For most of the FASTQ files, kallisto pseudoaligned well above \qty{80}{\percent} of the (preprocessed) RNA-seq reads. Figure \ref{fig:0.3-MultiQC_kallisto_alignment} shows a MultiQC overview of the kallisto\index{kallisto} pseudoalignments.
+For most of the FASTQ files, kallisto pseudoaligned well above 80 \% of the (preprocessed) RNA-seq reads. Figure \ref{fig:0.3-MultiQC_kallisto_alignment} shows a MultiQC overview of the kallisto\index{kallisto} pseudoalignments.
 
 \begin{figure}[htbp]
     \caption{kallisto pseudoalignments}
