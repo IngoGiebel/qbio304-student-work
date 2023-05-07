@@ -1,24 +1,32 @@
+\indexentry{hierarchical cluster analysis (HCA)|hyperpage}{3}
+\indexentry{principal component analysis (PCA)|hyperpage}{3}
+\indexentry{functional enrichment analysis|hyperpage}{3}
+\indexentry{RNA-seq|hyperpage}{3}
+\indexentry{hierarchical cluster analysis (HCA)|hyperpage}{3}
+\indexentry{gene ontology (GO)!biological process (BP)|hyperpage}{3}
+\indexentry{gene ontology (GO)!molecular function (MF)|hyperpage}{3}
+\indexentry{gene ontology (GO)!cellular component (CC)|hyperpage}{3}
 \indexentry{transcriptome|hyperpage}{3}
 \indexentry{RNA-seq|hyperpage}{3}
 \indexentry{RNA-seq|hyperpage}{3}
-\indexentry{Oryza!nivara|hyperpage}{3}
-\indexentry{cultivar!BJ278|hyperpage}{3}
-\indexentry{cultivar!BJ89|hyperpage}{3}
-\indexentry{Oryza!sativa|hyperpage}{3}
-\indexentry{cultivar!Nipponbare|hyperpage}{3}
-\indexentry{Illumina!HiSeq 2000|hyperpage}{3}
-\indexentry{RNA-seq!quality assessment|hyperpage}{3}
-\indexentry{FastQC|hyperpage}{3}
-\indexentry{FASTQ|hyperpage}{3}
+\indexentry{Oryza!nivara|hyperpage}{4}
+\indexentry{cultivar!BJ278|hyperpage}{4}
+\indexentry{cultivar!BJ89|hyperpage}{4}
+\indexentry{Oryza!sativa|hyperpage}{4}
+\indexentry{cultivar!Nipponbare|hyperpage}{4}
+\indexentry{Illumina!HiSeq 2000|hyperpage}{4}
+\indexentry{RNA-seq!quality assessment|hyperpage}{4}
+\indexentry{FastQC|hyperpage}{4}
+\indexentry{FASTQ|hyperpage}{4}
 \indexentry{RNA-seq!contaminant|hyperpage}{4}
 \indexentry{RNA-seq!adapter sequence|hyperpage}{4}
 \indexentry{Trimmomatic|hyperpage}{4}
 \indexentry{kallisto|hyperpage}{4}
-\indexentry{transcript!pseudoalignment|hyperpage}{4}
-\indexentry{MultiQC|hyperpage}{4}
-\indexentry{Trimmomatic|hyperpage}{4}
-\indexentry{transcript!abundances quantification|hyperpage}{4}
-\indexentry{kallisto|hyperpage}{4}
+\indexentry{transcript!pseudoalignment|hyperpage}{5}
+\indexentry{MultiQC|hyperpage}{5}
+\indexentry{Trimmomatic|hyperpage}{5}
+\indexentry{transcript!abundances quantification|hyperpage}{6}
+\indexentry{kallisto|hyperpage}{6}
 \indexentry{genome/transcriptome!reference|hyperpage}{6}
 \indexentry{FASTA|hyperpage}{6}
 \indexentry{DNA!cDNA|hyperpage}{6}
@@ -28,14 +36,14 @@
 \indexentry{R!package!tximport|hyperpage}{6}
 \indexentry{transcript!ID|hyperpage}{6}
 \indexentry{gene!ID|hyperpage}{6}
-\indexentry{transcript!transcripts per million (TPM)|hyperpage}{6}
+\indexentry{transcript!transcripts per million (TPM)|hyperpage}{7}
 \indexentry{counts per million (CPM)|hyperpage}{7}
 \indexentry{R!package!edgeR|hyperpage}{7}
 \indexentry{hierarchical cluster analysis (HCA)|hyperpage}{8}
 \indexentry{R!package!stats|hyperpage}{8}
 \indexentry{hierarchical cluster analysis (HCA)!Euclidean distance matrix|hyperpage}{8}
-\indexentry{principal component analysis (PCA)|hyperpage}{8}
-\indexentry{R!package!stats|hyperpage}{8}
+\indexentry{principal component analysis (PCA)|hyperpage}{10}
+\indexentry{R!package!stats|hyperpage}{10}
 \indexentry{differentially expressed genes (DEGs)|hyperpage}{10}
 \indexentry{R!package!stats|hyperpage}{10}
 \indexentry{R!package!limma|hyperpage}{10}
@@ -50,17 +58,22 @@
 \indexentry{R!package!gprofiler2|hyperpage}{10}
 \indexentry{FastQC|hyperpage}{10}
 \indexentry{Trimmomatic|hyperpage}{10}
-\indexentry{kallisto|hyperpage}{10}
-\indexentry{MultiQC|hyperpage}{10}
-\indexentry{Trimmomatic|hyperpage}{10}
+\indexentry{kallisto|hyperpage}{11}
+\indexentry{MultiQC|hyperpage}{11}
+\indexentry{Trimmomatic|hyperpage}{11}
 \indexentry{FastQC|hyperpage}{11}
 \indexentry{kallisto|hyperpage}{11}
 \indexentry{hierarchical cluster analysis (HCA)|hyperpage}{11}
-\indexentry{principal component analysis (PCA)|hyperpage}{11}
-\indexentry{principal component analysis (PCA)!principal component (PC)|hyperpage}{11}
+\indexentry{principal component analysis (PCA)|hyperpage}{14}
+\indexentry{principal component analysis (PCA)!principal component (PC)|hyperpage}{14}
 \indexentry{batch effect|hyperpage}{14}
 \indexentry{functional enrichment analysis|hyperpage}{18}
 \indexentry{gene ontology (GO)|hyperpage}{18}
 \indexentry{gene ontology (GO)!biological process (BP)|hyperpage}{18}
 \indexentry{gene ontology (GO)!molecular function (MF)|hyperpage}{18}
 \indexentry{gene ontology (GO)!cellular component (CC)|hyperpage}{18}
+\indexentry{hierarchical cluster analysis (HCA)|hyperpage}{20}
+\indexentry{gene ontology (GO)!biological process (BP)|hyperpage}{20}
+\indexentry{gene ontology (GO)!molecular function (MF)|hyperpage}{20}
+\indexentry{gene ontology (GO)!cellular component (CC)|hyperpage}{20}
+\indexentry{principal component analysis (PCA)|hyperpage}{20}

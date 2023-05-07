@@ -922,6 +922,154 @@
       \verb https://doi.org/10.1093/bioinformatics/btw354
       \endverb
     \endentry
+    \entry{10.3390/ijms21175980}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=1fc0084dc5ec4e20a8012c42cccbf994}{%
+           family={Hamzelou},
+           familyi={H\bibinitperiod},
+           given={Sara},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d306b572b1d5f58c8b8a18bc3b4a7a}{%
+           family={Kamath},
+           familyi={K\bibinitperiod},
+           given={Karthik\bibnamedelima Shantharam},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73baad39e77d6c38eac1300c87c606c2}{%
+           family={Masoomi-Aladizgeh},
+           familyi={M\bibinithyphendelim A\bibinitperiod},
+           given={Farhad},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=393b36db93a318a8c154b2044dfe4a0c}{%
+           family={Johnsen},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8918960a3a19648f9c8f2cdbcd145819}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Brian\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=691df3bbafb7339e084f7bf08daf20ac}{%
+           family={Haynes},
+           familyi={H\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d6b5955f70c90eea399b5998636be32}
+      \strng{fullhash}{fcf78f18d06afc2bb3764ee054796398}
+      \strng{bibnamehash}{fcf78f18d06afc2bb3764ee054796398}
+      \strng{authorbibnamehash}{fcf78f18d06afc2bb3764ee054796398}
+      \strng{authornamehash}{6d6b5955f70c90eea399b5998636be32}
+      \strng{authorfullhash}{fcf78f18d06afc2bb3764ee054796398}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1422-0067}
+      \field{journaltitle}{International Journal of Molecular Sciences}
+      \field{number}{17}
+      \field{title}{Wild and Cultivated Species of Rice Have Distinctive Proteomic Responses to Drought}
+      \field{volume}{21}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.3390/ijms21175980
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1422-0067/21/17/5980
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1422-0067/21/17/5980
+      \endverb
+    \endentry
+    \entry{10.3389/fpls.2016.01029}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=4758d8f4d0a0939c84b520a708a04e47}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Rohit},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63115f659c14dd594c301164c1e54ca8}{%
+           family={Wani},
+           familyi={W\bibinitperiod},
+           given={Shabir\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99c1661fcef24f48ec39ea9c743878fd}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Balwant},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1072d9b17eb14fa4aec5fc9edd66e5a9}{%
+           family={Bohra},
+           familyi={B\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=224f159c9a78e6583bc4ccf2203d64e3}{%
+           family={Dar},
+           familyi={D\bibinitperiod},
+           given={Zahoor\bibnamedelima A.},
+           giveni={Z\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cebd0aef13ce8b39b8fff741187a4ae5}{%
+           family={Lone},
+           familyi={L\bibinitperiod},
+           given={Ajaz\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f71aa8a03ea4cd06e4fadeb780b3dbd9}{%
+           family={Pareek},
+           familyi={P\bibinitperiod},
+           given={Ashwani},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca0083ac0a57c6d24a3204d7e3dc1172}{%
+           family={Singla-Pareek},
+           familyi={S\bibinithyphendelim P\bibinitperiod},
+           given={Sneh\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b0f4fac93877fa044c9875be069afa4}
+      \strng{fullhash}{1b2edd2c5de87800c4788521839dc468}
+      \strng{bibnamehash}{1b2edd2c5de87800c4788521839dc468}
+      \strng{authorbibnamehash}{1b2edd2c5de87800c4788521839dc468}
+      \strng{authornamehash}{5b0f4fac93877fa044c9875be069afa4}
+      \strng{authorfullhash}{1b2edd2c5de87800c4788521839dc468}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Increasing vulnerability of plants to a variety of stresses such as drought, salt and extreme temperatures poses a global threat to sustained growth and productivity of major crops. Of these stresses, drought represents a considerable threat to plant growth and development. In view of this, developing staple food cultivars with improved drought tolerance emerges as the most sustainable solution toward improving crop productivity in a scenario of climate change. In parallel, unraveling the genetic architecture and the targeted identification of molecular networks using modern “OMICS” analyses, that can underpin drought tolerance mechanisms, is urgently required. Importantly, integrated studies intending to elucidate complex mechanisms can bridge the gap existing in our current knowledge about drought stress tolerance in plants. It is now well established that drought tolerance is regulated by several genes, including transcription factors (TFs) that enable plants to withstand unfavorable conditions, and these remain potential genomic candidates for their wide application in crop breeding. These TFs represent the key molecular switches orchestrating the regulation of plant developmental processes in response to a variety of stresses. The current review aims to offer a deeper understanding of TFs engaged in regulating plant’s response under drought stress and to devise potential strategies to improve plant tolerance against drought.}
+      \field{issn}{1664-462X}
+      \field{journaltitle}{Frontiers in Plant Science}
+      \field{title}{Transcription Factors and Plants Response to Drought Stress: Current Understanding and Future Directions}
+      \field{volume}{7}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.3389/fpls.2016.01029
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/fpls.2016.01029
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/fpls.2016.01029
+      \endverb
+    \endentry
     \entry{R-gprofiler2}{manual}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=95aed347c86db8130989069ebc31e3dc}{%
@@ -1033,6 +1181,60 @@
       \verb{url}
       \verb https://github.com/mikelove/tximport
       \endverb
+    \endentry
+    \entry{10.1016/j.rsci.2021.01.002}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1dab702003efd84f33dd72c2fa97c821}{%
+           family={Panda},
+           familyi={P\bibinitperiod},
+           given={Debabrata},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bb23a452119b33a7ee0e3455d0829b5}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Swati\bibnamedelima Sakambari},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fdf6d8a1f95171b40e76e84531c5c06}{%
+           family={Behera},
+           familyi={B\bibinitperiod},
+           given={Prafulla\bibnamedelima Kumar},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6cdb83ce9f79c1d91e6b88df4aac79c}
+      \strng{fullhash}{111befa76ee949907e6f9af053896769}
+      \strng{bibnamehash}{111befa76ee949907e6f9af053896769}
+      \strng{authorbibnamehash}{111befa76ee949907e6f9af053896769}
+      \strng{authornamehash}{c6cdb83ce9f79c1d91e6b88df4aac79c}
+      \strng{authorfullhash}{111befa76ee949907e6f9af053896769}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Drought stress is a serious limiting factor to rice production, which results in huge economic losses. It is becoming a more serious issue with respect to the global climate change. Keeping in view of the current and forecasted global food demand, it has become essential to enhance the crop productivity on the drought-prone rainfed lands with priority. In order to achieve the production target from rainfed areas, there is a requirement of rice varieties with drought tolerance, and genetic improvement for drought tolerant should be a high priority theme of research in the future. Breeding for drought tolerant rice varieties is a thought-provoking task because of the complex nature and multigenic control of drought tolerant traits would be a major bottleneck for the current research. A great progress has been made during last two decades in our understanding of the mechanisms involved in adaptation and tolerance to drought stress in rice. In this review, we highlighted the recent progresses in physiological, biochemical and molecular adaptation of rice to drought tolerance. A brief discussion on the molecular genetics and breeding approaches for drought tolerance in rice will be focused for the future crop improvement program for development of drought tolerant rice varieties.}
+      \field{issn}{1672-6308}
+      \field{journaltitle}{Rice Science}
+      \field{number}{2}
+      \field{title}{Drought Tolerance in Rice: Focus on Recent Mechanisms and Approaches}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{119\bibrangedash 132}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.rsci.2021.01.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1672630821000032
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1672630821000032
+      \endverb
+      \keyw{drought stress,drought adaptation,rice,water deficit tolerance}
     \endentry
     \entry{RStudio}{manual}{}
       \name{author}{1}{}{%
@@ -2304,6 +2506,154 @@
       \verb https://doi.org/10.1093/bioinformatics/btw354
       \endverb
     \endentry
+    \entry{10.3390/ijms21175980}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=1fc0084dc5ec4e20a8012c42cccbf994}{%
+           family={Hamzelou},
+           familyi={H\bibinitperiod},
+           given={Sara},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d306b572b1d5f58c8b8a18bc3b4a7a}{%
+           family={Kamath},
+           familyi={K\bibinitperiod},
+           given={Karthik\bibnamedelima Shantharam},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73baad39e77d6c38eac1300c87c606c2}{%
+           family={Masoomi-Aladizgeh},
+           familyi={M\bibinithyphendelim A\bibinitperiod},
+           given={Farhad},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=393b36db93a318a8c154b2044dfe4a0c}{%
+           family={Johnsen},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8918960a3a19648f9c8f2cdbcd145819}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Brian\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=691df3bbafb7339e084f7bf08daf20ac}{%
+           family={Haynes},
+           familyi={H\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d6b5955f70c90eea399b5998636be32}
+      \strng{fullhash}{fcf78f18d06afc2bb3764ee054796398}
+      \strng{bibnamehash}{fcf78f18d06afc2bb3764ee054796398}
+      \strng{authorbibnamehash}{fcf78f18d06afc2bb3764ee054796398}
+      \strng{authornamehash}{6d6b5955f70c90eea399b5998636be32}
+      \strng{authorfullhash}{fcf78f18d06afc2bb3764ee054796398}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1422-0067}
+      \field{journaltitle}{International Journal of Molecular Sciences}
+      \field{number}{17}
+      \field{title}{Wild and Cultivated Species of Rice Have Distinctive Proteomic Responses to Drought}
+      \field{volume}{21}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.3390/ijms21175980
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1422-0067/21/17/5980
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1422-0067/21/17/5980
+      \endverb
+    \endentry
+    \entry{10.3389/fpls.2016.01029}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=4758d8f4d0a0939c84b520a708a04e47}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Rohit},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63115f659c14dd594c301164c1e54ca8}{%
+           family={Wani},
+           familyi={W\bibinitperiod},
+           given={Shabir\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99c1661fcef24f48ec39ea9c743878fd}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Balwant},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1072d9b17eb14fa4aec5fc9edd66e5a9}{%
+           family={Bohra},
+           familyi={B\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=224f159c9a78e6583bc4ccf2203d64e3}{%
+           family={Dar},
+           familyi={D\bibinitperiod},
+           given={Zahoor\bibnamedelima A.},
+           giveni={Z\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cebd0aef13ce8b39b8fff741187a4ae5}{%
+           family={Lone},
+           familyi={L\bibinitperiod},
+           given={Ajaz\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f71aa8a03ea4cd06e4fadeb780b3dbd9}{%
+           family={Pareek},
+           familyi={P\bibinitperiod},
+           given={Ashwani},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca0083ac0a57c6d24a3204d7e3dc1172}{%
+           family={Singla-Pareek},
+           familyi={S\bibinithyphendelim P\bibinitperiod},
+           given={Sneh\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b0f4fac93877fa044c9875be069afa4}
+      \strng{fullhash}{1b2edd2c5de87800c4788521839dc468}
+      \strng{bibnamehash}{1b2edd2c5de87800c4788521839dc468}
+      \strng{authorbibnamehash}{1b2edd2c5de87800c4788521839dc468}
+      \strng{authornamehash}{5b0f4fac93877fa044c9875be069afa4}
+      \strng{authorfullhash}{1b2edd2c5de87800c4788521839dc468}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Increasing vulnerability of plants to a variety of stresses such as drought, salt and extreme temperatures poses a global threat to sustained growth and productivity of major crops. Of these stresses, drought represents a considerable threat to plant growth and development. In view of this, developing staple food cultivars with improved drought tolerance emerges as the most sustainable solution toward improving crop productivity in a scenario of climate change. In parallel, unraveling the genetic architecture and the targeted identification of molecular networks using modern “OMICS” analyses, that can underpin drought tolerance mechanisms, is urgently required. Importantly, integrated studies intending to elucidate complex mechanisms can bridge the gap existing in our current knowledge about drought stress tolerance in plants. It is now well established that drought tolerance is regulated by several genes, including transcription factors (TFs) that enable plants to withstand unfavorable conditions, and these remain potential genomic candidates for their wide application in crop breeding. These TFs represent the key molecular switches orchestrating the regulation of plant developmental processes in response to a variety of stresses. The current review aims to offer a deeper understanding of TFs engaged in regulating plant’s response under drought stress and to devise potential strategies to improve plant tolerance against drought.}
+      \field{issn}{1664-462X}
+      \field{journaltitle}{Frontiers in Plant Science}
+      \field{title}{Transcription Factors and Plants Response to Drought Stress: Current Understanding and Future Directions}
+      \field{volume}{7}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.3389/fpls.2016.01029
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/fpls.2016.01029
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/fpls.2016.01029
+      \endverb
+    \endentry
     \entry{R-gprofiler2}{manual}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=95aed347c86db8130989069ebc31e3dc}{%
@@ -2415,6 +2765,60 @@
       \verb{url}
       \verb https://github.com/mikelove/tximport
       \endverb
+    \endentry
+    \entry{10.1016/j.rsci.2021.01.002}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1dab702003efd84f33dd72c2fa97c821}{%
+           family={Panda},
+           familyi={P\bibinitperiod},
+           given={Debabrata},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bb23a452119b33a7ee0e3455d0829b5}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Swati\bibnamedelima Sakambari},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fdf6d8a1f95171b40e76e84531c5c06}{%
+           family={Behera},
+           familyi={B\bibinitperiod},
+           given={Prafulla\bibnamedelima Kumar},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6cdb83ce9f79c1d91e6b88df4aac79c}
+      \strng{fullhash}{111befa76ee949907e6f9af053896769}
+      \strng{bibnamehash}{111befa76ee949907e6f9af053896769}
+      \strng{authorbibnamehash}{111befa76ee949907e6f9af053896769}
+      \strng{authornamehash}{c6cdb83ce9f79c1d91e6b88df4aac79c}
+      \strng{authorfullhash}{111befa76ee949907e6f9af053896769}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Drought stress is a serious limiting factor to rice production, which results in huge economic losses. It is becoming a more serious issue with respect to the global climate change. Keeping in view of the current and forecasted global food demand, it has become essential to enhance the crop productivity on the drought-prone rainfed lands with priority. In order to achieve the production target from rainfed areas, there is a requirement of rice varieties with drought tolerance, and genetic improvement for drought tolerant should be a high priority theme of research in the future. Breeding for drought tolerant rice varieties is a thought-provoking task because of the complex nature and multigenic control of drought tolerant traits would be a major bottleneck for the current research. A great progress has been made during last two decades in our understanding of the mechanisms involved in adaptation and tolerance to drought stress in rice. In this review, we highlighted the recent progresses in physiological, biochemical and molecular adaptation of rice to drought tolerance. A brief discussion on the molecular genetics and breeding approaches for drought tolerance in rice will be focused for the future crop improvement program for development of drought tolerant rice varieties.}
+      \field{issn}{1672-6308}
+      \field{journaltitle}{Rice Science}
+      \field{number}{2}
+      \field{title}{Drought Tolerance in Rice: Focus on Recent Mechanisms and Approaches}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{119\bibrangedash 132}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.rsci.2021.01.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1672630821000032
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1672630821000032
+      \endverb
+      \keyw{drought stress,drought adaptation,rice,water deficit tolerance}
     \endentry
     \entry{RStudio}{manual}{}
       \name{author}{1}{}{%
