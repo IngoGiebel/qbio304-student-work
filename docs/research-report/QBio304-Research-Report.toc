@@ -1,6 +1,6 @@
 \selectlanguage *[variant=american]{english}
 \contentsline {section}{\numberline {1}Abstract}{3}{section.1}%
-\contentsline {section}{\numberline {2}Introduction and objectives}{3}{section.2}%
+\contentsline {section}{\numberline {2}Introduction}{3}{section.2}%
 \contentsline {section}{\numberline {3}Materials and methods}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Selection of the RNA-seq data}{3}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Quality evaluation}{3}{subsection.3.2}%
@@ -20,6 +20,6 @@
 \contentsline {subsection}{\numberline {4.4}Principal component analysis}{11}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Differentially expressed genes}{14}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Functional enrichment analysis}{18}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Discussion and conclusion}{18}{section.5}%
+\contentsline {section}{\numberline {5}Discussion}{18}{section.5}%
 \contentsline {section}{References}{21}{section*.27}%
 \contentsline {section}{Index}{23}{section*.28}%

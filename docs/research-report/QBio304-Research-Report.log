@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  6 MAY 2023 21:23
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  7 MAY 2023 11:08
  restricted system commands enabled.
 **QBio304-Research-Report.tex
 (./QBio304-Research-Report.tex
@@ -3417,15 +3417,9 @@ Package microtype Info: *** Changing to language context `english'
 (microtype)              on input line 27.
 Package polyglossia Info: Option: English, variant=american.
 )
-
-Package rerunfilecheck Warning: File `QBio304-Research-Report.out' has changed.
-
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `QBio304-Research-Report.out':
-(rerunfilecheck)             Before: 75EE963CC9AB92F8D5E3F9BFE2E9BE93;4769
-(rerunfilecheck)             After:  B0ED9901AFAAD07B021FD2ED2456D366;4769.
+Package rerunfilecheck Info: File `QBio304-Research-Report.out' has not changed
+.
+(rerunfilecheck)             Checksum: CAB8A75C988F77CAE6BEB7C52A70A29F;4607.
 Package logreq Info: Writing requests to 'QBio304-Research-Report.run.xml'.
 
 \openout1 = QBio304-Research-Report.run.xml
@@ -3440,7 +3434,7 @@ Here is how much of LuaTeX's memory you used:
    avail lists: 1:2,2:1359,3:2513,4:337,5:416,6:258,7:7311,8:161,9:826,10:22,11:
 453
  80434 multiletter control sequences out of 65536+600000
- 92 fonts using 18921163 bytes
+ 92 fonts using 18921011 bytes
  99i,12n,128p,1061b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf><c:/tex
 live/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive/2
@@ -3449,7 +3443,7 @@ exmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/texlive/2022/te
 xmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf><c:/texlive/2022/texmf-dis
 t/fonts/opentype/google/roboto/Roboto-Regular.otf><c:/texlive/2022/texmf-dist/fo
 nts/type1/urw/zapfding/uzdr.pfb>
-Output written on QBio304-Research-Report.pdf (24 pages, 2952928 bytes).
+Output written on QBio304-Research-Report.pdf (24 pages, 2952735 bytes).
 
 PDF statistics: 672 PDF objects out of 1000 (max. 8388607)
  571 compressed objects within 6 object streams
