@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  7 MAY 2023 22:10
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.27)  7 MAY 2023 23:02
  restricted system commands enabled.
 **QBio304-Research-Report.tex
 (./QBio304-Research-Report.tex
@@ -2396,7 +2396,7 @@ Package microtype Info: ... Loading protrusion list `T1-default'.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... Applying non-selected expansion (no list).
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CRR240
-976_f1.png, id=274, 1008.76875pt x 602.25pt>
+976_f1.png, id=275, 1008.76875pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_C
 RR240976_f1.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CR
@@ -2405,7 +2405,7 @@ Package luatex.def Info: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequ
 ence_content_plot_CRR240976_f1.png  used on input line 44.
 (luatex.def)             Requested size: 200.74966pt x 113.80379pt.
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CRR240
-976_f1_trim_p.png, id=275, 918.43124pt x 602.25pt>
+976_f1_trim_p.png, id=276, 918.43124pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_C
 RR240976_f1_trim_p.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_content_plot_CR
@@ -2414,7 +2414,7 @@ Package luatex.def Info: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequ
 ence_content_plot_CRR240976_f1_trim_p.png  used on input line 49.
 (luatex.def)             Requested size: 200.75218pt x 113.80379pt.
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CRR240
-976_f1.png, id=276, 1008.76875pt x 602.25pt>
+976_f1.png, id=277, 1008.76875pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_C
 RR240976_f1.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CR
@@ -2423,7 +2423,7 @@ Package luatex.def Info: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequ
 ence_quality_plot_CRR240976_f1.png  used on input line 59.
 (luatex.def)             Requested size: 200.74966pt x 113.80379pt.
 <../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CRR240
-976_f1_trim_p.png, id=277, 918.43124pt x 602.25pt>
+976_f1_trim_p.png, id=278, 918.43124pt x 602.25pt>
 File: ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_C
 RR240976_f1_trim_p.png Graphic file (type png)
 <use ../../results/fastqc/Plot-Exports/fastqc_per_base_sequence_quality_plot_CR
@@ -2447,100 +2447,101 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package microtype Info: ... : First loading protrusion list `default'.
 Package microtype Info: ... No expansion.
- [6]
-<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf, id=309, 597.231
+<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf, id=296, 597.231
 25pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf Graphic fil
 e (type pdf)
 <use ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_niv
-ara.pdf  used on input line 98.
+ara.pdf  used on input line 99.
 (luatex.def)             Requested size: 200.75996pt x 141.37514pt.
-<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf, id=310, 597.231
+<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf, id=297, 597.231
 25pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf Graphic fil
 e (type pdf)
 <use ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sat
-iva.pdf  used on input line 102.
+iva.pdf  used on input line 104.
 (luatex.def)             Requested size: 200.75996pt x 141.37514pt.
 <../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf, id=
-314, 597.23125pt x 420.57124pt>
+301, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf
  Graphic file (type pdf)
 <use ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf>
 
 Package luatex.def Info: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notno
-rm-Oryza_nivara.pdf  used on input line 115.
-(luatex.def)             Requested size: 267.68535pt x 113.81244pt.
+rm-Oryza_nivara.pdf  used on input line 118.
+(luatex.def)             Requested size: 267.68535pt x 85.35773pt.
 <../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf, id=
-315, 597.23125pt x 420.57124pt>
+302, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf
  Graphic file (type pdf)
 <use ../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa.pdf>
 
 Package luatex.def Info: ../../results/plots-and-tables/2.2-Log2CPM-unflt-notno
-rm-Oryza_sativa.pdf  used on input line 119.
-(luatex.def)             Requested size: 133.84267pt x 113.81244pt.
-<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf, id=31
-8, 597.23125pt x 420.57124pt>
+rm-Oryza_sativa.pdf  used on input line 123.
+(luatex.def)             Requested size: 133.84267pt x 85.35773pt.
+ [6]
+<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf, id=32
+0, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf G
 raphic file (type pdf)
 <use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
--Oryza_nivara.pdf  used on input line 149.
-(luatex.def)             Requested size: 267.68535pt x 113.81244pt.
-<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf, id=31
-9, 597.23125pt x 420.57124pt>
+-Oryza_nivara.pdf  used on input line 154.
+(luatex.def)             Requested size: 267.68535pt x 85.35773pt.
+<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf, id=32
+1, 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf G
 raphic file (type pdf)
 <use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
--Oryza_sativa.pdf  used on input line 153.
-(luatex.def)             Requested size: 133.84267pt x 113.81244pt.
-File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf G
-raphic file (type pdf)
-<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf>
-Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
--Oryza_nivara.pdf  used on input line 164.
-(luatex.def)             Requested size: 267.68535pt x 113.81244pt.
-File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf G
-raphic file (type pdf)
-<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>
-Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
--Oryza_sativa.pdf  used on input line 168.
-(luatex.def)             Requested size: 133.84267pt x 113.81244pt.
+-Oryza_sativa.pdf  used on input line 159.
+(luatex.def)             Requested size: 133.84267pt x 85.35773pt.
  [7<../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara.pdf><../../results
 /plots-and-tables/2.1-TPM-Stats-Oryza_sativa.pdf><../../results/plots-and-tables
 /2.2-Log2CPM-unflt-notnorm-Oryza_nivara.pdf><../../results/plots-and-tables/2.2-
 Log2CPM-unflt-notnorm-Oryza_sativa.pdf>]
+File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf G
+raphic file (type pdf)
+<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
+-Oryza_nivara.pdf  used on input line 171.
+(luatex.def)             Requested size: 267.68535pt x 85.35773pt.
+File: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf G
+raphic file (type pdf)
+<use ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>
+Package luatex.def Info: ../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm
+-Oryza_sativa.pdf  used on input line 176.
+(luatex.def)             Requested size: 133.84267pt x 85.35773pt.
 <../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf, id=357, 597.23125pt x
  420.57124pt>
 File: ../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf Graphic file (typ
 e pdf)
 <use ../../results/plots-and-tables/2.5-Log2CPM-Overview.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/2.5-Log2CPM-Overview.pd
-f  used on input line 177.
+f  used on input line 185.
 (luatex.def)             Requested size: 418.25368pt x 294.53905pt.
  [8<../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara.pdf><../
 ../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa.pdf>] [9<../../
-results/plots-and-tables/2.5-Log2CPM-Overview.pdf>]) (./results.tex [10]
-<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png, id=398, 12
+results/plots-and-tables/2.5-Log2CPM-Overview.pdf>]) (./results.tex
+<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png, id=388, 12
 04.5pt x 803.0pt>
 File: ../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png Graphi
 c file (type png)
 <use ../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/trimmomatic-survivi
 ng_reads.png  used on input line 12.
-(luatex.def)             Requested size: 313.69025pt x 209.1304pt.
-<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png, id=400, 12
+(luatex.def)             Requested size: 376.42575pt x 250.94913pt.
+<../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png, id=390, 12
 04.5pt x 803.0pt>
 File: ../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png Graphi
 c file (type png)
 <use ../../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/fastqc-status-check
 -heatmap.png  used on input line 20.
-(luatex.def)             Requested size: 313.69025pt x 209.1304pt.
+(luatex.def)             Requested size: 376.42575pt x 250.94913pt.
+ [10]
 <../../results/multiqc/Plot-Exports/kallisto_alignment.png, id=402, 1204.5pt x 
 803.0pt>
 File: ../../results/multiqc/Plot-Exports/kallisto_alignment.png Graphic file (t
@@ -2548,7 +2549,7 @@ ype png)
 <use ../../results/multiqc/Plot-Exports/kallisto_alignment.png>
 Package luatex.def Info: ../../results/multiqc/Plot-Exports/kallisto_alignment.
 png  used on input line 33.
-(luatex.def)             Requested size: 313.69025pt x 209.1304pt.
+(luatex.def)             Requested size: 376.42575pt x 250.94913pt.
 <../../results/plots-and-tables/3.1-Clust-Dendrogram-Oryza_nivara.pdf, id=405, 
 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/3.1-Clust-Dendrogram-Oryza_nivara.pdf Grap
@@ -2556,7 +2557,7 @@ hic file (type pdf)
 <use ../../results/plots-and-tables/3.1-Clust-Dendrogram-Oryza_nivara.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/3.1-Clust-Dendrogram-Or
 yza_nivara.pdf  used on input line 44.
-(luatex.def)             Requested size: 313.69025pt x 220.89948pt.
+(luatex.def)             Requested size: 376.42575pt x 265.08322pt.
 <../../results/plots-and-tables/3.1-Clust-Dendrogram-Oryza_sativa.pdf, id=406, 
 597.23125pt x 420.57124pt>
 File: ../../results/plots-and-tables/3.1-Clust-Dendrogram-Oryza_sativa.pdf Grap
@@ -2564,7 +2565,7 @@ hic file (type pdf)
 <use ../../results/plots-and-tables/3.1-Clust-Dendrogram-Oryza_sativa.pdf>
 Package luatex.def Info: ../../results/plots-and-tables/3.1-Clust-Dendrogram-Or
 yza_sativa.pdf  used on input line 50.
-(luatex.def)             Requested size: 313.69025pt x 220.89948pt.
+(luatex.def)             Requested size: 376.42575pt x 265.08322pt.
  [11<../../results/multiqc/Plot-Exports/trimmomatic-surviving_reads.png>] [12<..
 /../results/multiqc/Plot-Exports/fastqc-status-check-heatmap.png><../../results/
 multiqc/Plot-Exports/kallisto_alignment.png>]
@@ -2771,7 +2772,7 @@ Here is how much of LuaTeX's memory you used:
  718 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 16 attribute, 84 glue_spec
 , 16 attribute_list, 2 shape, 2 write, 10 pdf_action nodes
-   avail lists: 2:1515,3:3101,4:430,5:415,6:273,7:7122,8:206,9:919,10:25,11:512
+   avail lists: 2:1517,3:3107,4:430,5:420,6:276,7:7122,8:206,9:928,10:25,11:493
  58064 multiletter control sequences out of 65536+600000
  81 fonts using 8198707 bytes
  115i,12n,128p,1546b,5361s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2784,7 +2785,7 @@ onts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pf
 b>
-Output written on QBio304-Research-Report.pdf (25 pages, 2983612 bytes).
+Output written on QBio304-Research-Report.pdf (25 pages, 2983385 bytes).
 
 PDF statistics: 716 PDF objects out of 1000 (max. 8388607)
  613 compressed objects within 7 object streams

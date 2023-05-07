@@ -62,7 +62,7 @@
 \indexspace
 \textbf{K}\label{L-xindex-K}
 \nopagebreak[4]
-  \item kallisto, \hyperpage{4}, \hyperpage{6}, \hyperpage{11}
+  \item kallisto, \hyperpage{4\nohyperpage{f}}, \hyperpage{10\nohyperpage{f}}
 
 \indexspace
 \textbf{L}\label{L-xindex-L}
@@ -72,19 +72,19 @@
 \indexspace
 \textbf{M}\label{L-xindex-M}
 \nopagebreak[4]
-  \item MultiQC, \hyperpage{5}, \hyperpage{11}
+  \item MultiQC, \hyperpage{4}, \hyperpage{10}
 
 \indexspace
 \textbf{O}\label{L-xindex-O}
 \nopagebreak[4]
   \item Oryza
-    \subitem -\,nivara, \hyperpage{3\nohyperpage{f}}, \hyperpage{18}
-    \subitem -\,sativa, \hyperpage{3\nohyperpage{f}}, \hyperpage{18}
+    \subitem -\,nivara, \hyperpage{4}, \hyperpage{20}
+    \subitem -\,sativa, \hyperpage{4}, \hyperpage{20}
 
 \indexspace
 \textbf{P}\label{L-xindex-P}
 \nopagebreak[4]
-  \item principal component analysis (PCA), \hyperpage{3}, \hyperpage{10}, \hyperpage{14}, \hyperpage{20}
+  \item principal component analysis (PCA), \hyperpage{3}, \hyperpage{8}, \hyperpage{14}, \hyperpage{20}
     \subitem -\,principal component (PC), \hyperpage{14}
 
 \indexspace
@@ -101,6 +101,7 @@
   \item RNA-seq, \hyperpage{3}
     \subitem -\,adapter sequence, \hyperpage{4}
     \subitem -\,contaminant, \hyperpage{4}
+    \subitem -\,paired-end, \hyperpage{3}
     \subitem -\,quality assessment, \hyperpage{4}
 
 \indexspace
@@ -108,9 +109,9 @@
 \nopagebreak[4]
   \item transcript
     \subitem -\,ID, \hyperpage{6}
-    \subitem -\,abundances quantification, \hyperpage{6}
-    \subitem -\,pseudoalignment, \hyperpage{5}
-    \subitem -\,transcripts per million (TPM), \hyperpage{7}
+    \subitem -\,abundances quantification, \hyperpage{5}
+    \subitem -\,pseudoalignment, \hyperpage{4}
+    \subitem -\,transcripts per million (TPM), \hyperpage{6}
   \item transcriptome, \hyperpage{3}
-  \item Trimmomatic, \hyperpage{4\nohyperpage{f}}, \hyperpage{10\nohyperpage{f}}
+  \item Trimmomatic, \hyperpage{4\nohyperpage{f}}, \hyperpage{10}
 \end{theindex}

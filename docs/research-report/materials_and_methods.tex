@@ -2,7 +2,7 @@
 
 \subsection{Selection of the RNA-seq data}
 
-This study uses publicly available paired-end RNA-seq\index{RNA-seq} data of wild and cultivated rice, submitted in January 1, 2021 by the Institute of Botany, Chinese Academy of Sciences. This data allows to compare rice grown under normal conditions with rice grown under drought stress conditions. Furthermore, the data allows for an interspecies comparison of wild rice (Oryza nivara\index{Oryza!nivara}, cultivars BJ278\index{cultivar!BJ278} and BJ89\index{cultivar!BJ89}) with cultivated rice (Oryza sativa\index{Oryza!sativa}, cultivar Nipponbare\index{cultivar!Nipponbare}).
+This study uses publicly available paired-end RNA-seq\index{RNA-seq!paired-end} data of wild and cultivated rice, submitted in January 1, 2021 by the Institute of Botany, Chinese Academy of Sciences. This data allows to compare rice grown under normal conditions with rice grown under drought stress conditions. Furthermore, the data allows for an interspecies comparison of wild rice (Oryza nivara\index{Oryza!nivara}, cultivars BJ278\index{cultivar!BJ278} and BJ89\index{cultivar!BJ89}) with cultivated rice (Oryza sativa\index{Oryza!sativa}, cultivar Nipponbare\index{cultivar!Nipponbare}).
 
 All samples were uniformly taken from seedlings (leaf tissue) at the age of twelve days. Used sequencing platform: Illumina HiSeq 2000\index{Illumina!HiSeq 2000}.
 
@@ -94,10 +94,12 @@ Figure \ref{fig:2.1-TPM-Stats} shows some basic transcripts per million (TPM\ind
     \caption{TPM statistics about the imported kallisto data}
     \label{fig:2.1-TPM-Stats}
     \begin{subfigure}[t]{0.48\linewidth}
+        \caption{O. nivara}
         \label{fig:2.1-TPM-Stats-Oryza_nivara}
         \includegraphics[width=\textwidth]{../../results/plots-and-tables/2.1-TPM-Stats-Oryza_nivara}
     \end{subfigure}
     \begin{subfigure}[t]{0.48\linewidth}
+        \caption{O. sativa}
         \label{fig:2.1-TPM-Stats-Oryza_sativa}
         \includegraphics[width=\textwidth]{../../results/plots-and-tables/2.1-TPM-Stats-Oryza_sativa}
     \end{subfigure}
@@ -111,12 +113,14 @@ For further analysis, \verb|DGEList|-objects with counts per million (CPM)\index
     \caption{Log2(CPM) distribution of the unfiltered, non-normalized data}
     \label{fig:2.2-Log2CPM-unflt-notnorm}
     \begin{subfigure}[t]{0.64\linewidth}
+        \caption{O. nivara}
         \label{fig:2.2-Log2CPM-unflt-notnorm-Oryza_nivara}
-        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara}
+        \includegraphics[width=\textwidth, height=3cm]{../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_nivara}
     \end{subfigure}
     \begin{subfigure}[t]{0.32\linewidth}
+        \caption{O. sativa}
         \label{fig:2.2-Log2CPM-unflt-notnorm-Oryza_sativa}
-        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa}
+        \includegraphics[width=\textwidth, height=3cm]{../../results/plots-and-tables/2.2-Log2CPM-unflt-notnorm-Oryza_sativa}
     \end{subfigure}
 \end{figure}
 
@@ -145,12 +149,14 @@ Filtering out genes with low reads (\(< 1\) CPM in at least half of the samples)
     \caption[Log2(CPM) distribution of the filtered, non-normalized data]{Log2(CPM) distribution of the filtered (\(< 1\) CPM in at least half of the samples), non-normalized data}
     \label{fig:2.3-Log2CPM-flt-notnorm}
     \begin{subfigure}[t]{0.64\linewidth}
+        \caption{O. nivara}
         \label{fig:2.3-Log2CPM-flt-notnorm-Oryza_nivara}
-        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara}
+        \includegraphics[width=\textwidth, height=3cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara}
     \end{subfigure}
     \begin{subfigure}[t]{0.32\linewidth}
+        \caption{O. sativa}
         \label{fig:2.3-Log2CPM-flt-notnorm-Oryza_sativa}
-        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa}
+        \includegraphics[width=\textwidth, height=3cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa}
     \end{subfigure}
 \end{figure}
 
@@ -160,12 +166,14 @@ Finally, the filtered data was normalized using the \verb|edgeR| function \verb|
     \caption{Log2(CPM) distribution of the filtered, normalized data}
     \label{fig:2.4-Log2CPM-flt-norm}
     \begin{subfigure}[t]{0.64\linewidth}
+        \caption{O. nivara}
         \label{fig:2.4-Log2CPM-flt-norm-Oryza_nivara}
-        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara}
+        \includegraphics[width=\textwidth, height=3cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_nivara}
     \end{subfigure}
     \begin{subfigure}[t]{0.32\linewidth}
+        \caption{O. sativa}
         \label{fig:2.4-Log2CPM-flt-norm-Oryza_sativa}
-        \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa}
+        \includegraphics[width=\textwidth, height=3cm]{../../results/plots-and-tables/2.3-Log2CPM-flt-notnorm-Oryza_sativa}
     \end{subfigure}
 \end{figure}
 
