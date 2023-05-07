@@ -1,7 +1,0 @@
-{
-    "installOptions": {
-        "installFromRepository": true,
-        "libraryPath": "C:/Users/ingog/OneDrive/B.Sc. Studiengang Quantitative Biology/R Projekte/win-library/4.2",
-        "installDependencies": true
-    }
-}
