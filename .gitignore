@@ -2,6 +2,6 @@
 *.gz
 *.zip
 *.bak
-.Rproj.user*
+.R*
 ref-genomes*
 programs*
