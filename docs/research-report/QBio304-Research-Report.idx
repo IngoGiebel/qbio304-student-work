@@ -8,6 +8,8 @@
 \indexentry{gene ontology (GO)!cellular component (CC)|hyperpage}{3}
 \indexentry{transcriptome|hyperpage}{3}
 \indexentry{RNA-seq|hyperpage}{3}
+\indexentry{Oryza!nivara|hyperpage}{3}
+\indexentry{Oryza!sativa|hyperpage}{3}
 \indexentry{RNA-seq|hyperpage}{3}
 \indexentry{Oryza!nivara|hyperpage}{4}
 \indexentry{cultivar!BJ278|hyperpage}{4}
@@ -72,8 +74,11 @@
 \indexentry{gene ontology (GO)!biological process (BP)|hyperpage}{18}
 \indexentry{gene ontology (GO)!molecular function (MF)|hyperpage}{18}
 \indexentry{gene ontology (GO)!cellular component (CC)|hyperpage}{18}
+\indexentry{Oryza!nivara|hyperpage}{18}
+\indexentry{Oryza!sativa|hyperpage}{18}
 \indexentry{hierarchical cluster analysis (HCA)|hyperpage}{20}
 \indexentry{gene ontology (GO)!biological process (BP)|hyperpage}{20}
 \indexentry{gene ontology (GO)!molecular function (MF)|hyperpage}{20}
 \indexentry{gene ontology (GO)!cellular component (CC)|hyperpage}{20}
 \indexentry{principal component analysis (PCA)|hyperpage}{20}
+\indexentry{batch effect|hyperpage}{20}

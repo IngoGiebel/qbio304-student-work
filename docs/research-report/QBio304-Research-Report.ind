@@ -4,16 +4,16 @@
 \indexspace
 \textbf{B}\label{L-xindex-B}
 \nopagebreak[4]
-  \item batch effect, \hyperpage{14}
+  \item batch effect, \hyperpage{14}, \hyperpage{20}
 
 \indexspace
 \textbf{C}\label{L-xindex-C}
 \nopagebreak[4]
   \item counts per million (CPM), \hyperpage{7}
   \item cultivar
-    \subitem -\,BJ278, \hyperpage{3}
-    \subitem -\,BJ89, \hyperpage{3}
-    \subitem -\,Nipponbare, \hyperpage{3}
+    \subitem -\,BJ278, \hyperpage{4}
+    \subitem -\,BJ89, \hyperpage{4}
+    \subitem -\,Nipponbare, \hyperpage{4}
 
 \indexspace
 \textbf{D}\label{L-xindex-D}
@@ -31,9 +31,9 @@
 \textbf{F}\label{L-xindex-F}
 \nopagebreak[4]
   \item FASTA, \hyperpage{6}
-  \item FASTQ, \hyperpage{3}
-  \item FastQC, \hyperpage{3}, \hyperpage{10\nohyperpage{f}}
-  \item functional enrichment analysis, \hyperpage{10}, \hyperpage{18}
+  \item FASTQ, \hyperpage{4}
+  \item FastQC, \hyperpage{4}, \hyperpage{10\nohyperpage{f}}
+  \item functional enrichment analysis, \hyperpage{3}, \hyperpage{10}, \hyperpage{18}
 
 \indexspace
 \textbf{G}\label{L-xindex-G}
@@ -41,28 +41,28 @@
   \item gene
     \subitem -\,ID, \hyperpage{6}
   \item gene ontology (GO), \hyperpage{18}
-    \subitem -\,biological process (BP), \hyperpage{18}
-    \subitem -\,cellular component (CC), \hyperpage{18}
-    \subitem -\,molecular function (MF), \hyperpage{18}
+    \subitem -\,biological process (BP), \hyperpage{3}, \hyperpage{18}, \hyperpage{20}
+    \subitem -\,cellular component (CC), \hyperpage{3}, \hyperpage{18}, \hyperpage{20}
+    \subitem -\,molecular function (MF), \hyperpage{3}, \hyperpage{18}, \hyperpage{20}
   \item genome/transcriptome
     \subitem -\,reference, \hyperpage{6}
 
 \indexspace
 \textbf{H}\label{L-xindex-H}
 \nopagebreak[4]
-  \item hierarchical cluster analysis (HCA), \hyperpage{8}, \hyperpage{11}, \hyperpage{20}
+  \item hierarchical cluster analysis (HCA), \hyperpage{3}, \hyperpage{8}, \hyperpage{11}, \hyperpage{20}
     \subitem -\,Euclidean distance matrix, \hyperpage{8}
 
 \indexspace
 \textbf{I}\label{L-xindex-I}
 \nopagebreak[4]
   \item Illumina
-    \subitem -\,HiSeq 2000, \hyperpage{3}
+    \subitem -\,HiSeq 2000, \hyperpage{4}
 
 \indexspace
 \textbf{K}\label{L-xindex-K}
 \nopagebreak[4]
-  \item kallisto, \hyperpage{4}, \hyperpage{10\nohyperpage{f}}
+  \item kallisto, \hyperpage{4}, \hyperpage{6}, \hyperpage{11}
 
 \indexspace
 \textbf{L}\label{L-xindex-L}
@@ -72,20 +72,20 @@
 \indexspace
 \textbf{M}\label{L-xindex-M}
 \nopagebreak[4]
-  \item MultiQC, \hyperpage{4}, \hyperpage{10}
+  \item MultiQC, \hyperpage{5}, \hyperpage{11}
 
 \indexspace
 \textbf{O}\label{L-xindex-O}
 \nopagebreak[4]
   \item Oryza
-    \subitem -\,nivara, \hyperpage{3}
-    \subitem -\,sativa, \hyperpage{3}
+    \subitem -\,nivara, \hyperpage{3\nohyperpage{f}}, \hyperpage{18}
+    \subitem -\,sativa, \hyperpage{3\nohyperpage{f}}, \hyperpage{18}
 
 \indexspace
 \textbf{P}\label{L-xindex-P}
 \nopagebreak[4]
-  \item principal component analysis (PCA), \hyperpage{8}, \hyperpage{11}, \hyperpage{20}
-    \subitem -\,principal component (PC), \hyperpage{11}
+  \item principal component analysis (PCA), \hyperpage{3}, \hyperpage{10}, \hyperpage{14}, \hyperpage{20}
+    \subitem -\,principal component (PC), \hyperpage{14}
 
 \indexspace
 \textbf{R}\label{L-xindex-R}
@@ -101,16 +101,16 @@
   \item RNA-seq, \hyperpage{3}
     \subitem -\,adapter sequence, \hyperpage{4}
     \subitem -\,contaminant, \hyperpage{4}
-    \subitem -\,quality assessment, \hyperpage{3}
+    \subitem -\,quality assessment, \hyperpage{4}
 
 \indexspace
 \textbf{T}\label{L-xindex-T}
 \nopagebreak[4]
   \item transcript
     \subitem -\,ID, \hyperpage{6}
-    \subitem -\,abundances quantification, \hyperpage{4}
-    \subitem -\,pseudoalignment, \hyperpage{4}
-    \subitem -\,transcripts per million (TPM), \hyperpage{6}
+    \subitem -\,abundances quantification, \hyperpage{6}
+    \subitem -\,pseudoalignment, \hyperpage{5}
+    \subitem -\,transcripts per million (TPM), \hyperpage{7}
   \item transcriptome, \hyperpage{3}
-  \item Trimmomatic, \hyperpage{4}, \hyperpage{10}
+  \item Trimmomatic, \hyperpage{4\nohyperpage{f}}, \hyperpage{10\nohyperpage{f}}
 \end{theindex}
