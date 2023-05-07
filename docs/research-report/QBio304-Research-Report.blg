@@ -1,19 +1,19 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'QBio304-Research-Report.blg'
-[187] biber-MSWIN32:340> INFO - === 
-[292] Biber.pm:418> INFO - Reading 'QBio304-Research-Report.bcf'
-[427] Biber.pm:978> INFO - Found 15 citekeys in bib section 0
-[451] Biber.pm:4401> INFO - Processing section 0
-[476] Biber.pm:4592> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[612] bibtex.pm:1713> INFO - LaTeX decoding ...
-[665] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[797] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[798] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[799] Biber.pm:4221> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[800] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[836] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[837] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[837] Biber.pm:4221> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[838] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[859] bbl.pm:654> INFO - Writing 'QBio304-Research-Report.bbl' with encoding 'UTF-8'
-[921] bbl.pm:757> INFO - Output to QBio304-Research-Report.bbl
+[104] biber-MSWIN32:340> INFO - === 
+[214] Biber.pm:418> INFO - Reading 'QBio304-Research-Report.bcf'
+[363] Biber.pm:978> INFO - Found 15 citekeys in bib section 0
+[386] Biber.pm:4401> INFO - Processing section 0
+[398] Biber.pm:4592> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[534] bibtex.pm:1713> INFO - LaTeX decoding ...
+[563] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[759] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[760] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[761] Biber.pm:4221> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[761] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[807] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[808] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[809] Biber.pm:4221> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[809] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[837] bbl.pm:654> INFO - Writing 'QBio304-Research-Report.bbl' with encoding 'UTF-8'
+[1053] bbl.pm:757> INFO - Output to QBio304-Research-Report.bbl

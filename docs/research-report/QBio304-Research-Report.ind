@@ -33,17 +33,17 @@
   \item FASTA, \hyperpage{6}
   \item FASTQ, \hyperpage{3}
   \item FastQC, \hyperpage{3}, \hyperpage{10\nohyperpage{f}}
-  \item functional enrichment analysis, \hyperpage{10}, \hyperpage{21}
+  \item functional enrichment analysis, \hyperpage{10}, \hyperpage{18}
 
 \indexspace
 \textbf{G}\label{L-xindex-G}
 \nopagebreak[4]
   \item gene
     \subitem -\,ID, \hyperpage{6}
-  \item gene ontology (GO), \hyperpage{21}
-    \subitem -\,biological process (BP), \hyperpage{21}
-    \subitem -\,cellular component (CC), \hyperpage{21}
-    \subitem -\,molecular function (MF), \hyperpage{21}
+  \item gene ontology (GO), \hyperpage{18}
+    \subitem -\,biological process (BP), \hyperpage{18}
+    \subitem -\,cellular component (CC), \hyperpage{18}
+    \subitem -\,molecular function (MF), \hyperpage{18}
   \item genome/transcriptome
     \subitem -\,reference, \hyperpage{6}
 

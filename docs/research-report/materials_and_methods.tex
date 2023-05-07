@@ -29,7 +29,7 @@ The quality of the raw and trimmed RNA-seq data\index{RNA-seq!quality assessment
 The results of the separate FastQC analyses (of the raw and trimmed FASTQ files), the results of the Trimmomatic\index{Trimmomatic} trimming and the information about the kallisto\index{kallisto} pseudoalignments\index{transcript!pseudoalignment} were summarized in an interactive MultiQC\index{MultiQC} HTML-report. See \autocite{10.1093/bioinformatics/btw354}.
 
 
-\subsection{RNA-seq preprocessing}\label{RNA-seq-preprocessing}
+\subsection{RNA-seq preprocessing}
 
 The initial quality assessment of the raw FASTQ files revealed that about roughly the first 12 base pairs of the reads were of low quality. Therefore, the data was preprocessed/trimmed using Trimmomatic\index{Trimmomatic}, a "flexible and efficient preprocessing tool, which could correctly handle paired-end data" \autocite{10.1093/bioinformatics/btw354}.
 
@@ -73,7 +73,7 @@ The mapping/pseudoalignment of the RNA-seq reads and the abundances quantificati
     kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment. On benchmarks with standard RNA-Seq data, kallisto can quantify 30 million human bulk RNA-seq reads in less than 3 minutes on a Mac desktop computer using only the read sequences and a transcriptome index that itself takes than 10 minutes to build. Pseudoalignment of reads preserves the key information needed for quantification, and kallisto is therefore not only fast, but also comparably accurate to other existing quantification tools. In fact, because the pseudoalignment procedure is robust to errors in the reads, in many benchmarks kallisto significantly outperforms existing tools.
 \end{quote}
 
-kallisto requires a reference genome/transcriptome\index{genome/transcriptome!reference} for aligning the RNA-seq data. To this end, reference FASTA\index{FASTA} cDNA\index{DNA!cDNA} dumps of Oryza nivara, cultivar BJ278 and Oryza sativa, cultivar Nipponbare were downloaded from Ensembl\index{Ensembl}. The Ensembl project delivers reference data for genome interpretation for any species: genome assemblies from public archive are annotated with genes, regulatory regions, variants and comparative data to provide a foundation for scientific research and genome interpretation \autocite{10.1093/bioinformatics/btu170}.
+kallisto requires a reference genome/transcriptome\index{genome/transcriptome!reference} for aligning the RNA-seq data. To this end, reference FASTA\index{FASTA} cDNA\index{DNA!cDNA} dumps of Oryza nivara, cultivar BJ278 and Oryza sativa, cultivar Nipponbare were downloaded from Ensembl\index{Ensembl}. The Ensembl project delivers reference data for genome interpretation for any species: genome assemblies from public archive are annotated with genes, regulatory regions, variants and comparative data to provide a foundation for scientific research and genome interpretation \autocite{10.1093/nar/gkab1049}.
 
 
 \subsection{Statistical evaluation and differential expression analysis}
@@ -126,7 +126,7 @@ In order to assess reasonable values for filtering the data, the number of genes
     \begin{threeparttable}
         \caption[Number of genes with no reads, and number of genes with  CPMs \(\ge 1\)]{Number of genes with no reads at all, and conversely number of genes with CPMs \(\ge 1\) in at least n = 1, 2, 3, \dots\ of the samples}
         \label{tab:ufltr_cpm_stats}
-        \setlength\tabcolsep{6pt}
+        \setlength\tabcolsep{5pt}
         \begin{tabular}{l l l p{30pt} p{30pt} p{30pt} p{30pt} p{30pt} p{30pt}}
             \toprule
                              &                  &                     & \multicolumn{6}{l}{Genes with CPMs \(\ge 1\) in at least n samples} \\
@@ -177,15 +177,15 @@ Figure \ref{fig:2.5-Log2CPM-Overview} provides an overview of the filtering and 
     \includegraphics[width=\textwidth]{../../results/plots-and-tables/2.5-Log2CPM-Overview}
 \end{figure}
 
-\subsubsection{Hierarchical cluster analysis}\label{hierarchical-cluster-analysis}
+\subsubsection{Hierarchical cluster analysis}
 
 A hierarchical cluster analysis (HCA)\index{hierarchical cluster analysis (HCA)} was performed via the \verb|stats|\index{R!package!stats} function \verb|hclust| on the Euclidean distance matrix\index{hierarchical cluster analysis (HCA)!Euclidean distance matrix} of the log2(CPM) values. Used agglomeration method: \verb|method = complete|.
 
-\subsubsection{Principal component analysis}\label{principal-component-analysis}
+\subsubsection{Principal component analysis}
 
 A principal component analysis (PCA)\index{principal component analysis (PCA)} of the filtered and normalized log2(CPM) values was performed via the \verb|stats|\index{R!package!stats} function \verb|prcomp|.
 
-\subsubsection{Identification of differentially expressed genes}\label{differentially-expressed-genes}
+\subsubsection{Identification of differentially expressed genes}
 
 In order to identify differentially expressed genes (DEGs)\index{differentially expressed genes (DEGs)}, design and contrast matrices were created using the \verb|stats|\index{R!package!stats} function \verb|model.matrix| and the \verb|limma|\index{R!package!limma} function \verb|makeContrasts|.
 

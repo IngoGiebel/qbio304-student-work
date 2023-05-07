@@ -21,5 +21,6 @@
 \contentsline {subsection}{\numberline {4.5}Differentially expressed genes}{14}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Functional enrichment analysis}{18}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Discussion}{18}{section.5}%
+\contentsline {section}{\numberline {6}Online content and license notice}{20}{section.6}%
 \contentsline {section}{References}{21}{section*.27}%
 \contentsline {section}{Index}{23}{section*.28}%

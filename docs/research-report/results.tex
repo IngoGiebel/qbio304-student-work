@@ -2,7 +2,7 @@
 
 \subsection{Quality evaluation}
 
-The RNA-seq data was initially assessed with FastQC\index{FastQC}, and according to this assessment the data was preprocessed/trimmed with Trimmomatic\index{Trimmomatic} and afterwards assessed again with FastQC (see section \ref{RNA-seq-preprocessing}). Finally, an overall report on the data preprocessing, the quality assessments and the kallisto\index{kallisto} pseudoalignments was created with MultiQC\index{MultiQC}.
+The RNA-seq data was initially assessed with FastQC\index{FastQC}, and according to this assessment the data was preprocessed/trimmed with Trimmomatic\index{Trimmomatic} and afterwards assessed again with FastQC. Finally, an overall report on the data preprocessing, the quality assessments and the kallisto\index{kallisto} pseudoalignments was created with MultiQC\index{MultiQC}.
 
 Figure \ref{fig:0.1-MultiQC_FastQC_status_checks} shows the MultiQC report on the Trimmomatic\index{Trimmomatic} preprocessing (the surviving reads).
 
@@ -36,7 +36,7 @@ For most of the FASTQ files, kallisto pseudoaligned well above 80 \% of the (pre
 
 \subsection{Hierarchical cluster analysis}
 
-The hierarchical cluster analysis \index{hierarchical cluster analysis (HCA)} (see section \ref{hierarchical-cluster-analysis}) reveals that the normal condition groups and the drought stress condition groups are closely related (grouped together). But the data for O. nivara also shows that the cultivar has an even greater impact on the clustering then the drought stress condition (see figures \ref{fig:3.1-Clust-Dendrogram-Oryza_nivara} and \ref{fig:3.1-Clust-Dendrogram-Oryza_sativa}).
+The hierarchical cluster analysis\index{hierarchical cluster analysis (HCA)} reveals that the normal condition groups and the drought stress condition groups are closely related (grouped together). But the data for O. nivara also shows that the cultivar has an even greater impact on the clustering then the drought stress condition (see figures \ref{fig:3.1-Clust-Dendrogram-Oryza_nivara} and \ref{fig:3.1-Clust-Dendrogram-Oryza_sativa}).
 
 \begin{figure}[htbp]
     \caption{Hierarchical cluster analysis of the O. nivara RNA-seq data}
@@ -53,7 +53,7 @@ The hierarchical cluster analysis \index{hierarchical cluster analysis (HCA)} (s
 
 \subsection{Principal component analysis}
 
-The principal component analysis (PCA)\index{principal component analysis (PCA)} (see section \ref{principal-component-analysis}) reveals that for both O. nivara and O. sativa the first two principal components account for more than 80 \% of the variance in the gene expression. Figures  \ref{fig:3.2-PCA-Oryza_nivara} and \ref{fig:3.2-PCA-Oryza_sativa} show the contribution percentage of the samples to the first two principal components (PCs)\index{principal component analysis (PCA)!principal component (PC)} for the two species.
+The principal component analysis (PCA)\index{principal component analysis (PCA)} reveals that for both O. nivara and O. sativa the first two principal components account for more than 80 \% of the variance in the gene expression. Figures  \ref{fig:3.2-PCA-Oryza_nivara} and \ref{fig:3.2-PCA-Oryza_sativa} show the contribution percentage of the samples to the first two principal components (PCs)\index{principal component analysis (PCA)!principal component (PC)} for the two species.
 
 For O. nivara, the samples from the same condition (normal vs drought stress) cluster together, with a tight clustering of the two different cultivars. This means that the different conditions might well explain the differences in gene expression, with the cultivar being an important confounding factor.
 
@@ -62,13 +62,13 @@ For O. sativa, the samples from the same condition cluster together with the exc
 \begin{figure}[htbp]
     \caption{PCA of the log2(CPM) data - O. nivara}
     \label{fig:3.2-PCA-Oryza_nivara}
-    \includegraphics[width=0.75\textwidth]{../../results/plots-and-tables/3.2-PCA-Oryza_nivara}
+    \includegraphics[width=0.9\textwidth]{../../results/plots-and-tables/3.2-PCA-Oryza_nivara}
 \end{figure}
 
 \begin{figure}[htbp]
     \caption{PCA of the log2(CPM) data - O. sativa}
     \label{fig:3.2-PCA-Oryza_sativa}
-    \includegraphics[width=0.75\textwidth]{../../results/plots-and-tables/3.2-PCA-Oryza_sativa}
+    \includegraphics[width=0.9\textwidth]{../../results/plots-and-tables/3.2-PCA-Oryza_sativa}
 \end{figure}
 
 
@@ -79,13 +79,13 @@ The volcano plots \ref{fig:4.1-DEG-Volcano-Plot-Oryza_nivara} and \ref{fig:4.1-D
 \begin{figure}[htbp]
     \caption{Volcano plot of the DEGs - O. nivara}
     \label{fig:4.1-DEG-Volcano-Plot-Oryza_nivara}
-    \includegraphics[width=\textwidth]{../../results/plots-and-tables/4.1-DEG-Volcano-Plot-Oryza_nivara}
+    \includegraphics[width=0.9\textwidth]{../../results/plots-and-tables/4.1-DEG-Volcano-Plot-Oryza_nivara}
 \end{figure}
 
 \begin{figure}[htbp]
     \caption{Volcano plot of the DEGs - O. sativa}
     \label{fig:4.1-DEG-Volcano-Plot-Oryza_sativa}
-    \includegraphics[width=\textwidth]{../../results/plots-and-tables/4.1-DEG-Volcano-Plot-Oryza_sativa}
+    \includegraphics[width=0.9\textwidth]{../../results/plots-and-tables/4.1-DEG-Volcano-Plot-Oryza_sativa}
 \end{figure}
 
 According to the limma tests with a p-value of one percent, there are 15 down- vs 33 up-regulated genes for O. nivara under drought stress conditions, and 2 down- vs 16 up-regulated for O. sativa. Figure \ref{fig:4.2-DEG-Venn-Diagr} shows the respective Venn diagrams. Figures \ref{fig:4.4-DEG-Heatmap-Oryza_nivara} and \ref{fig:4.4-DEG-Heatmap-Oryza_sativa} present heatmaps of these genes.
@@ -93,12 +93,12 @@ According to the limma tests with a p-value of one percent, there are 15 down- v
 \begin{figure}[htbp]
     \caption{Venn diagrams of the DEGs}
     \label{fig:4.2-DEG-Venn-Diagr}
-    \begin{subfigure}[t]{0.48\linewidth}
+    \begin{subfigure}[t]{0.44\linewidth}
         \caption{O. nivara}
         \label{fig:4.2-DEG-Venn-Diagr-Oryza_nivara}
         \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/4.2-DEG-Venn-Diagr-Oryza_nivara}
     \end{subfigure}
-    \begin{subfigure}[t]{0.48\linewidth}
+    \begin{subfigure}[t]{0.44\linewidth}
         \caption{O. sativa}
         \label{fig:4.2-DEG-Venn-Diagr-Oryza_sativa}
         \includegraphics[width=\textwidth, height=4cm]{../../results/plots-and-tables/4.2-DEG-Venn-Diagr-Oryza_sativa}
@@ -140,11 +140,11 @@ Furthermore, for both rice species the following GO terms are significantly enri
 \begin{figure}[htbp]
     \caption{Manhattan plot with the first 10 top-ranked GO terms highlighted - O. nivara}
     \label{fig:5.2-Gost-Plot-Oryza_nivara}
-    \includegraphics[width=0.75\textwidth]{../../results/plots-and-tables/5.2-Gost-Plot-Oryza_nivara}
+    \includegraphics[width=0.9\textwidth]{../../results/plots-and-tables/5.2-Gost-Plot-Oryza_nivara}
 \end{figure}
 
 \begin{figure}[htbp]
     \caption{Manhattan plot with the first 10 top-ranked GO terms highlighted - O. sativa}
     \label{fig:5.2-Gost-Plot-Oryza_sativa}
-    \includegraphics[width=0.75\textwidth]{../../results/plots-and-tables/5.2-Gost-Plot-Oryza_sativa}
+    \includegraphics[width=0.9\textwidth]{../../results/plots-and-tables/5.2-Gost-Plot-Oryza_sativa}
 \end{figure}
