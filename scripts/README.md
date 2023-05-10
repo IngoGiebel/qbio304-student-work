@@ -38,8 +38,11 @@ data subdirectory. See the respective README in that folder.
 
 R script for performing a differential gene expression (DGE) analysis.
 
-Prerequisite: the package "biomaRt" is installed via
-BiocManager::install("biomaRt"). The other packages listed in the section
+Prerequisite: the packages "biomaRt" and "edgeR" are installed via
+- BiocManager::install("biomaRt")
+- BiocManager::install("edgeR")
+
+The other packages listed in the section
 "Load required packages" are installed as usual.
 
 
