@@ -437,7 +437,7 @@ do_pca <- function() {
   pca_res_osativa <<- compute_pca_res(cpm_fltr_norm_log2_osativa)
 }
 
-#' Plot the samples and their contributioh percentage to the first two PCs.
+#' Plot the samples and their contribution percentage to the first two PCs.
 plot_pc1_pc2 <- function(pca_res, samples, groups, organism) {
   # Percentage variance explained by each PC
   pca_pct <- round(pca_res$sdev^2 * 100 / sum(pca_res$sdev^2), 1)
