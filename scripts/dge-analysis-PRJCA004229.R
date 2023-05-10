@@ -102,7 +102,7 @@ library(plotly)
 library(DT)
 # For annotating the abundance data
 library(biomaRt)
-# For getting Kallisto results into R
+# For getting kallisto results into R
 library(tximport)
 # For differential expression analysis. Here used for creating DGEList objects
 # and for data normalization.
