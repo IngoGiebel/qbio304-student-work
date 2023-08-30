@@ -1,43 +1,44 @@
+\xpginauxfiletrue 
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {1}{\ignorespaces Exemplary FastQC quality assessment of the per base sequence content - raw vs trimmed FASTQ file}}{5}{figure.caption.4}%
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {2}{\ignorespaces Exemplary FastQC quality assessment of the per base sequence quality - raw vs trimmed FASTQ file}}{5}{figure.caption.5}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {3}{\ignorespaces TPM statistics about the imported kallisto data\relax }}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {3}{\ignorespaces TPM statistics about the imported kallisto data}}{7}{figure.caption.6}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {4}{\ignorespaces Log2(CPM) distribution of the unfiltered, non-normalized data\relax }}{7}{figure.caption.7}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Log2(CPM) distribution of the unfiltered, non-normalized data}}{7}{figure.caption.7}%
 \setforeignlanguage {english}
 \setforeignlanguage {english}
 \contentsline {figure}{\numberline {5}{\ignorespaces Log2(CPM) distribution of the filtered, non-normalized data}}{8}{figure.caption.10}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {6}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data\relax }}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data}}{8}{figure.caption.11}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {7}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data in comparison with the non-normalized and the unfiltered data\relax }}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Log2(CPM) distribution of the filtered, normalized data in comparison with the non-normalized and the unfiltered data}}{9}{figure.caption.12}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {8}{\ignorespaces Trimmomatic preprocessing\relax }}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Trimmomatic preprocessing}}{11}{figure.caption.13}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {9}{\ignorespaces FastQC quality assessment of the preprocessed FASTQ files\relax }}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {9}{\ignorespaces FastQC quality assessment of the preprocessed FASTQ files}}{12}{figure.caption.14}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {10}{\ignorespaces kallisto pseudoalignments\relax }}{12}{figure.caption.15}%
+\contentsline {figure}{\numberline {10}{\ignorespaces kallisto pseudoalignments}}{12}{figure.caption.15}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {11}{\ignorespaces Hierarchical cluster analysis of the \plant [a]{On} RNA-seq data\relax }}{13}{figure.caption.16}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Hierarchical cluster analysis of the \plant [a]{On} RNA-seq data}}{13}{figure.caption.16}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {12}{\ignorespaces Hierarchical cluster analysis of the \plant [a]{Os} RNA-seq data\relax }}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Hierarchical cluster analysis of the \plant [a]{Os} RNA-seq data}}{13}{figure.caption.17}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {13}{\ignorespaces PCA of the log2(CPM) data - \plant [a]{On}\relax }}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {13}{\ignorespaces PCA of the log2(CPM) data - \plant [a]{On}}}{14}{figure.caption.18}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {14}{\ignorespaces PCA of the log2(CPM) data - \plant [a]{Os}\relax }}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {14}{\ignorespaces PCA of the log2(CPM) data - \plant [a]{Os}}}{15}{figure.caption.19}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {15}{\ignorespaces Volcano plot of the DEGs - \plant [a]{On}\relax }}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Volcano plot of the DEGs - \plant [a]{On}}}{15}{figure.caption.20}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {16}{\ignorespaces Volcano plot of the DEGs - \plant [a]{Os}\relax }}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Volcano plot of the DEGs - \plant [a]{Os}}}{16}{figure.caption.21}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {17}{\ignorespaces Venn diagrams of the DEGs\relax }}{16}{figure.caption.22}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Venn diagrams of the DEGs}}{16}{figure.caption.22}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {18}{\ignorespaces Heatmap of the DEGs - \plant [a]{On}\relax }}{17}{figure.caption.23}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Heatmap of the DEGs - \plant [a]{On}}}{17}{figure.caption.23}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {19}{\ignorespaces Heatmap of the DEGs - \plant [a]{Os}\relax }}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Heatmap of the DEGs - \plant [a]{Os}}}{17}{figure.caption.24}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {20}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - \plant [a]{On}\relax }}{19}{figure.caption.25}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - \plant [a]{On}}}{19}{figure.caption.25}%
 \setforeignlanguage {english}
-\contentsline {figure}{\numberline {21}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - \plant [a]{Os}\relax }}{19}{figure.caption.26}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Manhattan plot with the first 10 top-ranked GO terms highlighted - \plant [a]{Os}}}{19}{figure.caption.26}%
